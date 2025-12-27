@@ -4,77 +4,139 @@
   <meta charset="UTF-8">
   <title>Fonem Sanat Merkezi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
-    #header {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  text-align: center;
-}
-
-#header img {
-  max-width: 180px;
-}
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: black;
-      color: white;
+      background: #000;
+      color: #fff;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
-    }
-    #welcome {
-      font-size: 36px;
-      text-align: center;
-      animation: fadeOut 3s forwards;
-    }
-    @keyframes fadeOut {
-      0% { opacity: 1; }
-      80% { opacity: 1; }
-      100% { opacity: 0; display: none; }
-    }
-    #menu {
-      display: none;
       flex-direction: column;
-      gap: 20px;
+      align-items: center;
+      min-height: 100vh;
     }
+
+    /* LOGO */
+    #header {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    #header img {
+      width: 160px;
+      max-width: 90%;
+    }
+
+    /* BAŞLIK */
+    #welcome {
+      text-align: center;
+      margin: 15px 0 30px 0;
+    }
+
+    #welcome h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+
+    #welcome p {
+      font-size: 16px;
+      margin: 6px 0 0 0;
+      opacity: 0.8;
+    }
+
+    /* ANA ALAN */
+    #content {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .btn {
-      padding: 15px 30px;
-      font-size: 20px;
-      background: white;
-      color: black;
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      font-size: 18px;
+      background: #fff;
+      color: #000;
       border: none;
       cursor: pointer;
     }
+
+    /* SAYFALAR */
+    .page {
+      display: none;
+      width: 100%;
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .artist-list p {
+      margin: 6px 0;
+      opacity: 0.9;
+    }
   </style>
 </head>
+
 <body>
 
-  <div id="welcome">
-    <div>Fonem Sanat Merkezi</div>
-    <div style="font-size:20px;margin-top:10px;">Hoş Geldiniz</div>
+  <!-- LOGO -->
+  <div id="header">
+    <img src="fonem tabela transparent.png" alt="Fonem Sanat Merkezi">
   </div>
 
-  <div id="menu">
-    <button class="btn">Sanatçılar</button>
-    <button class="btn">Etkinlikler</button>
-    <button class="btn">İletişim</button>
+  <!-- BAŞLIK -->
+  <div id="welcome">
+    <h1>Fonem Sanat Merkezi</h1>
+    <p>Hoş Geldiniz</p>
+  </div>
+
+  <!-- İÇERİK -->
+  <div id="content">
+
+    <!-- ANA MENÜ -->
+    <div id="menu" class="page" style="display:block;">
+      <button class="btn" onclick="showArtists()">Karaoke Sanatçı Listesi</button>
+      <button class="btn">Menü & Fiyatlar</button>
+      <button class="btn">Şarkı Hatırlatıcı</button>
+    </div>
+
+    <!-- SANATÇI LİSTESİ -->
+    <div id="artists" class="page">
+      <input type="text" placeholder="Sanatçı ara...">
+
+      <div class="artist-list">
+        <p>Ajda Pekkan</p>
+        <p>Barış Manço</p>
+        <p>Cem Karaca</p>
+        <p>Sezen Aksu</p>
+        <p>Tarkan</p>
+      </div>
+
+      <button class="btn" onclick="goBack()">Geri</button>
+    </div>
+
   </div>
 
   <script>
-    setTimeout(() => {
-      document.getElementById("welcome").style.display = "none";
-      document.getElementById("menu").style.display = "flex";
-    }, 3000);
+    function showArtists() {
+      document.getElementById("menu").style.display = "none";
+      document.getElementById("artists").style.display = "block";
+    }
+
+    function goBack() {
+      document.getElementById("artists").style.display = "none";
+      document.getElementById("menu").style.display = "block";
+    }
   </script>
 
 </body>
-  <div id="header">
-  <img src="fonem-logo.png" alt="Fonem Sanat Merkezi">
-</div>
-
 </html>
