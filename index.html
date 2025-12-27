@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Fonem Sanat Merkezi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    #welcome {
+      font-size: 36px;
+      text-align: center;
+      animation: fadeOut 3s forwards;
+    }
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { opacity: 0; display: none; }
+    }
+    #menu {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .btn {
+      padding: 15px 30px;
+      font-size: 20px;
+      background: white;
+      color: black;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="welcome">
+    <div>Fonem Sanat Merkezi</div>
+    <div style="font-size:20px;margin-top:10px;">Hoş Geldiniz</div>
+  </div>
+
+  <div id="menu">
+    <button class="btn">Sanatçılar</button>
+    <button class="btn">Etkinlikler</button>
+    <button class="btn">İletişim</button>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("welcome").style.display = "none";
+      document.getElementById("menu").style.display = "flex";
+    }, 3000);
+  </script>
+
+</body>
+</html>
