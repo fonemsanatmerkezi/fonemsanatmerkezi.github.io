@@ -3,80 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Fonem Karaoke</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0f0f0f;
-      color: #ffffff;
-    }
-
-    header {
-      padding: 15px;
+      font-family: Arial, sans-serif;
       background: #111;
-      text-align: center;
-      border-bottom: 1px solid #333;
-    }
-
-    header img {
-      max-width: 140px;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      padding: 10px;
-      background: #1a1a1a;
-      flex-wrap: wrap;
-    }
-
-    nav button {
-      background: #333;
       color: #fff;
-      border: none;
-      padding: 10px 14px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 14px;
+      margin: 0;
+      padding: 20px;
     }
-
-    nav button:hover {
-      background: #ff0055;
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      font-size: 16px;
     }
-
-    main {
-      padding: 15px;
-    }
-
-    h2 {
-      border-bottom: 1px solid #444;
-      padding-bottom: 5px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
     li {
-      padding: 10px;
+      list-style: none;
+      padding: 8px;
       border-bottom: 1px solid #333;
       cursor: pointer;
     }
-
     li:hover {
       background: #222;
     }
-
-    #lyrics-area {
-      margin-top: 20px;
-      padding: 15px;
-      background: #111;
-      border-radius: 6px;
+    pre {
       white-space: pre-wrap;
     }
   </style>
@@ -84,26 +35,6 @@
 
 <body>
 
-<header>
-  <img src="fonem-logo.png" alt="Fonem Karaoke">
-</header>
+<h1>🎤 Fonem Karaoke</h1>
 
-<nav>
-  <button onclick="loadCategory('pop')">Pop</button>
-  <!-- İleride eklenecek:
-  <button onclick="loadCategory('rock')">Rock</button>
-  -->
-</nav>
-
-<main>
-  <div id="list-area">
-    <p>Lütfen bir kategori seçin.</p>
-  </div>
-
-  <div id="lyrics-area"></div>
-</main>
-
-<script src="js/app.js"></script>
-
-</body>
-</html>
+<button onclick="load
