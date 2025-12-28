@@ -17,22 +17,29 @@ body {
     url("github-arka-plan.jpeg") center / cover no-repeat fixed;
 }
 
-.header {
-  padding: 12px;
-}
-
+/* GERI BUTONU */
 .back-btn {
-  background: none;
-  border: none;
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 1000;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.4);
   color: #fff;
   font-size: 16px;
+  padding: 10px 14px;
+  border-radius: 12px;
   cursor: pointer;
+}
+
+.back-btn:hover {
+  background: rgba(255,255,255,0.25);
 }
 
 .container {
   max-width: 520px;
   margin: auto;
-  padding: 16px;
+  padding: 70px 16px 16px;
   text-align: center;
 }
 
@@ -75,9 +82,7 @@ h2 {
 
 <body>
 
-<div class="header">
-  <button class="back-btn" onclick="goBack()">← Geri</button>
-</div>
+<button class="back-btn" onclick="goBack()">← Geri</button>
 
 <div class="container">
   <h2 id="title">Türk Pop – Sanatçılar (A)</h2>
@@ -94,7 +99,7 @@ h2 {
 </div>
 
 <script>
-/* === SANATÇI → ŞARKI VERİSİ (A HARFİ) === */
+/* === A HARFİ VERİSİ (DEVAM EDECEK) === */
 const data = {
   "Ajda Pekkan": [
     "Yaz Yaz Yaz",
@@ -157,11 +162,9 @@ const data = {
   ]
 };
 
-/* === DURUM === */
 const artists = Object.keys(data).sort((a,b)=>a.localeCompare(b,'tr'));
 let view = "artists";
 
-/* === LİSTEYİ ÇİZ === */
 function renderArtists(list) {
   const el = document.getElementById("list");
   el.innerHTML = "";
@@ -174,13 +177,11 @@ function renderArtists(list) {
   });
 }
 
-/* === ARAMA === */
 function filterArtists(val) {
   const v = val.toLowerCase();
   renderArtists(artists.filter(a => a.toLowerCase().startsWith(v)));
 }
 
-/* === ŞARKILARI GÖSTER === */
 function showSongs(artist) {
   view = "songs";
   document.getElementById("title").textContent = artist + " – Şarkılar";
@@ -197,7 +198,6 @@ function showSongs(artist) {
   });
 }
 
-/* === GERİ === */
 function goBack() {
   if (view === "songs") {
     view = "artists";
@@ -210,7 +210,6 @@ function goBack() {
   }
 }
 
-/* === İLK YÜKLEME === */
 renderArtists(artists);
 </script>
 
