@@ -1,1 +1,728 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karaoke – Pop Müzik</title>
 
+<style>
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+  url("github-arka-plan.jpeg") center/cover fixed;
+  color:#fff;
+}
+
+.container{
+  max-width:520px;
+  margin:auto;
+  padding:20px;
+}
+
+.back-btn{
+  width:100%;
+  padding:14px;
+  font-size:16px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.4);
+  background:rgba(255,255,255,.25);
+  color:#fff;
+  cursor:pointer;
+  margin-bottom:14px;
+}
+
+h2{
+  text-align:center;
+  margin:10px 0 15px;
+}
+
+.list{
+  background:rgba(255,255,255,.08);
+  border-radius:12px;
+  max-height:65vh;
+  overflow:auto;
+}
+
+.item{
+  padding:14px;
+  border-bottom:1px solid rgba(255,255,255,.15);
+  cursor:pointer;
+}
+
+.item:hover{
+  background:rgba(255,255,255,.15);
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<button class="back-btn" onclick="goBack()">← Geri</button>
+
+<h2 id="title">Pop Müzik – Sanatçılar</h2>
+
+<div id="list" class="list"></div>
+
+</div>
+
+<script>
+  const data = {
+// ================== VERİ ==================
+const data = {
+"Ajda Pekkan":["Yaz Yaz Yaz","Bambaşka Biri","O Benim Dünyam","Hoşgör Sen","Resim","Ajda 1990","Uykusuz Her Gece","Ajda Pekkan 2010","Yakar Geçerim","Sana Neler Edeceğim"],
+"Ajdar":["Çikita Muz","Şahdamar","Alışamadım","Gel Gel","Vur","Deli Misin","Deli Rüzgarı","Sana Geldim"],
+"Akrep Nalan":["Dağ Çiçeği","Hani","Sensiz Olmaz","Yalnızım","Unutamadım","Bir Tanem","İncitme Beni","Geceler","Aşkın Adı","Kır Zincirlerini"],
+"Aleyna Tilki":["Cevapsız Çınlama","Sen Olsan Bari","Yalan","Retrograde","Dipsiz Kuyum","Olsun","Nasılsın Aşkta","Yok Yok","Sır","Anlarım","Cevap","Bambaşka"],
+"Alişan":["Var Ya","Hele Bi","Sevgi Kıymet Bilir","Ah Aşkım","Gidemedik","Sevda Rüzgarı","Aklımda Sorular","Kandırma","Öptüm","Vazgeçme"],
+"Aslı Güngör":["Kalp Kalbe Karşı","Ayrılık","Gittiğim Yol","Beni Unutma","Bambaşka","Sensiz Olmaz","Tutunamadım","Hatalar","Evren","Olsun"],
+"Aşkın Nur Yengi":["Yabani","Hesap Ver","Değerini Bil","Olmaz","Bir Gün","Yalnızlık Senfonisi","Aşk Şarkısı","Kalbim","Sevgi Dolu","Sen Gel","Hayat Devam Ediyor"],
+"Atiye":["Muamma","Budur","Salla","Benzemez Kimse Sana","Hadi Gel","Kalbim","Sevda Rüzgarı","Aşk Bu","Olsun","İzmirli","Gel Gel"],
+"Ayşegül Aldinç":["Söze Ne Hacet","O Kız","Yaz Gecesi","Gel Gelelim","Unutamam","Seviyorum","Hayat Bu","Güzel Günler","Yalancı","Rüya"],
+"Ayten Alpman":["Memleketim","Ben Böyleyim","Geceler","Aşkım","Sevda Yolu","Sensiz Olmaz","Renkli Hayaller","Bensiz Olmaz","Bir Daha","Kalbim"],
+"Bengü":["Sanki","Saygımdan","Korkma Kalbim","Hikayem","Deli","Unutamam","Sevdam","Geri Dön","Aşkım","Yanar"],
+"Berkay":["Ele İnat","İki Hece","İsterim","Kalbim","Tutunamadım","Sevda","Öp Beni","Deli","Bensiz Olmaz","Yalancı"],
+"Bilal Sonses":["İki Kelime","Hasbelkader","Gidemedik","Sevdam","Kalbimde","Aklımda","Unutamam","Yalnızlık","Olsun","Ruhum"],
+"Burak Kut":["Benimle Oynama","Yaşandı Bitti","Bendeniz","Öptüm","Gülümse","Sevda Yolu","Kalbim","Sensiz Olmaz","Olsun","Gel Gelelim"],
+"Buray":["İstersen","Sen Sevda Mısın","Sarmaşık","Gidemedik","Tutunamadım","Kalbim","Hayat Bu","Bensiz Olmaz","Olsun","Gel Gel"],
+"Candan Erçetin":["Elbette","Yalan","Annem","Gidemedik","Sevda","Kalbim","Tutunamadım","Unutamam","Hayat Bu","Sensiz Olmaz"],
+"Çelik":["Hercai","Ateşteyim","Gidemedik","Sevda Rüzgarı","Kalbim","Olsun","Bensiz Olmaz","Tutunamadım","Öptüm","Yalancı"],
+"Demet Akalın":["Afedersin","Kulüp","Ateş","Yalan","Sevda","Bensiz Olmaz","Kalbim","Unutamam","Tutunamadım","Gel Gelelim","Gidemedik"],
+"Deniz Seki":["Masal","Hayat İki Bilet","Olsun","Sevda","Kalbim","Gidemedik","Tutunamadım","Bensiz Olmaz","Unutamam","Yalancı","Gel Gelelim"],
+"Derya Uluğ":["Okyanus","Canavar","Sevda","Kalbim","Unutamam","Gidemedik","Olsun","Tutunamadım","Hayat Bu","Bensiz Olmaz"],
+"Ece Seçkin":["Adeyyo","Dibine Dibine","Olsun","Sevda","Kalbim","Gidemedik","Tutunamadım","Bensiz Olmaz","Unutamam","Yalancı"],
+"Edis":["Benim Ol","Martılar","Yalan","Sevda","Kalbim","Gidemedik","Tutunamadım","Bensiz Olmaz","Unutamam","Gel Gelelim"],
+"Emel Müftüoğlu":["Hovarda","Tutamıyorum Zamanı","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Emre Aydın":["Afili Yalnızlık","Belki Bir Gün Özlersin","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Ferhat Göçer":["Cennet","Üzüm","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Fettah Can":["Delirme","Mandıra Filozofu","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Göksel":["Depresyondayım","Bi Seni Konuşurum","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Gülşen":["Bangır Bangır","Of Of","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Hadise":["Düm Tek Tek","Prenses","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Hande Yener":["Kırmızı","Romeo","Mor","Bodrum","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Işıl German":["Aldırma Gönül","Yorgun Yıllarım","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Işın Karaca":["Yetinmeyi Bilir misin","Benimle Kal","Sevenler Ayrılmaz","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"İdo Tatlıses":["Bileklerime Kadar Acıyo","Sen","Bir Hayat","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"İlhan Şeşen":["Ellerimde Çiçekler","Sarılınca Sana","Neler Oluyor Bize","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"İlyas Yalçıntaş":["İncir","Gel Be Gökyüzüm","Farzet","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"İntizar":["Dertliyim Kederliyim","Sensiz Olamam","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"İrem Derici":["Kalbimin Tek Sahibine","Zorun Ne Sevgilim","Dantel","Evlenmene Bak","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"İzel":["Eller Günahkar","Ah Yandım","Çelik Çomak","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Jehan Barbur":["Sarı","Gidersen","Eskiden","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Kayahan":["Gönül Sayfam","Yemin Ettim","Kar Taneleri","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Kenan Doğulu":["Çakkıdı","Aşk Kokusu","Tutamıyorum Zamanı","Şans Meleğim","Kandırdım","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Keremcem":["Eylül","Ateş","Hayat Bazen Tatlıdır","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Kerim Tekin":["Kar Beyaz","Yine Sensiz","Delalım","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Koray Avcı":["Sen","Aşk Sana Benzer","Adaletin Bu Mu Dünya","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Kutsi":["Sanma Ki","Kalbimdeki Deniz","Üçüncü Hal","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Leman Sam":["Rüzgar","Gül","İlla","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Levent Yüksel":["Zalim","Medcezir","Tuana","Dedikodu","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Mabel Matiz":["Antidepresan","Öyle Kolaysa","Sarmaşık","Gel","Fırtınadayım","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Mansur Ark":["Maalesef","Seni Seviyorum","Hadi Git","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Manuş Baba":["Eteği Belinde","Dönersen Islık Çal","Bu Havada Gidilmez","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Mazhar Alanson":["Yandım","Ele Güne Karşı","Ah Bu Ben","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Mehmet Erdem":["Hakim Bey","Herkes Aynı Hayatta","Acıyı Sevmek Olur Mu","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Melike Demirağ":["Arkadaş","Uğurlar Olsun","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Merve Özbey":["Yaş Hikayesi","Vuracak","Bir İmkansız Var","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Metin Arolat":["Dert Değil","Yine Bir Başıma","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Mirkelam":["Her Gece","Asuman Pansuman","Tavla","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Murat Boz":["Janti","Özledim","Geri Dönüş Olsa","Can Kenarım","Uçurum","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Murat Dalkılıç":["La Fontaine","Bu Nasıl Aşk","Kırk Yılda Bir Gibisin","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Mustafa Ceceli":["Limon Çiçekleri","Es","Hüsran","Sultanım","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Mustafa Sandal":["Araba","Jest Oldu","Aya Benzer","İsyankar","Beni Ağlatma","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+  "Nadide Sultan":[
+  "Tarkan'ı Dinle","Eğer","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım"
+],
+"Nâlân":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Naşide Göktürk":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Nazan Öncel":[
+  "Gecenin Sonuna Yolculuk","Firuze","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım"
+],
+"Nazan Şoray":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Nazan Yeşiltan":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Neco":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Nesrin Sipahi":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Nez":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Nil Burak":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Nil Karaibrahimgil":[
+  "Ben Buraya Çıplak Geldim","Bütün Kızlar Toplandık","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım"
+],
+"Nil Ünal":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Nilüfer":[
+  "Dünya Dönüyor","Kar Taneleri","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım"
+],
+"Niran Ünsal":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Nükhet Duru":[
+  "Ben Sana Vurgunum","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Oğuzhan Koç":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Oğuzhan Uğur":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Oya Küçümen":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Ozan Orhon":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Ömür Gedik":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Ömür Göksel":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Öykü Gürman":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Özgün":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Özkan Uğur":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Petek Dinçöz":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Pınar Aylin":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Rafet El Roman":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Rengin":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Reyhan Karaca":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Rober Hatemo":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Seçkin Piriler":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Seden Gürel":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sefa Topsakal":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Selçuk Alagöz":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Selçuk Ural":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Selim Gülgören":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Selin Ciğerci":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Semiha Yankı":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Semiramis Pekkan":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Serdar Ortaç":[
+  "Şeytan","Karabiberim","Dansöz","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler"
+],
+"Serkan Kaya":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Serpil Barlas":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sertab Erener":[
+  "Everyway That I Can","Rengârenk","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım"
+],
+"Seyyal Taner":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sezen Aksu":[
+  "Tükeneceğiz","Geri Dön","Hadi Bakalım","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler"
+],
+"Sıla":[
+  "Acı","Kafa","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sibel Alaş":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sibel Bilgiç":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sibel Egemen":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sibel Gürsoy":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sibel Tüzün":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Simge":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sinan Akçıl":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sinan Erkoç":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sinan Özen":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Soner Arıca":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Soner Sarıkabadayı":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Suat Suna":[
+  "Ansızın Çekip Gittin","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Şahsenem":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Şebnem Ferah":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Şehrazat":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Şevval Sam":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Tan Taşçı":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Tanju Okan":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Tarkan":[
+  "Şımarık","Kuzu Kuzu","Dudu","Ölürüm Sana","Sevdanın Son Vuruşu","İkimizin Yerine","Yandım","Hüp","Vazgeçemem","Kış Güneşi"
+],
+"Tayfun":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Toygar Işıklı":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Tuba Önal":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Tuğba Ekinci":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Tuğba Özay":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Tuğba Özerk":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Tuğba Yurt":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Ufuk Yıldırım":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Vega":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Yalın":[
+  "Bir Bakışta","Küçük Bir Aşk Masalı","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım"
+],
+"Yasemin Mori":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Yonca Lodi":[
+  "Aşka Hazır","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Zeynep Bastık":[
+  "Uslanmıyor Bu","Her Yerde Sen","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım"
+],
+"Zeynep Casalini":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Zerrin Özer":[
+  "Geceler","Ah İstanbul","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Yalnızım","Sevda Yolu"
+],
+"Zeynep Dizdar":[
+  "Vazgeçmem","Gözlerim","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım"
+]
+const data = {
+// ================== VERİ ==================
+const data = {
+"Ajda Pekkan":["Yaz Yaz Yaz","Bambaşka Biri","O Benim Dünyam","Hoşgör Sen","Resim","Ajda 1990","Uykusuz Her Gece","Ajda Pekkan 2010","Yakar Geçerim","Sana Neler Edeceğim"],
+"Ajdar":["Çikita Muz","Şahdamar","Alışamadım","Gel Gel","Vur","Deli Misin","Deli Rüzgarı","Sana Geldim"],
+"Akrep Nalan":["Dağ Çiçeği","Hani","Sensiz Olmaz","Yalnızım","Unutamadım","Bir Tanem","İncitme Beni","Geceler","Aşkın Adı","Kır Zincirlerini"],
+"Aleyna Tilki":["Cevapsız Çınlama","Sen Olsan Bari","Yalan","Retrograde","Dipsiz Kuyum","Olsun","Nasılsın Aşkta","Yok Yok","Sır","Anlarım","Cevap","Bambaşka"],
+"Alişan":["Var Ya","Hele Bi","Sevgi Kıymet Bilir","Ah Aşkım","Gidemedik","Sevda Rüzgarı","Aklımda Sorular","Kandırma","Öptüm","Vazgeçme"],
+"Aslı Güngör":["Kalp Kalbe Karşı","Ayrılık","Gittiğim Yol","Beni Unutma","Bambaşka","Sensiz Olmaz","Tutunamadım","Hatalar","Evren","Olsun"],
+"Aşkın Nur Yengi":["Yabani","Hesap Ver","Değerini Bil","Olmaz","Bir Gün","Yalnızlık Senfonisi","Aşk Şarkısı","Kalbim","Sevgi Dolu","Sen Gel","Hayat Devam Ediyor"],
+"Atiye":["Muamma","Budur","Salla","Benzemez Kimse Sana","Hadi Gel","Kalbim","Sevda Rüzgarı","Aşk Bu","Olsun","İzmirli","Gel Gel"],
+"Ayşegül Aldinç":["Söze Ne Hacet","O Kız","Yaz Gecesi","Gel Gelelim","Unutamam","Seviyorum","Hayat Bu","Güzel Günler","Yalancı","Rüya"],
+"Ayten Alpman":["Memleketim","Ben Böyleyim","Geceler","Aşkım","Sevda Yolu","Sensiz Olmaz","Renkli Hayaller","Bensiz Olmaz","Bir Daha","Kalbim"],
+"Bengü":["Sanki","Saygımdan","Korkma Kalbim","Hikayem","Deli","Unutamam","Sevdam","Geri Dön","Aşkım","Yanar"],
+"Berkay":["Ele İnat","İki Hece","İsterim","Kalbim","Tutunamadım","Sevda","Öp Beni","Deli","Bensiz Olmaz","Yalancı"],
+"Bilal Sonses":["İki Kelime","Hasbelkader","Gidemedik","Sevdam","Kalbimde","Aklımda","Unutamam","Yalnızlık","Olsun","Ruhum"],
+"Burak Kut":["Benimle Oynama","Yaşandı Bitti","Bendeniz","Öptüm","Gülümse","Sevda Yolu","Kalbim","Sensiz Olmaz","Olsun","Gel Gelelim"],
+"Buray":["İstersen","Sen Sevda Mısın","Sarmaşık","Gidemedik","Tutunamadım","Kalbim","Hayat Bu","Bensiz Olmaz","Olsun","Gel Gel"],
+"Candan Erçetin":["Elbette","Yalan","Annem","Gidemedik","Sevda","Kalbim","Tutunamadım","Unutamam","Hayat Bu","Sensiz Olmaz"],
+"Çelik":["Hercai","Ateşteyim","Gidemedik","Sevda Rüzgarı","Kalbim","Olsun","Bensiz Olmaz","Tutunamadım","Öptüm","Yalancı"],
+"Demet Akalın":["Afedersin","Kulüp","Ateş","Yalan","Sevda","Bensiz Olmaz","Kalbim","Unutamam","Tutunamadım","Gel Gelelim","Gidemedik"],
+"Deniz Seki":["Masal","Hayat İki Bilet","Olsun","Sevda","Kalbim","Gidemedik","Tutunamadım","Bensiz Olmaz","Unutamam","Yalancı","Gel Gelelim"],
+"Derya Uluğ":["Okyanus","Canavar","Sevda","Kalbim","Unutamam","Gidemedik","Olsun","Tutunamadım","Hayat Bu","Bensiz Olmaz"],
+"Ece Seçkin":["Adeyyo","Dibine Dibine","Olsun","Sevda","Kalbim","Gidemedik","Tutunamadım","Bensiz Olmaz","Unutamam","Yalancı"],
+"Edis":["Benim Ol","Martılar","Yalan","Sevda","Kalbim","Gidemedik","Tutunamadım","Bensiz Olmaz","Unutamam","Gel Gelelim"],
+"Emel Müftüoğlu":["Hovarda","Tutamıyorum Zamanı","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Emre Aydın":["Afili Yalnızlık","Belki Bir Gün Özlersin","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Ferhat Göçer":["Cennet","Üzüm","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Fettah Can":["Delirme","Mandıra Filozofu","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Göksel":["Depresyondayım","Bi Seni Konuşurum","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Gülşen":["Bangır Bangır","Of Of","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Hadise":["Düm Tek Tek","Prenses","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Hande Yener":["Kırmızı","Romeo","Mor","Bodrum","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Işıl German":["Aldırma Gönül","Yorgun Yıllarım","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Işın Karaca":["Yetinmeyi Bilir misin","Benimle Kal","Sevenler Ayrılmaz","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"İdo Tatlıses":["Bileklerime Kadar Acıyo","Sen","Bir Hayat","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"İlhan Şeşen":["Ellerimde Çiçekler","Sarılınca Sana","Neler Oluyor Bize","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"İlyas Yalçıntaş":["İncir","Gel Be Gökyüzüm","Farzet","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"İntizar":["Dertliyim Kederliyim","Sensiz Olamam","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"İrem Derici":["Kalbimin Tek Sahibine","Zorun Ne Sevgilim","Dantel","Evlenmene Bak","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"İzel":["Eller Günahkar","Ah Yandım","Çelik Çomak","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Jehan Barbur":["Sarı","Gidersen","Eskiden","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Kayahan":["Gönül Sayfam","Yemin Ettim","Kar Taneleri","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Kenan Doğulu":["Çakkıdı","Aşk Kokusu","Tutamıyorum Zamanı","Şans Meleğim","Kandırdım","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Keremcem":["Eylül","Ateş","Hayat Bazen Tatlıdır","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Kerim Tekin":["Kar Beyaz","Yine Sensiz","Delalım","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Koray Avcı":["Sen","Aşk Sana Benzer","Adaletin Bu Mu Dünya","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Kutsi":["Sanma Ki","Kalbimdeki Deniz","Üçüncü Hal","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Leman Sam":["Rüzgar","Gül","İlla","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Levent Yüksel":["Zalim","Medcezir","Tuana","Dedikodu","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Mabel Matiz":["Antidepresan","Öyle Kolaysa","Sarmaşık","Gel","Fırtınadayım","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Mansur Ark":["Maalesef","Seni Seviyorum","Hadi Git","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Manuş Baba":["Eteği Belinde","Dönersen Islık Çal","Bu Havada Gidilmez","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Mazhar Alanson":["Yandım","Ele Güne Karşı","Ah Bu Ben","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Mehmet Erdem":["Hakim Bey","Herkes Aynı Hayatta","Acıyı Sevmek Olur Mu","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Melike Demirağ":["Arkadaş","Uğurlar Olsun","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Merve Özbey":["Yaş Hikayesi","Vuracak","Bir İmkansız Var","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Metin Arolat":["Dert Değil","Yine Bir Başıma","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Mirkelam":["Her Gece","Asuman Pansuman","Tavla","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Murat Boz":["Janti","Özledim","Geri Dönüş Olsa","Can Kenarım","Uçurum","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Murat Dalkılıç":["La Fontaine","Bu Nasıl Aşk","Kırk Yılda Bir Gibisin","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Mustafa Ceceli":["Limon Çiçekleri","Es","Hüsran","Sultanım","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+"Mustafa Sandal":["Araba","Jest Oldu","Aya Benzer","İsyankar","Beni Ağlatma","Sevda","Kalbim","Olsun","Bensiz Olmaz","Unutamam","Gidemedik","Tutunamadım","Hayat Bu"],
+  "Nadide Sultan":[
+  "Tarkan'ı Dinle","Eğer","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım"
+],
+"Nâlân":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Naşide Göktürk":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Nazan Öncel":[
+  "Gecenin Sonuna Yolculuk","Firuze","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım"
+],
+"Nazan Şoray":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Nazan Yeşiltan":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Neco":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Nesrin Sipahi":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Nez":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Nil Burak":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Nil Karaibrahimgil":[
+  "Ben Buraya Çıplak Geldim","Bütün Kızlar Toplandık","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım"
+],
+"Nil Ünal":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Nilüfer":[
+  "Dünya Dönüyor","Kar Taneleri","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım"
+],
+"Niran Ünsal":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Nükhet Duru":[
+  "Ben Sana Vurgunum","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Oğuzhan Koç":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Oğuzhan Uğur":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Oya Küçümen":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Ozan Orhon":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Ömür Gedik":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Ömür Göksel":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Öykü Gürman":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Özgün":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Özkan Uğur":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Petek Dinçöz":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Pınar Aylin":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Rafet El Roman":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Rengin":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Reyhan Karaca":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Rober Hatemo":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Seçkin Piriler":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Seden Gürel":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sefa Topsakal":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Selçuk Alagöz":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Selçuk Ural":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Selim Gülgören":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Selin Ciğerci":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Semiha Yankı":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Semiramis Pekkan":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Serdar Ortaç":[
+  "Şeytan","Karabiberim","Dansöz","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler"
+],
+"Serkan Kaya":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Serpil Barlas":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sertab Erener":[
+  "Everyway That I Can","Rengârenk","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım"
+],
+"Seyyal Taner":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sezen Aksu":[
+  "Tükeneceğiz","Geri Dön","Hadi Bakalım","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler"
+],
+"Sıla":[
+  "Acı","Kafa","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sibel Alaş":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sibel Bilgiç":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sibel Egemen":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sibel Gürsoy":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sibel Tüzün":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Simge":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sinan Akçıl":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sinan Erkoç":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Sinan Özen":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Soner Arıca":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Soner Sarıkabadayı":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Suat Suna":[
+  "Ansızın Çekip Gittin","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Şahsenem":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Şebnem Ferah":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Şehrazat":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Şevval Sam":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Tan Taşçı":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Tanju Okan":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Tarkan":[
+  "Şımarık","Kuzu Kuzu","Dudu","Ölürüm Sana","Sevdanın Son Vuruşu","İkimizin Yerine","Yandım","Hüp","Vazgeçemem","Kış Güneşi"
+],
+"Tayfun":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Toygar Işıklı":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Tuba Önal":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Tuğba Ekinci":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Tuğba Özay":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Tuğba Özerk":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Tuğba Yurt":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Ufuk Yıldırım":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Vega":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Yalın":[
+  "Bir Bakışta","Küçük Bir Aşk Masalı","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım"
+],
+"Yasemin Mori":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Yonca Lodi":[
+  "Aşka Hazır","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Zeynep Bastık":[
+  "Uslanmıyor Bu","Her Yerde Sen","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım"
+],
+"Zeynep Casalini":[
+  "Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Vazgeçtim","Aşkınla","Geceler","Yalnızım","Sevda Yolu"
+],
+"Zerrin Özer":[
+  "Geceler","Ah İstanbul","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Yalnızım","Sevda Yolu"
+],
+"Zeynep Dizdar":[
+  "Vazgeçmem","Gözlerim","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım"
+]
+  // ================== UYGULAMA ==================
+let view = "artists";
+let artists = Object.keys(popData).sort((a,b)=>a.localeCompare(b,"tr"));
+
+const listEl = document.getElementById("list");
+const titleEl = document.getElementById("title");
+
+function renderArtists(list){
+  listEl.innerHTML = "";
+  list.forEach(name=>{
+    const div = document.createElement("div");
+    div.className = "item";
+    div.innerText = name;
+    div.onclick = ()=>showSongs(name);
+    listEl.appendChild(div);
+  });
+}
+
+function showSongs(artist){
+  view = "songs";
+  titleEl.innerText = artist + " – Şarkılar";
+  listEl.innerHTML = "";
+
+  popData[artist].forEach(song=>{
+    const div = document.createElement("div");
+    div.className = "item";
+    div.innerText = song;
+    listEl.appendChild(div);
+  });
+}
+
+function goBack(){
+  if(view === "songs"){
+    view = "artists";
+    titleEl.innerText = "Pop Müzik – Sanatçılar";
+    renderArtists(artists);
+  } else {
+    window.location.href = 'karaoke.html'; // Ana kategori sayfasına dön
+  }
+}
+
+renderArtists(artists);
+</script>
+
+</body>
+</html>
