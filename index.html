@@ -2,154 +2,114 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Fonem Sanat Merkezi</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fonem Sanat Merkezi</title>
 
 <!-- El yazısı hissi için Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
 <style>
-body{
-  margin:0;
+/* GENEL AYARLAR */
+body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  background:#000;
-  color:#fff;
-  text-align:center;
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("github-arka-plan.jpeg") center/cover no-repeat fixed;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+/* AÇILIŞ EKRANI */
+#splash {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url("github-arka-plan.jpeg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+#splash h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 36px;
+  margin-top: 20px;
 }
 
 /* LOGO */
-#logo{
-  margin-top:30px;
-}
-#logo img{
-  width:280px;
-  max-width:90%;
-  filter: grayscale(100%);
+.logo {
+  max-width: 260px;
+  margin-bottom: 20px;
+  filter: grayscale(80%) brightness(1.1);
 }
 
-/* HOŞGELDİNİZ */
-#welcome{
-  font-family:'Pacifico', cursive;
-  font-size:34px;
-  margin-top:20px;
-  animation: fadeOut 3s forwards;
-}
-@keyframes fadeOut{
-  0%{opacity:1;}
-  70%{opacity:1;}
-  100%{opacity:0; display:none;}
+/* ANA ALAN */
+.container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 120px 20px 40px;
 }
 
-/* ANA MENÜ */
-#menu{
-  display:none;
-  max-width:420px;
-  margin:30px auto;
-}
-.btn{
-  width:100%;
-  padding:15px;
-  margin:8px 0;
-  font-size:17px;
-  background:#fff;
-  color:#000;
-  border:none;
-  cursor:pointer;
+/* BUTONLAR */
+.btn {
+  width: 100%;
+  padding: 16px;
+  margin: 12px 0;
+  font-size: 17px;
+  background: #f5f5f0; /* kırık beyaz */
+  color: #222;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
-/* SAYFALAR */
-.page{
-  display:none;
-  max-width:420px;
-  margin:20px auto;
-}
-.back{
-  margin-top:20px;
+.btn:hover {
+  background: #eaeae5;
 }
 
-/* ALT BİLGİ */
-.small{
-  font-size:14px;
-  opacity:.8;
+/* ALT NOT */
+.footer {
+  margin-top: 40px;
+  font-size: 13px;
+  opacity: 0.7;
 }
 </style>
 </head>
 
 <body>
 
-<!-- LOGO -->
-<div id="logo">
-  <img src="fonem-logo.png" alt="Fonem Sanat Merkezi">
+<!-- AÇILIŞ -->
+<div id="splash">
+  <img src="fonem-logo.png" alt="Fonem Logo" class="logo">
+  <h1>Hoş Geldiniz</h1>
 </div>
 
-<!-- HOŞGELDİNİZ -->
-<div id="welcome">Hoş Geldiniz</div>
+<!-- ANA İÇERİK -->
+<div class="container">
+  <img src="fonem-logo.png" alt="Fonem Logo" class="logo">
 
-<!-- ANA MENÜ -->
-<div id="menu">
-  <button class="btn" onclick="openPage('artists')">Karaoke Sanatçı Hatırlatıcı</button>
-  <button class="btn" onclick="openPage('songs')">Karaoke Şarkı Hatırlatıcı</button>
-  <button class="btn" onclick="openPage('prices')">Fiyatlarımız</button>
-  <button class="btn">Rezervasyon Yap</button>
-  <button class="btn" onclick="openPage('feedback')">Dilek – İstek – Öneri</button>
-  <button class="btn" onclick="openPage('social')">Bizi Takip Edin</button>
-</div>
+  <button class="btn">🎤 Karaoke Sanatçı Hatırlatıcı</button>
+  <button class="btn">🎶 Karaoke Şarkı Hatırlatıcı</button>
+  <button class="btn">💸 Fiyatlarımız</button>
+  <button class="btn">📅 Rezervasyon Yap</button>
+  <button class="btn">📝 Dilek – İstek – Öneri</button>
+  <button class="btn">📲 Bizi Takip Edin</button>
 
-<!-- SANATÇILAR -->
-<div id="artists" class="page">
-  <h2>Sanatçı Listesi</h2>
-  <p class="small">(Yakında arama eklenecek)</p>
-  <button class="btn back" onclick="goBack()">Geri</button>
-</div>
-
-<!-- ŞARKILAR -->
-<div id="songs" class="page">
-  <h2>Şarkı Listesi</h2>
-  <p class="small">Excel’den otomatik çekilecek</p>
-  <button class="btn back" onclick="goBack()">Geri</button>
-</div>
-
-<!-- FİYATLAR -->
-<div id="prices" class="page">
-  <h2>Fiyatlarımız</h2>
-  <h3>🎤 Odalar & Kayıt</h3>
-  <p class="small">Liste eklenecek</p>
-
-  <h3>☕ Kafe</h3>
-  <p class="small">Liste eklenecek</p>
-
-  <button class="btn back" onclick="goBack()">Geri</button>
-</div>
-
-<!-- GERİ BİLDİRİM -->
-<div id="feedback" class="page">
-  <h2>Dilek – İstek – Öneri</h2>
-  <p class="small">Form eklenecek</p>
-  <button class="btn back" onclick="goBack()">Geri</button>
-</div>
-
-<!-- SOSYAL -->
-<div id="social" class="page">
-  <h2>Bizi Takip Edin</h2>
-  <button class="btn">Instagram</button>
-  <button class="btn">Google’da Yorum Yap</button>
-  <button class="btn back" onclick="goBack()">Geri</button>
+  <div class="footer">
+    © Fonem Sanat Merkezi
+  </div>
 </div>
 
 <script>
-setTimeout(()=>{
-  document.getElementById("menu").style.display="block";
-},3000);
-
-function openPage(id){
-  document.getElementById("menu").style.display="none";
-  document.getElementById(id).style.display="block";
-}
-
-function goBack(){
-  document.querySelectorAll(".page").forEach(p=>p.style.display="none");
-  document.getElementById("menu").style.display="block";
-}
+/* 3 SANİYE SONRA AÇILIŞI KAPAT */
+setTimeout(() => {
+  document.getElementById("splash").style.display = "none";
+}, 3000);
 </script>
 
 </body>
