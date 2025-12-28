@@ -10,7 +10,7 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: #f2f2f2;
   background:
     linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
@@ -18,13 +18,13 @@ body {
 }
 
 .header {
-  padding: 15px;
+  padding: 12px;
 }
 
 .back-btn {
   background: none;
   border: none;
-  color: #f2f2f2;
+  color: #fff;
   font-size: 16px;
   cursor: pointer;
 }
@@ -32,38 +32,39 @@ body {
 .container {
   max-width: 520px;
   margin: auto;
-  padding: 20px;
+  padding: 16px;
   text-align: center;
 }
 
 h2 {
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 .search {
   width: 100%;
   padding: 14px;
-  margin: 15px 0;
+  margin: 14px 0;
   font-size: 16px;
   border-radius: 10px;
   border: none;
 }
 
 .list {
-  background: rgba(255,255,255,0.1);
-  border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
   overflow-y: auto;
   max-height: 65vh;
 }
 
 .item {
-  padding: 12px 14px;
+  padding: 14px;
   border-bottom: 1px solid rgba(255,255,255,0.15);
   cursor: pointer;
+  text-align: left;
 }
 
 .item:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.12);
 }
 
 .item:last-child {
@@ -75,11 +76,11 @@ h2 {
 <body>
 
 <div class="header">
-  <button class="back-btn" id="backBtn" onclick="goBack()">← Geri</button>
+  <button class="back-btn" onclick="goBack()">← Geri</button>
 </div>
 
 <div class="container">
-  <h2 id="title">Türk Pop Sanatçıları</h2>
+  <h2 id="title">Türk Pop – Sanatçılar (A)</h2>
 
   <input
     type="text"
@@ -93,39 +94,75 @@ h2 {
 </div>
 
 <script>
-/* SANATÇI → ŞARKI HARİTASI */
+/* === SANATÇI → ŞARKI VERİSİ (A HARFİ) === */
 const data = {
-  "Tarkan": [
-    "Şımarık",
-    "Kuzu Kuzu",
-    "Dudu",
-    "Şıkıdım",
-    "Öp"
-  ],
-  "Sezen Aksu": [
-    "Gülümse",
-    "Hadi Bakalım",
-    "Firuze",
-    "Tükeneceğiz",
-    "Küçüğüm"
-  ],
   "Ajda Pekkan": [
     "Yaz Yaz Yaz",
     "Sana Neler Edeceğim",
+    "Hoşgör Sen",
     "Bambaşka Biri",
-    "Petrol",
-    "Hoşgör Sen"
+    "Yakar Geçerim",
+    "Aynen Öyle",
+    "O Benim Dünyam",
+    "Uykusuz Her Gece",
+    "Haykıracak Nefesim Yok",
+    "Arada Sırada"
+  ],
+  "Ajdar": [
+    "Çikita Muz",
+    "Şahdamar",
+    "Ringa Ringa",
+    "Pizza",
+    "Çikita Muz (Remix)"
+  ],
+  "Ajlan Büyükburç": [
+    "Yaz Yaz Yaz",
+    "Ayrılık Zor",
+    "Olmaz Böyle Şey"
+  ],
+  "Akın": [
+    "Kaybolan Yıllar",
+    "Anladım Ki",
+    "Sen Gidince"
+  ],
+  "Akrep Nalan": [
+    "Dağ Çiçeği",
+    "Hani",
+    "Bir Şarkısın Sen"
+  ],
+  "Aleyna Tilki": [
+    "Cevapsız Çınlama",
+    "Sen Olsan Bari",
+    "Yalan",
+    "Nasılsın Aşkta"
+  ],
+  "Ali Güven": [
+    "Yolcu",
+    "Dön Desem",
+    "Unutamam"
+  ],
+  "Ali Kocatepe": [
+    "Sevdan Olmasaydı",
+    "Geriye Dönsen",
+    "Bir Gün Beni Ararsan"
+  ],
+  "Ali Rıza Binboğa": [
+    "Yarınlar Bizim",
+    "Savaştan Barışa"
+  ],
+  "Alişan": [
+    "Var Ya",
+    "Hele Bi",
+    "Sana Bir Şey Olmasın"
   ]
 };
 
-/* TÜM SANATÇILAR */
-const artists = Object.keys(data);
-
-/* DURUM */
+/* === DURUM === */
+const artists = Object.keys(data).sort((a,b)=>a.localeCompare(b,'tr'));
 let view = "artists";
 
-/* LİSTEYİ ÇİZ */
-function render(list) {
+/* === LİSTEYİ ÇİZ === */
+function renderArtists(list) {
   const el = document.getElementById("list");
   el.innerHTML = "";
   list.forEach(name => {
@@ -137,13 +174,13 @@ function render(list) {
   });
 }
 
-/* ARAMA */
+/* === ARAMA === */
 function filterArtists(val) {
   const v = val.toLowerCase();
-  render(artists.filter(a => a.toLowerCase().startsWith(v)));
+  renderArtists(artists.filter(a => a.toLowerCase().startsWith(v)));
 }
 
-/* SANATÇIYA TIKLANDI */
+/* === ŞARKILARI GÖSTER === */
 function showSongs(artist) {
   view = "songs";
   document.getElementById("title").textContent = artist + " – Şarkılar";
@@ -160,21 +197,21 @@ function showSongs(artist) {
   });
 }
 
-/* GERİ */
+/* === GERİ === */
 function goBack() {
   if (view === "songs") {
     view = "artists";
-    document.getElementById("title").textContent = "Türk Pop Sanatçıları";
+    document.getElementById("title").textContent = "Türk Pop – Sanatçılar (A)";
     document.getElementById("searchBox").style.display = "block";
     document.getElementById("searchBox").value = "";
-    render(artists);
+    renderArtists(artists);
   } else {
     history.back();
   }
 }
 
-/* İLK YÜKLEME */
-render(artists);
+/* === İLK YÜKLEME === */
+renderArtists(artists);
 </script>
 
 </body>
