@@ -1,1 +1,11 @@
-
+{
+  "category": "Pop",
+  "mode": "song",
+  "songs": [
+    {
+      "artist": "Tarkan",
+      "title": "Dudu",
+      "lyricsFile": "tarkan_dudu"
+    }
+  ]
+}
