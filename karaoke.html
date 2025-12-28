@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Karaoke Sanatçı Hatırlatıcı – Türk Pop</title>
+<title>Karaoke Sanatçı Hatırlatıcı</title>
 
 <style>
 body{
@@ -70,13 +70,14 @@ h2{
 
 <button class="back-btn" onclick="goBack()">← Geri</button>
 
-<h2 id="title">Türk Pop – Sanatçılar</h2>
+<h2 id="title">Karaoke – Kategoriler</h2>
 
 <input
   id="search"
   class="search"
   placeholder="Harf veya sanatçı yaz..."
   onkeyup="filterArtists(this.value)"
+  style="display:none;"
 >
 
 <div id="list" class="list"></div>
@@ -776,13 +777,54 @@ const data = {
 
 };
 
-// ================== UYGULAMA ==================
-let view = "artists";
-let artists = Object.keys(data).sort((a,b)=>a.localeCompare(b,"tr"));
+// Diğer kategoriler için boş placeholder veri
+const thmData = {};
+const tsmData = {};
+const arabeskData = {};
+const turkRockData = {};
+const rapData = {};
+const turkGruplariData = {};
+const yabanciData = {};
+
+// Kategoriler
+const categories = [
+  {name:"Pop Müzik", data:popData},
+  {name:"THM / Özgün", data:thmData},
+  {name:"TSM", data:tsmData},
+  {name:"Arabesk", data:arabeskData},
+  {name:"Türkçe Rock", data:turkRockData},
+  {name:"Rap", data:rapData},
+  {name:"Türk Müzik Grupları", data:turkGruplariData},
+  {name:"Yabancı", data:yabanciData}
+];
+
+let view = "categories"; // başlangıçta kategori görünümü
+let currentData = null;
+let artists = [];
 
 const listEl = document.getElementById("list");
 const titleEl = document.getElementById("title");
 const searchEl = document.getElementById("search");
+
+// Render fonksiyonları
+function renderCategories(){
+  listEl.innerHTML = "";
+  categories.forEach(cat=>{
+    const div = document.createElement("div");
+    div.className = "item";
+    div.innerText = cat.name;
+    div.onclick = ()=>{
+      currentData = cat.data;
+      artists = Object.keys(currentData).sort((a,b)=>a.localeCompare(b,"tr"));
+      view = "artists";
+      titleEl.innerText = cat.name + " – Sanatçılar";
+      searchEl.style.display = "block";
+      searchEl.value = "";
+      renderArtists(artists);
+    };
+    listEl.appendChild(div);
+  });
+}
 
 function renderArtists(list){
   listEl.innerHTML = "";
@@ -808,7 +850,7 @@ function showSongs(artist){
   searchEl.style.display = "none";
   listEl.innerHTML = "";
 
-  data[artist].forEach(song=>{
+  currentData[artist].forEach(song=>{
     const div = document.createElement("div");
     div.className = "item";
     div.innerText = song;
@@ -819,16 +861,29 @@ function showSongs(artist){
 function goBack(){
   if(view === "songs"){
     view = "artists";
-    titleEl.innerText = "Türk Pop – Sanatçılar";
+    titleEl.innerText = getCategoryName() + " – Sanatçılar";
     searchEl.style.display = "block";
     searchEl.value = "";
     renderArtists(artists);
-  }else{
+  } else if(view === "artists"){
+    view = "categories";
+    titleEl.innerText = "Karaoke – Kategoriler";
+    searchEl.style.display = "none";
+    renderCategories();
+  } else {
     history.back();
   }
 }
 
-renderArtists(artists);
+function getCategoryName(){
+  for(let cat of categories){
+    if(cat.data === currentData) return cat.name;
+  }
+  return "";
+}
+
+// Başlangıçta kategori listesi göster
+renderCategories();
 </script>
 
 </body>
