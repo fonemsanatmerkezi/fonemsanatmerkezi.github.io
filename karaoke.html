@@ -1,102 +1,88 @@
 <!DOCTYPE html>
-<html lang="tr" translate="no">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <title>Fonem Karaoke</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google" content="notranslate">
-  <meta http-equiv="Content-Language" content="tr">
 
   <style>
     body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #000;
-      color: #fff;
+      text-align: center;
     }
 
     header {
-      text-align: center;
       padding: 20px;
       border-bottom: 1px solid #333;
     }
 
     h1 {
       margin: 0;
-      font-size: 24px;
+      font-size: 28px;
     }
 
-    nav {
-      text-align: center;
-      padding: 15px;
-      border-bottom: 1px solid #333;
+    .buttons {
+      margin: 20px 0;
     }
 
     button {
-      background: #222;
+      background-color: #8b0000;
       color: #fff;
-      border: 1px solid #444;
-      padding: 10px 18px;
-      margin: 5px;
+      border: none;
+      padding: 12px 24px;
       font-size: 16px;
+      margin: 5px;
+      border-radius: 6px;
       cursor: pointer;
     }
 
-    button:hover {
-      background: #c00000;
+    button:active {
+      background-color: #b22222;
     }
 
-    main {
-      padding: 20px;
+    #liste {
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: left;
+      padding: 10px;
     }
 
-    ul {
+    #liste ul {
       list-style: none;
       padding: 0;
       margin: 0;
     }
 
-    li {
-      padding: 12px;
+    #liste li {
+      padding: 10px;
       border-bottom: 1px solid #333;
-      cursor: pointer;
-    }
-
-    li:hover {
-      background: #111;
-    }
-
-    #sozler {
-      margin-top: 25px;
-      padding: 15px;
-      border: 1px solid #333;
-      background: #050505;
-      white-space: pre-wrap;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>🎤 Fonem Karaoke</h1>
-</header>
+  <header>
+    <h1>🎤 Fonem Karaoke</h1>
+  </header>
 
-<nav>
-  <button onclick="loadPop()">Pop</button>
-</nav>
-
-<main>
-  <div id="liste">
-    <p>Bir kategori seçin.</p>
+  <div class="buttons">
+    <button onclick="loadCategory('pop')">Pop</button>
+    <button onclick="loadCategory('rock')">Rock</button>
+    <button onclick="loadCategory('turkce')">Türkçe</button>
   </div>
 
-  <div id="sozler"></div>
-</main>
+  <h2>Bir kategori seçin.</h2>
 
-<script src="js/uygulama.js"></script>
+  <!-- 🔴 EN KRİTİK YER BURASI -->
+  <div id="liste"></div>
+
+  <!-- 🔴 JS DOSYASI EN ALTTA -->
+  <script src="app.js"></script>
 
 </body>
 </html>
