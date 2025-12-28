@@ -1,44 +1,28 @@
-function loadCategory(category) {
-  fetch(`data/${category}.json`)
+function loadPop() {
+  fetch("veri/pop.json")
     .then(res => res.json())
     .then(data => {
+      const liste = document.getElementById("liste");
+      let html = "<ul>";
 
-      const listArea = document.getElementById("list-area");
-      const lyricsArea = document.getElementById("lyrics-area");
+      data.songs.forEach(song => {
+        html += `<li onclick="showLyrics('${song.artist}','${song.title}','${song.lyrics}')">
+          ${song.artist} – ${song.title}
+        </li>`;
+      });
 
-      lyricsArea.innerHTML = "";
-
-      if (data.mode === "artist") {
-        let html = `<h2>${data.category}</h2><ul>`;
-        data.artists.forEach(artist => {
-          html += `<li>${artist}</li>`;
-        });
-        html += "</ul>";
-        listArea.innerHTML = html;
-        return;
-      }
-
-      if (data.mode === "song") {
-        let html = `<h2>${data.category}</h2><ul>`;
-        data.songs.forEach(song => {
-          html += `
-            <li onclick="loadLyrics('${song.lyricsFile}')">
-              ${song.artist} – ${song.title}
-            </li>`;
-        });
-        html += "</ul>";
-        listArea.innerHTML = html;
-      }
+      html += "</ul>";
+      liste.innerHTML = html;
+    })
+    .catch(err => {
+      alert("JSON okunamadı");
+      console.error(err);
     });
 }
 
-function loadLyrics(file) {
-  fetch(`lyrics/${file}.json`)
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById("lyrics-area").innerHTML = `
-        <h3>${data.artist} – ${data.title}</h3>
-        <pre>${data.lyrics}</pre>
-      `;
-    });
+function showLyrics(artist, title, lyrics) {
+  document.getElementById("sozler").innerHTML = `
+    <h3>${artist} – ${title}</h3>
+    <pre>${lyrics}</pre>
+  `;
 }
