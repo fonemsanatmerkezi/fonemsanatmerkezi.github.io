@@ -8,17 +8,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
 <style>
+/* ========== GENEL ========== */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  color: #f2f2f2;
+  text-align: center;
   background:
     linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
     url("github-arka-plan.jpeg") center / cover no-repeat fixed;
-  color: #f2f2f2;
-  text-align: center;
 }
 
-/* AÇILIŞ */
+/* ========== AÇILIŞ ========== */
 #splash {
   position: fixed;
   inset: 0;
@@ -29,52 +34,73 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  z-index: 100;
 }
 
 #splash h1 {
   font-family: 'Pacifico', cursive;
-  font-size: 36px;
-  margin-top: 20px;
+  font-size: 40px;
+  margin-top: 24px;
 }
 
-/* LOGO */
+/* ========== LOGO ========== */
 .logo {
-  max-width: 460px;
   width: 100%;
-  margin-bottom: 24px;
+  max-width: 520px;   /* GERÇEK BÜYÜKLÜK */
+  margin: 0 auto 32px;
 }
 
-}
-
-/* ANA ALAN */
+/* ========== ANA ALAN ========== */
 .container {
-  max-width: 420px;
+  max-width: 460px;
   margin: 0 auto;
   padding: 120px 20px 40px;
 }
 
-/* BUTONLAR */
+/* ========== BUTONLAR (GÖRSEL ETKİLİ) ========== */
 .btn {
   width: 100%;
-  padding: 16px;
-  margin: 12px 0;
+  padding: 18px;
+  margin: 14px 0;
   font-size: 17px;
-  background: #f5f5f0;
-  color: #222;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  border-radius: 14px;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
+  color: #222;
+  background: linear-gradient(135deg, #f7f7f2, #e6e6df);
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+  transition: all 0.25s ease;
 }
 
 .btn:hover {
-  background: #eaeae5;
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 26px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.8);
 }
 
+.btn:active {
+  transform: translateY(0);
+  box-shadow:
+    0 6px 14px rgba(0,0,0,0.4);
+}
+
+/* ========== ALT ========== */
 .footer {
   margin-top: 40px;
   font-size: 13px;
   opacity: 0.7;
+}
+
+/* ========== MOBİL AYAR ========== */
+@media (max-width: 480px) {
+  .logo {
+    max-width: 360px;
+  }
 }
 </style>
 </head>
