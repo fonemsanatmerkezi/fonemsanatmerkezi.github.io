@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Pop Müzik Listesi</title>
-
 <style>
 body{
   font-family: Arial, Helvetica, sans-serif;
@@ -41,7 +40,6 @@ button{
 }
 </style>
 </head>
-
 <body>
 
 <header>
@@ -52,7 +50,6 @@ button{
 <div id="list"></div>
 
 <script>
-  const data = {
 // ================== VERİ ==================
 const data = {
 "Ajda Pekkan":["Yaz Yaz Yaz","Bambaşka Biri","O Benim Dünyam","Hoşgör Sen","Resim","Ajda 1990","Uykusuz Her Gece","Ajda Pekkan 2010","Yakar Geçerim","Sana Neler Edeceğim"],
@@ -359,12 +356,12 @@ const data = {
   "Vazgeçmem","Gözlerim","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım"
 ]
   };
-/* ================== DEĞİŞKENLER ================== */
+// ================== DEĞİŞKENLER ==================
 const list = document.getElementById("list");
 const title = document.getElementById("title");
 let activeArtist = null;
 
-/* ================== SANATÇI LİSTESİ ================== */
+// ================== SANATÇI LİSTESİ ==================
 function showArtists(){
   list.innerHTML = "";
   title.innerText = "Pop Müzik – Sanatçılar";
@@ -379,7 +376,7 @@ function showArtists(){
   }
 }
 
-/* ================== ŞARKI LİSTESİ ================== */
+// ================== ŞARKI LİSTESİ ==================
 function showSongs(artist){
   list.innerHTML = "";
   title.innerText = artist;
@@ -393,7 +390,7 @@ function showSongs(artist){
   });
 }
 
-/* ================== GERİ ================== */
+// ================== GERİ ==================
 function goBack(){
   if(activeArtist){
     showArtists();
@@ -402,7 +399,7 @@ function goBack(){
   }
 }
 
-/* ================== BAŞLAT ================== */
+// ================== BAŞLAT ==================
 showArtists();
 </script>
 
