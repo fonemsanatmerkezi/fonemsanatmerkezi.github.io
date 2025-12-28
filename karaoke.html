@@ -3,24 +3,167 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Karaoke Hatırlatıcı</title>
+<title>Karaoke Hatırlatıcı – Türk Pop</title>
 
 <style>
+* { box-sizing: border-box; }
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #111;
   color: #f2f2f2;
+  background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url("github-arka-plan.jpeg") center / cover no-repeat fixed;
+}
+
+/* ÜST BAR */
+.header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  padding: 15px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #f2f2f2;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* KONTENT */
+.container {
+  max-width: 520px;
+  margin: auto;
+  padding: 20px;
   text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+/* ARAMA */
+.search {
+  width: 100%;
+  padding: 14px;
+  margin: 15px 0;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* LİSTE */
+.list {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  overflow-y: auto;
+  max-height: 65vh;
+}
+
+.item {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.item:last-child {
+  border-bottom: none;
 }
 </style>
 </head>
 
 <body>
-<h2>Karaoke Hatırlatıcı<br>yakında burada</h2>
+
+<!-- ÜST -->
+<div class="header">
+  <button class="back-btn" onclick="history.back()">← Geri</button>
+</div>
+
+<div class="container">
+  <h2>Türk Pop Sanatçıları</h2>
+
+  <input
+    type="text"
+    class="search"
+    placeholder="Harf veya isim yaz..."
+    onkeyup="filterArtists(this.value)"
+  >
+
+  <div class="list" id="artistList"></div>
+</div>
+
+<script>
+const artists = [
+"Ajda Pekkan","Ajdar","Ajlan Büyükburç","Akın","Akrep Nalan","Aleyna Tilki",
+"Ali Güven","Ali Kocatepe","Ali Rıza Binboğa","Alişan","Alpay","Altan Çetin",
+"Altay","Aslı Güngör","Asuman Krause","Asya","Aşkın Nur Yengi","Atilla Atasoy",
+"Atilla Taş","Atiye","Ayça","Ayla Algan","Ayla Çelik","Ayla Dikmen",
+"Aylin Livaneli","Aysun Kocatepe","Ayşe Hatun Önal","Ayşegül Aldinç",
+"Ayten Alpman","Baha","Banu Alkan","Bayhan","Bedük","Bendeniz","Bengü",
+"Berkant","Berkay","Berksan","Bilal Sonses","Bora Ayanoğlu","Bora Duran",
+"Bora Ebeoğlu","Bora Öztoprak","Burak Kut","Buray","Burcu Güneş",
+"Candan Erçetin","Çelik","Çetin Alp","Dario Moreno","Davut Güloğlu",
+"Demet Akalın","Demet Sağıroğlu","Deniz Arcak","Deniz Seki","Derya Uluğ",
+"Doğuş","Ebru Destan","Ebru Elver","Ebru Polat","Ebru Yaşar","Ece Anlı",
+"Ece Seçkin","Eda Özülkü","Edis","Ege","Emel Müftüoğlu","Emir","Emre Altuğ",
+"Emre Aydın","Emre Kaya","Ercan Saatçi","Erdal Çelik","Erhan Güleryüz",
+"Erol Büyükburç","Erol Evgin","Ersay Üner","Esmeray","Faruk K",
+"Fatih Erkoç","Fatih Ürek","Ferda Anıl Yarkın","Ferhat Göçer","Fettah Can",
+"Fulden Uras","Funda Arar","Füsun Önal","Gökben","Gökçe","Gökçe Kırgız",
+"Gökhan Kırdar","Gökhan Özen","Gökhan Semiz","Gökhan Tepe","Gökhan Türkmen",
+"Göksel","Gülben Ergen","Gülden","Güliz Ayla","Gülşen","Hadise",
+"Hakan Peker","Halil Sezai","Hande Yener","Harun Kolçak","Hatice","Hayko",
+"Hazal","Hilal Cebeci","Irmak Arıcı","Işıl German","Işın Karaca",
+"İdo Tatlıses","İlhan Şeşen","İlyas Yalçıntaş","İntizar","İrem Derici",
+"İzel","Jale","Jehan Barbur","Kâmuran Akkor","Kayahan","Kenan Doğulu",
+"Keremcem","Kerim Tekin","Koray Avcı","Kutsi","Lale Belkıs","Lara",
+"Leman Sam","Levent Yüksel","Mabel Matiz","Mansur Ark","Manuş Baba",
+"Mazhar Alanson","Mehmet Erdem","Melike Demirağ","Merve Özbey",
+"Metin Arolat","Mirkelam","Mithat Körler","Murat Başaran","Murat Boz",
+"Murat Dalkılıç","Murat Evgin","Mustafa Ceceli","Mustafa Sandal",
+"Nadide Sultan","Nâlân","Naşide Göktürk","Nazan Öncel","Nazan Şoray",
+"Nazan Yeşiltan","Neco","Nesrin Sipahi","Nez","Nil Burak",
+"Nil Karaibrahimgil","Nil Ünal","Nilüfer","Niran Ünsal","Nükhet Duru",
+"Oğuzhan Koç","Oğuzhan Uğur","Oya Küçümen","Ozan Orhon","Ömür Gedik",
+"Ömür Göksel","Öykü Gürman","Özgün","Özkan Uğur","Petek Dinçöz",
+"Pınar Aylin","Rafet El Roman","Rengin","Reyhan Karaca","Rober Hatemo",
+"Seçkin Piriler","Seden Gürel","Sefa Topsakal","Selçuk Alagöz",
+"Selçuk Ural","Selim Gülgören","Selin Ciğerci","Semiha Yankı",
+"Semiramis Pekkan","Serdar Ortaç","Serkan Kaya","Serpil Barlas",
+"Sertab Erener","Seyyal Taner","Sezen Aksu","Sıla","Sibel Alaş",
+"Sibel Bilgiç","Sibel Egemen","Sibel Gürsoy","Sibel Tüzün","Simge",
+"Sinan Akçıl","Sinan Erkoç","Sinan Özen","Soner Arıca",
+"Soner Sarıkabadayı","Suat Suna","Şahsenem","Şebnem Ferah","Şehrazat",
+"Şevval Sam","Tan Taşçı","Tanju Okan","Tarkan","Tayfun","Toygar Işıklı",
+"Tuba Önal","Tuğba Ekinci","Tuğba Özay","Tuğba Özerk","Tuğba Yurt",
+"Tuğçe San","Tuğrul Arsever","Ufuk Yıldırım","Umay Umay","Ümit Sayın",
+"Vedat Sakman","Yalın","Yaşar","Yeliz","Yeşim","Yeşim Salkım",
+"Yıldız Tilbe","Yusuf Güney","Zafer Peker","Zeynep Bastık",
+"Zeynep Casalini","Zeynep Dizdar"
+];
+
+/* LİSTEYİ BAS */
+function render(list) {
+  const el = document.getElementById("artistList");
+  el.innerHTML = "";
+  list.forEach(name => {
+    const div = document.createElement("div");
+    div.className = "item";
+    div.textContent = name;
+    el.appendChild(div);
+  });
+}
+
+/* FİLTRE */
+function filterArtists(val) {
+  const v = val.toLowerCase();
+  render(artists.filter(a => a.toLowerCase().startsWith(v)));
+}
+
+/* SAYFA AÇILINCA TAM LİSTE */
+render(artists);
+</script>
+
 </body>
 </html>
