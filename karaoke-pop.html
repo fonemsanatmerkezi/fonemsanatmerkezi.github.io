@@ -2,74 +2,55 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Karaoke – Pop Müzik</title>
+<title>Pop Müzik Listesi</title>
 
 <style>
 body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#111;
+  color:#fff;
   margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-  url("github-arka-plan.jpeg") center/cover fixed;
-  color:#fff;
+  padding:0;
 }
-
-.container{
-  max-width:520px;
-  margin:auto;
-  padding:20px;
+header{
+  background:#000;
+  padding:15px;
+  display:flex;
+  align-items:center;
 }
-
-.back-btn{
-  width:100%;
-  padding:14px;
+button{
+  margin-right:10px;
   font-size:16px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,.4);
-  background:rgba(255,255,255,.25);
-  color:#fff;
   cursor:pointer;
-  margin-bottom:14px;
 }
-
-h2{
-  text-align:center;
-  margin:10px 0 15px;
+#title{
+  font-size:20px;
 }
-
-.list{
-  background:rgba(255,255,255,.08);
-  border-radius:12px;
-  max-height:65vh;
-  overflow:auto;
+#list{
+  padding:15px;
 }
-
 .item{
-  padding:14px;
-  border-bottom:1px solid rgba(255,255,255,.15);
+  padding:12px;
+  border-bottom:1px solid #333;
   cursor:pointer;
 }
-
 .item:hover{
-  background:rgba(255,255,255,.15);
+  background:#222;
 }
 </style>
 </head>
 
 <body>
-<div class="container">
 
-<button class="back-btn" onclick="goBack()">← Geri</button>
+<header>
+  <button onclick="goBack()">←</button>
+  <div id="title">Pop Müzik – Sanatçılar</div>
+</header>
 
-<h2 id="title">Pop Müzik – Sanatçılar</h2>
-
-<div id="list" class="list"></div>
-
-</div>
+<div id="list"></div>
 
 <script>
-  
-const data = {
+  const data = {
 // ================== VERİ ==================
 const data = {
 "Ajda Pekkan":["Yaz Yaz Yaz","Bambaşka Biri","O Benim Dünyam","Hoşgör Sen","Resim","Ajda 1990","Uykusuz Her Gece","Ajda Pekkan 2010","Yakar Geçerim","Sana Neler Edeceğim"],
@@ -376,48 +357,51 @@ const data = {
   "Vazgeçmem","Gözlerim","Kalbim","Sevda","Sensiz Olmaz","Bir Gün Daha","Gözlerin","Aşkınla","Geceler","Yalnızım"
 ]
   };
-  // ================== UYGULAMA ==================
-let view = "artists";
-let artists = Object.keys(popData).sort((a,b)=>a.localeCompare(b,"tr"));
+/* ================== DEĞİŞKENLER ================== */
+const list = document.getElementById("list");
+const title = document.getElementById("title");
+let activeArtist = null;
 
-const listEl = document.getElementById("list");
-const titleEl = document.getElementById("title");
+/* ================== SANATÇI LİSTESİ ================== */
+function showArtists(){
+  list.innerHTML = "";
+  title.innerText = "Pop Müzik – Sanatçılar";
+  activeArtist = null;
 
-function renderArtists(list){
-  listEl.innerHTML = "";
-  list.forEach(name=>{
+  for(let artist in data){
     const div = document.createElement("div");
     div.className = "item";
-    div.innerText = name;
-    div.onclick = ()=>showSongs(name);
-    listEl.appendChild(div);
-  });
-}
-
-function showSongs(artist){
-  view = "songs";
-  titleEl.innerText = artist + " – Şarkılar";
-  listEl.innerHTML = "";
-
-  popData[artist].forEach(song=>{
-    const div = document.createElement("div");
-    div.className = "item";
-    div.innerText = song;
-    listEl.appendChild(div);
-  });
-}
-
-function goBack(){
-  if(view === "songs"){
-    view = "artists";
-    titleEl.innerText = "Pop Müzik – Sanatçılar";
-    renderArtists(artists);
-  } else {
-    window.location.href = 'karaoke.html'; // Ana kategori sayfasına dön
+    div.innerText = artist;
+    div.onclick = ()=>showSongs(artist);
+    list.appendChild(div);
   }
 }
 
-renderArtists(artists);
+/* ================== ŞARKI LİSTESİ ================== */
+function showSongs(artist){
+  list.innerHTML = "";
+  title.innerText = artist;
+  activeArtist = artist;
+
+  data[artist].forEach(song=>{
+    const div = document.createElement("div");
+    div.className = "item";
+    div.innerText = song;
+    list.appendChild(div);
+  });
+}
+
+/* ================== GERİ ================== */
+function goBack(){
+  if(activeArtist){
+    showArtists();
+  }else{
+    history.back();
+  }
+}
+
+/* ================== BAŞLAT ================== */
+showArtists();
 </script>
 
 </body>
