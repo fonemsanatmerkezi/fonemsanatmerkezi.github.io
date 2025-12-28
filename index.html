@@ -8,10 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
 <style>
-/* ========== GENEL ========== */
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -23,7 +20,7 @@ body {
     url("github-arka-plan.jpeg") center / cover no-repeat fixed;
 }
 
-/* ========== AÇILIŞ ========== */
+/* AÇILIŞ */
 #splash {
   position: fixed;
   inset: 0;
@@ -43,64 +40,76 @@ body {
   margin-top: 24px;
 }
 
-/* ========== LOGO ========== */
+/* LOGO */
 .logo {
   width: 100%;
-  max-width: 520px;   /* GERÇEK BÜYÜKLÜK */
+  max-width: 520px;
   margin: 0 auto 32px;
 }
 
-/* ========== ANA ALAN ========== */
+/* ANA */
 .container {
   max-width: 460px;
   margin: 0 auto;
   padding: 120px 20px 40px;
 }
 
-/* ========== BUTONLAR (GÖRSEL ETKİLİ) ========== */
+/* BUTON */
 .btn {
   width: 100%;
   padding: 18px;
   margin: 14px 0;
   font-size: 17px;
   font-weight: 600;
-  letter-spacing: 0.3px;
   border-radius: 14px;
   border: none;
   cursor: pointer;
   color: #222;
   background: linear-gradient(135deg, #f7f7f2, #e6e6df);
-  box-shadow:
-    0 8px 20px rgba(0,0,0,0.35),
-    inset 0 1px 0 rgba(255,255,255,0.6);
-  transition: all 0.25s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 12px 26px rgba(0,0,0,0.45),
-    inset 0 1px 0 rgba(255,255,255,0.8);
+/* SANATÇI ARAMA */
+#artistSection {
+  display: none;
+  margin-top: 30px;
 }
 
-.btn:active {
-  transform: translateY(0);
-  box-shadow:
-    0 6px 14px rgba(0,0,0,0.4);
+.search-input {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 16px;
 }
 
-/* ========== ALT ========== */
+.artist-list {
+  text-align: left;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 10px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.artist-item {
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.artist-item:last-child {
+  border-bottom: none;
+}
+
 .footer {
   margin-top: 40px;
   font-size: 13px;
   opacity: 0.7;
 }
 
-/* ========== MOBİL AYAR ========== */
 @media (max-width: 480px) {
-  .logo {
-    max-width: 360px;
-  }
+  .logo { max-width: 360px; }
 }
 </style>
 </head>
@@ -109,28 +118,79 @@ body {
 
 <!-- AÇILIŞ -->
 <div id="splash">
-  <img src="fonem-logo.png" alt="Fonem Logo" class="logo">
+  <img src="fonem-logo.png" class="logo">
   <h1>Hoş Geldiniz</h1>
 </div>
 
-<!-- ANA SAYFA -->
+<!-- ANA -->
 <div class="container">
-  <img src="fonem-logo.png" alt="Fonem Logo" class="logo">
+  <img src="fonem-logo.png" class="logo">
 
-  <button class="btn">🎤 Karaoke Sanatçı Hatırlatıcı</button>
-  <button class="btn">🎶 Karaoke Şarkı Hatırlatıcı</button>
-  <button class="btn">💸 Fiyatlarımız</button>
-  <button class="btn">📅 Rezervasyon Yap</button>
-  <button class="btn">📝 Dilek – İstek – Öneri</button>
-  <button class="btn">📲 Bizi Takip Edin</button>
+  <button class="btn" onclick="toggleArtists()">🎤 Karaoke Sanatçı Hatırlatıcı</button>
+
+  <!-- SANATÇI ARAMA -->
+  <div id="artistSection">
+    <input
+      type="text"
+      class="search-input"
+      placeholder="Sanatçı ara..."
+      onkeyup="filterArtists(this.value)"
+    >
+
+    <div class="artist-list" id="artistList"></div>
+  </div>
 
   <div class="footer">© Fonem Sanat Merkezi</div>
 </div>
 
 <script>
+/* AÇILIŞ */
 setTimeout(() => {
   document.getElementById("splash").style.display = "none";
 }, 3000);
+
+/* SANATÇI LİSTESİ (ÖRNEK) */
+const artists = [
+  "Ajda Pekkan",
+  "Athena",
+  "Barış Manço",
+  "Cem Adrian",
+  "Duman",
+  "Edis",
+  "Ezhel",
+  "MFÖ",
+  "Müslüm Gürses",
+  "Sezen Aksu",
+  "Teoman",
+  "Tarkan",
+  "Zeki Müren"
+].sort();
+
+/* LİSTEYİ BAS */
+const listEl = document.getElementById("artistList");
+function renderList(list) {
+  listEl.innerHTML = "";
+  list.forEach(a => {
+    const div = document.createElement("div");
+    div.className = "artist-item";
+    div.textContent = a;
+    listEl.appendChild(div);
+  });
+}
+renderList(artists);
+
+/* ARAMA */
+function filterArtists(value) {
+  const v = value.toLowerCase();
+  const filtered = artists.filter(a => a.toLowerCase().includes(v));
+  renderList(filtered);
+}
+
+/* AÇ / KAPA */
+function toggleArtists() {
+  const sec = document.getElementById("artistSection");
+  sec.style.display = sec.style.display === "none" ? "block" : "none";
+}
 </script>
 
 </body>
