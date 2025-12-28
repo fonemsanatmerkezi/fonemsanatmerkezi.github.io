@@ -68,37 +68,99 @@ h2{
 </div>
 
 <script>
-// ================== KATEGORİLER ==================
+// ================== VERİ ==================
+// Örnek Pop sanatçı listesi (tüm sanatçılar burada olacak)
+const popData = {
+  "Ajda Pekkan":["Yaz Yaz Yaz","Sana Neler Edeceğim","Hoşgör Sen","Bambaşka Biri","Yakar Geçerim"],
+  "Ajdar":["Çikita Muz","Şahdamar"],
+  "Akrep Nalan":["Dağ Çiçeği","Hani"],
+  "Aleyna Tilki":["Cevapsız Çınlama","Sen Olsan Bari","Yalan"]
+  // Buraya tüm Pop sanatçıları eklenecek
+};
+
+// Kategori listesi
 const categories = [
-  {name:"Pop Müzik", url:"karaoke-pop.html"},
-  {name:"THM/Özgün", url:"karaoke-thm.html"},
-  {name:"TSM", url:"karaoke-tsm.html"},
-  {name:"Arabesk", url:"karaoke-arabesk.html"},
-  {name:"Türkçe Rock", url:"karaoke-rock.html"},
-  {name:"Rap", url:"karaoke-rap.html"},
-  {name:"Türk Müzik Grupları", url:"karaoke-grup.html"},
-  {name:"Yabancı", url:"karaoke-foreign.html"}
+  {name:"Pop Müzik"},
+  {name:"THM/Özgün"},
+  {name:"TSM"},
+  {name:"Arabesk"},
+  {name:"Türkçe Rock"},
+  {name:"Rap"},
+  {name:"Türk Müzik Grupları"},
+  {name:"Yabancı"}
 ];
 
 // ================== UYGULAMA ==================
+let view = "categories"; // categories, artists, songs
+let currentCategory = "";
+let currentArtist = "";
+
 const listEl = document.getElementById("list");
+const titleEl = document.getElementById("title");
 
 function renderCategories(){
+  view = "categories";
+  titleEl.innerText = "Karaoke Kategorileri";
   listEl.innerHTML = "";
   categories.forEach(cat=>{
     const div = document.createElement("div");
     div.className = "item";
     div.innerText = cat.name;
-    div.onclick = ()=>window.location.href = cat.url;
+    div.onclick = ()=>showArtists(cat.name);
     listEl.appendChild(div);
   });
 }
 
-// Ana sayfaya yönlendiren geri butonu
-function goBack(){
-  window.location.href = 'index.html';
+function showArtists(category){
+  view = "artists";
+  currentCategory = category;
+  titleEl.innerText = category;
+  listEl.innerHTML = "";
+
+  let artists = [];
+  if(category === "Pop Müzik"){
+    artists = Object.keys(popData).sort((a,b)=>a.localeCompare(b,"tr"));
+  }
+  // Diğer kategoriler için artists dizisi buraya eklenecek
+
+  artists.forEach(artist=>{
+    const div = document.createElement("div");
+    div.className = "item";
+    div.innerText = artist;
+    div.onclick = ()=>showSongs(artist, category);
+    listEl.appendChild(div);
+  });
 }
 
+function showSongs(artist, category){
+  view = "songs";
+  currentArtist = artist;
+  titleEl.innerText = artist + " – Şarkılar";
+  listEl.innerHTML = "";
+
+  let dataSet = {};
+  if(category === "Pop Müzik") dataSet = popData;
+  // Diğer kategoriler için dataSet buraya eklenecek
+
+  dataSet[artist].forEach(song=>{
+    const div = document.createElement("div");
+    div.className = "item";
+    div.innerText = song;
+    listEl.appendChild(div);
+  });
+}
+
+function goBack(){
+  if(view === "songs"){
+    showArtists(currentCategory);
+  } else if(view === "artists"){
+    renderCategories();
+  } else {
+    window.location.href = 'index.html';
+  }
+}
+
+// Başlangıçta kategorileri göster
 renderCategories();
 </script>
 
