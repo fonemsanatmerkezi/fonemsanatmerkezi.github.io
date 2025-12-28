@@ -3,209 +3,230 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Karaoke Hatırlatıcı – Türk Pop</title>
+<title>Karaoke Sanatçı Hatırlatıcı – Türk Pop</title>
 
 <style>
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #f2f2f2;
-  background:
-    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url("github-arka-plan.jpeg") center / cover no-repeat fixed;
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+  url("github-arka-plan.jpeg") center/cover fixed;
+  color:#fff;
 }
 
-/* GERI BUTONU */
-.back-btn {
-  position: fixed;
-  top: 14px;
-  left: 14px;
-  z-index: 1000;
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.4);
-  color: #fff;
-  font-size: 16px;
-  padding: 10px 14px;
-  border-radius: 12px;
-  cursor: pointer;
+.container{
+  max-width:520px;
+  margin:auto;
+  padding:20px;
 }
 
-.back-btn:hover {
-  background: rgba(255,255,255,0.25);
+.back-btn{
+  width:100%;
+  padding:14px;
+  font-size:16px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.4);
+  background:rgba(255,255,255,.25);
+  color:#fff;
+  cursor:pointer;
+  margin-bottom:14px;
 }
 
-.container {
-  max-width: 520px;
-  margin: auto;
-  padding: 70px 16px 16px;
-  text-align: center;
+h2{
+  text-align:center;
+  margin:10px 0 15px;
 }
 
-h2 {
-  margin: 10px 0;
+.search{
+  width:100%;
+  padding:14px;
+  border-radius:10px;
+  border:none;
+  font-size:16px;
+  margin-bottom:12px;
 }
 
-.search {
-  width: 100%;
-  padding: 14px;
-  margin: 14px 0;
-  font-size: 16px;
-  border-radius: 10px;
-  border: none;
+.list{
+  background:rgba(255,255,255,.08);
+  border-radius:12px;
+  max-height:65vh;
+  overflow:auto;
 }
 
-.list {
-  background: rgba(255,255,255,0.08);
-  border-radius: 12px;
-  overflow-y: auto;
-  max-height: 65vh;
+.item{
+  padding:14px;
+  border-bottom:1px solid rgba(255,255,255,.15);
+  cursor:pointer;
 }
 
-.item {
-  padding: 14px;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
-  cursor: pointer;
-  text-align: left;
-}
-
-.item:hover {
-  background: rgba(255,255,255,0.12);
-}
-
-.item:last-child {
-  border-bottom: none;
+.item:hover{
+  background:rgba(255,255,255,.15);
 }
 </style>
 </head>
 
 <body>
+<div class="container">
 
 <button class="back-btn" onclick="goBack()">← Geri</button>
 
-<div class="container">
-  <h2 id="title">Türk Pop – Sanatçılar (A)</h2>
+<h2 id="title">Türk Pop – Sanatçılar</h2>
 
-  <input
-    type="text"
-    id="searchBox"
-    class="search"
-    placeholder="Harf veya isim yaz..."
-    onkeyup="filterArtists(this.value)"
-  >
+<input
+  id="search"
+  class="search"
+  placeholder="Harf veya sanatçı yaz..."
+  onkeyup="filterArtists(this.value)"
+>
 
-  <div class="list" id="list"></div>
+<div id="list" class="list"></div>
+
 </div>
 
 <script>
-/* === A HARFİ VERİSİ (DEVAM EDECEK) === */
+// ================== VERİ ==================
 const data = {
-  "Ajda Pekkan": [
-    "Yaz Yaz Yaz",
-    "Sana Neler Edeceğim",
-    "Hoşgör Sen",
-    "Bambaşka Biri",
-    "Yakar Geçerim",
-    "Aynen Öyle",
-    "O Benim Dünyam",
-    "Uykusuz Her Gece",
-    "Haykıracak Nefesim Yok",
-    "Arada Sırada"
+  "Ajda Pekkan":[
+    "Yaz Yaz Yaz","Sana Neler Edeceğim","Hoşgör Sen",
+    "Bambaşka Biri","Yakar Geçerim"
   ],
-  "Ajdar": [
-    "Çikita Muz",
-    "Şahdamar",
-    "Ringa Ringa",
-    "Pizza",
-    "Çikita Muz (Remix)"
+  "Ajdar":[
+    "Çikita Muz","Şahdamar"
   ],
-  "Ajlan Büyükburç": [
-    "Yaz Yaz Yaz",
-    "Ayrılık Zor",
-    "Olmaz Böyle Şey"
+  "Akrep Nalan":[
+    "Dağ Çiçeği","Hani"
   ],
-  "Akın": [
-    "Kaybolan Yıllar",
-    "Anladım Ki",
-    "Sen Gidince"
+  "Aleyna Tilki":[
+    "Cevapsız Çınlama","Sen Olsan Bari","Yalan"
   ],
-  "Akrep Nalan": [
-    "Dağ Çiçeği",
-    "Hani",
-    "Bir Şarkısın Sen"
+  "Alişan":[
+    "Var Ya","Hele Bi"
   ],
-  "Aleyna Tilki": [
-    "Cevapsız Çınlama",
-    "Sen Olsan Bari",
-    "Yalan",
-    "Nasılsın Aşkta"
+  "Aslı Güngör":[
+    "Kalp Kalbe Karşı","Ayrılık"
   ],
-  "Ali Güven": [
-    "Yolcu",
-    "Dön Desem",
-    "Unutamam"
+  "Aşkın Nur Yengi":[
+    "Yabani","Hesap Ver"
   ],
-  "Ali Kocatepe": [
-    "Sevdan Olmasaydı",
-    "Geriye Dönsen",
-    "Bir Gün Beni Ararsan"
+  "Atiye":[
+    "Muamma","Budur","Salla"
   ],
-  "Ali Rıza Binboğa": [
-    "Yarınlar Bizim",
-    "Savaştan Barışa"
+  "Ayşegül Aldinç":[
+    "Söze Ne Hacet","O Kız"
   ],
-  "Alişan": [
-    "Var Ya",
-    "Hele Bi",
-    "Sana Bir Şey Olmasın"
+  "Ayten Alpman":[
+    "Memleketim","Ben Böyleyim"
+  ],
+  "Bengü":[
+    "Sanki","Saygımdan","Korkma Kalbim"
+  ],
+  "Berkay":[
+    "Ele İnat","İki Hece"
+  ],
+  "Bilal Sonses":[
+    "İki Kelime","Hasbelkader"
+  ],
+  "Burak Kut":[
+    "Benimle Oynama","Yaşandı Bitti"
+  ],
+  "Buray":[
+    "İstersen","Sen Sevda Mısın"
+  ],
+  "Candan Erçetin":[
+    "Elbette","Yalan","Annem"
+  ],
+  "Çelik":[
+    "Hercai","Ateşteyim"
+  ],
+  "Demet Akalın":[
+    "Afedersin","Kulüp","Ateş"
+  ],
+  "Deniz Seki":[
+    "Masal","Hayat İki Bilet"
+  ],
+  "Derya Uluğ":[
+    "Okyanus","Canavar"
+  ],
+  "Ece Seçkin":[
+    "Adeyyo","Dibine Dibine","Olsun"
+  ],
+  "Edis":[
+    "Benim Ol","Martılar","Yalan"
+  ],
+  "Emel Müftüoğlu":[
+    "Hovarda","Tutamıyorum Zamanı"
+  ],
+  "Emre Aydın":[
+    "Afili Yalnızlık","Belki Bir Gün Özlersin"
+  ],
+  "Ferhat Göçer":[
+    "Cennet","Üzüm"
+  ],
+  "Fettah Can":[
+    "Delirme","Mandıra Filozofu"
+  ],
+  "Göksel":[
+    "Depresyondayım","Bi Seni Konuşurum"
+  ],
+  "Gülşen":[
+    "Bangır Bangır","Of Of"
+  ],
+  "Hadise":[
+    "Düm Tek Tek","Prenses"
+  ],
+  "Hande Yener":[
+    "Kırmızı","Romeo","Mor","Bodrum"
   ]
 };
 
-const artists = Object.keys(data).sort((a,b)=>a.localeCompare(b,'tr'));
+// ================== UYGULAMA ==================
 let view = "artists";
+let artists = Object.keys(data).sort((a,b)=>a.localeCompare(b,"tr"));
 
-function renderArtists(list) {
-  const el = document.getElementById("list");
-  el.innerHTML = "";
-  list.forEach(name => {
+const listEl = document.getElementById("list");
+const titleEl = document.getElementById("title");
+const searchEl = document.getElementById("search");
+
+function renderArtists(list){
+  listEl.innerHTML = "";
+  list.forEach(name=>{
     const div = document.createElement("div");
     div.className = "item";
-    div.textContent = name;
-    div.onclick = () => showSongs(name);
-    el.appendChild(div);
+    div.innerText = name;
+    div.onclick = ()=>showSongs(name);
+    listEl.appendChild(div);
   });
 }
 
-function filterArtists(val) {
-  const v = val.toLowerCase();
-  renderArtists(artists.filter(a => a.toLowerCase().startsWith(v)));
+function filterArtists(val){
+  val = val.toLowerCase();
+  renderArtists(
+    artists.filter(a=>a.toLowerCase().startsWith(val))
+  );
 }
 
-function showSongs(artist) {
+function showSongs(artist){
   view = "songs";
-  document.getElementById("title").textContent = artist + " – Şarkılar";
-  document.getElementById("searchBox").style.display = "none";
+  titleEl.innerText = artist + " – Şarkılar";
+  searchEl.style.display = "none";
+  listEl.innerHTML = "";
 
-  const el = document.getElementById("list");
-  el.innerHTML = "";
-
-  data[artist].forEach(song => {
+  data[artist].forEach(song=>{
     const div = document.createElement("div");
     div.className = "item";
-    div.textContent = song;
-    el.appendChild(div);
+    div.innerText = song;
+    listEl.appendChild(div);
   });
 }
 
-function goBack() {
-  if (view === "songs") {
+function goBack(){
+  if(view === "songs"){
     view = "artists";
-    document.getElementById("title").textContent = "Türk Pop – Sanatçılar (A)";
-    document.getElementById("searchBox").style.display = "block";
-    document.getElementById("searchBox").value = "";
+    titleEl.innerText = "Türk Pop – Sanatçılar";
+    searchEl.style.display = "block";
+    searchEl.value = "";
     renderArtists(artists);
-  } else {
+  }else{
     history.back();
   }
 }
