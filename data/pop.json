@@ -1,11 +1,16 @@
 {
-  "category": "Pop",
-  "mode": "song",
   "songs": [
     {
       "artist": "Tarkan",
-      "title": "Dudu",
-      "lyricsFile": "tarkan_dudu"
+      "title": "Şımarık"
+    },
+    {
+      "artist": "Sezen Aksu",
+      "title": "Gülümse"
+    },
+    {
+      "artist": "Kenan Doğulu",
+      "title": "Çakkıdı"
     }
   ]
 }
