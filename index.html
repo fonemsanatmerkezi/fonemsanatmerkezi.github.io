@@ -3,26 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fonem Karaoke Hatırlatıcı</title>
+<title>Fonem Sanat Merkezi</title>
 
 <style>
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  color: #f5f5f5;
+  color: #f2f2f2;
   text-align: center;
   background:
-    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
     url("github-arka-plan.jpeg") center / cover no-repeat fixed;
 }
 
 /* LOGO */
 .logo {
-  max-width: 520px;
   width: 100%;
+  max-width: 520px;
   margin: 40px auto 30px;
+  display: block;
 }
 
 /* KONTEYNER */
@@ -32,7 +35,7 @@ body {
   padding: 20px;
 }
 
-/* BUTON */
+/* BUTONLAR */
 .btn {
   width: 100%;
   padding: 18px;
@@ -45,31 +48,15 @@ body {
   color: #222;
   background: linear-gradient(135deg, #f7f7f2, #e6e6df);
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-/* BÖLÜMLER */
-.section {
-  display: none;
-  margin-top: 30px;
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.5);
 }
 
-/* LİSTE */
-.list {
-  text-align: left;
-  background: rgba(255,255,255,0.1);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.item {
-  padding: 14px;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
-}
-
-.item:last-child {
-  border-bottom: none;
-}
-
+/* ALT YAZI */
 .footer {
   margin: 30px 0 10px;
   font-size: 13px;
@@ -80,62 +67,41 @@ body {
 
 <body>
 
-<img src="fonem-logo.png" class="logo">
+<!-- LOGO -->
+<img src="fonem-logo.png" alt="Fonem Sanat Merkezi" class="logo">
 
 <div class="container">
 
-  <!-- ANA BUTON -->
-  <button class="btn" onclick="openStyles()">🎤 Karaoke Hatırlatıcı</button>
+  <!-- BUTONLAR -->
+  <button class="btn" onclick="location.href='karaoke.html'">
+    🎤 Karaoke Hatırlatıcı
+  </button>
 
-  <!-- TARZLAR -->
-  <div id="styles" class="section">
-    <h3>Tarz Seç</h3>
-    <button class="btn" onclick="openTurkPop()">Türk Pop</button>
+  <button class="btn" onclick="location.href='fotograflar.html'">
+    📸 Fotoğraflar
+  </button>
+
+  <button class="btn">
+    💸 Fiyatlarımız
+  </button>
+
+  <button class="btn">
+    📅 Rezervasyon Yap
+  </button>
+
+  <button class="btn">
+    📝 Dilek – İstek – Öneri
+  </button>
+
+  <button class="btn">
+    📲 Bizi Takip Edin
+  </button>
+
+  <div class="footer">
+    © Fonem Sanat Merkezi
   </div>
 
-  <!-- TÜRK POP SANATÇILARI -->
-  <div id="turkPop" class="section">
-    <h3>Türk Pop Sanatçıları</h3>
-    <div class="list" id="artistList"></div>
-  </div>
-
-  <div class="footer">© Fonem Sanat Merkezi</div>
 </div>
-
-<script>
-/* TÜRK POP SANATÇILARI */
-const turkPopArtists = [
-  "Tarkan",
-  "Sezen Aksu",
-  "Ajda Pekkan",
-  "Kenan Doğulu",
-  "Sertab Erener",
-  "Nilüfer",
-  "Levent Yüksel",
-  "Gülşen",
-  "Mustafa Sandal",
-  "Hadise"
-];
-
-/* TARZLARI AÇ */
-function openStyles() {
-  document.getElementById("styles").style.display = "block";
-  document.getElementById("turkPop").style.display = "none";
-}
-
-/* TÜRK POP AÇ */
-function openTurkPop() {
-  const list = document.getElementById("artistList");
-  list.innerHTML = "";
-  turkPopArtists.forEach(name => {
-    const div = document.createElement("div");
-    div.className = "item";
-    div.textContent = name;
-    list.appendChild(div);
-  });
-  document.getElementById("turkPop").style.display = "block";
-}
-</script>
 
 </body>
 </html>
