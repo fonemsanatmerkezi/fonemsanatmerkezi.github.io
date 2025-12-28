@@ -1,28 +1,24 @@
+// JS gerçekten yükleniyor mu test
+alert("JS yüklendi");
+
 function loadPop() {
   fetch("veri/pop.json")
-    .then(res => res.json())
-    .then(data => {
-      const liste = document.getElementById("liste");
-      let html = "<ul>";
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var listeDiv = document.getElementById("liste");
+      var html = "<ul>";
 
-      data.songs.forEach(song => {
-        html += `<li onclick="showLyrics('${song.artist}','${song.title}','${song.lyrics}')">
-          ${song.artist} – ${song.title}
-        </li>`;
+      data.songs.forEach(function (song) {
+        html += "<li>" + song.artist + " - " + song.title + "</li>";
       });
 
       html += "</ul>";
-      liste.innerHTML = html;
+      listeDiv.innerHTML = html;
     })
-    .catch(err => {
+    .catch(function (error) {
       alert("JSON okunamadı");
-      console.error(err);
+      console.log(error);
     });
-}
-
-function showLyrics(artist, title, lyrics) {
-  document.getElementById("sozler").innerHTML = `
-    <h3>${artist} – ${title}</h3>
-    <pre>${lyrics}</pre>
-  `;
 }
