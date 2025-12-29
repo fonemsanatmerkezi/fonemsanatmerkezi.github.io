@@ -8,8 +8,9 @@ function loadCategory(kategori) {
       sanatcilariGoster(tumSanatcilar, data.kategori);
     })
     .catch(err => {
-      document.getElementById("liste").innerHTML = "Kategori yüklenemedi.";
       console.error(err);
+      document.getElementById("liste").innerHTML =
+        "<p>Bu kategori yüklenemedi.</p>";
     });
 }
 
