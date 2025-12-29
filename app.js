@@ -1,75 +1,85 @@
-let aktifKategoriData = {};
+const icerik = document.getElementById("icerik");
+let aktifData = {};
 let aktifSanatci = "";
-let aktifGorunum = "sanatci"; // sanatci | sarki
 
-function el(id) {
-  return document.getElementById(id);
+// ================= KATEGORİLER =================
+kategorileriGoster();
+
+function kategorileriGoster(){
+  icerik.innerHTML = `
+    <button class="btn" onclick="kategoriAc('pop')">Pop</button>
+    <button class="btn" onclick="kategoriAc('arabesk')">Arabesk</button>
+    <button class="btn" onclick="kategoriAc('rock')">Rock</button>
+    <button class="btn" onclick="kategoriAc('grup')">Grup</button>
+    <button class="btn" onclick="kategoriAc('sanat')">Sanat Müziği</button>
+    <button class="btn" onclick="kategoriAc('halk_ozgun')">Halk / Özgün</button>
+    <button class="btn" onclick="kategoriAc('yabanci')">Yabancı</button>
+  `;
 }
 
-// ================= KATEGORİ YÜKLE =================
-function kategoriYukle(kategori) {
+// ================= KATEGORİ AÇ =================
+function kategoriAc(kategori){
   fetch(`data/${kategori}.json`)
-    .then(res => res.json())
-    .then(data => {
-      aktifKategoriData = data;
+    .then(r=>r.json())
+    .then(data=>{
+      aktifData = data;
       sanatcilariGoster();
-      el("geriBtn").style.display = "none";
-      el("sozAlani").style.display = "none";
-    })
-    .catch(() => {
-      el("liste").innerHTML = "<li>Veri yüklenemedi</li>";
     });
 }
 
 // ================= SANATÇILAR =================
-function sanatcilariGoster() {
-  aktifGorunum = "sanatci";
-  const liste = el("liste");
-  liste.innerHTML = "";
-  el("sozAlani").style.display = "none";
+function sanatcilariGoster(){
+  icerik.innerHTML = `
+    <button class="btn" onclick="kategorileriGoster()">← Kategoriler</button>
+    <input placeholder="Sanatçı ara..." oninput="sanatciAra(this.value)">
+    <div class="list" id="liste"></div>
+  `;
 
-  Object.keys(aktifKategoriData)
-    .sort((a, b) => a.localeCompare(b, "tr"))
-    .forEach(sanatci => {
-      const li = document.createElement("li");
-      li.textContent = sanatci;
-      li.onclick = () => sarkilariGoster(sanatci);
-      liste.appendChild(li);
+  listeyiDoldur(Object.keys(aktifData));
+}
+
+function sanatciAra(q){
+  const sonuc = Object.keys(aktifData)
+    .filter(s => s.toLowerCase().includes(q.toLowerCase()));
+  listeyiDoldur(sonuc);
+}
+
+function listeyiDoldur(sanatcilar){
+  const liste = document.getElementById("liste");
+  liste.innerHTML = "";
+
+  sanatcilar
+    .sort((a,b)=>a.localeCompare(b,"tr"))
+    .forEach(s=>{
+      const div = document.createElement("div");
+      div.className="item";
+      div.innerText=s;
+      div.onclick=()=>sarkilariGoster(s);
+      liste.appendChild(div);
     });
 }
 
 // ================= ŞARKILAR =================
-function sarkilariGoster(sanatci) {
-  aktifGorunum = "sarki";
+function sarkilariGoster(sanatci){
   aktifSanatci = sanatci;
-  const liste = el("liste");
-  liste.innerHTML = "";
 
-  aktifKategoriData[sanatci].forEach(sarki => {
-    const li = document.createElement("li");
-    li.textContent = sarki;
-    li.onclick = () => sarkiSozuGoster(sarki);
-    liste.appendChild(li);
-  });
-
-  el("geriBtn").style.display = "inline-block";
+  icerik.innerHTML = `
+    <button class="btn" onclick="sanatcilariGoster()">← Sanatçılar</button>
+    <div class="list">
+      ${aktifData[sanatci].map(s=>`
+        <div class="item" onclick="sozGoster('${s}')">${s}</div>
+      `).join("")}
+    </div>
+    <div id="soz"></div>
+  `;
 }
 
 // ================= ŞARKI SÖZÜ =================
-function sarkiSozuGoster(sarki) {
-  const soz = el("sozAlani");
+function sozGoster(sarki){
+  const soz = document.getElementById("soz");
   soz.innerHTML = `
     <h3>${aktifSanatci} – ${sarki}</h3>
     <pre>Şarkı sözleri eklenecek.</pre>
   `;
-  soz.style.display = "block";
-  soz.scrollIntoView({ behavior: "smooth" });
-}
-
-// ================= GERİ =================
-function geri() {
-  if (aktifGorunum === "sarki") {
-    sanatcilariGoster();
-    el("geriBtn").style.display = "none";
-  }
+  soz.scrollIntoView({behavior:"smooth"});
 }
