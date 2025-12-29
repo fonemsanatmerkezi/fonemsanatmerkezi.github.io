@@ -1,1 +1,1670 @@
+{
+  "kategori": "Pop",
+  "sanatcilar": [
+    {
+      "id": "ajda_pekkan",
+      "ad": "Ajda Pekkan",
+      "sarkilar": [
+        "Yaz Yaz Yaz",
+        "Hoşgör Sen",
+        "Sana Neler Edeceğim",
+        "Bambaşka Biri",
+        "Uykusuz Her Gece",
+        "Oyalama Beni",
+        "Petrol",
+        "Arada Sırada",
+        "Kimler Geldi Kimler Geçti",
+        "Süperstar"
+      ]
+    },
+    {
+      "id": "ajdar",
+      "ad": "Ajdar",
+      "sarkilar": [
+        "Çikita Muz",
+        "Nane Nane",
+        "Çikita Muz 2",
+        "Sana Neler Ettim",
+        "Kundum",
+        "Plajda",
+        "Kibarım",
+        "Sanane",
+        "Aynen",
+        "Yıkılıyo"
+      ]
+    },
+    {
+      "id": "ajlan_buyukburc",
+      "ad": "Ajlan Büyükburç",
+      "sarkilar": [
+        "Yaz Yaz Yaz",
+        "Sensiz Olmam",
+        "Aşka İnat",
+        "Sahte Aşklar",
+        "Ayrılık",
+        "Yalan",
+        "Ağla Gözlerim",
+        "Unutamam",
+        "Gitti",
+        "Yokluğun"
+      ]
+    },
+    {
+      "id": "akrep_nalan",
+      "ad": "Akrep Nalan",
+      "sarkilar": [
+        "Halikarnas",
+        "Karlar Düşer",
+        "Dağlar",
+        "Ağla Sevdam",
+        "Geceler",
+        "Bir Kadın",
+        "Yasak Aşk",
+        "Seni Sevmek",
+        "Ayrılık",
+        "Yalnızım"
+      ]
+    },
+    {
+      "id": "aleyna_tilki",
+      "ad": "Aleyna Tilki",
+      "sarkilar": [
+        "Cevapsız Çınlama",
+        "Sen Olsan Bari",
+        "Nasılsın Aşkta",
+        "Yalan",
+        "O Sen Olsan Bari",
+        "Tanırım İntiharı",
+        "Dipsiz Kuyum",
+        "Retrograde",
+        "Bu Benim Masalım",
+        "Başıma Belasın"
+      ]
+    },
+    {
+      "id": "alisan",
+      "ad": "Alişan",
+      "sarkilar": [
+        "Var Ya",
+        "Zeytin Gözlüm",
+        "Melekler Seni Bana Yazmış",
+        "Ayrılık",
+        "Gönlümün Efendisi",
+        "Bir Daha Mı",
+        "Sana Bir Şey Olmasın",
+        "Hele Bi",
+        "Kalbim Seninle",
+        "Gitme"
+      ]
+    },
+    {
+      "id": "alpay",
+      "ad": "Alpay",
+      "sarkilar": [
+        "Eylül’de Gel",
+        "Fabrika Kızı",
+        "Dağlar Dağlar",
+        "Nihayet",
+        "Hatıram Olsun",
+        "Bir Mavi Yolculuk",
+        "Gurbet",
+        "Aşk Böyledir",
+        "Sensiz Yaşayamam",
+        "Yalnızım"
+      ]
+    },
+    {
+      "id": "askin_nur_yengi",
+      "ad": "Aşkın Nur Yengi",
+      "sarkilar": [
+        "Yazık",
+        "Hesap Ver",
+        "Serserim Benim",
+        "Ay İnanmıyorum",
+        "Kara Çiçek",
+        "Gözlerin Hani",
+        "Helal Ettim",
+        "Sevgiliye",
+        "Yabani",
+        "Ayrılmam"
+      ]
+    },
+    {
+      "id": "ayca",
+      "ad": "Ayça",
+      "sarkilar": [
+        "Yenildim",
+        "Aşk Oyunu",
+        "Gurur",
+        "Sensiz Olmaz",
+        "Beni Unutma",
+        "Bir Gün",
+        "Sakın Dönme",
+        "Ağla",
+        "Kalbim",
+        "Son Kez"
+      ]
+    },
+    {
+      "id": "ayse_hatun_onal",
+      "ad": "Ayşe Hatun Önal",
+      "sarkilar": [
+        "Çak Bir Selam",
+        "Kalbe Ben",
+        "Güm Güm",
+        "Selam Dengesiz",
+        "Katakulli",
+        "Sirens",
+        "Yalnızlık",
+        "Bir Daha",
+        "Kör Kütük",
+        "Olay"
+      ]
+    },
+    {
+      "id": "ayten_alpman",
+      "ad": "Ayten Alpman",
+      "sarkilar": [
+        "Memleketim",
+        "Ben Varım",
+        "Bir Başkadır",
+        "Sensiz Olmam",
+        "Hoşgeldin",
+        "Bir Gün",
+        "Hatıralar",
+        "Ayrılık",
+        "Yalnızım",
+        "Geceler"
+      ]
+    },
+    {
+      "id": "banu_alkan",
+      "ad": "Banu Alkan",
+      "sarkilar": [
+        "Benimle Oynama",
+        "Aşkın Kadını",
+        "Yalnızım",
+        "Bir Hayal",
+        "Gözlerin",
+        "Seviyorum",
+        "Ayrılık",
+        "Gurur",
+        "Beni Anla",
+        "Gitme"
+      ]
+    },
+    {
+      "id": "bengü",
+      "ad": "Bengü",
+      "sarkilar": [
+        "Çile Bülbülüm",
+        "Korkma Kalbim",
+        "Unut Beni",
+        "İki Melek",
+        "Sanki",
+        "Saygımdan",
+        "Selam",
+        "Hoş Geldin",
+        "Ağla Kalbim",
+        "Yaralı"
+      ]
+    },
+    {
+      "id": "burak_kut",
+      "ad": "Burak Kut",
+      "sarkilar": [
+        "Benimle Oynama",
+        "Komple",
+        "Yaşandı Bitti",
+        "Nereden Geldim",
+        "Bu Akşam",
+        "Mavi Mavi",
+        "Bebeğim",
+        "Ayrılık",
+        "Geri Dön",
+        "Yeter"
+      ]
+    },
+    {
+      "id": "burcu_gunes",
+      "ad": "Burcu Güneş",
+      "sarkilar": [
+        "Çile Bülbülüm",
+        "Ay Şahit",
+        "Sahilden",
+        "Yaralı",
+        "Üzgünüm",
+        "Bir An Gelir",
+        "Sen ve Ben",
+        "Geri Dön",
+        "Vazgeçtim",
+        "Hasret"
+      ]
+    },
+    {
+      "id": "candan_ercetin",
+      "ad": "Candan Erçetin",
+      "sarkilar": [
+        "Elbette",
+        "Yalan",
+        "Gamsız Hayat",
+        "Söz Vermiştin",
+        "Melek",
+        "Git",
+        "Sensizim",
+        "Umrumda Değil",
+        "Aşk",
+        "Göç"
+      ]
+    },
+    {
+      "id": "celik",
+      "ad": "Çelik",
+      "sarkilar": [
+        "Hercai",
+        "Ateşteyim",
+        "Dilberim",
+        "Yaman Sevda",
+        "Ayrılık",
+        "Gurbet",
+        "Sevdanın Rengi",
+        "Benimle Kal",
+        "Gitme",
+        "Hasret"
+      ]
+    },
+  {
+    "id": "demet_akalın",
+    "ad": "Demet Akalın",
+    "sarkilar": [
+      "Afedersin",
+      "Ateş",
+      "Bebek",
+      "Banane",
+      "Çanta",
+      "Kulüp",
+      "Sabıka",
+      "Toz Pembe",
+      "Ders Olsun",
+      "Unuttum",
+      "Rota",
+      "Aferin Bana"
+    ]
+  },
+  {
+    "id": "demet_sagiroglu",
+    "ad": "Demet Sağıroğlu",
+    "sarkilar": [
+      "Arnavut Kaldırımı",
+      "Aşktan Haber Yok",
+      "Gitme",
+      "Yazık",
+      "Papatya",
+      "Ağla",
+      "Gurur",
+      "Sensizim",
+      "Unutamadım"
+    ]
+  },
+  {
+    "id": "deniz_seki",
+    "ad": "Deniz Seki",
+    "sarkilar": [
+      "İlk Günkü Gibi",
+      "Masal",
+      "Yalan",
+      "Adaletsiz Seçim",
+      "Aşk",
+      "Doyamadım",
+      "Suya Hapsettim",
+      "Hayat İki Bilet",
+      "İnsan Lekesi",
+      "Ayrılık"
+    ]
+  },
+  {
+    "id": "derya_ulug",
+    "ad": "Derya Uluğ",
+    "sarkilar": [
+      "Okyanus",
+      "Canavar",
+      "Kanunlar Gibi",
+      "Ah Zaman",
+      "Sürgün Aşkımız",
+      "Ne Münasebet",
+      "Yansıma",
+      "Nefes",
+      "Hadi Çal"
+    ]
+  },
+  {
+    "id": "dogus",
+    "ad": "Doğuş",
+    "sarkilar": [
+      "Gamsız",
+      "Uyan",
+      "Hatıram Olsun",
+      "Sensiz Ne Yaparım",
+      "Yalan",
+      "Ben Sensiz Ne Yaparım",
+      "Bir Aşk Hikayesi",
+      "Ayrılık",
+      "Git"
+    ]
+  },
+  {
+    "id": "edis",
+    "ad": "Edis",
+    "sarkilar": [
+      "Benim Ol",
+      "Ân",
+      "Martılar",
+      "Çok Çok",
+      "Yalan",
+      "Dudak",
+      "Arıyorum",
+      "Sor",
+      "Bana Mı",
+      "Nirvana"
+    ]
+  },
+  {
+    "id": "emel_muftuoglu",
+    "ad": "Emel Müftüoğlu",
+    "sarkilar": [
+      "Faka Bastın",
+      "Hovarda",
+      "Git",
+      "Aşka Engel",
+      "Bana Sor",
+      "Sensiz Olmam",
+      "Vurgunum",
+      "Ayrılık",
+      "Hasret"
+    ]
+  },
+  {
+    "id": "emre_altug",
+    "ad": "Emre Altuğ",
+    "sarkilar": [
+      "Sıcak",
+      "Kapış Kapış",
+      "Aşk-ı Kıyamet",
+      "Bu Kadar Mı",
+      "Gidecek Yerim Yok",
+      "Bir Gülüşü Var",
+      "Nefes",
+      "Ayrılamayız",
+      "Sensiz Olmam"
+    ]
+  },
+  {
+    "id": "emre_aydin",
+    "ad": "Emre Aydın",
+    "sarkilar": [
+      "Afili Yalnızlık",
+      "Belki Bir Gün Özlersin",
+      "Soğuk Odalar",
+      "Hoşçakal",
+      "Hareket Vakti",
+      "Son Defa",
+      "Bu Kez Anladım",
+      "Git",
+      "İstanbul"
+    ]
+  },
+  {
+    "id": "ercan_saatci",
+    "ad": "Ercan Saatçi",
+    "sarkilar": [
+      "Sayenizde",
+      "Bir Gün Olur",
+      "Zaman",
+      "Unutamadım",
+      "Ayrılık",
+      "Sensiz",
+      "Gurur",
+      "Hatıra"
+    ]
+  },
+  {
+    "id": "erol_egvin",
+    "ad": "Erol Evgin",
+    "sarkilar": [
+      "İşte Öyle Bir Şey",
+      "Sevdan Olmasa",
+      "Bir de Bana Sor",
+      "Sitem",
+      "Ben İmkansız Aşklar İçin Yaratılmışım",
+      "Deli Divane",
+      "Ayrılık",
+      "Sensiz Olmam"
+    ]
+  },
+  {
+    "id": "ersay_uner",
+    "ad": "Ersay Üner",
+    "sarkilar": [
+      "İki Aşık",
+      "Tatlım Tatlım",
+      "Yürüdüm",
+      "Ağlamak Yok",
+      "Nokta",
+      "Üzdün",
+      "Kızım",
+      "Sevgiye Muhtaç"
+    ]
+  },
+  {
+    "id": "fatih_erkoç",
+    "ad": "Fatih Erkoç",
+    "sarkilar": [
+      "Yol Ver",
+      "Ellerim Bomboş",
+      "Ona Buna Bakma",
+      "Ben Ölürsem",
+      "Zaman",
+      "Ayrılık",
+      "Sensiz",
+      "Hasret"
+    ]
+  },
+  {
+    "id": "ferhat_gocer",
+    "ad": "Ferhat Göçer",
+    "sarkilar": [
+      "Cennet",
+      "Yıllarım Gitti",
+      "Sorarlarsa",
+      "Biri Bana Gelsin",
+      "Üzüm",
+      "Kalp Kalbe Karşı",
+      "Ayrılsak Ölürüz Biz",
+      "Ayrılık",
+      "Git"
+    ]
+  },
+  {
+    "id": "fettah_can",
+    "ad": "Fettah Can",
+    "sarkilar": [
+      "Mandalin",
+      "Bana Affet Demem",
+      "Kalakaldım",
+      "Delirme",
+      "Kimse Aramasın",
+      "Yalan",
+      "Ayrılık",
+      "Sensiz Olmaz"
+    ]
+  },
+  {
+    "id": "funda_arar",
+    "ad": "Funda Arar",
+    "sarkilar": [
+      "Arapsaçı",
+      "Yak Gel",
+      "Senden Öğrendim",
+      "Al Sevgilim",
+      "Ömrümün Son Demi",
+      "Ayrılık",
+      "Yalnızlık",
+      "Hasret",
+      "Git"
+    ]
+  },
+{
+  "id": "gokhan_ozen",
+  "ad": "Gökhan Özen",
+  "sarkilar": [
+    "Civciv",
+    "Aramazsan Arama",
+    "Budala",
+    "Firardayım",
+    "Ezberbozan",
+    "Benden Sorulur",
+    "Aşk Lütfen Gel",
+    "Kördüğüm",
+    "Vah Vah",
+    "Yakarım"
+  ]
+},
+{
+  "id": "gokhan_tepe",
+  "ad": "Gökhan Tepe",
+  "sarkilar": [
+    "Tuttu Fırlattı",
+    "Yürü Yüreğim",
+    "Ayrılık Halleri",
+    "Gel Aşkım",
+    "Gönül Çelen",
+    "Adı Aşk Olsun",
+    "Veda Makamı",
+    "Halim",
+    "Bir Yanlış Kaç Doğru",
+    "Sevdanın Son Vuruşu"
+  ]
+},
+{
+  "id": "goksel",
+  "ad": "Göksel",
+  "sarkilar": [
+    "Depresyondayım",
+    "Uzaktan",
+    "Bi Seni Konuşurum",
+    "Denize Bıraksam",
+    "Bu Da Geçer",
+    "Karar Verdim",
+    "Acıyor",
+    "Dursun Zaman",
+    "Yalnız Kuş",
+    "Haklıydın"
+  ]
+},
+{
+  "id": "gulben_ergen",
+  "ad": "Gülben Ergen",
+  "sarkilar": [
+    "Uçacaksın",
+    "Abayı Yaktım",
+    "Sade ve Sadece",
+    "Lay Lay Lom",
+    "Şıkır Şıkır",
+    "Kandırmışlar",
+    "Aşk Hiç Bitmez",
+    "Bir Sevgi İstiyorum",
+    "Giden Günlerim Oldu",
+    "Yalnızlık"
+  ]
+},
+{
+  "id": "gulsen",
+  "ad": "Gülşen",
+  "sarkilar": [
+    "Bangır Bangır",
+    "Of Of",
+    "İltimas",
+    "Dan Dan",
+    "Yurtta Aşk Cihanda Aşk",
+    "Saz mı Caz mı",
+    "Be Adam",
+    "Bi' An Gel",
+    "Ya Tutarsa",
+    "Lolipop"
+  ]
+},
+{
+  "id": "hadise",
+  "ad": "Hadise",
+  "sarkilar": [
+    "Stir Me",
+    "Düm Tek Tek",
+    "Prenses",
+    "Aşk Kaç Beden Giyer",
+    "Sıfır Tolerans",
+    "Superman",
+    "Evlenmeliyiz",
+    "Hayat Oyunu",
+    "Farkımız Var",
+    "Küçük Bir Yol"
+  ]
+},
+{
+  "id": "hakan_peker",
+  "ad": "Hakan Peker",
+  "sarkilar": [
+    "Karam",
+    "Bir Efsane",
+    "Ateşini Yolla Bana",
+    "İlla Ki",
+    "Hey Corç",
+    "Aslında",
+    "Serseri",
+    "Gönlüm",
+    "Aşkın Kanunu",
+    "Yeter"
+  ]
+},
+{
+  "id": "halil_sezai",
+  "ad": "Halil Sezai",
+  "sarkilar": [
+    "İsyan",
+    "Sonbahar",
+    "Paramparça",
+    "Ayrılık",
+    "Yollarda Bulurum Seni",
+    "Yanıma Gel",
+    "Sen Olsan Bari",
+    "Beni Affet",
+    "Git",
+    "Güz"
+  ]
+},
+{
+  "id": "hande_yener",
+  "ad": "Hande Yener",
+  "sarkilar": [
+    "Kırmızı",
+    "Romeo",
+    "Mor",
+    "Sebastian",
+    "Acele Etme",
+    "Bodrum",
+    "Aşkın Ateşi",
+    "Sopa",
+    "Benden Sonra",
+    "Naber"
+  ]
+},
+{
+  "id": "harun_kolcak",
+  "ad": "Harun Kolçak",
+  "sarkilar": [
+    "Gir Kanıma",
+    "Yanımda Kal",
+    "Teslim Oldum",
+    "İstersen",
+    "Çeyrek Asır",
+    "Yıllar",
+    "Ağlat Beni",
+    "Gitme Seviyorum",
+    "Ayrılık",
+    "Hasret"
+  ]
+},
+{
+  "id": "irem_derici",
+  "ad": "İrem Derici",
+  "sarkilar": [
+    "Kalbimin Tek Sahibine",
+    "Zorun Ne Sevgilim",
+    "Evlenmene Bak",
+    "Dantel",
+    "Aşk Eşittir Biz",
+    "Bazı Aşklar Yarım Kalmalı",
+    "Tek Tabanca",
+    "Ben Tek Siz Hepiniz",
+    "Sabıka",
+    "Senin Hastan"
+  ]
+},
+{
+  "id": "ilyas_yalcintas",
+  "ad": "İlyas Yalçıntaş",
+  "sarkilar": [
+    "İncir",
+    "Bu Son Olacak",
+    "Olur Olur",
+    "Gel Be Gökyüzüm",
+    "Farzet",
+    "Ayrılık",
+    "Seni Seviyorum",
+    "Yalan",
+    "Kalbimin Kapısı",
+    "Git"
+  ]
+},
+{
+  "id": "ilhan_sesen",
+  "ad": "İlhan Şeşen",
+  "sarkilar": [
+    "Ellerimde Çiçekler",
+    "Sarılınca Sana",
+    "Neler Oluyor Bize",
+    "Aşk Layık Olanda Kalmalı",
+    "Rüzgar",
+    "Sensiz Olmam",
+    "Ayrılık",
+    "Hatıra",
+    "Yalnızlık"
+  ]
+},
+{
+  "id": "jehan_barbur",
+  "ad": "Jehan Barbur",
+  "sarkilar": [
+    "Gidersen",
+    "Seni Seviyorum",
+    "Leyla",
+    "Tesadüf",
+    "Hayat",
+    "Eylül",
+    "Sarıl Bana",
+    "Uyan",
+    "Kendine Zaman Ver"
+  ]
+},
+{
+  "id": "kayahan",
+  "ad": "Kayahan",
+  "sarkilar": [
+    "Gönül Sayfam",
+    "Yemin Ettim",
+    "Emrin Olur",
+    "Sarı Şekerim",
+    "Bir Aşk Hikayesi",
+    "Canımın Yaprakları",
+    "Odalarda Işıksızım",
+    "Mor Menekşe",
+    "Ben Anadolu Çocuğuyum",
+    "E Bebeğim"
+  ]
+},
+{
+  "id": "kenan_dogulu",
+  "ad": "Kenan Doğulu",
+  "sarkilar": [
+    "Çakkıdı",
+    "Tutamıyorum Zamanı",
+    "Aşk ile Yap",
+    "Yap Yap",
+    "Kandırdım",
+    "Ara Beni Lütfen",
+    "Güzeller İçinden",
+    "Aşka Türlü Şeyler",
+    "Şans Meleğim",
+    "İlk Adımı Sen At"
+  ]
+},
+{
+  "id": "keremcem",
+  "ad": "Keremcem",
+  "sarkilar": [
+    "Eylül",
+    "Aşk Bitti",
+    "Hayallerin Peşinde",
+    "Sensiz Olmaz",
+    "Bu Aşk Burada Biter",
+    "Aman Aman",
+    "Git",
+    "Kalbim",
+    "Yine Bana Kal"
+  ]
+},
+{
+  "id": "koray_avci",
+  "ad": "Koray Avcı",
+  "sarkilar": [
+    "Aşk Sana Benzer",
+    "Yakarım Geceleri",
+    "Sen",
+    "Hoş Geldin",
+    "Adaletin Bu Mu Dünya",
+    "Seni Çok Seviyorum",
+    "Dert Olur",
+    "Emanet",
+    "Yine Aylardan Kasım"
+  ]
+},
+{
+  "id": "kutsi",
+  "ad": "Kutsi",
+  "sarkilar": [
+    "Kalbimdeki Deniz",
+    "İlan-ı Aşk",
+    "Gönderilmemiş Mektuplar",
+    "Aşk Paylaşılmaz",
+    "Bittin Sen",
+    "Randevu",
+    "Benimlesin",
+    "Yıkılmadım"
+  ]
+},
+{
+  "id": "lale_belkis",
+  "ad": "Lale Belkıs",
+  "sarkilar": [
+    "Sana Mecburum",
+    "Ayrılık",
+    "Yalnızlık",
+    "Geceler",
+    "Hatıra",
+    "Bir Gün",
+    "Sensiz",
+    "Hasret"
+  ]
+},
+{
+  "id": "leman_sam",
+  "ad": "Leman Sam",
+  "sarkilar": [
+    "Rüzgar",
+    "Gül Güzeli",
+    "Daha Gidecek Yolumuz Var",
+    "İlla",
+    "Kıyamam Sana",
+    "Aldırma Gönül",
+    "Benimle Kal",
+    "Ayrılık"
+  ]
+},
+{
+  "id": "levent_yuksel",
+  "ad": "Levent Yüksel",
+  "sarkilar": [
+    "Zalim",
+    "Med Cezir",
+    "Tuana",
+    "Kadınım",
+    "Yas",
+    "Bi Daha",
+    "Bu Gece Son",
+    "Karaağaç",
+    "Yeter Ki Onursuz Olmasın Aşk"
+  ]
+},
+{
+  "id": "mabel_matiz",
+  "ad": "Mabel Matiz",
+  "sarkilar": [
+    "Antidepresan",
+    "Sarmaşık",
+    "Öyle Kolaysa",
+    "Gel",
+    "Ya Bu İşler Ne",
+    "Mendilimde Kırmızım Var",
+    "A Canım",
+    "Fırtınadayım",
+    "Gök Nerede"
+  ]
+},
+{
+  "id": "mehmet_erdem",
+  "ad": "Mehmet Erdem",
+  "sarkilar": [
+    "Hakim Bey",
+    "Acıyı Sevmek Olur Mu",
+    "Ben Ölmeden Önce",
+    "Herkes Aynı Hayatta",
+    "Olur Ya",
+    "Bir Elmanın Yarısı",
+    "Sen De Gitme",
+    "İyi"
+  ]
+},
+{
+  "id": "melike_demirag",
+  "ad": "Melike Demirağ",
+  "sarkilar": [
+    "Arkadaş",
+    "Yandım Şeker",
+    "Uzakta",
+    "Ayrılık",
+    "Sevgi",
+    "Bir Gün",
+    "Hatıra"
+  ]
+},
+{
+  "id": "merve_ozbey",
+  "ad": "Merve Özbey",
+  "sarkilar": [
+    "Yaş Hikayesi",
+    "Tebrikler",
+    "Helal Ettim",
+    "Vuracak",
+    "Devran",
+    "Bir İmkansız Var",
+    "Kendine Dünya",
+    "Yaramızda Kalsın"
+  ]
+},
+{
+  "id": "mirkelam",
+  "ad": "Mirkelam",
+  "sarkilar": [
+    "Her Gece",
+    "Tavla",
+    "Asuman Pansuman",
+    "Unutulmaz",
+    "Benimle Eğlenir Misin",
+    "Hatıra",
+    "Yollar",
+    "Ayrılık"
+  ]
+},
+{
+  "id": "murat_boz",
+  "ad": "Murat Boz",
+  "sarkilar": [
+    "Janti",
+    "Maximum",
+    "Geri Dönüş Olsa",
+    "Can Kenarım",
+    "Özledim",
+    "Gönül İster Ki",
+    "Aşklarım Büyük Benden",
+    "Vazgeçmem",
+    "Üzüleceksin",
+    "Adı Eylül"
+  ]
+},
+{
+  "id": "murat_dalkilic",
+  "ad": "Murat Dalkılıç",
+  "sarkilar": [
+    "Bir Hayli",
+    "La Fontaine",
+    "Derine",
+    "Kasaba",
+    "Bu Nasıl Aşk",
+    "Canın Sağ Olsun",
+    "Ben Bilmem",
+    "Kırk Yılda Bir Gibisin"
+  ]
+},
+{
+  "id": "mustafa_ceceli",
+  "ad": "Mustafa Ceceli",
+  "sarkilar": [
+    "Es",
+    "Aşktan Giderken",
+    "Hüsran",
+    "Bedel",
+    "Limon Çiçekleri",
+    "Unut",
+    "Kıymetlim",
+    "Ayrılık"
+  ]
+},
+{
+  "id": "mustafa_sandal",
+  "ad": "Mustafa Sandal",
+  "sarkilar": [
+    "Araba",
+    "İsyankar",
+    "Aya Benzer",
+    "Jest Oldu",
+    "Pazara Kadar",
+    "Beni Ağlatma",
+    "Aşka Yürek Gerek",
+    "Gel Bana",
+    "Suç Bende"
+  ]
+}
+,
+{
+  "id": "nadide_sultan",
+  "ad": "Nadide Sultan",
+  "sarkilar": [
+    "Konyalım",
+    "Sultanım",
+    "Aşktan Sabıkalı",
+    "Hayatımın Kadını",
+    "Ayrılık",
+    "Sensiz Olmam",
+    "Yalan",
+    "Geceler"
+  ]
+},
+{
+  "id": "nalan",
+  "ad": "Nâlân",
+  "sarkilar": [
+    "Of Aman",
+    "Hani",
+    "Söz Verdik",
+    "Gurbet",
+    "Ayrılık",
+    "Geceler",
+    "Yalnızım",
+    "Hatıra"
+  ]
+},
+{
+  "id": "nazan_oncel",
+  "ad": "Nazan Öncel",
+  "sarkilar": [
+    "Sokak Kızı",
+    "Erkekler de Yanar",
+    "Ben Sokak Kızıyım",
+    "Aynı Nakarat",
+    "Gitme Kal",
+    "Hay Hay",
+    "Gidelim Buralardan",
+    "Demir Leblebi",
+    "Aşkım Baksana Bana",
+    "Geceler Kara"
+  ]
+},
+{
+  "id": "neco",
+  "ad": "Neco",
+  "sarkilar": [
+    "Hani",
+    "Hayat Bayram Olsa",
+    "Göreceksin Kendini",
+    "Yazık",
+    "Gurbet",
+    "Ayrılık",
+    "Sensiz",
+    "Hatıra"
+  ]
+},
+{
+  "id": "nil_karaibrahimgil",
+  "ad": "Nil Karaibrahimgil",
+  "sarkilar": [
+    "Kanatlarım Var Ruhumda",
+    "Pırlanta",
+    "Seviyorum Sevmiyorum",
+    "Ben Aptal mıyım",
+    "XL",
+    "Bu Mudur",
+    "Duman",
+    "İnşallah"
+  ]
+},
+{
+  "id": "nilufer",
+  "ad": "Nilüfer",
+  "sarkilar": [
+    "Kar Taneleri",
+    "Mor Menekşe",
+    "Ta Uzak Yollardan",
+    "Geceler",
+    "Boşver",
+    "Mavilim",
+    "Ayrılsak Ölürüz Biz",
+    "Erkekler Ağlamaz",
+    "Olur Mu",
+    "Haram Geceler"
+  ]
+},
+{
+  "id": "nukhet_duru",
+  "ad": "Nükhet Duru",
+  "sarkilar": [
+    "Ben Sana Vurgunum",
+    "Mahmure",
+    "Cambaz",
+    "Melankoli",
+    "Aklımda Hep Sen",
+    "Ayrılık",
+    "Geceler",
+    "Hatıra"
+  ]
+},
+{
+  "id": "oguzhan_koc",
+  "ad": "Oğuzhan Koç",
+  "sarkilar": [
+    "Ayy",
+    "Küsme Aşka",
+    "Bulutlara Esir Olduk",
+    "Heyecandan",
+    "Ben Hala Rüyada",
+    "Giden Günlerim Oldu",
+    "Her Aşk Bir Gün Biter",
+    "Yüzük"
+     "Beni İyi Sanıyorlar",
+  ]
+},
+{
+  "id": "oguzhan_ugur",
+  "ad": "Oğuzhan Uğur",
+  "sarkilar": [
+   "Soğan Ekmek",
+    "Terbiyesizim",
+    "Yok",
+    "Gereksizse Söndür",
+    "Panpa",
+    "Tın",
+    "Mars Venüs",
+    "Bal Prensesi"
+  ]
+},
+{
+  "id": "omur_gedik",
+  "ad": "Ömür Gedik",
+  "sarkilar": [
+    "Yaralı",
+    "Adam Gibi",
+    "Aşk",
+    "Sensiz",
+    "Ayrılık",
+    "Hatıra"
+  ]
+},
+{
+  "id": "omur_goksel",
+  "ad": "Ömür Göksel",
+  "sarkilar": [
+    "Bir Varmış Bir Yokmuş",
+    "Deniz ve Mehtap",
+    "Yalnızım",
+    "Geceler",
+    "Hatıra",
+    "Ayrılık"
+  ]
+},
+{
+  "id": "oyku_gurman",
+  "ad": "Öykü Gürman",
+  "sarkilar": [
+    "Evlerinin Önü Boyalı Direk",
+    "Candan Sevmeli",
+    "Kara Toprak",
+    "Bir Fırtına Tuttu Bizi",
+    "Düşler Sokağı",
+    "Yalnızım",
+    "Geceler"
+  ]
+},
+{
+  "id": "ozgun",
+  "ad": "Özgün",
+  "sarkilar": [
+    "Elveda",
+    "Miş Miş",
+    "İstiklal",
+    "Sadece Arkadaşız",
+    "Bir Bana Bir De Allah'a İnan",
+    "Aşk",
+    "Geceler",
+    "Ayrılık"
+  ]
+},
+{
+  "id": "ozkan_ugur",
+  "ad": "Özkan Uğur",
+  "sarkilar": [
+    "Ele Güne Karşı",
+    "Peki Peki Anladık",
+    "Sude",
+    "No Problem",
+    "Güllerin İçinden",
+    "Yalnızlık",
+    "Geceler"
+  ]
+},
+{
+  "id": "petek_dincoz",
+  "ad": "Petek Dinçöz",
+  "sarkilar": [
+    "Bam Bam",
+    "Sen Değmezsin",
+    "Allah Belanı Versin",
+    "Foolish Casanova",
+    "Doktor Tavsiyesi",
+    "Bir Alo De",
+    "Yolun Açık Olsun",
+    "Ayrılık"
+  ]
+},
+{
+  "id": "pinar_aylin",
+  "ad": "Pınar Aylin",
+  "sarkilar": [
+    "Deliler Gibi",
+    "Beni Al",
+    "Geceler",
+    "Ayrılamayız",
+    "Yalnızım",
+    "Hatıra"
+  ]
+},
+{
+  "id": "seckin_piriler",
+  "ad": "Seçkin Piriler",
+  "sarkilar": [
+    "Aldatıldık",
+    "Kıymetlim",
+    "Bana Sor",
+    "Deli Gibi Sevdim",
+    "Sensiz Olmam"
+  ]
+},
+    {
+  "id": "seden_gurel",
+  "ad": "Seden Gürel",
+  "sarkilar": [
+    "Devlerin Aşkı",
+    "Saygı Duruşu",
+    "Vazgeç Gönlüm",
+    "Sen Değil misin",
+    "Kırık Kalpler"
+  ]
+},
+    {
+  "id": "selcuk_ural",
+  "ad": "Selçuk Ural",
+  "sarkilar": [
+    "Sevdan Olmasa",
+    "Kadınım",
+    "Yorgunum",
+    "Sevmek İstiyorum"
+  ]
+},
+    {
+  "id": "semiramis_pekkan",
+  "ad": "Semiramis Pekkan",
+  "sarkilar": [
+    "Bana Yalan Söylediler",
+    "Olmaz Bu İş Olamaz",
+    "Unutamazsın",
+    "Sen Kimsin"
+  ]
+},
+    {
+  "id": "serdar_ortac",
+  "ad": "Serdar Ortaç",
+  "sarkilar": [
+    "Karabiberim",
+    "Poşet",
+    "Asrın Hatası",
+    "Mesafe",
+    "Dansöz",
+    "İki Deli",
+    "Ray",
+    "Şeytan"
+  ]
+},
+    {
+  "id": "sertab_erener",
+  "ad": "Sertab Erener",
+  "sarkilar": [
+    "Sakin Ol",
+    "Rengârenk",
+    "Everyway That I Can",
+    "Aşk",
+    "Lal",
+    "Bu Böyle"
+  ]
+},
+    {
+  "id": "sezen_aksu",
+  "ad": "Sezen Aksu",
+  "sarkilar": [
+    "Gülümse",
+    "Tükeneceğiz",
+    "Hadi Bakalım",
+    "Küçüğüm",
+    "Firuze",
+    "Sen Ağlama",
+    "Git",
+    "Keskin Bıçak"
+  ]
+},
+    {
+  "id": "sila",
+  "ad": "Sıla",
+  "sarkilar": [
+    "Yan Benimle",
+    "Vur Kadehi Ustam"
+    "Vaziyetler",
+    "İnşallah",
+    "Acısa da Öldürmez",
+    "Zor Seviyorum",
+    "Muhbir"
+  ]
+},
+    {
+  "id": "simge",
+  "ad": "Simge",
+  "sarkilar": [
+    "Miş Miş",
+    "Ben Bazen",
+    "Aşkın Olayım",
+    "Öpücem",
+    "Yankı"
+  ]
+},
+    {
+  "id": "sahsenem",
+  "ad": "Şahsenem",
+  "sarkilar": [
+    "Gözyaşlarım Anlatır",
+    "Oynasana",
+    "Kime Ne",
+    "Aldandım",
+    "Yalan"
+  ]
+},
+    {
+  "id": "sebnem_ferah",
+  "ad": "Şebnem Ferah",
+  "sarkilar": [
+    "Sil Baştan",
+    "Can Kırıkları",
+    "Sigara",
+    "Hoşçakal",
+    "Vazgeçtim Dünyadan",
+    "Yağmurlar"
+  ]
+},
+    {
+  "id": "sehrazat",
+  "ad": "Şehrazat",
+  "sarkilar": [
+    "Onu Alma Beni Al",
+    "Yüreğim Var",
+    "Aşk"
+  ]
+},
+    {
+  "id": "sevval_sam",
+  "ad": "Şevval Sam",
+  "sarkilar": [
+    "Ander Sevdaluk",
+    "Güzelliğin On Para Etmez",
+    "Telli Turnam",
+    "Feraye",
+    "Rüzgar"
+  ]
+},
+    {
+  "id": "senay",
+  "ad": "Şenay",
+  "sarkilar": [
+    "Hayat Bayram Olsa",
+    "Sev Kardeşim"
+  ]
+},
+    {
+  "id": "simal",
+  "ad": "Şimal",
+  "sarkilar": [
+    "Yoksun",
+    "Aşkın Tarifi",
+    "Zor"
+  ]
+},
+    {
+  "id": "sohret",
+  "ad": "Şöhret",
+  "sarkilar": [
+    "Sevdanın Son Vuruşu",
+    "Ayrılık"
+  ]
+},
+    {
+  "id": "sukru_tunar",
+  "ad": "Şükrü Tunar",
+  "sarkilar": [
+    "Üsküdar'a Gider İken"
+  ]
+},
+    {
+  "id": "sukran_ay",
+  "ad": "Şükran Ay",
+  "sarkilar": [
+    "Karakolda Ayna Var"
+  ]
+},
+    {
+  "id": "sule",
+  "ad": "Şule",
+  "sarkilar": [
+    "Özledim"
+  ]
+},
+
+  {
+    "id": "tan_tasci",
+    "ad": "Tan Taşçı",
+    "sarkilar": [
+      "Yok Başka Hayalim",
+      "Gelsin Öpsün Kalbimi",
+      "Zamana Bırak",
+      "Gitme",
+      "Benimle Yan"
+    ]
+  },
+  {
+    "id": "tanju_okan",
+    "ad": "Tanju Okan",
+    "sarkilar": [
+      "Kadınım",
+      "Hasret",
+      "Gönül Çelen",
+      "Benim Gibi Sevenler"
+    ]
+  },
+  {
+    "id": "tarkan",
+    "ad": "Tarkan",
+    "sarkilar": [
+      "Şımarık",
+      "Kuzu Kuzu",
+      "Dudu",
+      "Öp",
+      "Hüp",
+      "Gül Döktüm Yollarına",
+      "Yolla",
+      "Kış Güneşi",
+      "Beni Çok Sev"
+    ]
+  },
+  {
+    "id": "tayfun",
+    "ad": "Tayfun",
+    "sarkilar": [
+      "Hadi Yine İyisin",
+      "Söyle Canım",
+      "Aşk Deli Gibi Sever"
+    ]
+  },
+  {
+    "id": "toygar_isikli",
+    "ad": "Toygar Işıklı",
+    "sarkilar": [
+      "Yalnızlar Rıhtımı",
+      "Ben Seni Çok Sevdim",
+      "Çırpınırdın Karadeniz"
+    ]
+  },
+  {
+    "id": "tuba_onal",
+    "ad": "Tuba Önal",
+    "sarkilar": [
+      "Deli Gibi Sevdim",
+      "Yüreğim Ağlar"
+    ]
+  },
+  {
+    "id": "tugba_ekinci",
+    "ad": "Tuğba Ekinci",
+    "sarkilar": [
+      "Condom",
+      "Açık Açık",
+      "Yanlış Kapı"
+    ]
+  },
+  {
+    "id": "tugba_ozay",
+    "ad": "Tuğba Özay",
+    "sarkilar": [
+      "Aranıyor",
+      "Sahte"
+    ]
+  },
+  {
+    "id": "tugba_ozerk",
+    "ad": "Tuğba Özerk",
+    "sarkilar": [
+      "Patlat",
+      "Yıkılsın",
+      "Gidelim Mi Buralardan"
+    ]
+  },
+  {
+    "id": "tugba_yurt",
+    "ad": "Tuğba Yurt",
+    "sarkilar": [
+      "İnceden İnceden",
+      "Benim O",
+      "Aklımda Sorular Var",
+      "Masal"
+    ]
+  },
+  {
+    "id": "tugce_san",
+    "ad": "Tuğçe San",
+    "sarkilar": [
+      "Ağlayalım Mı",
+      "Beni Unut"
+    ]
+  },
+  {
+    "id": "tugrul_arsever",
+    "ad": "Tuğrul Arsever",
+    "sarkilar": [
+      "Yıllar Sonra",
+      "Ayrılık"
+    ]
+  },
+
+  {
+    "id": "ufuk_yildirim",
+    "ad": "Ufuk Yıldırım",
+    "sarkilar": [
+      "Aşkın Halleri",
+      "Yaradana Yalvartma",
+      "Seviyorum Sevilmiyorum"
+    ]
+  },
+  {
+    "id": "umay_umay",
+    "ad": "Umay Umay",
+    "sarkilar": [
+      "Hareket Vakti",
+      "O, O, O",
+      "Yüreğim"
+    ]
+  },
+  {
+    "id": "umit_sayin",
+    "ad": "Ümit Sayın",
+    "sarkilar": [
+      "Gül Beyaz Gül",
+      "Sensizliğin En Dibindeyim",
+      "Aşk Bana",
+      "Kara Gözlüm"
+    ]
+  },
+  {
+    "id": "vedat_sakman",
+    "ad": "Vedat Sakman",
+    "sarkilar": [
+      "Daha Nasıl Sevebilirim",
+      "Ayrılamayız Biz",
+      "Alışmak Sevmekten Zor"
+    ]
+  },
+  {
+    "id": "yalin",
+    "ad": "Yalın",
+    "sarkilar": [
+      "Küçücüğüm",
+      "Zalim",
+      "Ellerine Sağlık",
+      "Ben Bugün",
+      "Bir Bakmışsın",
+      "Sensiz Olmaz"
+    ]
+  },
+  {
+    "id": "yasar",
+    "ad": "Yaşar",
+    "sarkilar": [
+      "Kumralım",
+      "Divane",
+      "Sebepsiz Fırtına",
+      "Aldanırım",
+      "Masum"
+    ]
+  },
+  {
+    "id": "yeliz",
+    "ad": "Yeliz",
+    "sarkilar": [
+      "Bu Ne Dünya Kardeşim",
+      "Haykıracak Nefesim Yok"
+    ]
+  },
+  {
+    "id": "yesim",
+    "ad": "Yeşim",
+    "sarkilar": [
+      "Olmaz Böyle Şey"
+    ]
+  },
+  {
+    "id": "yesim_salkim",
+    "ad": "Yeşim Salkım",
+    "sarkilar": [
+      "Deli Mavi",
+      "Ferman",
+      "Gözü Kör Olası",
+      "Rüzgar"
+    ]
+  },
+  {
+    "id": "yildiz_tilbe",
+    "ad": "Yıldız Tilbe",
+    "sarkilar": [
+      "Delikanlım",
+      "Haberi Olsun",
+      "Vazgeçtim",
+      "Çabuk Olalım Aşkım",
+      "Sevdanın Son Vuruşu",
+      "Ama Evlisin"
+    ]
+  },
+  {
+    "id": "yusuf_guney",
+    "ad": "Yusuf Güney",
+    "sarkilar": [
+      "Aşk-ı Virane",
+      "Heder Oldum Aşkına",
+      "Unut Onu Kalbim"
+    ]
+  },
+  {
+    "id": "zafer_peker",
+    "ad": "Zafer Peker",
+    "sarkilar": [
+      "Gönül Defteri",
+      "Yandım"
+    ]
+  },
+  {
+    "id": "zeynep_bastik",
+    "ad": "Zeynep Bastık",
+    "sarkilar": [
+      "Uslanmıyor Bu",
+      "Her Yerde Sen",
+      "Ara",
+      "Lan"
+    ]
+  },
+  {
+    "id": "zeynep_casalini",
+    "ad": "Zeynep Casalini",
+    "sarkilar": [
+      "Duvar",
+      "Çığlık Çığlığa"
+    ]
+  },
+  {
+    "id": "zeynep_dizdar",
+    "ad": "Zeynep Dizdar",
+    "sarkilar": [
+      "Vazgeç Gönlüm",
+      "Son Bir Rica",
+      "Kalbimdeki"
+    ]
+  }
+]
+
+
+
+
+
+
+
+ 
+
 
