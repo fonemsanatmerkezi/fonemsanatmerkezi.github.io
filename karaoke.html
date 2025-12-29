@@ -81,6 +81,134 @@ li{
   <button id="geriBtn" onclick="geri()">⬅ Geri</button>
   <input id="arama" placeholder="Sanatçı ara...">
 </header>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karaoke</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#111;
+  color:#fff;
+}
+
+/* ÜST MENÜ */
+header{
+  padding:12px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+#geriBtn{
+  display:none;
+  width:100%;
+  height:40px;
+  background:#c62828;
+  border:none;
+  border-radius:16px;
+  color:#fff;
+  font-size:14px;
+  cursor:pointer;
+  transition:background .1s ease;
+}
+
+#geriBtn:active{
+  background:#a91f1f;
+}
+
+#arama{
+  width:100%;
+  height:40px;
+  border-radius:16px;
+  border:none;
+  padding:0 14px;
+  font-size:14px;
+}
+
+/* KATEGORİ BUTONLARI */
+.kategoriler{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  padding:16px;
+}
+
+.kategoriBtn{
+  height:42px;
+  background:#c62828;
+  color:#fff;
+  border-radius:18px;
+  font-size:14px;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  user-select:none;
+  box-shadow:0 4px 10px rgba(0,0,0,.35);
+  transition:transform .1s ease, background-color .1s ease, box-shadow .1s ease;
+}
+
+.kategoriBtn:active{
+  background:#a91f1f;
+  transform:scale(.94);
+  box-shadow:0 2px 5px rgba(0,0,0,.45);
+}
+
+/* SANATÇI LİSTESİ */
+ul{
+  list-style:none;
+  padding:20px;
+  margin:0;
+}
+
+li{
+  background:#1c1c1c;
+  padding:12px;
+  margin-bottom:8px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* ŞARKI SÖZ ALANI */
+#sozAlani{
+  display:none;
+  padding:20px;
+  background:#000;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <button id="geriBtn" onclick="geri()">⬅ Geri</button>
+  <input id="arama" placeholder="Sanatçı ara...">
+</header>
+
+<!-- KATEGORİLER -->
+<div id="kategoriAlan" class="kategoriler">
+  <div class="kategoriBtn" onclick="kategoriSec('pop')">Pop</div>
+  <div class="kategoriBtn" onclick="kategoriSec('arabesk')">Arabesk</div>
+  <div class="kategoriBtn" onclick="kategoriSec('rock')">Rock</div>
+  <div class="kategoriBtn" onclick="kategoriSec('grup')">Grup</div>
+  <div class="kategoriBtn" onclick="kategoriSec('sanat')">Sanat Müziği</div>
+  <div class="kategoriBtn" onclick="kategoriSec('halk_ozgun')">Halk / Özgün</div>
+  <div class="kategoriBtn" onclick="kategoriSec('yabanci')">Yabancı</div>
+</div>
+
+<!-- SANATÇI LİSTESİ -->
+<ul id="liste"></ul>
+<div id="sozAlani"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
 
 <div id="kategoriAlan" class="kategoriler">
   <div class="kategoriBtn" onclick="kategoriSec('pop')">Pop</div>
