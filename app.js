@@ -1,40 +1,53 @@
-let aktifSanatcilar = [];
+let aktifKategoriData = {};
+let aktifSanatci = "";
+let aktifGorunum = "sanatci"; // sanatci | sarki
 
 function el(id) {
   return document.getElementById(id);
 }
 
+// ================= KATEGORİ YÜKLE =================
 function kategoriYukle(kategori) {
   fetch(`data/${kategori}.json`)
     .then(res => res.json())
     .then(data => {
-      aktifSanatcilar = data.sanatcilar;
-      sanatcilariGoster(aktifSanatcilar);
+      aktifKategoriData = data;
+      sanatcilariGoster();
       el("geriBtn").style.display = "none";
       el("sozAlani").style.display = "none";
+    })
+    .catch(() => {
+      el("liste").innerHTML = "<li>Veri yüklenemedi</li>";
     });
 }
 
-function sanatcilariGoster(sanatcilar) {
+// ================= SANATÇILAR =================
+function sanatcilariGoster() {
+  aktifGorunum = "sanatci";
   const liste = el("liste");
   liste.innerHTML = "";
   el("sozAlani").style.display = "none";
 
-  sanatcilar.forEach(sanatci => {
-    const li = document.createElement("li");
-    li.textContent = sanatci.ad;
-    li.onclick = () => sarkilariGoster(sanatci.sarkilar);
-    liste.appendChild(li);
-  });
+  Object.keys(aktifKategoriData)
+    .sort((a, b) => a.localeCompare(b, "tr"))
+    .forEach(sanatci => {
+      const li = document.createElement("li");
+      li.textContent = sanatci;
+      li.onclick = () => sarkilariGoster(sanatci);
+      liste.appendChild(li);
+    });
 }
 
-function sarkilariGoster(sarkilar) {
+// ================= ŞARKILAR =================
+function sarkilariGoster(sanatci) {
+  aktifGorunum = "sarki";
+  aktifSanatci = sanatci;
   const liste = el("liste");
   liste.innerHTML = "";
 
-  sarkilar.forEach(sarki => {
+  aktifKategoriData[sanatci].forEach(sarki => {
     const li = document.createElement("li");
-    li.textContent = sarki.ad;
+    li.textContent = sarki;
     li.onclick = () => sarkiSozuGoster(sarki);
     liste.appendChild(li);
   });
@@ -42,16 +55,21 @@ function sarkilariGoster(sarkilar) {
   el("geriBtn").style.display = "inline-block";
 }
 
+// ================= ŞARKI SÖZÜ =================
 function sarkiSozuGoster(sarki) {
   const soz = el("sozAlani");
   soz.innerHTML = `
-    <h3>${sarki.ad}</h3>
-    <pre>${sarki.soz || "Bu şarkının sözleri henüz eklenmedi."}</pre>
+    <h3>${aktifSanatci} – ${sarki}</h3>
+    <pre>Şarkı sözleri eklenecek.</pre>
   `;
   soz.style.display = "block";
+  soz.scrollIntoView({ behavior: "smooth" });
 }
 
+// ================= GERİ =================
 function geri() {
-  sanatcilariGoster(aktifSanatcilar);
-  el("geriBtn").style.display = "none";
+  if (aktifGorunum === "sarki") {
+    sanatcilariGoster();
+    el("geriBtn").style.display = "none";
+  }
 }
