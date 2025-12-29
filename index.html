@@ -44,10 +44,28 @@ body{
 .btn:hover{
   background:#b71c1c;
 }
+
+/* HOŞ GELDİN MESAJI */
+#hosgeldiniz{
+  text-align:center;
+  padding:12px;
+  background:#0288d1;
+  color:#fff;
+  font-weight:bold;
+  border-radius:8px;
+  margin:10px auto;
+  max-width:300px;
+  box-shadow:0 3px 8px rgba(0,0,0,.3);
+  font-size:16px;
+}
 </style>
 </head>
 
 <body>
+
+<!-- HOŞ GELDİN MESAJI -->
+<div id="hosgeldiniz">Hoş Geldiniz!</div>
+
 <div class="container">
 
   <!-- LOGO -->
@@ -67,5 +85,16 @@ body{
   <button class="btn">📲 Bizi Takip Edin</button>
 
 </div>
+
+<script>
+/* HOŞ GELDİN MESAJI 3 SANİYE SONRA KAYBOLSUN */
+window.addEventListener('load', () => {
+  const mesaj = document.getElementById('hosgeldiniz');
+  setTimeout(() => { 
+    mesaj.style.display='none'; 
+  }, 3000); // 3 saniye
+});
+</script>
+
 </body>
 </html>
