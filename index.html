@@ -4,68 +4,68 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fonem Sanat Merkezi</title>
+
 <style>
-body {
+body{
   margin:0;
-  font-family:Arial, sans-serif;
-  background:#111;
+  font-family:Arial, Helvetica, sans-serif;
+  background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+  url("github-arka-plan.jpeg") center/cover fixed;
   color:#fff;
 }
 
-/* HOŞ GELDİN MESAJI */
-#hosgeldiniz{
-  text-align:center;
-  padding:12px;
-  background:#0288d1;
-  color:#fff;
-  font-weight:bold;
-  border-radius:8px;
-  margin:10px auto;
-  max-width:300px;
-  box-shadow:0 3px 8px rgba(0,0,0,.3);
-}
-
-/* Mevcut ana sayfa stillerini bozmamak için varsayılan örnek */
 .container{
-  max-width:900px;
-  margin:0 auto;
+  max-width:520px;
+  margin:auto;
   padding:20px;
-  text-align:center;
 }
 
-/* Örnek butonlar */
-button{
-  padding:10px 20px;
-  font-size:14px;
-  border-radius:8px;
+.logo{
+  text-align:center;
+  margin:30px 0 25px;
+}
+
+.logo img{
+  max-width:220px;
+}
+
+.btn{
+  width:100%;
+  padding:14px;
+  margin-bottom:12px;
+  font-size:16px;
+  border-radius:14px;
   border:none;
+  background:#c62828;
+  color:#fff;
   cursor:pointer;
 }
 
+.btn:hover{
+  background:#b71c1c;
+}
 </style>
 </head>
+
 <body>
-
-<!-- HOŞ GELDİN MESAJI -->
-<div id="hosgeldiniz">Hoş Geldiniz!</div>
-
-<!-- Mevcut ana sayfa içeriği -->
 <div class="container">
-  <h1>Fonem Sanat Merkezi</h1>
-  <p>Buraya ana sayfa içeriğiniz gelecek.</p>
-  <button onclick="window.location.href='karaoke.html'">Karaoke</button>
-  <button onclick="window.location.href='fotograflar.html'">Fotoğraflar</button>
+
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="fonem-logo.png" alt="Fonem Sanat Merkezi">
+  </div>
+
+  <!-- ANA BUTONLAR -->
+  <a href="karaoke.html">
+    <button class="btn">🎤 Karaoke Hatırlatıcı</button>
+  </a>
+
+  <button class="btn">📸 Fotoğraflarımız</button>
+  <button class="btn">💰 Fiyatlarımız</button>
+  <button class="btn">📅 Rezervasyon</button>
+  <button class="btn">📝 Dilek / İstek / Öneri</button>
+  <button class="btn">📲 Bizi Takip Edin</button>
+
 </div>
-
-<script>
-/* HOŞ GELDİN MESAJI 3 SANİYE SONRA KAYBOLSUN */
-window.addEventListener('load', () => {
-  const mesaj = document.getElementById('hosgeldiniz');
-  setTimeout(() => { 
-    mesaj.style.display='none'; 
-  }, 3000);
-});
-</script>
-
 </body>
 </html>
