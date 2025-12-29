@@ -13,46 +13,11 @@ body{
   color:#fff;
 }
 
-/* ÜST MENÜ */
-header{
-  padding:12px;
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-}
-
-#geriBtn{
-  display:none;
-  width:100%;
-  height:36px;
-  background:#c62828;
-  border:none;
-  border-radius:14px;
-  color:#fff;
-  font-size:14px;
-  cursor:pointer;
-  transition:background .1s ease;
-}
-
-#geriBtn:active{
-  background:#a91f1f;
-}
-
-#arama{
-  width:100%;
-  height:36px;
-  border-radius:14px;
-  border:none;
-  padding:0 12px;
-  font-size:14px;
-  display:none;
-}
-
 /* ANA SAYFA BUTONU */
 #anaSayfaBtn{
   position:fixed;
-  bottom:20px;
-  right:20px;
+  top:10px;
+  right:10px;
   background:#0288d1;
   color:#fff;
   border:none;
@@ -63,52 +28,79 @@ header{
   box-shadow:0 3px 6px rgba(0,0,0,.4);
   z-index:10;
 }
-
 #anaSayfaBtn:active{
   background:#0277bd;
 }
 
 /* KATEGORİ BUTONLARI */
 .kategoriler{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:8px;
-  padding:16px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  padding:20px;
+  max-width:300px;
+  margin:60px auto 20px auto; /* üstte ana sayfa butonundan boşluk */
 }
 
 .kategoriBtn{
-  height:36px;
   background:#c62828;
   color:#fff;
   border-radius:14px;
-  font-size:13px;
+  font-size:14px;
   font-weight:600;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  padding:10px 16px;
+  width:100%; /* container genişliğine göre eşit */
+  text-align:center;
   cursor:pointer;
   user-select:none;
   box-shadow:0 3px 8px rgba(0,0,0,.35);
   transition:transform .1s ease, background-color .1s ease, box-shadow .1s ease;
 }
-
 .kategoriBtn:active{
   background:#a91f1f;
   transform:scale(.95);
   box-shadow:0 2px 4px rgba(0,0,0,.45);
 }
 
-/* SANATÇI LİSTESİ */
+/* SANATÇI LİSTESİ ALANI */
 #sanatciAlan{
   display:none;
   max-width:400px;
   margin:20px auto;
 }
 
+#sanatciAlan #geriBtn{
+  width:100%;
+  height:36px;
+  background:#c62828;
+  border:none;
+  border-radius:14px;
+  color:#fff;
+  font-size:14px;
+  cursor:pointer;
+  margin-bottom:10px;
+}
+
+#sanatciAlan #geriBtn:active{
+  background:#a91f1f;
+}
+
+#sanatciAlan #arama{
+  width:100%;
+  height:36px;
+  border-radius:14px;
+  border:none;
+  padding:0 12px;
+  font-size:14px;
+  margin-bottom:10px;
+  display:block;
+}
+
 #sanatciAlan ul{
   list-style:none;
   padding:0;
-  margin:10px 0 0 0;
+  margin:0;
 }
 
 #sanatciAlan li{
@@ -121,13 +113,10 @@ header{
 }
 </style>
 </head>
-
 <body>
 
-<header>
-  <button id="geriBtn" onclick="geri()">⬅ Geri</button>
-  <input id="arama" placeholder="Sanatçı ara..." oninput="aramaFiltre()">
-</header>
+<!-- ANA SAYFA BUTONU -->
+<button id="anaSayfaBtn" onclick="window.location.href='index.html'">Ana Sayfa</button>
 
 <!-- KATEGORİLER -->
 <div id="kategoriAlan" class="kategoriler">
@@ -142,11 +131,10 @@ header{
 
 <!-- SANATÇI LİSTESİ -->
 <div id="sanatciAlan">
+  <button id="geriBtn" onclick="geri()">⬅ Geri</button>
+  <input id="arama" placeholder="Sanatçı ara..." oninput="aramaFiltre()">
   <ul id="liste"></ul>
 </div>
-
-<!-- ANA SAYFA BUTONU -->
-<button id="anaSayfaBtn" onclick="window.location.href='index.html'">Ana Sayfa</button>
 
 <script>
 let mevcutSanatcilar = [];
@@ -154,19 +142,18 @@ let mevcutSanatcilar = [];
 async function kategoriSec(kategori){
   document.getElementById('kategoriAlan').style.display = 'none';
   document.getElementById('sanatciAlan').style.display = 'block';
-  document.getElementById('geriBtn').style.display = 'block';
-  document.getElementById('arama').style.display = 'block';
-  document.getElementById('arama').value = ''; // aramayı temizle
+  document.getElementById('arama').value = '';
+  mevcutSanatcilar = [];
 
   const liste = document.getElementById('liste');
   liste.innerHTML = '';
-  mevcutSanatcilar = [];
 
   if(kategori === 'pop'){
     try {
       const response = await fetch('pop.json');
       if(!response.ok) throw new Error('Dosya bulunamadı');
-      const data = await response.json(); // JSON array bekleniyor
+      const data = await response.json();
+      if(!Array.isArray(data)) throw new Error('JSON array değil');
       mevcutSanatcilar = data;
       data.forEach(s => {
         const li = document.createElement('li');
@@ -174,9 +161,9 @@ async function kategoriSec(kategori){
         li.onclick = () => alert(s + ' seçildi');
         liste.appendChild(li);
       });
-    } catch(err) {
+    } catch(err){
       console.error(err);
-      liste.innerHTML = '<li>Sanatçı verisi bulunamadı.</li>';
+      liste.innerHTML = '<li>Sanatçı verisi yüklenemedi. Dosya yolu ve JSON formatını kontrol edin.</li>';
     }
   } else {
     const li = document.createElement('li');
@@ -185,17 +172,13 @@ async function kategoriSec(kategori){
   }
 }
 
-// Geri butonu
 function geri(){
-  document.getElementById('kategoriAlan').style.display = 'grid';
+  document.getElementById('kategoriAlan').style.display = 'flex';
   document.getElementById('sanatciAlan').style.display = 'none';
-  document.getElementById('geriBtn').style.display = 'none';
-  document.getElementById('arama').style.display = 'none';
   document.getElementById('liste').innerHTML = '';
   mevcutSanatcilar = [];
 }
 
-// Arama filtreleme
 function aramaFiltre(){
   const arama = document.getElementById('arama').value.toLowerCase();
   const liste = document.getElementById('liste');
