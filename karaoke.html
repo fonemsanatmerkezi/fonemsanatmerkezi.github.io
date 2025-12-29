@@ -2,70 +2,98 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Karaoke Hatırlatıcı</title>
+<title>Karaoke</title>
 
 <style>
 body{
   margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-  url("github-arka-plan.jpeg") center/cover fixed;
+  font-family:Arial, sans-serif;
+  background:#111;
   color:#fff;
 }
 
-.container{
-  max-width:520px;
-  margin:auto;
+header{
+  padding:10px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+#geriBtn{
+  display:none;
+  padding:8px 14px;
+  background:#c62828;
+  border:none;
+  border-radius:8px;
+  color:#fff;
+  cursor:pointer;
+}
+
+#arama{
+  flex:1;
+  display:none;
+  padding:8px;
+  border-radius:8px;
+  border:none;
+}
+
+.kategoriler{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
   padding:20px;
 }
 
-.btn{
-  width:100%;
+.kategoriBtn{
   padding:14px;
-  margin-bottom:12px;
-  font-size:16px;
+  background:#fff;
+  color:#000;
   border-radius:14px;
-  border:none;
-  background:#c62828;
-  color:#fff;
+  text-align:center;
   cursor:pointer;
 }
 
-.list{
-  background:rgba(255,255,255,.08);
-  border-radius:12px;
-  max-height:65vh;
-  overflow:auto;
+ul{
+  list-style:none;
+  padding:20px;
+  margin:0;
 }
 
-.item{
-  padding:14px;
-  border-bottom:1px solid rgba(255,255,255,.15);
-  cursor:pointer;
-}
-
-.item:hover{
-  background:rgba(255,255,255,.15);
-}
-
-input{
-  width:100%;
+li{
+  background:#1c1c1c;
   padding:12px;
-  border-radius:10px;
-  border:none;
-  margin-bottom:12px;
+  margin-bottom:8px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+#sozAlani{
+  display:none;
+  padding:20px;
+  background:#000;
 }
 </style>
 </head>
 
 <body>
-<div class="container">
 
-<a href="index.html" class="btn">← Ana Sayfaya Dön</a>
+<header>
+  <button id="geriBtn" onclick="geri()">⬅ Geri</button>
+  <input id="arama" placeholder="Sanatçı ara...">
+</header>
 
-<div id="icerik"></div>
-
+<div id="kategoriAlan" class="kategoriler">
+  <div class="kategoriBtn" onclick="kategoriSec('pop')">Pop</div>
+  <div class="kategoriBtn" onclick="kategoriSec('arabesk')">Arabesk</div>
+  <div class="kategoriBtn" onclick="kategoriSec('rock')">Rock</div>
+  <div class="kategoriBtn" onclick="kategoriSec('grup')">Grup</div>
+  <div class="kategoriBtn" onclick="kategoriSec('sanat')">Sanat Müziği</div>
+  <div class="kategoriBtn" onclick="kategoriSec('halk_ozgun')">Halk / Özgün</div>
+  <div class="kategoriBtn" onclick="kategoriSec('yabancı')">Yabancı</div>
 </div>
+
+<ul id="liste"></ul>
+<div id="sozAlani"></div>
 
 <script src="app.js"></script>
 </body>
