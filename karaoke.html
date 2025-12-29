@@ -141,43 +141,43 @@ body{
 
 <script>
 let mevcutSanatcilar = [];
+let mevcutData = []; // JSON objesi, şarkılar için
 
 async function kategoriSec(kategori){
   document.querySelector('.kategoriler').style.display = 'none';
   document.getElementById('sanatciAlan').style.display = 'block';
   document.getElementById('arama').value = '';
   mevcutSanatcilar = [];
+  mevcutData = [];
 
   const liste = document.getElementById('liste');
   liste.innerHTML = '';
 
-  if(kategori === 'pop'){
-    try {
-      const response = await fetch('pop.json'); // Aynı klasörde olmalı
-      if(!response.ok) throw new Error(`Dosya bulunamadı: ${response.status}`);
-      const data = await response.json();
+  try {
+    const response = await fetch(`data/${kategori}.json`);
+    if(!response.ok) throw new Error(`Dosya bulunamadı: ${response.status}`);
+    const data = await response.json();
 
-      if(!data.sanatcilar || !Array.isArray(data.sanatcilar)) 
-        throw new Error('JSON içinde sanatcilar array bulunamadı');
+    if(!data.sanatcilar || !Array.isArray(data.sanatcilar)) 
+      throw new Error('JSON içinde sanatcilar array bulunamadı');
 
-      // Sanatçı isimlerini al
-      mevcutSanatcilar = data.sanatcilar.map(s => s.ad);
+    mevcutData = data.sanatcilar;
+    mevcutSanatcilar = data.sanatcilar.map(s => s.ad);
 
+    if(mevcutSanatcilar.length === 0){
+      liste.innerHTML = '<li>Sanatçı verisi henüz yok.</li>';
+    } else {
       mevcutSanatcilar.forEach(s => {
         const li = document.createElement('li');
         li.textContent = s;
-        li.onclick = () => alert(s + ' seçildi');
+        li.onclick = () => alert(s + ' seçildi'); // ileride şarkı listesi açılabilir
         liste.appendChild(li);
       });
-
-    } catch(err){
-      console.error(err);
-      liste.innerHTML = `<li>Sanatçı verisi yüklenemedi: ${err.message}</li>`;
     }
-  } else {
-    const li = document.createElement('li');
-    li.textContent = 'Sanatçı verisi henüz yok.';
-    liste.appendChild(li);
+
+  } catch(err){
+    console.error(err);
+    liste.innerHTML = `<li>Sanatçı verisi yüklenemedi: ${err.message}</li>`;
   }
 }
 
@@ -186,6 +186,7 @@ function geri(){
   document.getElementById('sanatciAlan').style.display = 'none';
   document.getElementById('liste').innerHTML = '';
   mevcutSanatcilar = [];
+  mevcutData = [];
 }
 
 function aramaFiltre(){
