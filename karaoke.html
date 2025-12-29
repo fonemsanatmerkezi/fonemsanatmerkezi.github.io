@@ -17,85 +17,71 @@
 
     header {
       padding: 20px;
-      border-bottom: 1px solid #333;
-    }
-
-    h1 {
-      margin: 0;
       font-size: 28px;
+      font-weight: bold;
     }
 
-    .buttons {
-      margin: 20px 0;
-    }
-
-    button {
-      background-color: #8b0000;
+    .kategoriler button {
+      background: darkred;
       color: #fff;
       border: none;
-      padding: 12px 24px;
-      font-size: 16px;
+      padding: 10px 20px;
       margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .kategoriler button:hover {
+      background: red;
+    }
+
+    #geriBtn {
+      display: none;
+      margin: 15px;
+      padding: 8px 16px;
+      background: #444;
+      color: #fff;
+      border: none;
       border-radius: 6px;
       cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #b22222;
-    }
-
-    #liste {
-      max-width: 600px;
-      margin: 20px auto;
-      text-align: left;
-      padding: 10px;
-    }
-
-    input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-      border: none;
     }
 
     ul {
       list-style: none;
       padding: 0;
-      margin: 0;
+      max-width: 500px;
+      margin: 0 auto;
     }
 
     li {
-      padding: 10px;
+      padding: 12px;
       border-bottom: 1px solid #333;
       cursor: pointer;
     }
 
     li:hover {
-      background-color: #222;
+      background: #222;
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <h1>🎤 Fonem Karaoke Hatırlatıcı</h1>
-</header>
+<header>🎤 Fonem Karaoke</header>
 
-<div class="buttons">
-  <button onclick="loadCategory('pop')">Pop</button>
-  <button onclick="loadCategory('rock')">Rock</button>
-  <button onclick="loadCategory('arabesk')">Arabesk</button>
-  <button onclick="loadCategory('halk_ozgun')">Halk / Özgün</button>
-  <button onclick="loadCategory('sanat')">Sanat Müziği</button>
-  <button onclick="loadCategory('grup')">Gruplar</button>
-  <button onclick="loadCategory('yabancı')">Yabancı</button>
+<div class="kategoriler">
+  <button onclick="kategoriYukle('pop')">Pop</button>
+  <button onclick="kategoriYukle('rock')">Rock</button>
+  <button onclick="kategoriYukle('arabesk')">Arabesk</button>
+  <button onclick="kategoriYukle('sanat')">Sanat Müziği</button>
+  <button onclick="kategoriYukle('halk_ozgun')">Halk / Özgün</button>
+  <button onclick="kategoriYukle('grup')">Gruplar</button>
+  <button onclick="kategoriYukle('yabancı')">Yabancı</button>
 </div>
 
-<div id="liste">
-  <h2 id="baslik">Bir kategori seçin</h2>
-</div>
+<button id="geriBtn" onclick="geri()">⬅ Geri</button>
+
+<ul id="liste"></ul>
 
 <script src="app.js"></script>
 </body>
