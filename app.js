@@ -1,4 +1,3 @@
-alert("app.js çalışıyor");
 let sanatciListesi = [];
 let aktifSanatcilar = [];
 
