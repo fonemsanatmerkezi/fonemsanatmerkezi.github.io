@@ -194,7 +194,7 @@
       ]
     },
     {
-      "id": "bengü",
+      "id": "bengu",
       "ad": "Bengü",
       "sarkilar": [
         "Çile Bülbülüm",
@@ -274,7 +274,7 @@
       ]
     },
   {
-    "id": "demet_akalın",
+    "id": "demet_akalin",
     "ad": "Demet Akalın",
     "sarkilar": [
       "Afedersin",
@@ -1097,8 +1097,8 @@
     "Ben Hala Rüyada",
     "Giden Günlerim Oldu",
     "Her Aşk Bir Gün Biter",
-    "Yüzük"
-     "Beni İyi Sanıyorlar",
+    "Yüzük",
+     "Beni İyi Sanıyorlar"
   ]
 },
 {
@@ -1292,7 +1292,7 @@
   "ad": "Sıla",
   "sarkilar": [
     "Yan Benimle",
-    "Vur Kadehi Ustam"
+    "Vur Kadehi Ustam",
     "Vaziyetler",
     "İnşallah",
     "Acısa da Öldürmez",
@@ -1655,10 +1655,10 @@
       "Vazgeç Gönlüm",
       "Son Bir Rica",
       "Kalbimdeki"
+ ]
+  }
     ]
   }
-]
-
 
 
 
