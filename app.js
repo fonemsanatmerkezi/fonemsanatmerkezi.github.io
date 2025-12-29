@@ -1,20 +1,26 @@
 let aktifSanatcilar = [];
 
+function el(id) {
+  return document.getElementById(id);
+}
+
 function kategoriYukle(kategori) {
   fetch(`data/${kategori}.json`)
     .then(res => res.json())
     .then(data => {
       aktifSanatcilar = data.sanatcilar;
       sanatcilariGoster(aktifSanatcilar);
-      document.getElementById("geriBtn").style.display = "none";
-      document.getElementById("sozAlani").style.display = "none";
+      if (el("geriBtn")) el("geriBtn").style.display = "none";
+      if (el("sozAlani")) el("sozAlani").style.display = "none";
     });
 }
 
 function sanatcilariGoster(sanatcilar) {
-  const liste = document.getElementById("liste");
+  const liste = el("liste");
+  if (!liste) return;
+
   liste.innerHTML = "";
-  document.getElementById("sozAlani").style.display = "none";
+  if (el("sozAlani")) el("sozAlani").style.display = "none";
 
   sanatcilar.forEach(sanatci => {
     const li = document.createElement("li");
@@ -25,9 +31,10 @@ function sanatcilariGoster(sanatcilar) {
 }
 
 function sarkilariGoster(sarkilar) {
-  const liste = document.getElementById("liste");
+  const liste = el("liste");
+  if (!liste) return;
+
   liste.innerHTML = "";
-  document.getElementById("sozAlani").style.display = "none";
 
   sarkilar.forEach(sarki => {
     const li = document.createElement("li");
@@ -36,22 +43,22 @@ function sarkilariGoster(sarkilar) {
     liste.appendChild(li);
   });
 
-  document.getElementById("geriBtn").style.display = "inline-block";
+  if (el("geriBtn")) el("geriBtn").style.display = "inline-block";
 }
 
 function sarkiSozuGoster(sarki) {
-  const sozDiv = document.getElementById("sozAlani");
+  const soz = el("sozAlani");
+  if (!soz) return;
 
-  if (sarki.soz && sarki.soz.trim() !== "") {
-    sozDiv.textContent = sarki.soz;
-  } else {
-    sozDiv.textContent = "Bu şarkının sözleri henüz eklenmedi.";
-  }
+  soz.textContent =
+    sarki.soz && sarki.soz.trim()
+      ? sarki.soz
+      : "Bu şarkının sözleri henüz eklenmedi.";
 
-  sozDiv.style.display = "block";
+  soz.style.display = "block";
 }
 
 function geri() {
   sanatcilariGoster(aktifSanatcilar);
-  document.getElementById("geriBtn").style.display = "none";
+  if (el("geriBtn")) el("geriBtn").style.display = "none";
 }
