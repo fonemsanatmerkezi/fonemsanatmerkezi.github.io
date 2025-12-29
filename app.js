@@ -1,85 +1,72 @@
-const icerik = document.getElementById("icerik");
-let aktifData = {};
-let aktifSanatci = "";
+let aktifSanatcilar = [];
+let seviye = "kategori";
 
-// ================= KATEGORİLER =================
-kategorileriGoster();
+const kategoriAlan = document.getElementById("kategoriAlan");
+const liste = document.getElementById("liste");
+const geriBtn = document.getElementById("geriBtn");
+const arama = document.getElementById("arama");
+const sozAlani = document.getElementById("sozAlani");
 
-function kategorileriGoster(){
-  icerik.innerHTML = `
-    <button class="btn" onclick="kategoriAc('pop')">Pop</button>
-    <button class="btn" onclick="kategoriAc('arabesk')">Arabesk</button>
-    <button class="btn" onclick="kategoriAc('rock')">Rock</button>
-    <button class="btn" onclick="kategoriAc('grup')">Grup</button>
-    <button class="btn" onclick="kategoriAc('sanat')">Sanat Müziği</button>
-    <button class="btn" onclick="kategoriAc('halk_ozgun')">Halk / Özgün</button>
-    <button class="btn" onclick="kategoriAc('yabanci')">Yabancı</button>
-  `;
-}
-
-// ================= KATEGORİ AÇ =================
-function kategoriAc(kategori){
+function kategoriSec(kategori){
   fetch(`data/${kategori}.json`)
     .then(r=>r.json())
-    .then(data=>{
-      aktifData = data;
-      sanatcilariGoster();
+    .then(d=>{
+      aktifSanatcilar = d.sanatcilar;
+      seviye = "sanatci";
+      kategoriAlan.style.display="none";
+      geriBtn.style.display="block";
+      arama.style.display="block";
+      sanatcilariGoster(aktifSanatcilar);
     });
 }
 
-// ================= SANATÇILAR =================
-function sanatcilariGoster(){
-  icerik.innerHTML = `
-    <button class="btn" onclick="kategorileriGoster()">← Kategoriler</button>
-    <input placeholder="Sanatçı ara..." oninput="sanatciAra(this.value)">
-    <div class="list" id="liste"></div>
-  `;
+function sanatcilariGoster(listeData){
+  liste.innerHTML="";
+  sozAlani.style.display="none";
 
-  listeyiDoldur(Object.keys(aktifData));
+  listeData.forEach(s=>{
+    const li=document.createElement("li");
+    li.textContent=s.ad;
+    li.onclick=()=>sarkilariGoster(s.sarkilar);
+    liste.appendChild(li);
+  });
 }
 
-function sanatciAra(q){
-  const sonuc = Object.keys(aktifData)
-    .filter(s => s.toLowerCase().includes(q.toLowerCase()));
-  listeyiDoldur(sonuc);
+function sarkilariGoster(sarkilar){
+  seviye="sarki";
+  liste.innerHTML="";
+  arama.style.display="none";
+
+  sarkilar.forEach(s=>{
+    const li=document.createElement("li");
+    li.textContent=s.ad;
+    li.onclick=()=>sozGoster(s);
+    liste.appendChild(li);
+  });
 }
 
-function listeyiDoldur(sanatcilar){
-  const liste = document.getElementById("liste");
-  liste.innerHTML = "";
-
-  sanatcilar
-    .sort((a,b)=>a.localeCompare(b,"tr"))
-    .forEach(s=>{
-      const div = document.createElement("div");
-      div.className="item";
-      div.innerText=s;
-      div.onclick=()=>sarkilariGoster(s);
-      liste.appendChild(div);
-    });
-}
-
-// ================= ŞARKILAR =================
-function sarkilariGoster(sanatci){
-  aktifSanatci = sanatci;
-
-  icerik.innerHTML = `
-    <button class="btn" onclick="sanatcilariGoster()">← Sanatçılar</button>
-    <div class="list">
-      ${aktifData[sanatci].map(s=>`
-        <div class="item" onclick="sozGoster('${s}')">${s}</div>
-      `).join("")}
-    </div>
-    <div id="soz"></div>
-  `;
-}
-
-// ================= ŞARKI SÖZÜ =================
 function sozGoster(sarki){
-  const soz = document.getElementById("soz");
-  soz.innerHTML = `
-    <h3>${aktifSanatci} – ${sarki}</h3>
-    <pre>Şarkı sözleri eklenecek.</pre>
-  `;
-  soz.scrollIntoView({behavior:"smooth"});
+  sozAlani.innerHTML=`<h3>${sarki.ad}</h3><pre>${sarki.soz||"Söz eklenmedi"}</pre>`;
+  sozAlani.style.display="block";
+  window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
 }
+
+function geri(){
+  if(seviye==="sarki"){
+    seviye="sanatci";
+    arama.style.display="block";
+    sanatcilariGoster(aktifSanatcilar);
+  }else{
+    seviye="kategori";
+    kategoriAlan.style.display="grid";
+    liste.innerHTML="";
+    geriBtn.style.display="none";
+    arama.style.display="none";
+    sozAlani.style.display="none";
+  }
+}
+
+arama.addEventListener("input",()=>{
+  const q=arama.value.toLowerCase();
+  sanatcilariGoster(aktifSanatcilar.filter(s=>s.ad.toLowerCase().includes(q)));
+});
