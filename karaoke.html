@@ -13,7 +13,7 @@ body{
   color:#fff;
 }
 
-/* KATEGORİ BUTONLARI */
+/* KATEGORİ BUTONLARI & ANA SAYFA BUTONU */
 .kategoriler{
   display:flex;
   flex-direction:column;
@@ -154,19 +154,25 @@ async function kategoriSec(kategori){
   if(kategori === 'pop'){
     try {
       const response = await fetch('pop.json'); // Aynı klasörde olmalı
-      if(!response.ok) throw new Error('Dosya bulunamadı');
+      if(!response.ok) throw new Error(`Dosya bulunamadı: ${response.status}`);
       const data = await response.json();
-      if(!Array.isArray(data)) throw new Error('JSON array değil');
-      mevcutSanatcilar = data;
-      data.forEach(s => {
+
+      if(!data.sanatcilar || !Array.isArray(data.sanatcilar)) 
+        throw new Error('JSON içinde sanatcilar array bulunamadı');
+
+      // Sanatçı isimlerini al
+      mevcutSanatcilar = data.sanatcilar.map(s => s.ad);
+
+      mevcutSanatcilar.forEach(s => {
         const li = document.createElement('li');
         li.textContent = s;
         li.onclick = () => alert(s + ' seçildi');
         liste.appendChild(li);
       });
+
     } catch(err){
       console.error(err);
-      liste.innerHTML = '<li>Sanatçı verisi yüklenemedi. Dosya yolu ve JSON formatını kontrol edin.</li>';
+      liste.innerHTML = `<li>Sanatçı verisi yüklenemedi: ${err.message}</li>`;
     }
   } else {
     const li = document.createElement('li');
