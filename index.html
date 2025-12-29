@@ -1,51 +1,71 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Karaoke Kategoriler</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fonem Sanat Merkezi</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #fff;
-      text-align: center;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+  url("github-arka-plan.jpeg") center/cover fixed;
+  color:#fff;
+}
 
-    h1 {
-      margin: 20px 0;
-    }
+.container{
+  max-width:520px;
+  margin:auto;
+  padding:20px;
+}
 
-    .kategori {
-      display: block;
-      width: 220px;
-      margin: 10px auto;
-      padding: 12px;
-      background: #1c1c1c;
-      border-radius: 8px;
-      text-decoration: none;
-      color: #fff;
-      font-size: 16px;
-    }
+.logo{
+  text-align:center;
+  margin:30px 0 25px;
+}
 
-    .kategori:hover {
-      background: #2a2a2a;
-    }
-  </style>
+.logo img{
+  max-width:220px;
+}
+
+.btn{
+  width:100%;
+  padding:14px;
+  margin-bottom:12px;
+  font-size:16px;
+  border-radius:14px;
+  border:none;
+  background:#c62828;
+  color:#fff;
+  cursor:pointer;
+}
+
+.btn:hover{
+  background:#b71c1c;
+}
+</style>
 </head>
 
 <body>
+<div class="container">
 
-  <h1>Kategoriler</h1>
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="fonem-logo.png" alt="Fonem Sanat Merkezi">
+  </div>
 
-  <a class="kategori" href="karaoke.html?kategori=pop">Pop</a>
-  <a class="kategori" href="karaoke.html?kategori=arabesk">Arabesk</a>
-  <a class="kategori" href="karaoke.html?kategori=rock">Rock</a>
-  <a class="kategori" href="karaoke.html?kategori=grup">Grup</a>
-  <a class="kategori" href="karaoke.html?kategori=sanat">Sanat Müziği</a>
-  <a class="kategori" href="karaoke.html?kategori=halk_ozgun">Halk / Özgün</a>
-  <a class="kategori" href="karaoke.html?kategori=yabancı">Yabancı</a>
+  <!-- ANA BUTONLAR -->
+  <a href="karaoke.html">
+    <button class="btn">🎤 Karaoke Hatırlatıcı</button>
+  </a>
 
+  <button class="btn">📸 Fotoğraflarımız</button>
+  <button class="btn">💰 Fiyatlarımız</button>
+  <button class="btn">📅 Rezervasyon</button>
+  <button class="btn">📝 Dilek / İstek / Öneri</button>
+  <button class="btn">📲 Bizi Takip Edin</button>
+
+</div>
 </body>
 </html>
