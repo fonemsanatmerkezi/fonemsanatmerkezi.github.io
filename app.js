@@ -1,40 +1,60 @@
-console.log("app.js çalışıyor");
+let tumSanatcilar = [];
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Sayfa açılınca otomatik Pop yükle
-  loadCategory("pop");
-});
-
-function loadCategory(category) {
-  fetch("./data/" + category + ".json")
-    .then(function (response) {
-      if (!response.ok) {
-        throw new Error("JSON bulunamadı");
-      }
-      return response.json();
+function loadCategory(kategori) {
+  fetch(`data/${kategori}.json`)
+    .then(res => res.json())
+    .then(data => {
+      tumSanatcilar = data.sanatcilar;
+      sanatcilariGoster(tumSanatcilar, data.kategori);
     })
-    .then(function (data) {
-      var liste = document.getElementById("liste");
-      liste.innerHTML = "";
-
-      if (!data.songs || data.songs.length === 0) {
-        liste.innerHTML = "<p>Bu kategoride şarkı yok</p>";
-        return;
-      }
-
-      var ul = document.createElement("ul");
-
-      data.songs.forEach(function (song) {
-        var li = document.createElement("li");
-        li.textContent = song.artist + " - " + song.title;
-        ul.appendChild(li);
-      });
-
-      liste.appendChild(ul);
-    })
-    .catch(function (error) {
-      var liste = document.getElementById("liste");
-      liste.innerHTML = "<p>Liste yüklenemedi</p>";
-      console.error(error);
+    .catch(err => {
+      document.getElementById("liste").innerHTML = "Kategori yüklenemedi.";
+      console.error(err);
     });
+}
+
+function sanatcilariGoster(liste, kategoriAdi) {
+  const alan = document.getElementById("liste");
+
+  alan.innerHTML = `
+    <h2>${kategoriAdi}</h2>
+    <input type="text" placeholder="Sanatçı ara..." oninput="sanatciAra(this.value)">
+    <ul id="sanatciListe"></ul>
+  `;
+
+  const ul = document.getElementById("sanatciListe");
+
+  liste.forEach(sanatci => {
+    const li = document.createElement("li");
+    li.textContent = sanatci.ad;
+    li.onclick = () => sarkilariGoster(sanatci);
+    ul.appendChild(li);
+  });
+}
+
+function sanatciAra(kelime) {
+  const filtre = tumSanatcilar.filter(s =>
+    s.ad.toLowerCase().includes(kelime.toLowerCase())
+  );
+
+  const ul = document.getElementById("sanatciListe");
+  ul.innerHTML = "";
+
+  filtre.forEach(sanatci => {
+    const li = document.createElement("li");
+    li.textContent = sanatci.ad;
+    li.onclick = () => sarkilariGoster(sanatci);
+    ul.appendChild(li);
+  });
+}
+
+function sarkilariGoster(sanatci) {
+  const alan = document.getElementById("liste");
+
+  alan.innerHTML = `
+    <h2>${sanatci.ad}</h2>
+    <ul>
+      ${sanatci.sarkilar.map(s => `<li>${s}</li>`).join("")}
+    </ul>
+  `;
 }
