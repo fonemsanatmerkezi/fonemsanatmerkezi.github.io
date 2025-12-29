@@ -13,7 +13,7 @@ body{
   color:#fff;
 }
 
-/* KATEGORİ BUTONLARI & ANA SAYFA BUTONU */
+/* KATEGORİ BUTONLARI */
 .kategoriler{
   display:flex;
   flex-direction:column;
@@ -24,8 +24,8 @@ body{
   margin:60px auto 20px auto;
 }
 
-.kategoriBtn, #anaSayfaBtn{
-  background:#c62828;
+.kategoriBtn{
+  background:#c62828; /* kırmızı */
   color:#fff;
   border-radius:14px;
   font-size:14px;
@@ -39,8 +39,31 @@ body{
   transition:transform .1s ease, background-color .1s ease, box-shadow .1s ease;
 }
 
-.kategoriBtn:active, #anaSayfaBtn:active{
+.kategoriBtn:active{
   background:#a91f1f;
+  transform:scale(.95);
+  box-shadow:0 2px 4px rgba(0,0,0,.45);
+}
+
+/* ANA SAYFA BUTONU */
+#anaSayfaBtn{
+  background:#0288d1; /* mavi */
+  color:#fff;
+  border:none;
+  border-radius:14px;
+  font-size:14px;
+  font-weight:600;
+  padding:10px 16px;
+  width:100%;
+  text-align:center;
+  cursor:pointer;
+  user-select:none;
+  box-shadow:0 3px 8px rgba(0,0,0,.35);
+  transition:transform .1s ease, background-color .1s ease, box-shadow .1s ease;
+}
+
+#anaSayfaBtn:active{
+  background:#0277bd;
   transform:scale(.95);
   box-shadow:0 2px 4px rgba(0,0,0,.45);
 }
