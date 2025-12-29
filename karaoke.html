@@ -2,89 +2,6 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Karaoke</title>
-
-<style>
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#111;
-  color:#fff;
-}
-
-header{
-  padding:10px;
-  display:flex;
-  gap:10px;
-  align-items:center;
-}
-
-#geriBtn{
-  display:none;
-  padding:8px 14px;
-  background:#c62828;
-  border:none;
-  border-radius:8px;
-  color:#fff;
-  cursor:pointer;
-}
-
-#arama{
-  flex:1;
-  display:none;
-  padding:8px;
-  border-radius:8px;
-  border:none;
-}
-
-.kategoriler{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
-  padding:20px;
-}
-
-.kategoriBtn{
-  padding:14px;
-  background:#fff;
-  color:#000;
-  border-radius:14px;
-  text-align:center;
-  cursor:pointer;
-}
-
-ul{
-  list-style:none;
-  padding:20px;
-  margin:0;
-}
-
-li{
-  background:#1c1c1c;
-  padding:12px;
-  margin-bottom:8px;
-  border-radius:8px;
-  cursor:pointer;
-}
-
-#sozAlani{
-  display:none;
-  padding:20px;
-  background:#000;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <button id="geriBtn" onclick="geri()">⬅ Geri</button>
-  <input id="arama" placeholder="Sanatçı ara...">
-</header>
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Karaoke</title>
 
@@ -101,16 +18,16 @@ header{
   padding:12px;
   display:flex;
   flex-direction:column;
-  gap:10px;
+  gap:8px;
 }
 
 #geriBtn{
   display:none;
   width:100%;
-  height:40px;
+  height:36px;
   background:#c62828;
   border:none;
-  border-radius:16px;
+  border-radius:14px;
   color:#fff;
   font-size:14px;
   cursor:pointer;
@@ -123,63 +40,84 @@ header{
 
 #arama{
   width:100%;
-  height:40px;
-  border-radius:16px;
+  height:36px;
+  border-radius:14px;
   border:none;
-  padding:0 14px;
+  padding:0 12px;
   font-size:14px;
+  display:none;
+}
+
+/* ANA SAYFA BUTONU */
+#anaSayfaBtn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#0288d1;
+  color:#fff;
+  border:none;
+  border-radius:14px;
+  padding:10px 16px;
+  font-size:14px;
+  cursor:pointer;
+  box-shadow:0 3px 6px rgba(0,0,0,.4);
+  z-index:10;
+}
+
+#anaSayfaBtn:active{
+  background:#0277bd;
 }
 
 /* KATEGORİ BUTONLARI */
 .kategoriler{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:10px;
+  gap:8px;
   padding:16px;
 }
 
 .kategoriBtn{
-  height:42px;
+  height:36px;
   background:#c62828;
   color:#fff;
-  border-radius:18px;
-  font-size:14px;
+  border-radius:14px;
+  font-size:13px;
   font-weight:600;
   display:flex;
   align-items:center;
   justify-content:center;
   cursor:pointer;
   user-select:none;
-  box-shadow:0 4px 10px rgba(0,0,0,.35);
+  box-shadow:0 3px 8px rgba(0,0,0,.35);
   transition:transform .1s ease, background-color .1s ease, box-shadow .1s ease;
 }
 
 .kategoriBtn:active{
   background:#a91f1f;
-  transform:scale(.94);
-  box-shadow:0 2px 5px rgba(0,0,0,.45);
+  transform:scale(.95);
+  box-shadow:0 2px 4px rgba(0,0,0,.45);
 }
 
 /* SANATÇI LİSTESİ */
-ul{
-  list-style:none;
-  padding:20px;
-  margin:0;
-}
-
-li{
-  background:#1c1c1c;
-  padding:12px;
-  margin-bottom:8px;
-  border-radius:8px;
-  cursor:pointer;
-}
-
-/* ŞARKI SÖZ ALANI */
-#sozAlani{
+#sanatciAlan{
   display:none;
-  padding:20px;
-  background:#000;
+  max-width:400px;
+  margin:20px auto;
+}
+
+#sanatciAlan ul{
+  list-style:none;
+  padding:0;
+  margin:10px 0 0 0;
+}
+
+#sanatciAlan li{
+  background:#1c1c1c;
+  padding:10px;
+  margin-bottom:6px;
+  border-radius:8px;
+  text-align:center;
+  cursor:pointer;
 }
 </style>
 </head>
@@ -188,7 +126,7 @@ li{
 
 <header>
   <button id="geriBtn" onclick="geri()">⬅ Geri</button>
-  <input id="arama" placeholder="Sanatçı ara...">
+  <input id="arama" placeholder="Sanatçı ara..." oninput="aramaFiltre()">
 </header>
 
 <!-- KATEGORİLER -->
@@ -203,26 +141,75 @@ li{
 </div>
 
 <!-- SANATÇI LİSTESİ -->
-<ul id="liste"></ul>
-<div id="sozAlani"></div>
-
-<script src="app.js"></script>
-</body>
-</html>
-
-<div id="kategoriAlan" class="kategoriler">
-  <div class="kategoriBtn" onclick="kategoriSec('pop')">Pop</div>
-  <div class="kategoriBtn" onclick="kategoriSec('arabesk')">Arabesk</div>
-  <div class="kategoriBtn" onclick="kategoriSec('rock')">Rock</div>
-  <div class="kategoriBtn" onclick="kategoriSec('grup')">Grup</div>
-  <div class="kategoriBtn" onclick="kategoriSec('sanat')">Sanat Müziği</div>
-  <div class="kategoriBtn" onclick="kategoriSec('halk_ozgun')">Halk / Özgün</div>
-  <div class="kategoriBtn" onclick="kategoriSec('yabancı')">Yabancı</div>
+<div id="sanatciAlan">
+  <ul id="liste"></ul>
 </div>
 
-<ul id="liste"></ul>
-<div id="sozAlani"></div>
+<!-- ANA SAYFA BUTONU -->
+<button id="anaSayfaBtn" onclick="window.location.href='index.html'">Ana Sayfa</button>
 
-<script src="app.js"></script>
+<script>
+let mevcutSanatcilar = [];
+
+async function kategoriSec(kategori){
+  document.getElementById('kategoriAlan').style.display = 'none';
+  document.getElementById('sanatciAlan').style.display = 'block';
+  document.getElementById('geriBtn').style.display = 'block';
+  document.getElementById('arama').style.display = 'block';
+  document.getElementById('arama').value = ''; // aramayı temizle
+
+  const liste = document.getElementById('liste');
+  liste.innerHTML = '';
+  mevcutSanatcilar = [];
+
+  if(kategori === 'pop'){
+    try {
+      const response = await fetch('pop.json');
+      if(!response.ok) throw new Error('Dosya bulunamadı');
+      const data = await response.json(); // JSON array bekleniyor
+      mevcutSanatcilar = data;
+      data.forEach(s => {
+        const li = document.createElement('li');
+        li.textContent = s;
+        li.onclick = () => alert(s + ' seçildi');
+        liste.appendChild(li);
+      });
+    } catch(err) {
+      console.error(err);
+      liste.innerHTML = '<li>Sanatçı verisi bulunamadı.</li>';
+    }
+  } else {
+    const li = document.createElement('li');
+    li.textContent = 'Sanatçı verisi henüz yok.';
+    liste.appendChild(li);
+  }
+}
+
+// Geri butonu
+function geri(){
+  document.getElementById('kategoriAlan').style.display = 'grid';
+  document.getElementById('sanatciAlan').style.display = 'none';
+  document.getElementById('geriBtn').style.display = 'none';
+  document.getElementById('arama').style.display = 'none';
+  document.getElementById('liste').innerHTML = '';
+  mevcutSanatcilar = [];
+}
+
+// Arama filtreleme
+function aramaFiltre(){
+  const arama = document.getElementById('arama').value.toLowerCase();
+  const liste = document.getElementById('liste');
+  liste.innerHTML = '';
+  mevcutSanatcilar
+    .filter(s => s.toLowerCase().includes(arama))
+    .forEach(s => {
+      const li = document.createElement('li');
+      li.textContent = s;
+      li.onclick = () => alert(s + ' seçildi');
+      liste.appendChild(li);
+    });
+}
+</script>
+
 </body>
 </html>
