@@ -5,8 +5,8 @@
       "id": "ajda_pekkan",
       "ad": "Ajda Pekkan",
       "sarkilar": [
-        { "id": "yaz_yaz_yaz", "ad": "Yaz Yaz Yaz", "soz": "Güneş doğar, deniz parlar, her şey yeni başlar." },
-        { "id": "hosgor_sen", "ad": "Hoşgör Sen", "soz": "Dost ol, anlamaya çalış, kırmadan geç hayatı." },
+        { "id": "yaz_yaz_yaz", "ad": "Yaz Yaz Yaz", "soz": "" },
+        { "id": "hosgor_sen", "ad": "Hoşgör Sen", "soz": "" },
         { "id": "sana_neler_edecegim", "ad": "Sana Neler Edeceğim", "soz": "" },
         { "id": "bambaska_biri", "ad": "Bambaşka Biri", "soz": "" },
         { "id": "uykusuz_her_gece", "ad": "Uykusuz Her Gece", "soz": "" },
@@ -15,22 +15,6 @@
         { "id": "arada_sirada", "ad": "Arada Sırada", "soz": "" },
         { "id": "kimler_geldi_kimler_gecti", "ad": "Kimler Geldi Kimler Geçti", "soz": "" },
         { "id": "superstar", "ad": "Süperstar", "soz": "" }
-      ]
-    },
-    {
-      "id": "ajdar",
-      "ad": "Ajdar",
-      "sarkilar": [
-        { "id": "cikita_muz", "ad": "Çikita Muz", "soz": "" },
-        { "id": "nane_nane", "ad": "Nane Nane", "soz": "" },
-        { "id": "cikita_muz_2", "ad": "Çikita Muz 2", "soz": "" },
-        { "id": "sana_neler_ettim", "ad": "Sana Neler Ettim", "soz": "" },
-        { "id": "kundum", "ad": "Kundum", "soz": "" },
-        { "id": "plajda", "ad": "Plajda", "soz": "" },
-        { "id": "kibarim", "ad": "Kibarım", "soz": "" },
-        { "id": "sanane", "ad": "Sanane", "soz": "" },
-        { "id": "aynen", "ad": "Aynen", "soz": "" },
-        { "id": "yikiliyor", "ad": "Yıkılıyo", "soz": "" }
       ]
     },
     {
@@ -130,38 +114,6 @@
       ]
     },
     {
-      "id": "ayca",
-      "ad": "Ayça",
-      "sarkilar": [
-        { "id": "yenildim", "ad": "Yenildim", "soz": "" },
-        { "id": "ask_oyunu", "ad": "Aşk Oyunu", "soz": "" },
-        { "id": "gurur", "ad": "Gurur", "soz": "" },
-        { "id": "sensiz_olmaz", "ad": "Sensiz Olmaz", "soz": "" },
-        { "id": "beni_unutma", "ad": "Beni Unutma", "soz": "" },
-        { "id": "bir_gun_ayca", "ad": "Bir Gün", "soz": "" },
-        { "id": "sakin_donme", "ad": "Sakın Dönme", "soz": "" },
-        { "id": "agla_ayca", "ad": "Ağla", "soz": "" },
-        { "id": "kalbim_ayca", "ad": "Kalbim", "soz": "" },
-        { "id": "son_kez", "ad": "Son Kez", "soz": "" }
-      ]
-    },
-    {
-      "id": "ayse_hatun_onal",
-      "ad": "Ayşe Hatun Önal",
-      "sarkilar": [
-        { "id": "cak_bir_selam", "ad": "Çak Bir Selam", "soz": "" },
-        { "id": "kalbe_ben", "ad": "Kalbe Ben", "soz": "" },
-        { "id": "gum_gum", "ad": "Güm Güm", "soz": "" },
-        { "id": "selam_dengesiz", "ad": "Selam Dengesiz", "soz": "" },
-        { "id": "katakulli", "ad": "Katakulli", "soz": "" },
-        { "id": "sirens", "ad": "Sirens", "soz": "" },
-        { "id": "yalnizlik", "ad": "Yalnızlık", "soz": "" },
-        { "id": "bir_daha_ayse", "ad": "Bir Daha", "soz": "" },
-        { "id": "kor_kutuk", "ad": "Kör Kütük", "soz": "" },
-        { "id": "olay", "ad": "Olay", "soz": "" }
-      ]
-    },
-    {
       "id": "ayten_alpman",
       "ad": "Ayten Alpman",
       "sarkilar": [
@@ -177,23 +129,7 @@
         { "id": "geceler_ayten", "ad": "Geceler", "soz": "" }
       ]
     },
-    {
-      "id": "banu_alkan",
-      "ad": "Banu Alkan",
-      "sarkilar": [
-        { "id": "benimle_oynama_banu", "ad": "Benimle Oynama", "soz": "" },
-        { "id": "askin_kadini", "ad": "Aşkın Kadını", "soz": "" },
-        { "id": "yalnizim_banu", "ad": "Yalnızım", "soz": "" },
-        { "id": "bir_hayal", "ad": "Bir Hayal", "soz": "" },
-        { "id": "gozlerin_banu", "ad": "Gözlerin", "soz": "" },
-        { "id": "seviyorum_banu", "ad": "Seviyorum", "soz": "" },
-        { "id": "ayrilik_banu", "ad": "Ayrılık", "soz": "" },
-        { "id": "gurur_banu", "ad": "Gurur", "soz": "" },
-        { "id": "beni_anla", "ad": "Beni Anla", "soz": "" },
-        { "id": "gitme_banu", "ad": "Gitme", "soz": "" }
-      ]
-    },
-    {
+   {
       "id": "bengu",
       "ad": "Bengü",
       "sarkilar": [
@@ -434,11 +370,11 @@
         { "id": "iste_oyle_bir_sey", "ad": "İşte Öyle Bir Şey", "soz": "" },
         { "id": "sevdan_olmasa", "ad": "Sevdan Olmasa", "soz": "" },
         { "id": "bir_de_bana_sor", "ad": "Bir de Bana Sor", "soz": "" },
-        { "id": "sitem_egvin", "ad": "Sitem", "soz": "" },
+        { "id": "sitem", "ad": "Sitem", "soz": "" },
         { "id": "ben_imkansiz_asklar", "ad": "Ben İmkansız Aşklar İçin Yaratılmışım", "soz": "" },
         { "id": "deli_divane", "ad": "Deli Divane", "soz": "" },
-        { "id": "ayrilik_egvin", "ad": "Ayrılık", "soz": "" },
-        { "id": "sensiz_olmam_egvin", "ad": "Sensiz Olmam", "soz": "" }
+        { "id": "ayrilik", "ad": "Ayrılık", "soz": "" },
+        { "id": "sensiz_olmam", "ad": "Sensiz Olmam", "soz": "" }
       ]
     },
     {
@@ -673,39 +609,7 @@
         { "id": "hasret_hk", "ad": "Hasret", "soz": "" }
       ]
     },
-    {
-      "id": "irem_derici",
-      "ad": "İrem Derici",
-      "sarkilar": [
-        { "id": "kalbimin_tek_sahibine", "ad": "Kalbimin Tek Sahibine", "soz": "" },
-        { "id": "zorun_ne_sevgilim", "ad": "Zorun Ne Sevgilim", "soz": "" },
-        { "id": "evlenmene_bak", "ad": "Evlenmene Bak", "soz": "" },
-        { "id": "dantel", "ad": "Dantel", "soz": "" },
-        { "id": "ask_esittir_biz", "ad": "Aşk Eşittir Biz", "soz": "" },
-        { "id": "bazi_asklar_yarim_kalmali", "ad": "Bazı Aşklar Yarım Kalmalı", "soz": "" },
-        { "id": "tek_tabanca", "ad": "Tek Tabanca", "soz": "" },
-        { "id": "ben_tek_siz_hepiniz", "ad": "Ben Tek Siz Hepiniz", "soz": "" },
-        { "id": "sabika_id", "ad": "Sabıka", "soz": "" },
-        { "id": "senin_hastan", "ad": "Senin Hastan", "soz": "" }
-      ]
-    },
-    {
-      "id": "ilyas_yalcintas",
-      "ad": "İlyas Yalçıntaş",
-      "sarkilar": [
-        { "id": "incir", "ad": "İncir", "soz": "" },
-        { "id": "bu_son_olacak", "ad": "Bu Son Olacak", "soz": "" },
-        { "id": "olur_olur", "ad": "Olur Olur", "soz": "" },
-        { "id": "gel_be_gokyuzum", "ad": "Gel Be Gökyüzüm", "soz": "" },
-        { "id": "farzet", "ad": "Farzet", "soz": "" },
-        { "id": "ayrilik_iy", "ad": "Ayrılık", "soz": "" },
-        { "id": "seni_seviyorum_iy", "ad": "Seni Seviyorum", "soz": "" },
-        { "id": "yalan_iy", "ad": "Yalan", "soz": "" },
-        { "id": "kalbimin_kapisi", "ad": "Kalbimin Kapısı", "soz": "" },
-        { "id": "git_iy", "ad": "Git", "soz": "" }
-      ]
-    },
-    {
+   {
       "id": "irem_derici",
       "ad": "İrem Derici",
       "sarkilar": [
