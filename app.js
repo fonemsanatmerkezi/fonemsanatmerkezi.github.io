@@ -1,61 +1,45 @@
-let tumSanatcilar = [];
+let sanatciListesi = [];
+let aktifSanatcilar = [];
 
-function loadCategory(kategori) {
+function kategoriYukle(kategori) {
   fetch(`data/${kategori}.json`)
     .then(res => res.json())
     .then(data => {
-      tumSanatcilar = data.sanatcilar;
-      sanatcilariGoster(tumSanatcilar, data.kategori);
-    })
-    .catch(err => {
-      console.error(err);
-      document.getElementById("liste").innerHTML =
-        "<p>Bu kategori yüklenemedi.</p>";
+      aktifSanatcilar = data.sanatcilar;
+      sanatciListesi = data.sanatcilar;
+      sanatcilariGoster(aktifSanatcilar);
+      document.getElementById("geriBtn").style.display = "none";
     });
 }
 
-function sanatcilariGoster(liste, kategoriAdi) {
-  const alan = document.getElementById("liste");
+function sanatcilariGoster(sanatcilar) {
+  const liste = document.getElementById("liste");
+  liste.innerHTML = "";
 
-  alan.innerHTML = `
-    <h2>${kategoriAdi}</h2>
-    <input type="text" placeholder="Sanatçı ara..." oninput="sanatciAra(this.value)">
-    <ul id="sanatciListe"></ul>
-  `;
-
-  const ul = document.getElementById("sanatciListe");
-
-  liste.forEach(sanatci => {
+  sanatcilar.forEach(sanatci => {
     const li = document.createElement("li");
     li.textContent = sanatci.ad;
-    li.onclick = () => sarkilariGoster(sanatci);
-    ul.appendChild(li);
+    li.onclick = () => {
+      sarkilariGoster(sanatci.sarkilar);
+    };
+    liste.appendChild(li);
   });
 }
 
-function sanatciAra(kelime) {
-  const filtre = tumSanatcilar.filter(s =>
-    s.ad.toLowerCase().includes(kelime.toLowerCase())
-  );
+function sarkilariGoster(sarkilar) {
+  const liste = document.getElementById("liste");
+  liste.innerHTML = "";
 
-  const ul = document.getElementById("sanatciListe");
-  ul.innerHTML = "";
-
-  filtre.forEach(sanatci => {
+  sarkilar.forEach(sarki => {
     const li = document.createElement("li");
-    li.textContent = sanatci.ad;
-    li.onclick = () => sarkilariGoster(sanatci);
-    ul.appendChild(li);
+    li.textContent = sarki.ad;
+    liste.appendChild(li);
   });
+
+  document.getElementById("geriBtn").style.display = "inline-block";
 }
 
-function sarkilariGoster(sanatci) {
-  const alan = document.getElementById("liste");
-
-  alan.innerHTML = `
-    <h2>${sanatci.ad}</h2>
-    <ul>
-      ${sanatci.sarkilar.map(s => `<li>${s}</li>`).join("")}
-    </ul>
-  `;
+function geri() {
+  sanatcilariGoster(aktifSanatcilar);
+  document.getElementById("geriBtn").style.display = "none";
 }
