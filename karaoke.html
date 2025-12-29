@@ -13,26 +13,7 @@ body{
   color:#fff;
 }
 
-/* ANA SAYFA BUTONU */
-#anaSayfaBtn{
-  position:fixed;
-  top:10px;
-  right:10px;
-  background:#0288d1;
-  color:#fff;
-  border:none;
-  border-radius:14px;
-  padding:10px 16px;
-  font-size:14px;
-  cursor:pointer;
-  box-shadow:0 3px 6px rgba(0,0,0,.4);
-  z-index:10;
-}
-#anaSayfaBtn:active{
-  background:#0277bd;
-}
-
-/* KATEGORİ BUTONLARI */
+/* KATEGORİ BUTONLARI & ANA SAYFA BUTONU */
 .kategoriler{
   display:flex;
   flex-direction:column;
@@ -40,24 +21,25 @@ body{
   gap:10px;
   padding:20px;
   max-width:300px;
-  margin:60px auto 20px auto; /* üstte ana sayfa butonundan boşluk */
+  margin:60px auto 20px auto;
 }
 
-.kategoriBtn{
+.kategoriBtn, #anaSayfaBtn{
   background:#c62828;
   color:#fff;
   border-radius:14px;
   font-size:14px;
   font-weight:600;
   padding:10px 16px;
-  width:100%; /* container genişliğine göre eşit */
+  width:100%;
   text-align:center;
   cursor:pointer;
   user-select:none;
   box-shadow:0 3px 8px rgba(0,0,0,.35);
   transition:transform .1s ease, background-color .1s ease, box-shadow .1s ease;
 }
-.kategoriBtn:active{
+
+.kategoriBtn:active, #anaSayfaBtn:active{
   background:#a91f1f;
   transform:scale(.95);
   box-shadow:0 2px 4px rgba(0,0,0,.45);
@@ -115,11 +97,9 @@ body{
 </head>
 <body>
 
-<!-- ANA SAYFA BUTONU -->
-<button id="anaSayfaBtn" onclick="window.location.href='index.html'">Ana Sayfa</button>
-
-<!-- KATEGORİLER -->
-<div id="kategoriAlan" class="kategoriler">
+<!-- KATEGORİLER ve ANA SAYFA -->
+<div class="kategoriler">
+  <button id="anaSayfaBtn" onclick="window.location.href='index.html'">Ana Sayfa</button>
   <div class="kategoriBtn" onclick="kategoriSec('pop')">Pop</div>
   <div class="kategoriBtn" onclick="kategoriSec('arabesk')">Arabesk</div>
   <div class="kategoriBtn" onclick="kategoriSec('rock')">Rock</div>
@@ -140,7 +120,7 @@ body{
 let mevcutSanatcilar = [];
 
 async function kategoriSec(kategori){
-  document.getElementById('kategoriAlan').style.display = 'none';
+  document.querySelector('.kategoriler').style.display = 'none';
   document.getElementById('sanatciAlan').style.display = 'block';
   document.getElementById('arama').value = '';
   mevcutSanatcilar = [];
@@ -150,7 +130,7 @@ async function kategoriSec(kategori){
 
   if(kategori === 'pop'){
     try {
-      const response = await fetch('pop.json');
+      const response = await fetch('pop.json'); // Aynı klasörde olmalı
       if(!response.ok) throw new Error('Dosya bulunamadı');
       const data = await response.json();
       if(!Array.isArray(data)) throw new Error('JSON array değil');
@@ -173,7 +153,7 @@ async function kategoriSec(kategori){
 }
 
 function geri(){
-  document.getElementById('kategoriAlan').style.display = 'flex';
+  document.querySelector('.kategoriler').style.display = 'flex';
   document.getElementById('sanatciAlan').style.display = 'none';
   document.getElementById('liste').innerHTML = '';
   mevcutSanatcilar = [];
