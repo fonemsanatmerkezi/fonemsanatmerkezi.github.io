@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Karaoke</title>
-
   <style>
     body {
       margin: 0;
@@ -11,13 +10,11 @@
       background: #111;
       color: #fff;
     }
-
     ul {
       list-style: none;
       padding: 20px;
       margin: 0;
     }
-
     li {
       padding: 12px;
       margin-bottom: 8px;
@@ -25,12 +22,9 @@
       border-radius: 6px;
       cursor: pointer;
     }
-
     li:hover {
       background: #2a2a2a;
     }
-
-    /* ŞARKI → SANATÇI GERİ */
     #geriBtn {
       display: none;
       margin: 10px 20px;
@@ -41,8 +35,6 @@
       border-radius: 6px;
       cursor: pointer;
     }
-
-    /* ŞARKI SÖZÜ */
     #sozAlani {
       display: none;
       padding: 20px;
@@ -50,15 +42,8 @@
       background: #000;
       border-radius: 8px;
     }
-
-    #sozAlani h3 {
-      margin-top: 0;
-      text-align: center;
-    }
-
     pre {
       white-space: pre-wrap;
-      font-size: 16px;
       line-height: 1.6;
     }
   </style>
@@ -66,22 +51,15 @@
 
 <body>
 
-  <!-- ŞARKI → SANATÇI GERİ -->
   <button id="geriBtn" onclick="geri()">⬅ Geri</button>
 
-  <!-- LİSTE -->
   <ul id="liste"></ul>
 
-  <!-- ŞARKI SÖZLERİ -->
   <div id="sozAlani"></div>
 
   <script src="app.js"></script>
-
-  <!-- SAYFA AÇILINCA KATEGORİ YÜKLE -->
   <script>
-    const params = new URLSearchParams(window.location.search);
-    const kategori = params.get("kategori") || "pop";
-    kategoriYukle(kategori);
+    kategoriYukle("pop");
   </script>
 
 </body>
