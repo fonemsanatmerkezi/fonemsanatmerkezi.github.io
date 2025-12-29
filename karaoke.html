@@ -40,7 +40,7 @@
       cursor: pointer;
     }
 
-    button:active {
+    button:hover {
       background-color: #b22222;
     }
 
@@ -51,38 +51,52 @@
       padding: 10px;
     }
 
-    #liste ul {
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    ul {
       list-style: none;
       padding: 0;
       margin: 0;
     }
 
-    #liste li {
+    li {
       padding: 10px;
       border-bottom: 1px solid #333;
+      cursor: pointer;
+    }
+
+    li:hover {
+      background-color: #222;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>🎤 Fonem Karaoke</h1>
-  </header>
+<header>
+  <h1>🎤 Fonem Karaoke Hatırlatıcı</h1>
+</header>
 
-  <div class="buttons">
-    <button onclick="loadCategory('pop')">Pop</button>
-    <button onclick="loadCategory('rock')">Rock</button>
-    <button onclick="loadCategory('turkce')">Türkçe</button>
-  </div>
+<div class="buttons">
+  <button onclick="loadCategory('pop')">Pop</button>
+  <button onclick="loadCategory('rock')">Rock</button>
+  <button onclick="loadCategory('arabesk')">Arabesk</button>
+  <button onclick="loadCategory('halk_ozgun')">Halk / Özgün</button>
+  <button onclick="loadCategory('sanat')">Sanat Müziği</button>
+  <button onclick="loadCategory('grup')">Gruplar</button>
+  <button onclick="loadCategory('yabancı')">Yabancı</button>
+</div>
 
-  <h2>Bir kategori seçin.</h2>
+<div id="liste">
+  <h2 id="baslik">Bir kategori seçin</h2>
+</div>
 
-  <!-- 🔴 EN KRİTİK YER BURASI -->
-  <div id="liste"></div>
-
-  <!-- 🔴 JS DOSYASI EN ALTTA -->
-  <script src="app.js"></script>
-
+<script src="app.js"></script>
 </body>
 </html>
