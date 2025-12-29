@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Karaoke</title>
-
 <style>
 body{
   margin:0;
@@ -25,7 +24,7 @@ body{
 }
 
 .kategoriBtn{
-  background:#c62828; /* kırmızı */
+  background:#c62828;
   color:#fff;
   border-radius:14px;
   font-size:14px;
@@ -38,16 +37,14 @@ body{
   box-shadow:0 3px 8px rgba(0,0,0,.35);
   transition:transform .1s ease, background-color .1s ease, box-shadow .1s ease;
 }
-
 .kategoriBtn:active{
   background:#a91f1f;
   transform:scale(.95);
   box-shadow:0 2px 4px rgba(0,0,0,.45);
 }
 
-/* ANA SAYFA BUTONU */
 #anaSayfaBtn{
-  background:#0288d1; /* mavi */
+  background:#0288d1;
   color:#fff;
   border:none;
   border-radius:14px;
@@ -59,23 +56,21 @@ body{
   cursor:pointer;
   user-select:none;
   box-shadow:0 3px 8px rgba(0,0,0,.35);
-  transition:transform .1s ease, background-color .1s ease, box-shadow .1s ease;
 }
-
 #anaSayfaBtn:active{
   background:#0277bd;
   transform:scale(.95);
   box-shadow:0 2px 4px rgba(0,0,0,.45);
 }
 
-/* SANATÇI LİSTESİ ALANI */
-#sanatciAlan{
+/* GENEL LİSTE ALANI */
+#sanatciAlan, #sarkiAlan, #sozAlani{
   display:none;
   max-width:400px;
   margin:20px auto;
 }
 
-#sanatciAlan #geriBtn{
+#sanatciAlan button, #sarkiAlan button{
   width:100%;
   height:36px;
   background:#c62828;
@@ -87,7 +82,7 @@ body{
   margin-bottom:10px;
 }
 
-#sanatciAlan #geriBtn:active{
+#sanatciAlan button:active, #sarkiAlan button:active{
   background:#a91f1f;
 }
 
@@ -99,16 +94,15 @@ body{
   padding:0 12px;
   font-size:14px;
   margin-bottom:10px;
-  display:block;
 }
 
-#sanatciAlan ul{
+ul{
   list-style:none;
   padding:0;
   margin:0;
 }
 
-#sanatciAlan li{
+li{
   background:#1c1c1c;
   padding:10px;
   margin-bottom:6px;
@@ -120,7 +114,7 @@ body{
 </head>
 <body>
 
-<!-- KATEGORİLER ve ANA SAYFA -->
+<!-- KATEGORİLER VE ANA SAYFA -->
 <div class="kategoriler">
   <button id="anaSayfaBtn" onclick="window.location.href='index.html'">Ana Sayfa</button>
   <div class="kategoriBtn" onclick="kategoriSec('pop')">Pop</div>
@@ -134,73 +128,120 @@ body{
 
 <!-- SANATÇI LİSTESİ -->
 <div id="sanatciAlan">
-  <button id="geriBtn" onclick="geri()">⬅ Geri</button>
+  <button onclick="geriSanatci()">⬅ Geri</button>
   <input id="arama" placeholder="Sanatçı ara..." oninput="aramaFiltre()">
   <ul id="liste"></ul>
 </div>
 
+<!-- ŞARKI LİSTESİ -->
+<div id="sarkiAlan">
+  <button onclick="geriSarki()">⬅ Geri</button>
+  <ul id="sarkiListe"></ul>
+</div>
+
+<!-- ŞARKI SÖZLERİ -->
+<div id="sozAlani">
+  <button onclick="geriSoz()">⬅ Geri</button>
+  <div id="sozListe" style="padding:10px;background:#222;border-radius:8px;"></div>
+</div>
+
 <script>
 let mevcutSanatcilar = [];
-let mevcutData = []; // JSON objesi, şarkılar için
+let mevcutData = [];
+let secilenSanatci = null;
 
 async function kategoriSec(kategori){
-  document.querySelector('.kategoriler').style.display = 'none';
-  document.getElementById('sanatciAlan').style.display = 'block';
-  document.getElementById('arama').value = '';
+  document.querySelector('.kategoriler').style.display='none';
+  document.getElementById('sanatciAlan').style.display='block';
+  document.getElementById('arama').value='';
+  const liste = document.getElementById('liste');
+  liste.innerHTML='';
   mevcutSanatcilar = [];
   mevcutData = [];
+  secilenSanatci = null;
 
-  const liste = document.getElementById('liste');
-  liste.innerHTML = '';
-
-  try {
+  try{
     const response = await fetch(`data/${kategori}.json`);
     if(!response.ok) throw new Error(`Dosya bulunamadı: ${response.status}`);
     const data = await response.json();
 
     if(!data.sanatcilar || !Array.isArray(data.sanatcilar)) 
-      throw new Error('JSON içinde sanatcilar array bulunamadı');
+      throw new Error('Sanatçı array bulunamadı');
 
     mevcutData = data.sanatcilar;
-    mevcutSanatcilar = data.sanatcilar.map(s => s.ad);
+    mevcutSanatcilar = data.sanatcilar.map(s=>s.ad);
 
-    if(mevcutSanatcilar.length === 0){
-      liste.innerHTML = '<li>Sanatçı verisi henüz yok.</li>';
+    if(mevcutSanatcilar.length===0){
+      liste.innerHTML='<li>Sanatçı verisi henüz yok.</li>';
     } else {
-      mevcutSanatcilar.forEach(s => {
-        const li = document.createElement('li');
-        li.textContent = s;
-        li.onclick = () => alert(s + ' seçildi'); // ileride şarkı listesi açılabilir
+      mevcutSanatcilar.forEach(s=>{
+        const li=document.createElement('li');
+        li.textContent=s;
+        li.onclick=()=>sanatciSec(s);
         liste.appendChild(li);
       });
     }
 
-  } catch(err){
+  }catch(err){
+    liste.innerHTML=`<li>Sanatçı verisi yüklenemedi: ${err.message}</li>`;
     console.error(err);
-    liste.innerHTML = `<li>Sanatçı verisi yüklenemedi: ${err.message}</li>`;
   }
 }
 
-function geri(){
-  document.querySelector('.kategoriler').style.display = 'flex';
-  document.getElementById('sanatciAlan').style.display = 'none';
-  document.getElementById('liste').innerHTML = '';
-  mevcutSanatcilar = [];
-  mevcutData = [];
+function sanatciSec(ad){
+  secilenSanatci = mevcutData.find(sc=>sc.ad===ad);
+  if(!secilenSanatci) return;
+  document.getElementById('sanatciAlan').style.display='none';
+  const sarkiAlan=document.getElementById('sarkiAlan');
+  sarkiAlan.style.display='block';
+  const sarkiListe=document.getElementById('sarkiListe');
+  sarkiListe.innerHTML='';
+
+  if(!secilenSanatci.sarkilar || secilenSanatci.sarkilar.length===0){
+    sarkiListe.innerHTML='<li>Şarkı verisi yok.</li>';
+  }else{
+    secilenSanatci.sarkilar.forEach(s=>{
+      const li=document.createElement('li');
+      li.textContent=s.ad;
+      li.onclick=()=>sarkiSec(s);
+      sarkiListe.appendChild(li);
+    });
+  }
 }
 
+function sarkiSec(sarki){
+  document.getElementById('sarkiAlan').style.display='none';
+  const sozAlani=document.getElementById('sozAlani');
+  const sozListe=document.getElementById('sozListe');
+  sozListe.textContent = sarki.soz || 'Şarkı sözü yok.';
+  sozAlani.style.display='block';
+}
+
+/* GERİ BUTONLARI */
+function geriSanatci(){
+  document.getElementById('sanatciAlan').style.display='none';
+  document.querySelector('.kategoriler').style.display='flex';
+}
+function geriSarki(){
+  document.getElementById('sarkiAlan').style.display='none';
+  document.getElementById('sanatciAlan').style.display='block';
+}
+function geriSoz(){
+  document.getElementById('sozAlani').style.display='none';
+  document.getElementById('sarkiAlan').style.display='block';
+}
+
+/* ARAMA FONKSİYONU */
 function aramaFiltre(){
-  const arama = document.getElementById('arama').value.toLowerCase();
-  const liste = document.getElementById('liste');
-  liste.innerHTML = '';
-  mevcutSanatcilar
-    .filter(s => s.toLowerCase().includes(arama))
-    .forEach(s => {
-      const li = document.createElement('li');
-      li.textContent = s;
-      li.onclick = () => alert(s + ' seçildi');
-      liste.appendChild(li);
-    });
+  const arama=document.getElementById('arama').value.toLowerCase();
+  const liste=document.getElementById('liste');
+  liste.innerHTML='';
+  mevcutSanatcilar.filter(s=>s.toLowerCase().includes(arama)).forEach(s=>{
+    const li=document.createElement('li');
+    li.textContent=s;
+    li.onclick=()=>sanatciSec(s);
+    liste.appendChild(li);
+  });
 }
 </script>
 
