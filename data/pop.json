@@ -6,10 +6,14 @@
       "ad": "Ajda Pekkan",
       "sarkilar": [
         {
+          "id": "yaz_yaz_yaz",
           "ad": "Yaz Yaz Yaz",
-          "soz": "Neden senle hiç durmadan tartışıp duruyoruz ki biz\nBile bile üstüme gelmene ne gerek var\nNeden dostça ve insanca ayrılamıyoruz ki biz\nVe bunca yaşanmış yılların da hatırı var\n\nEğer her gün bu işk"
+          "soz": "Güneş doğar, deniz parlar, her şey yeni başlar."
         },
-      "Hoşgör Sen",
+        {
+       "id": "hosgor_sen",
+          "ad": "Hoşgör Sen",
+          "soz": "Dost ol, anlamaya çalış, kırmadan geç hayatı." "Hoşgör Sen",
       "Sana Neler Edeceğim",
       "Bambaşka Biri",
       "Uykusuz Her Gece",
