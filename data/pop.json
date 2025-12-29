@@ -2,19 +2,22 @@
   "kategori": "Pop",
   "sanatcilar": [
     {
-      "id": "ajda_pekkan",
-      "ad": "Ajda Pekkan",
-      "sarkilar": [
-        "Yaz Yaz Yaz",
-        "Hoşgör Sen",
-        "Sana Neler Edeceğim",
-        "Bambaşka Biri",
-        "Uykusuz Her Gece",
-        "Oyalama Beni",
-        "Petrol",
-        "Arada Sırada",
-        "Kimler Geldi Kimler Geçti",
-        "Süperstar"
+     "id": "ajda_pekkan",
+    "ad": "Ajda Pekkan",
+    "sarkilar": [
+      {
+        "ad": "Yaz Yaz Yaz",
+        "soz": "Bu sadece örnek bir şarkı sözüdür.\nİkinci satır burada.\nÜçüncü satır burada."
+      },
+      "Hoşgör Sen",
+      "Sana Neler Edeceğim",
+      "Bambaşka Biri",
+      "Uykusuz Her Gece",
+      "Oyalama Beni",
+      "Petrol",
+      "Arada Sırada",
+      "Kimler Geldi Kimler Geçti",
+      "Süperstar"
       ]
     },
     {
