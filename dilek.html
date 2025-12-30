@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dilek / İstek / Öneri</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+body{
+  margin:0;
+  font-family:'Montserrat', sans-serif;
+  background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("github-arka-plan.jpeg") center/cover fixed;
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  flex-direction:column;
+  text-align:center;
+}
+
+.home-btn{
+  position:absolute;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  padding:10px 20px;
+  background:#1976d2;
+  color:#fff;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.2s;
+}
+.home-btn:hover{
+  background:#135ba1;
+}
+
+.form-box{
+  background:rgba(255,255,255,0.95);
+  color:#000;
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 6px 14px rgba(0,0,0,0.3);
+  max-width:400px;
+  width:90%;
+  margin-top:40px;
+  text-align:left;
+}
+
+.form-box label{
+  display:block;
+  margin-top:10px;
+  font-weight:600;
+}
+
+.form-box input, .form-box textarea{
+  width:100%;
+  padding:10px;
+  margin-top:5px;
+  border-radius:10px;
+  border:1px solid #ccc;
+  font-size:14px;
+}
+
+textarea{
+  resize:vertical;
+  min-height:80px;
+}
+
+.submit-btn{
+  margin-top:15px;
+  padding:12px 20px;
+  background:#25D366;
+  color:#fff;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:600;
+  width:100%;
+}
+.submit-btn:hover{
+  background:#1ebe57;
+}
+</style>
+</head>
+<body>
+
+<a href="index.html" class="home-btn">🏠 Ana Sayfaya Dön</a>
+
+<div class="form-box">
+  <h2>Dilek / İstek / Öneri</h2>
+  <form id="dilekForm">
+    <label>Ad Soyad *</label>
+    <input type="text" id="adSoyad" required>
+
+    <label>Telefon *</label>
+    <input type="tel" id="telefon" required>
+
+    <label>Email (isteğe bağlı)</label>
+    <input type="email" id="email">
+
+    <label>Açıklama *</label>
+    <textarea id="aciklama" required></textarea>
+
+    <button type="submit" class="submit-btn">WhatsApp ile Gönder</button>
+  </form>
+</div>
+
+<script>
+// WhatsApp ile gönderme
+const form = document.getElementById('dilekForm');
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const ad = document.getElementById('adSoyad').value.trim();
+  const tel = document.getElementById('telefon').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const aciklama = document.getElementById('aciklama').value.trim();
+
+  if(!ad || !tel || !aciklama){
+    alert("Lütfen zorunlu alanları doldurun!");
+    return;
+  }
+
+  let mesaj = `Dilek / İstek / Öneri:%0AAd Soyad: ${ad}%0ATelefon: ${tel}%0A`;
+  if(email) mesaj += `Email: ${email}%0A`;
+  mesaj += `Açıklama: ${aciklama}`;
+
+  // WhatsApp linki
+  const whatsappLink = `https://wa.me/905417195706?text=${mesaj}`;
+  window.open(whatsappLink, '_blank');
+});
+</script>
+
+</body>
+</html>
