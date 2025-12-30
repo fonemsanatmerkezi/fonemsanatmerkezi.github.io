@@ -4,109 +4,118 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dilek / İstek / Öneri</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
 <style>
 body{
   margin:0;
   font-family:'Montserrat', sans-serif;
-  background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("github-arka-plan.jpeg") center/cover fixed;
+  background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+  url("github-arka-plan.jpeg") center/cover fixed;
   color:#fff;
+  min-height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
-  min-height:100vh;
-  flex-direction:column;
-  text-align:center;
 }
 
+/* Ana sayfa butonu */
 .home-btn{
-  position:absolute;
-  top:20px;
+  position:fixed;
+  top:18px;
   left:50%;
   transform:translateX(-50%);
-  padding:10px 20px;
   background:#1976d2;
   color:#fff;
-  border:none;
-  border-radius:12px;
-  cursor:pointer;
-  font-weight:600;
+  padding:10px 22px;
+  border-radius:14px;
   text-decoration:none;
-  transition:0.2s;
+  font-weight:600;
+  transition:.2s;
 }
 .home-btn:hover{
-  background:#135ba1;
+  background:#125aa1;
 }
 
+/* Form kutusu */
 .form-box{
-  background:rgba(255,255,255,0.95);
+  background:#fff;
   color:#000;
-  padding:25px;
-  border-radius:16px;
-  box-shadow:0 6px 14px rgba(0,0,0,0.3);
-  max-width:400px;
+  padding:26px;
+  border-radius:18px;
   width:90%;
-  margin-top:40px;
-  text-align:left;
+  max-width:420px;
+  box-shadow:0 10px 25px rgba(0,0,0,.35);
 }
 
-.form-box label{
+.form-box h2{
+  text-align:center;
+  margin-top:0;
+}
+
+/* Form alanları */
+label{
   display:block;
-  margin-top:10px;
+  margin-top:12px;
   font-weight:600;
-}
-
-.form-box input, .form-box textarea{
-  width:100%;
-  padding:10px;
-  margin-top:5px;
-  border-radius:10px;
-  border:1px solid #ccc;
   font-size:14px;
 }
 
-textarea{
-  resize:vertical;
-  min-height:80px;
-}
-
-/* Gönder Butonları */
-.submit-btn{
-  margin-top:15px;
-  padding:12px 20px;
-  color:#fff;
-  border:none;
-  border-radius:12px;
-  cursor:pointer;
-  font-weight:600;
+input, textarea{
   width:100%;
-  text-align:center;
-  display:block;
-  text-decoration:none;
-  transition:0.2s;
-}
-.submit-btn:hover{
-  opacity:0.9;
+  box-sizing:border-box;
+  padding:10px 12px;
+  margin-top:6px;
+  border-radius:12px;
+  border:1px solid #ccc;
+  font-size:14px;
+  font-family:'Montserrat', sans-serif;
 }
 
-/* WhatsApp */
-.whatsapp-btn{
+textarea{
+  min-height:90px;
+  resize:vertical;
+}
+
+/* Ortak buton stili */
+.submit-btn{
+  width:100%;
+  box-sizing:border-box;
+  margin-top:14px;
+  padding:13px;
+  border:none;
+  border-radius:14px;
+  font-size:15px;
+  font-weight:700;
+  cursor:pointer;
+  color:#fff;
+  transition:.15s;
+}
+
+.submit-btn:active{
+  transform:scale(.97);
+}
+
+/* WhatsApp & Email aynı stil */
+.whatsapp-btn,
+.email-btn{
   background:#25D366;
 }
 
-/* Email */
 .email-btn{
-  background:#1976d2;
   margin-top:10px;
 }
 </style>
 </head>
+
 <body>
 
 <a href="index.html" class="home-btn">🏠 Ana Sayfaya Dön</a>
 
 <div class="form-box">
   <h2>Dilek / İstek / Öneri</h2>
+
   <form id="dilekForm">
     <label>Ad Soyad *</label>
     <input type="text" id="adSoyad" required>
@@ -120,38 +129,75 @@ textarea{
     <label>Açıklama *</label>
     <textarea id="aciklama" required></textarea>
 
-    <button type="submit" class="submit-btn whatsapp-btn">WhatsApp ile Gönder</button>
-    <a href="#" class="submit-btn email-btn" id="emailBtn">Email ile Gönder</a>
+    <button type="submit" class="submit-btn whatsapp-btn">
+      WhatsApp ile Gönder
+    </button>
+
+    <button type="button" id="emailBtn" class="submit-btn email-btn">
+      Email ile Gönder
+    </button>
   </form>
 </div>
 
 <script>
-// Form ve butonlar
-const form = document.getElementById('dilekForm');
-const emailBtn = document.getElementById('emailBtn');
+const form = document.getElementById("dilekForm");
+const emailBtn = document.getElementById("emailBtn");
 
-form.addEventListener('submit', function(e){
-  e.preventDefault();
-
-  const ad = document.getElementById('adSoyad').value.trim();
-  const tel = document.getElementById('telefon').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const aciklama = document.getElementById('aciklama').value.trim();
+function formVerisiniAl(){
+  const ad = document.getElementById("adSoyad").value.trim();
+  const tel = document.getElementById("telefon").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const aciklama = document.getElementById("aciklama").value.trim();
 
   if(!ad || !tel || !aciklama){
-    alert("Lütfen zorunlu alanları doldurun!");
-    return;
+    alert("Lütfen zorunlu alanları doldurun.");
+    return null;
   }
 
-  // WhatsApp Mesajı
-  let mesaj = `Dilek / İstek / Öneri:%0AAd Soyad: ${ad}%0ATelefon: ${tel}%0A`;
-  if(email) mesaj += `Email: ${email}%0A`;
-  mesaj += `Açıklama: ${aciklama}`;
-  window.open(`https://wa.me/905417195706?text=${mesaj}`, '_blank');
+  return { ad, tel, email, aciklama };
+}
 
-  // Email Mesajı
-  let emailBody = `Ad Soyad: ${ad}%0ATelefon: ${tel}%0AEmail: ${email}%0AAçıklama: ${aciklama}`;
-  emailBtn.href = `mailto:fonemsanatmerkezi@gmail.com?subject=Dilek / İstek / Öneri&body=${emailBody}`;
+/* WhatsApp */
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+  const data = formVerisiniAl();
+  if(!data) return;
+
+  let mesaj =
+`DİLEK / İSTEK / ÖNERİ
+------------------------
+Ad Soyad: ${data.ad}
+Telefon: ${data.tel}
+${data.email ? "Email: " + data.email : ""}
+Açıklama:
+${data.aciklama}
+------------------------`;
+
+  window.open(
+    "https://wa.me/905417195706?text=" + encodeURIComponent(mesaj),
+    "_blank"
+  );
+});
+
+/* Email */
+emailBtn.addEventListener("click", function(){
+  const data = formVerisiniAl();
+  if(!data) return;
+
+  let body =
+`DİLEK / İSTEK / ÖNERİ
+------------------------
+Ad Soyad: ${data.ad}
+Telefon: ${data.tel}
+${data.email ? "Email: " + data.email : ""}
+Açıklama:
+${data.aciklama}
+------------------------`;
+
+  window.location.href =
+    "mailto:fonemsanatmerkezi@gmail.com" +
+    "?subject=" + encodeURIComponent("Dilek / İstek / Öneri") +
+    "&body=" + encodeURIComponent(body);
 });
 </script>
 
