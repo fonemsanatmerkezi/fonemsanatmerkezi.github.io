@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dilek / İstek / Öneri</title>
+<title>Bizi Takip Edin</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 
@@ -38,54 +38,30 @@ body{
   background:#125aa1;
 }
 
-/* Form kutusu */
-.form-box{
+/* Orta kutu */
+.box{
   background:#fff;
   color:#000;
-  padding:26px;
+  padding:28px;
   border-radius:18px;
   width:90%;
   max-width:420px;
   box-shadow:0 10px 25px rgba(0,0,0,.35);
-}
-
-.form-box h2{
   text-align:center;
+}
+
+.box h2{
   margin-top:0;
-}
-
-/* Form alanları */
-label{
-  display:block;
-  margin-top:12px;
-  font-weight:600;
-  font-size:14px;
-}
-
-input, textarea{
-  width:100%;
-  box-sizing:border-box;
-  padding:10px 12px;
-  margin-top:6px;
-  border-radius:12px;
-  border:1px solid #ccc;
-  font-size:14px;
-  font-family:'Montserrat', sans-serif;
-}
-
-textarea{
-  min-height:90px;
-  resize:vertical;
+  margin-bottom:22px;
 }
 
 /* Ortak buton stili */
-.submit-btn{
+.follow-btn{
   width:100%;
-  box-sizing:border-box;
-  margin-top:14px;
-  padding:13px;
+  padding:14px;
+  margin-bottom:14px;
   border:none;
-  border-radius:14px;
+  border-radius:16px;
   font-size:15px;
   font-weight:700;
   cursor:pointer;
@@ -93,18 +69,21 @@ textarea{
   transition:.15s;
 }
 
-.submit-btn:active{
-  transform:scale(.97);
+.follow-btn:active{
+  transform:scale(.96);
 }
 
-/* WhatsApp & Email aynı stil */
-.whatsapp-btn,
-.email-btn{
-  background:#25D366;
+/* Platform renkleri */
+.instagram{
+  background:#E1306C;
 }
 
-.email-btn{
-  margin-top:10px;
+.tiktok{
+  background:#000;
+}
+
+.google{
+  background:#4285F4;
 }
 </style>
 </head>
@@ -113,93 +92,25 @@ textarea{
 
 <a href="index.html" class="home-btn">🏠 Ana Sayfaya Dön</a>
 
-<div class="form-box">
-  <h2>Dilek / İstek / Öneri</h2>
+<div class="box">
+  <h2>Bizi Takip Edin</h2>
 
-  <form id="dilekForm">
-    <label>Ad Soyad *</label>
-    <input type="text" id="adSoyad" required>
+  <button class="follow-btn instagram"
+    onclick="window.open('https://www.instagram.com/fonemsanatmerkezi/', '_blank')">
+    📸 Instagram
+  </button>
 
-    <label>Telefon *</label>
-    <input type="tel" id="telefon" required>
+  <button class="follow-btn tiktok"
+    onclick="window.open('https://www.tiktok.com/@fonemsanatmerkezi', '_blank')">
+    🎵 TikTok
+  </button>
 
-    <label>Email (isteğe bağlı)</label>
-    <input type="email" id="email">
+  <button class="follow-btn google"
+    onclick="window.open('https://share.google/0oSEWr7wu4Oa8pLR1', '_blank')">
+    ⭐ Google’da Yorum Yap
+  </button>
 
-    <label>Açıklama *</label>
-    <textarea id="aciklama" required></textarea>
-
-    <button type="submit" class="submit-btn whatsapp-btn">
-      WhatsApp ile Gönder
-    </button>
-
-    <button type="button" id="emailBtn" class="submit-btn email-btn">
-      Email ile Gönder
-    </button>
-  </form>
 </div>
-
-<script>
-const form = document.getElementById("dilekForm");
-const emailBtn = document.getElementById("emailBtn");
-
-function formVerisiniAl(){
-  const ad = document.getElementById("adSoyad").value.trim();
-  const tel = document.getElementById("telefon").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const aciklama = document.getElementById("aciklama").value.trim();
-
-  if(!ad || !tel || !aciklama){
-    alert("Lütfen zorunlu alanları doldurun.");
-    return null;
-  }
-
-  return { ad, tel, email, aciklama };
-}
-
-/* WhatsApp */
-form.addEventListener("submit", function(e){
-  e.preventDefault();
-  const data = formVerisiniAl();
-  if(!data) return;
-
-  let mesaj =
-`DİLEK / İSTEK / ÖNERİ
-------------------------
-Ad Soyad: ${data.ad}
-Telefon: ${data.tel}
-${data.email ? "Email: " + data.email : ""}
-Açıklama:
-${data.aciklama}
-------------------------`;
-
-  window.open(
-    "https://wa.me/905417195706?text=" + encodeURIComponent(mesaj),
-    "_blank"
-  );
-});
-
-/* Email */
-emailBtn.addEventListener("click", function(){
-  const data = formVerisiniAl();
-  if(!data) return;
-
-  let body =
-`DİLEK / İSTEK / ÖNERİ
-------------------------
-Ad Soyad: ${data.ad}
-Telefon: ${data.tel}
-${data.email ? "Email: " + data.email : ""}
-Açıklama:
-${data.aciklama}
-------------------------`;
-
-  window.location.href =
-    "mailto:fonemsanatmerkezi@gmail.com" +
-    "?subject=" + encodeURIComponent("Dilek / İstek / Öneri") +
-    "&body=" + encodeURIComponent(body);
-});
-</script>
 
 </body>
 </html>
