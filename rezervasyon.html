@@ -19,6 +19,26 @@ body{
   text-align:center;
 }
 
+/* Ana Sayfaya Dön Butonu */
+.home-btn{
+  position:absolute;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  padding:10px 20px;
+  background:#1976d2; /* mavi renk */
+  color:#fff;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.2s;
+}
+.home-btn:hover{
+  background:#135ba1;
+}
+
 /* Kutular */
 .rezervasyon-box{
   background:rgba(255,255,255,0.95);
@@ -28,6 +48,7 @@ body{
   box-shadow:0 6px 14px rgba(0,0,0,0.3);
   max-width:400px;
   width:90%;
+  margin-top:40px; /* ana sayfa butonu üstte olduğundan */
 }
 
 /* WhatsApp Butonu */
@@ -50,6 +71,9 @@ body{
 </style>
 </head>
 <body>
+
+<!-- Ana Sayfaya Dön Butonu -->
+<a href="index.html" class="home-btn">🏠 Ana Sayfaya Dön</a>
 
 <div class="rezervasyon-box">
   <h2>Rezervasyon</h2>
