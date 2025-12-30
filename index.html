@@ -5,20 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fonem Sanat Merkezi</title>
 
-<!-- Google Fonts Modern -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 
 <style>
 body{
   margin:0;
   font-family:'Montserrat', sans-serif;
-  background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("github-arka-plan.jpeg") center/cover fixed;
+  background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+             url("github-arka-plan.jpeg") center/cover fixed;
   color:#fff;
   overflow-x:hidden;
-  position:relative;
 }
 
-/* Hoş Geldiniz Mesajı Üstte */
+/* Hoş Geldiniz */
 #welcome{
   position:fixed;
   top:10px;
@@ -26,16 +25,11 @@ body{
   transform:translateX(-50%);
   font-size:34px;
   font-weight:700;
-  color:#ffffff;
-  opacity:1;
   animation: fadeOut 3s ease forwards 3s;
   z-index:999;
-  text-align:center;
 }
-
 @keyframes fadeOut{
-  0% { opacity:1; }
-  100% { opacity:0; transform:translateY(-30px); }
+  to { opacity:0; transform:translate(-50%,-30px); }
 }
 
 /* Container */
@@ -44,96 +38,99 @@ body{
   margin:auto;
   padding:20px;
   text-align:center;
-  margin-top:60px;
+  margin-top:80px;
 }
 
 /* Logo */
-.logo{
-  text-align:center;
-  margin:20px 0 25px;
-}
 .logo img{
   max-width:220px;
-  height:auto;
-  display:block;
-  margin:auto;
+  margin-bottom:30px;
 }
 
-/* Butonlar alt alta, eşit en, modern gölgeli */
-.btn{
-  display:block;
-  width:280px; /* biraz daha uzun */
-  padding:12px;
-  margin:10px auto; /* ortada alt alta */
-  font-size:16px;
-  border-radius:16px;
-  border:none;
+/* ==== DAİRESEL MENÜ ==== */
+.circle-menu{
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  margin:40px auto;
+  position:relative;
+  border:4px solid #c40000; /* kırmızı çerçeve */
+}
+
+.center{
+  width:100px;
+  height:100px;
+  border-radius:50%;
   background:#fff;
-  color:#000;
+  color:#111;
+  font-weight:700;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.slice{
+  position:absolute;
+  width:50%;
+  height:50%;
+  transform-origin:100% 100%;
+  background:#f4f1ec;
+  border:none;
   cursor:pointer;
+  font-size:13px;
   font-weight:600;
-  transition:0.2s ease-in-out;
-  text-align:center;
-  box-shadow:0 6px 12px rgba(0,0,0,0.25);
-  text-decoration:none; /* alt çizgi yok */
-}
-.btn:hover{
-  background:#f5f5f5;
-  box-shadow:0 8px 16px rgba(0,0,0,0.3);
-}
-.btn:active{
-  background:#e0e0e0;
-  transform:scale(0.97);
+  color:#111;
 }
 
-/* Özel butonlar altı çizgi olmasın */
-a.btn{
-  text-decoration:none;
+.slice:hover{
+  background:#ebe6dd;
 }
 
-/* Responsive */
-@media screen and (max-width:400px){
-  #welcome{
-    font-size:28px;
-  }
-  .btn{
-    width:220px;
-    font-size:15px;
-    padding:10px;
-  }
+/* Dilimler */
+#karaoke { transform: rotate(0deg) translate(100%,0); }
+#foto    { transform: rotate(60deg) translate(100%,0); }
+#fiyat   { transform: rotate(120deg) translate(100%,0); }
+#rezerv  { transform: rotate(180deg) translate(100%,0); }
+#dilek   { transform: rotate(240deg) translate(100%,0); }
+#takip   { transform: rotate(300deg) translate(100%,0); }
+
+/* Mobil */
+@media(max-width:600px){
+  .circle-menu{ transform:scale(0.85); }
 }
 </style>
 </head>
+
 <body>
 
-<!-- Hoş Geldiniz Mesajı -->
 <div id="welcome">Hoş Geldiniz!</div>
 
 <div class="container">
 
-  <!-- LOGO -->
   <div class="logo">
     <img src="fonem-logo.png" alt="Fonem Sanat Merkezi">
   </div>
 
-  <!-- Butonlar ALT ALTA -->
-  <a href="karaoke.html"><button class="btn">🎤 Karaoke Hatırlatıcı</button></a>
-  <a href="fotograflar.html"><button class="btn">📸 Fotoğraflarımız</button></a>
-  <a href="fiyatlar.html"><button class="btn">💰 Fiyatlarımız</button></a>
-  <a href="rezervasyon.html"><button class="btn">📅 Rezervasyon</button></a>
-  <a href="dilek.html"><button class="btn">📝 Dilek / İstek / Öneri</button></a>
-  <a href="takip.html"><button class="btn">📲 Bizi Takip Edin</button>
-</a>
+  <div class="circle-menu">
+    <div class="center">FONEM</div>
 
+    <button class="slice" id="karaoke" onclick="go('karaoke.html')">🎤 Karaoke</button>
+    <button class="slice" id="foto" onclick="go('fotograflar.html')">📸 Fotoğraflar</button>
+    <button class="slice" id="fiyat" onclick="go('fiyatlar.html')">💰 Fiyatlar</button>
+    <button class="slice" id="rezerv" onclick="go('rezervasyon.html')">📅 Rezervasyon</button>
+    <button class="slice" id="dilek" onclick="go('dilek.html')">📝 Dilek</button>
+    <button class="slice" id="takip" onclick="go('takip.html')">📲 Takip</button>
+  </div>
 
 </div>
 
 <script>
-// 3 saniye sonra hoşgeldiniz mesajını kaldır
-setTimeout(() => {
-  const welcome = document.getElementById('welcome');
-  welcome.style.display = 'none';
-}, 6000);
+setTimeout(()=>{ document.getElementById("welcome").style.display="none"; },6000);
+function go(url){ window.location.href = url; }
 </script>
 
 </body>
