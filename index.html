@@ -5,54 +5,126 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fonem Sanat Merkezi</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
 <style>
-/* GENEL */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+*{
+  box-sizing:border-box;
 }
 
-body {
-  height: 100vh;
-  background: url("background.jpg") no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+body{
+  margin:0;
+  font-family:'Montserrat', sans-serif;
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("github-arka-plan.jpeg") no-repeat center center fixed;
+  background-size:cover;
+  color:#fff;
+  min-height:100vh;
 }
 
-/* DIŞ KIRMIZI DAİRE */
-.circle-wrapper {
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  background: #b30000;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Hoş geldiniz */
+#welcome{
+  position:fixed;
+  top:15px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:28px;
+  font-weight:700;
+  z-index:1000;
+  animation: fadeOut 3s ease forwards 3s;
 }
 
-/* ORTA BEYAZ DAİRE */
-.center-circle {
-  width: 120px;
-  height: 120px;
-  background: #ffffff;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+@keyframes fadeOut{
+  to{
+    opacity:0;
+    transform:translate(-50%,-20px);
+  }
 }
 
-/* BUTONLAR */
-.menu-btn {
-  width: 80px;
-  height: 80px;
-  background: #f3f1eb; /* kırık beyaz */
-  border-radius: 50%;
-  position:
+/* Ana alan */
+.container{
+  max-width:420px;
+  margin:auto;
+  padding:20px;
+  text-align:center;
+  margin-top:80px;
+}
+
+/* Logo */
+.logo img{
+  width:200px;
+  max-width:80%;
+  margin-bottom:25px;
+}
+
+/* Butonlar */
+.menu-btn{
+  display:block;
+  width:100%;
+  max-width:280px;
+  margin:12px auto;
+  padding:14px;
+  background:#f5f5f0; /* kırık beyaz */
+  color:#000;
+  font-size:16px;
+  font-weight:600;
+  border:none;
+  border-radius:18px;
+  text-decoration:none;
+  box-shadow:0 6px 12px rgba(0,0,0,0.3);
+  transition:all 0.2s ease;
+}
+
+/* Basılabilir hissi */
+.menu-btn:hover{
+  background:#eaeada;
+}
+
+.menu-btn:active{
+  background:#dcdccf;
+  transform:scale(0.96);
+  box-shadow:0 4px 8px rgba(0,0,0,0.4);
+}
+
+/* Mobil */
+@media (max-width:400px){
+  #welcome{
+    font-size:24px;
+  }
+  .menu-btn{
+    font-size:15px;
+    padding:12px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="welcome">Hoş Geldiniz!</div>
+
+<div class="container">
+
+  <div class="logo">
+    <img src="fonem-logo.png" alt="Fonem Sanat Merkezi">
+  </div>
+
+  <a href="karaoke.html" class="menu-btn">🎤 Karaoke Hatırlatıcı</a>
+  <a href="fotograflar.html" class="menu-btn">📸 Fotoğraflarımız</a>
+  <a href="fiyatlar.html" class="menu-btn">💰 Fiyatlarımız</a>
+  <a href="rezervasyon.html" class="menu-btn">📅 Rezervasyon</a>
+  <a href="dilek.html" class="menu-btn">📝 Dilek / Öneri</a>
+  <a href="takip.html" class="menu-btn">📲 Bizi Takip Edin</a>
+
+</div>
+
+<script>
+setTimeout(() => {
+  const w = document.getElementById("welcome");
+  if(w) w.style.display = "none";
+}, 6000);
+</script>
+
+</body>
+</html>
