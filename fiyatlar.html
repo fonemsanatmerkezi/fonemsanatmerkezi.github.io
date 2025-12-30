@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiyatlarımız</title>
+<style>
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#111;
+  color:#fff;
+}
+
+.container{
+  max-width:600px;
+  margin:auto;
+  padding:20px;
+  text-align:center;
+}
+
+/* Geri Butonu */
+#geriBtn{
+  width:100%;
+  padding:12px;
+  margin-bottom:20px;
+  font-size:16px;
+  border:none;
+  border-radius:14px;
+  background:#0288d1;
+  color:#fff;
+  cursor:pointer;
+}
+#geriBtn:active{ background:#0277bd; }
+
+/* Slogan */
+.slogan{
+  font-size:20px;
+  color:#ffeb3b;
+  margin-bottom:20px;
+  font-weight:600;
+}
+
+/* Accordion */
+.accordion{
+  background:#c62828;
+  color:#fff;
+  cursor:pointer;
+  padding:14px;
+  width:100%;
+  border:none;
+  text-align:left;
+  outline:none;
+  font-size:16px;
+  border-radius:12px;
+  margin-bottom:10px;
+  transition:0.2s;
+}
+
+.accordion:active, .accordion:hover{
+  background:#b71c1c;
+}
+
+.panel{
+  padding:0 15px;
+  display:none;
+  background:#1c1c1c;
+  overflow:hidden;
+  border-radius:12px;
+  margin-bottom:10px;
+  text-align:left;
+}
+
+.panel ul{
+  list-style:none;
+  padding-left:0;
+}
+
+.panel li{
+  padding:6px 0;
+  border-bottom:1px solid #333;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <button id="geriBtn" onclick="window.location.href='index.html'">⬅ Ana Sayfa</button>
+  <div class="slogan">6 Kahve Sizden, 1 Kahve Bizden</div>
+
+  <!-- Karaoke Fiyatları -->
+  <button class="accordion">Karaoke Fiyatları</button>
+  <div class="panel">
+    <p>1 saat kişi başı 200 TL</p>
+  </div>
+
+  <!-- Prova Stüdyoları -->
+  <button class="accordion">Prova Stüdyoları</button>
+  <div class="panel">
+    <p>1 saat 500 TL</p>
+  </div>
+
+  <!-- Kayıt / Mix / Mastering -->
+  <button class="accordion">Kayıt / Mix / Mastering</button>
+  <div class="panel">
+    <p>Lütfen iletişime geçiniz: 541 719 57 06</p>
+  </div>
+
+  <!-- Kafe Menü -->
+  <button class="accordion">Kafe Menü</button>
+  <div class="panel">
+    <ul>
+      <li><strong>Sıcak İçecekler</strong>
+        <ul>
+          <li><strong>Kahveler</strong>
+            <ul>
+              <li>Türk Kahvesi 70 TL</li>
+              <li>Filtre Kahve 100 TL</li>
+              <li>Espresso 70 TL</li>
+              <li>Americano 110 TL</li>
+              <li>Cappuccino 110 TL</li>
+              <li>Latte 110 TL</li>
+              <li>Flat White 110 TL</li>
+              <li>Coffee Cream 110 TL</li>
+            </ul>
+          </li>
+          <li><strong>Aromalı Kahveler</strong>
+            <ul>
+              <li>White Chocolate Mocha 135 TL</li>
+              <li>Caramel Macchiato 135 TL</li>
+              <li>Aromalı Cappuccino 135 TL</li>
+              <li>Aromalı Latte 135 TL</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Çaylar</strong>
+        <ul>
+          <li>Siyah Çay 35 TL</li>
+          <li>Double Siyah Çay 45 TL</li>
+          <li>Bitki Çayları 55 TL</li>
+        </ul>
+      </li>
+      <li><strong>Soğuk İçecekler</strong>
+        <ul>
+          <li><strong>Soğuk Kahveler</strong>
+            <ul>
+              <li>Iced Caramel Latte</li>
+              <li>Iced Mocha</li>
+              <li>Iced Americano</li>
+            </ul>
+          </li>
+          <li><strong>Gazlı / Gazsız İçecekler</strong>
+            <ul>
+              <li>Cam İçecekler 200 ml 50 TL</li>
+              <li>Kutu İçecekler 70 TL</li>
+              <li>Pet İçecekler 1 lt 90 TL</li>
+              <li>500 ml Su 20 TL</li>
+              <li>Maden Suyu 30 TL</li>
+            </ul>
+          </li>
+          <li><strong>Enerji İçecekleri</strong>
+            <ul>
+              <li>Monster 500 ml 90 TL</li>
+              <li>Powerade 500 ml 90 TL</li>
+              <li>Predator Energy 70 TL</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<script>
+// Accordion aç/kapa
+const acc = document.getElementsByClassName("accordion");
+for(let i=0;i<acc.length;i++){
+  acc[i].addEventListener("click", function(){
+    this.classList.toggle("active");
+    const panel = this.nextElementSibling;
+    panel.style.display = (panel.style.display === "block") ? "none" : "block";
+  });
+}
+</script>
+
+</body>
+</html>
 
