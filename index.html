@@ -5,120 +5,154 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fonem Sanat Merkezi</title>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
+<style>
 body{
   margin:0;
-  font-family:'Poppins', sans-serif;
   background:
     linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
     url("github-arka-plan.jpeg") center/cover fixed;
-  color:#fff;
-}
-
-/* ANA ALAN */
-.main{
+  font-family:'Poppins', sans-serif;
   height:100vh;
+  overflow:hidden;
+}
+
+/* HOŞ GELDİNİZ */
+#welcome{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Playfair Display', serif;
+  font-size:38px;
+  color:#fff;
+  background:rgba(0,0,0,.6);
+  z-index:10;
+  animation:fadeOut 3s ease forwards;
+}
+
+@keyframes fadeOut{
+  0%{opacity:0}
+  20%{opacity:1}
+  80%{opacity:1}
+  100%{opacity:0; visibility:hidden}
+}
+
+/* MERKEZ */
+.main{
+  height:100%;
   display:flex;
   align-items:center;
   justify-content:center;
 }
 
-/* DAİRE KONTEYNER */
-.circle-container{
-  position:relative;
-  width:320px;
-  height:320px;
+/* SVG */
+svg{
+  width:340px;
+  max-width:90vw;
 }
 
-/* ORTA LOGO */
-.center-logo{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:110px;
-  height:110px;
-  border-radius:50%;
-  background:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 6px 18px rgba(0,0,0,.5);
+.slice{
+  fill:transparent;
+  cursor:pointer;
 }
 
-.center-logo img{
-  width:80px;
+.slice:hover{
+  fill:rgba(156,39,176,.12);
 }
 
-/* BUTONLAR */
-.circle-btn{
-  position:absolute;
-  width:160px;
-  height:42px;
-  background:#fff;
-  color:#4a148c;
-  border-radius:22px;
-  border:2px solid #9c27b0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  font-size:14px;
+.lines{
+  stroke:#9c27b0;
+  stroke-width:2;
+}
+
+.outer{
+  fill:none;
+  stroke:#9c27b0;
+  stroke-width:4;
+}
+
+.center-circle{
+  fill:#fff;
+}
+
+.slice-text{
+  fill:#fff;
+  font-size:13px;
   font-weight:500;
-  box-shadow:0 6px 16px rgba(0,0,0,.35);
-  transition:all .15s ease;
-}
-
-.circle-btn:active{
-  background:#f3e5f5;
-  transform:scale(.95);
-  box-shadow:0 3px 8px rgba(0,0,0,.4);
-}
-
-/* KONUM LANDIRMALAR */
-.btn1{ top:-10px; left:50%; transform:translateX(-50%); }
-.btn2{ top:70px; right:-10px; }
-.btn3{ bottom:70px; right:-10px; }
-.btn4{ bottom:-10px; left:50%; transform:translateX(-50%); }
-.btn5{ bottom:70px; left:-10px; }
-.btn6{ top:70px; left:-10px; }
-
-/* MOBİL */
-@media(max-width:420px){
-  .circle-container{
-    width:280px;
-    height:280px;
-  }
-  .circle-btn{
-    width:145px;
-    font-size:13px;
-  }
+  text-anchor:middle;
 }
 </style>
 </head>
 
 <body>
 
+<div id="welcome">Hoş Geldiniz</div>
+
 <div class="main">
-  <div class="circle-container">
+<svg viewBox="0 0 300 300">
 
-    <!-- ORTA LOGO -->
-    <div class="center-logo">
-      <img src="fonem-logo.png" alt="Fonem">
-    </div>
+  <!-- DIŞ ÇEMBER -->
+  <circle cx="150" cy="150" r="135" class="outer"/>
 
-    <!-- BUTONLAR -->
-    <a href="karaoke.html" class="circle-btn btn1">Karaoke Şarkı Hatırlatıcı</a>
-    <a href="fotograflar.html" class="circle-btn btn2">Fotoğraflarımız</a>
-    <a href="rezervasyon.html" class="circle-btn btn3">Rezervasyon</a>
-    <a href="takip.html" class="circle-btn btn4">Bizi Takip Edin</a>
-    <a href="dilek.html" class="circle-btn btn5">Dilek / Öneri</a>
-    <a href="fiyatlar.html" class="circle-btn btn6">Fiyatlarımız</a>
+  <!-- DİLİMLER -->
+  <g onclick="go('karaoke.html')">
+    <path class="slice" d="M150 150 L150 15 A135 135 0 0 1 265 85 Z"/>
+    <text class="slice-text" x="190" y="55">Karaoke</text>
+  </g>
 
-  </div>
+  <g onclick="go('fotograflar.html')">
+    <path class="slice" d="M150 150 L265 85 A135 135 0 0 1 265 215 Z"/>
+    <text class="slice-text" x="240" y="155">Fotoğraflar</text>
+  </g>
+
+  <g onclick="go('rezervasyon.html')">
+    <path class="slice" d="M150 150 L265 215 A135 135 0 0 1 150 285 Z"/>
+    <text class="slice-text" x="190" y="260">Rezervasyon</text>
+  </g>
+
+  <g onclick="go('takip.html')">
+    <path class="slice" d="M150 150 L150 285 A135 135 0 0 1 35 215 Z"/>
+    <text class="slice-text" x="110" y="260">Takip</text>
+  </g>
+
+  <g onclick="go('dilek.html')">
+    <path class="slice" d="M150 150 L35 215 A135 135 0 0 1 35 85 Z"/>
+    <text class="slice-text" x="60" y="155">Dilek</text>
+  </g>
+
+  <g onclick="go('fiyatlar.html')">
+    <path class="slice" d="M150 150 L35 85 A135 135 0 0 1 150 15 Z"/>
+    <text class="slice-text" x="110" y="55">Fiyatlar</text>
+  </g>
+
+  <!-- AYIRICI ÇİZGİLER -->
+  <line x1="150" y1="15" x2="150" y2="285" class="lines"/>
+  <line x1="35" y1="85" x2="265" y2="215" class="lines"/>
+  <line x1="265" y1="85" x2="35" y2="215" class="lines"/>
+
+  <!-- ORTA -->
+  <circle cx="150" cy="150" r="38" class="center-circle"/>
+  <image href="fonem-logo.png" x="122" y="122" width="56"/>
+
+</svg>
 </div>
+
+<!-- SES -->
+<audio id="clickSound" preload="auto">
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8a1d4c7d9e.mp3">
+</audio>
+
+<script>
+function go(url){
+  const s=document.getElementById("clickSound");
+  s.currentTime=0;
+  s.play();
+  setTimeout(()=>{location.href=url},180);
+}
+</script>
 
 </body>
 </html>
