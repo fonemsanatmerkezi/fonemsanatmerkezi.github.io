@@ -71,12 +71,15 @@ body{
   to{transform:translate(-50%,-50%) rotate(360deg)}
 }
 
+/* LOGO – TAM ORTA */
 .record img{
-  width:92%;
+  width:78%;
+  height:78%;
+  object-fit:contain;
   border-radius:50%;
 }
 
-/* BUTON ORTAK */
+/* MENÜ */
 .menu{
   position:absolute;
   width:100%;
@@ -92,16 +95,13 @@ body{
   border-radius:16px;
   font-size:14px;
   font-weight:600;
-  box-shadow:
-    0 8px 18px rgba(0,0,0,.35),
-    0 0 0 rgba(255,255,255,0);
+  box-shadow:0 8px 18px rgba(0,0,0,.35);
   transition:
     box-shadow .25s ease,
-    filter .25s ease,
-    transform .12s ease;
+    filter .25s ease;
 }
 
-/* HAFİF BÜYÜME */
+/* HAFİF BÜYÜME – TRANSFORM YOK */
 .menu a:hover{
   filter:brightness(1.12);
   box-shadow:
@@ -110,7 +110,7 @@ body{
 }
 
 .menu a:active{
-  transform:scale(.96);
+  filter:brightness(.95);
 }
 
 /* KONUMSALLAR */
