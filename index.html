@@ -1,135 +1,146 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fonem Sanat Merkezi</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fonem Sanat Merkezi</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-<style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body{
-  font-family:'Poppins', sans-serif;
-  min-height:100vh;
-  background:
-    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
-    url("assets/bg.jpeg") center/cover fixed;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  color:#000;
-}
+    body {
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("assets/bg.jpeg") center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
 
-/* Hoşgeldiniz */
-#welcome{
-  position:fixed;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  font-size:32px;
-  color:#fff;
-  letter-spacing:2px;
-  z-index:10;
-  opacity:0;
-  animation:fadeWelcome 3s ease forwards;
-}
+    /* HOŞ GELDİNİZ */
+    #welcome {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.75);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 500;
+      z-index: 99;
+      animation: fadeOut 3s forwards;
+      animation-delay: 2s;
+    }
 
-@keyframes fadeWelcome{
-  0%{opacity:0}
-  20%{opacity:1}
-  80%{opacity:1}
-  100%{opacity:0}
-}
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
 
-/* Ana kutu */
-.container{
-  width:100%;
-  max-width:420px;
-  padding:24px;
-  text-align:center;
-}
+    /* ANA ALAN */
+    .menu-wrapper {
+      position: relative;
+      width: 320px;
+      height: 320px;
+    }
 
-/* Logo */
-.logo img{
-  width:180px;
-  margin-bottom:30px;
-}
+    /* ORTA LOGO */
+    .center-logo {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: 110px;
+      height: 110px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      z-index: 2;
+    }
 
-/* Butonlar */
-.menu{
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-}
+    .center-logo img {
+      width: 70%;
+    }
 
-.menu a{
-  text-decoration:none;
-}
+    /* BUTONLAR */
+    .menu-btn {
+      position: absolute;
+      width: 140px;
+      padding: 12px 0;
+      background: #fff;
+      border-radius: 999px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,0,0,.25);
+      transition: all .2s ease;
+      user-select: none;
+    }
 
-.btn{
-  width:100%;
-  padding:14px 0;
-  background:#fff;
-  border-radius:18px;
-  font-size:15px;
-  font-weight:500;
-  color:#222;
-  box-shadow:0 8px 18px rgba(0,0,0,.35);
-  transition:all .15s ease;
-}
+    .menu-btn:hover {
+      background: #f5f0ff;
+    }
 
-.btn:active{
-  background:#f0f0f0;
-  transform:scale(.97);
-  box-shadow:0 4px 10px rgba(0,0,0,.4);
-}
-</style>
+    .menu-btn:active {
+      transform: scale(.96);
+    }
+
+    /* KONUMlar */
+    .b1 { top: -10px; left: 50%; transform: translateX(-50%); }
+    .b2 { top: 70px; right: -10px; }
+    .b3 { bottom: 70px; right: -10px; }
+    .b4 { bottom: -10px; left: 50%; transform: translateX(-50%); }
+    .b5 { bottom: 70px; left: -10px; }
+    .b6 { top: 70px; left: -10px; }
+
+    @media (max-width: 480px) {
+      .menu-wrapper {
+        width: 280px;
+        height: 280px;
+      }
+
+      .menu-btn {
+        width: 130px;
+        font-size: 13px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div id="welcome">HOŞ GELDİNİZ</div>
+  <div id="welcome">Fonem Sanat Merkezi’ne Hoş Geldiniz</div>
 
-<div class="container">
+  <div class="menu-wrapper">
 
-  <div class="logo">
-    <img src="assets/logo.png" alt="Fonem Sanat Merkezi">
+    <div class="center-logo">
+      <img src="assets/logo.png" alt="Fonem">
+    </div>
+
+    <div class="menu-btn b1" data-link="karaoke.html">Karaoke Şarkı Hatırlatıcı</div>
+    <div class="menu-btn b2" data-link="fotograflar.html">Fotoğraflarımız</div>
+    <div class="menu-btn b3" data-link="rezervasyon.html">Rezervasyon</div>
+    <div class="menu-btn b4" data-link="takip.html">Bizi Takip Edin</div>
+    <div class="menu-btn b5" data-link="dilek.html">Dilek / Öneri</div>
+    <div class="menu-btn b6" data-link="fiyatlar.html">Fiyatlarımız</div>
+
   </div>
 
-  <div class="menu">
-    <a href="karaoke.html" class="btn">Karaoke Şarkı Hatırlatıcı</a>
-    <a href="fotograflar.html" class="btn">Fotoğraflarımız</a>
-    <a href="fiyatlar.html" class="btn">Fiyatlarımız</a>
-    <a href="rezervasyon.html" class="btn">Rezervasyon</a>
-    <a href="dilek.html" class="btn">Dilek / Öneri</a>
-    <a href="takip.html" class="btn">Bizi Takip Edin</a>
-  </div>
-
-</div>
-
-<audio id="clickSound" src="assets/click.mp3"></audio>
-
-<script>
-/* Click sesi */
-document.querySelectorAll(".btn").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    document.getElementById("clickSound").play();
-  });
-});
-
-/* Hoşgeldiniz sadece ilk giriş */
-if(localStorage.getItem("welcomeShown")){
-  document.getElementById("welcome").style.display="none";
-}else{
-  localStorage.setItem("welcomeShown","true");
-}
-</script>
-
+  <script src="app.js"></script>
 </body>
 </html>
