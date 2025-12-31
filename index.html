@@ -5,75 +5,83 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fonem Sanat Merkezi</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <style>
-body{
+html,body{
   margin:0;
+  height:100%;
+}
+
+body{
   background:
     linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
     url("github-arka-plan.jpeg") center/cover fixed;
-  height:100vh;
+  font-family:'Montserrat', sans-serif;
   overflow:hidden;
-  font-family:'Poppins', sans-serif;
 }
 
-/* Hoşgeldiniz */
+/* HOŞ GELDİNİZ */
 #welcome{
   position:fixed;
   inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display:grid;
+  place-items:center;
   font-family:'Playfair Display', serif;
   font-size:36px;
   color:#fff;
-  background:rgba(0,0,0,.6);
+  background:rgba(0,0,0,.45);
   z-index:10;
-  animation:fadeOut 3s forwards;
+  animation:welcome 3s ease forwards;
 }
 
-@keyframes fadeOut{
+@keyframes welcome{
   0%{opacity:0}
   20%{opacity:1}
   80%{opacity:1}
   100%{opacity:0; visibility:hidden}
 }
 
+/* MERKEZ */
 .main{
-  height:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  position:fixed;
+  inset:0;
+  display:grid;
+  place-items:center;
 }
 
+/* SVG */
 svg{
-  width:340px;
-  max-width:90vw;
+  width:clamp(340px, 88vw, 420px);
+  aspect-ratio:1/1;
+  overflow:hidden;
 }
 
-/* Dilimler */
+/* DİLİMLER */
 .slice{
   fill:#ffffff;
   cursor:pointer;
-  transition:.2s;
-}
-.slice:hover{
-  fill:#f3e5f5;
+  transition:fill .15s ease;
+  pointer-events:visiblePainted;
 }
 
-/* Çizgiler */
-.lines{
-  stroke:#9c27b0;
-  stroke-width:2;
+.slice:hover{
+  fill:#f3e9f6;
 }
+
+/* ÇİZGİLER */
 .outer{
   fill:none;
   stroke:#9c27b0;
   stroke-width:4;
 }
 
-/* Yazılar */
+.lines{
+  stroke:#9c27b0;
+  stroke-width:2;
+}
+
+/* YAZILAR */
 .slice-text{
   fill:#000;
   font-size:14px;
@@ -82,8 +90,12 @@ svg{
   dominant-baseline:middle;
 }
 
-/* Orta */
-.center-circle{ fill:#fff; }
+/* ORTA */
+.center-circle{
+  fill:#fff;
+  stroke:#9c27b0;
+  stroke-width:3;
+}
 </style>
 </head>
 
@@ -94,7 +106,7 @@ svg{
 <div class="main">
 <svg viewBox="0 0 300 300">
 
-  <!-- Dış Çember -->
+  <!-- DIŞ ÇEMBER -->
   <circle cx="150" cy="150" r="135" class="outer"/>
 
   <!-- DİLİMLER -->
@@ -115,12 +127,12 @@ svg{
 
   <g onclick="go('takip.html')">
     <path class="slice" d="M150 150 L150 285 A135 135 0 0 1 35 215 Z"/>
-    <text class="slice-text" x="110" y="230">Takip</text>
+    <text class="slice-text" x="110" y="230">Bizi Takip Edin</text>
   </g>
 
   <g onclick="go('dilek.html')">
     <path class="slice" d="M150 150 L35 215 A135 135 0 0 1 35 85 Z"/>
-    <text class="slice-text" x="75" y="150">Dilek</text>
+    <text class="slice-text" x="75" y="150">Dilek / Öneri</text>
   </g>
 
   <g onclick="go('fiyatlar.html')">
@@ -128,19 +140,24 @@ svg{
     <text class="slice-text" x="110" y="70">Fiyatlar</text>
   </g>
 
-  <!-- Ayırıcılar -->
+  <!-- AYIRICI ÇİZGİLER -->
   <line x1="150" y1="15" x2="150" y2="285" class="lines"/>
   <line x1="35" y1="85" x2="265" y2="215" class="lines"/>
   <line x1="265" y1="85" x2="35" y2="215" class="lines"/>
 
-  <!-- Orta -->
+  <!-- ORTA -->
   <circle cx="150" cy="150" r="38" class="center-circle"/>
-  <image href="fonem-logo.png" x="122" y="122" width="56"/>
+  <g transform="translate(150 150)">
+    <image href="fonem-logo.png"
+           width="48"
+           height="48"
+           transform="translate(-24 -24)"/>
+  </g>
 
 </svg>
 </div>
 
-<audio id="clickSound">
+<audio id="clickSound" preload="auto">
   <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8a1d4c7d9e.mp3">
 </audio>
 
@@ -149,7 +166,7 @@ function go(url){
   const s=document.getElementById("clickSound");
   s.currentTime=0;
   s.play();
-  setTimeout(()=>location.href=url,180);
+  setTimeout(()=>{location.href=url},180);
 }
 </script>
 
