@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fonem Sanat Merkezi</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <style>
 body{
@@ -13,12 +13,12 @@ body{
   background:
     linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
     url("github-arka-plan.jpeg") center/cover fixed;
-  font-family:'Poppins', sans-serif;
   height:100vh;
   overflow:hidden;
+  font-family:'Poppins', sans-serif;
 }
 
-/* HOŞ GELDİNİZ */
+/* Hoşgeldiniz */
 #welcome{
   position:fixed;
   inset:0;
@@ -26,11 +26,11 @@ body{
   align-items:center;
   justify-content:center;
   font-family:'Playfair Display', serif;
-  font-size:38px;
+  font-size:36px;
   color:#fff;
   background:rgba(0,0,0,.6);
   z-index:10;
-  animation:fadeOut 3s ease forwards;
+  animation:fadeOut 3s forwards;
 }
 
 @keyframes fadeOut{
@@ -40,7 +40,6 @@ body{
   100%{opacity:0; visibility:hidden}
 }
 
-/* MERKEZ */
 .main{
   height:100%;
   display:flex;
@@ -48,42 +47,43 @@ body{
   justify-content:center;
 }
 
-/* SVG */
 svg{
   width:340px;
   max-width:90vw;
 }
 
+/* Dilimler */
 .slice{
-  fill:transparent;
+  fill:#ffffff;
   cursor:pointer;
+  transition:.2s;
 }
-
 .slice:hover{
-  fill:rgba(156,39,176,.12);
+  fill:#f3e5f5;
 }
 
+/* Çizgiler */
 .lines{
   stroke:#9c27b0;
   stroke-width:2;
 }
-
 .outer{
   fill:none;
   stroke:#9c27b0;
   stroke-width:4;
 }
 
-.center-circle{
-  fill:#fff;
+/* Yazılar */
+.slice-text{
+  fill:#000;
+  font-size:14px;
+  font-weight:600;
+  text-anchor:middle;
+  dominant-baseline:middle;
 }
 
-.slice-text{
-  fill:#fff;
-  font-size:13px;
-  font-weight:500;
-  text-anchor:middle;
-}
+/* Orta */
+.center-circle{ fill:#fff; }
 </style>
 </head>
 
@@ -94,54 +94,53 @@ svg{
 <div class="main">
 <svg viewBox="0 0 300 300">
 
-  <!-- DIŞ ÇEMBER -->
+  <!-- Dış Çember -->
   <circle cx="150" cy="150" r="135" class="outer"/>
 
   <!-- DİLİMLER -->
   <g onclick="go('karaoke.html')">
     <path class="slice" d="M150 150 L150 15 A135 135 0 0 1 265 85 Z"/>
-    <text class="slice-text" x="190" y="55">Karaoke</text>
+    <text class="slice-text" x="190" y="70">Karaoke</text>
   </g>
 
   <g onclick="go('fotograflar.html')">
     <path class="slice" d="M150 150 L265 85 A135 135 0 0 1 265 215 Z"/>
-    <text class="slice-text" x="240" y="155">Fotoğraflar</text>
+    <text class="slice-text" x="225" y="150">Fotoğraflar</text>
   </g>
 
   <g onclick="go('rezervasyon.html')">
     <path class="slice" d="M150 150 L265 215 A135 135 0 0 1 150 285 Z"/>
-    <text class="slice-text" x="190" y="260">Rezervasyon</text>
+    <text class="slice-text" x="190" y="230">Rezervasyon</text>
   </g>
 
   <g onclick="go('takip.html')">
     <path class="slice" d="M150 150 L150 285 A135 135 0 0 1 35 215 Z"/>
-    <text class="slice-text" x="110" y="260">Takip</text>
+    <text class="slice-text" x="110" y="230">Takip</text>
   </g>
 
   <g onclick="go('dilek.html')">
     <path class="slice" d="M150 150 L35 215 A135 135 0 0 1 35 85 Z"/>
-    <text class="slice-text" x="60" y="155">Dilek</text>
+    <text class="slice-text" x="75" y="150">Dilek</text>
   </g>
 
   <g onclick="go('fiyatlar.html')">
     <path class="slice" d="M150 150 L35 85 A135 135 0 0 1 150 15 Z"/>
-    <text class="slice-text" x="110" y="55">Fiyatlar</text>
+    <text class="slice-text" x="110" y="70">Fiyatlar</text>
   </g>
 
-  <!-- AYIRICI ÇİZGİLER -->
+  <!-- Ayırıcılar -->
   <line x1="150" y1="15" x2="150" y2="285" class="lines"/>
   <line x1="35" y1="85" x2="265" y2="215" class="lines"/>
   <line x1="265" y1="85" x2="35" y2="215" class="lines"/>
 
-  <!-- ORTA -->
+  <!-- Orta -->
   <circle cx="150" cy="150" r="38" class="center-circle"/>
   <image href="fonem-logo.png" x="122" y="122" width="56"/>
 
 </svg>
 </div>
 
-<!-- SES -->
-<audio id="clickSound" preload="auto">
+<audio id="clickSound">
   <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8a1d4c7d9e.mp3">
 </audio>
 
@@ -150,7 +149,7 @@ function go(url){
   const s=document.getElementById("clickSound");
   s.currentTime=0;
   s.play();
-  setTimeout(()=>{location.href=url},180);
+  setTimeout(()=>location.href=url,180);
 }
 </script>
 
