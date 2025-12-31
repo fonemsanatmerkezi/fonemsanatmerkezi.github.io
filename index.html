@@ -1,146 +1,188 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fonem Sanat Merkezi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fonem Sanat Merkezi</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Montserrat',sans-serif;
+}
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      height: 100vh;
-      background:
-        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-        url("assets/bg.jpeg") center / cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
+body{
+  min-height:100vh;
+  background:url("assets/bg.jpg") center/cover no-repeat fixed;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+}
 
-    /* HOŞ GELDİNİZ */
-    #welcome {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,.75);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      font-weight: 500;
-      z-index: 99;
-      animation: fadeOut 3s forwards;
-      animation-delay: 2s;
-    }
+/* KARARTMA */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.55);
+  z-index:-1;
+}
 
-    @keyframes fadeOut {
-      to {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
+/* ANA KONTEYNER */
+.main{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:28px;
+}
 
-    /* ANA ALAN */
-    .menu-wrapper {
-      position: relative;
-      width: 320px;
-      height: 320px;
-    }
+/* PLAK */
+.vinyl{
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  background:
+    repeating-radial-gradient(
+      circle,
+      #111 0px,
+      #111 2px,
+      #1a1a1a 3px,
+      #111 4px
+    );
+  position:relative;
+  animation:spin 14s linear infinite;
+  box-shadow:
+    0 0 25px rgba(255,255,255,.15),
+    0 0 60px rgba(255,255,255,.08);
+}
 
-    /* ORTA LOGO */
-    .center-logo {
-      position: absolute;
-      inset: 0;
-      margin: auto;
-      width: 110px;
-      height: 110px;
-      background: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
-      z-index: 2;
-    }
+/* NEON HALKA */
+.vinyl::before{
+  content:"";
+  position:absolute;
+  inset:-6px;
+  border-radius:50%;
+  border:1.5px solid rgba(255,255,255,.6);
+  box-shadow:0 0 18px rgba(255,255,255,.4);
+}
 
-    .center-logo img {
-      width: 70%;
-    }
+/* ORTA ETİKET */
+.label{
+  position:absolute;
+  inset:0;
+  margin:auto;
+  width:55%;
+  height:55%;
+  background:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
-    /* BUTONLAR */
-    .menu-btn {
-      position: absolute;
-      width: 140px;
-      padding: 12px 0;
-      background: #fff;
-      border-radius: 999px;
-      text-align: center;
-      font-size: 14px;
-      font-weight: 500;
-      cursor: pointer;
-      box-shadow: 0 8px 20px rgba(0,0,0,.25);
-      transition: all .2s ease;
-      user-select: none;
-    }
+.label img{
+  width:90%;
+  height:90%;
+  object-fit:contain;
+  border-radius:50%;
+}
 
-    .menu-btn:hover {
-      background: #f5f0ff;
-    }
+/* MERKEZ DELİK */
+.vinyl::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  margin:auto;
+  width:6px;
+  height:6px;
+  background:#000;
+  border-radius:50%;
+  z-index:10;
+}
 
-    .menu-btn:active {
-      transform: scale(.96);
-    }
+/* BUTONLAR */
+.menu{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
 
-    /* KONUMlar */
-    .b1 { top: -10px; left: 50%; transform: translateX(-50%); }
-    .b2 { top: 70px; right: -10px; }
-    .b3 { bottom: 70px; right: -10px; }
-    .b4 { bottom: -10px; left: 50%; transform: translateX(-50%); }
-    .b5 { bottom: 70px; left: -10px; }
-    .b6 { top: 70px; left: -10px; }
+.menu a{
+  text-decoration:none;
+}
 
-    @media (max-width: 480px) {
-      .menu-wrapper {
-        width: 280px;
-        height: 280px;
-      }
+.btn{
+  width:240px;
+  padding:12px;
+  text-align:center;
+  color:#000;
+  background:#fff;
+  border-radius:30px;
+  font-weight:500;
+  letter-spacing:.5px;
+  box-shadow:
+    0 6px 18px rgba(0,0,0,.3),
+    inset 0 0 0 rgba(255,255,255,0);
+  transition:.25s ease;
+}
 
-      .menu-btn {
-        width: 130px;
-        font-size: 13px;
-      }
-    }
-  </style>
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:
+    0 10px 30px rgba(255,255,255,.35);
+}
+
+.btn:active{
+  transform:scale(.96);
+}
+
+/* DÖNÜŞ */
+@keyframes spin{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+</style>
 </head>
 
 <body>
 
-  <div id="welcome">Fonem Sanat Merkezi’ne Hoş Geldiniz</div>
+<audio id="clickSound" src="assets/click.mp3"></audio>
 
-  <div class="menu-wrapper">
+<div class="main">
 
-    <div class="center-logo">
+  <!-- PLAK -->
+  <div class="vinyl">
+    <div class="label">
       <img src="assets/logo.png" alt="Fonem">
     </div>
-
-    <div class="menu-btn b1" data-link="karaoke.html">Karaoke Şarkı Hatırlatıcı</div>
-    <div class="menu-btn b2" data-link="fotograflar.html">Fotoğraflarımız</div>
-    <div class="menu-btn b3" data-link="rezervasyon.html">Rezervasyon</div>
-    <div class="menu-btn b4" data-link="takip.html">Bizi Takip Edin</div>
-    <div class="menu-btn b5" data-link="dilek.html">Dilek / Öneri</div>
-    <div class="menu-btn b6" data-link="fiyatlar.html">Fiyatlarımız</div>
-
   </div>
 
-  <script src="app.js"></script>
+  <!-- BUTONLAR -->
+  <div class="menu">
+    <a href="karaoke.html"><div class="btn">Şarkı Hatırlatıcı</div></a>
+    <a href="foto.html"><div class="btn">Fotoğraflarımız</div></a>
+    <a href="fiyat.html"><div class="btn">Fiyatlarımız</div></a>
+    <a href="rezervasyon.html"><div class="btn">Rezervasyon</div></a>
+    <a href="dilek.html"><div class="btn">Dilek – İstek – Öneri</div></a>
+    <a href="takip.html"><div class="btn">Bizi Takip Edin</div></a>
+  </div>
+
+</div>
+
+<script>
+const sound=document.getElementById("clickSound");
+document.querySelectorAll(".btn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    sound.currentTime=0;
+    sound.play();
+  });
+});
+</script>
+
 </body>
 </html>
