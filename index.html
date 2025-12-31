@@ -5,45 +5,131 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fonem Sanat Merkezi</title>
 
-<link rel="stylesheet" href="index.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+    url("assets/bg.jpeg") center/cover fixed;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#000;
+}
+
+/* Hoşgeldiniz */
+#welcome{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:32px;
+  color:#fff;
+  letter-spacing:2px;
+  z-index:10;
+  opacity:0;
+  animation:fadeWelcome 3s ease forwards;
+}
+
+@keyframes fadeWelcome{
+  0%{opacity:0}
+  20%{opacity:1}
+  80%{opacity:1}
+  100%{opacity:0}
+}
+
+/* Ana kutu */
+.container{
+  width:100%;
+  max-width:420px;
+  padding:24px;
+  text-align:center;
+}
+
+/* Logo */
+.logo img{
+  width:180px;
+  margin-bottom:30px;
+}
+
+/* Butonlar */
+.menu{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.menu a{
+  text-decoration:none;
+}
+
+.btn{
+  width:100%;
+  padding:14px 0;
+  background:#fff;
+  border-radius:18px;
+  font-size:15px;
+  font-weight:500;
+  color:#222;
+  box-shadow:0 8px 18px rgba(0,0,0,.35);
+  transition:all .15s ease;
+}
+
+.btn:active{
+  background:#f0f0f0;
+  transform:scale(.97);
+  box-shadow:0 4px 10px rgba(0,0,0,.4);
+}
+</style>
 </head>
 
 <body>
 
-<!-- HOŞ GELDİNİZ -->
-<div id="welcome">Hoş Geldiniz</div>
+<div id="welcome">HOŞ GELDİNİZ</div>
 
-<!-- ANA ALAN -->
-<div class="screen">
+<div class="container">
 
-  <!-- ÇARK -->
-  <div class="wheel-wrapper">
+  <div class="logo">
+    <img src="assets/logo.png" alt="Fonem Sanat Merkezi">
+  </div>
 
-    <div class="wheel">
-
-      <a href="karaoke.html" class="slice s1">Karaoke<br>Hatırlatıcı</a>
-      <a href="fotograflar.html" class="slice s2">Fotoğraflarımız</a>
-      <a href="fiyatlar.html" class="slice s3">Fiyatlarımız</a>
-      <a href="rezervasyon.html" class="slice s4">Rezervasyon</a>
-      <a href="dilek.html" class="slice s5">Dilek / Öneri</a>
-      <a href="takip.html" class="slice s6">Bizi Takip Edin</a>
-
-      <!-- ORTA LOGO -->
-      <div class="center-circle">
-        <img src="fonem-logo.png" alt="Fonem">
-      </div>
-
-    </div>
-
+  <div class="menu">
+    <a href="karaoke.html" class="btn">Karaoke Şarkı Hatırlatıcı</a>
+    <a href="fotograflar.html" class="btn">Fotoğraflarımız</a>
+    <a href="fiyatlar.html" class="btn">Fiyatlarımız</a>
+    <a href="rezervasyon.html" class="btn">Rezervasyon</a>
+    <a href="dilek.html" class="btn">Dilek / Öneri</a>
+    <a href="takip.html" class="btn">Bizi Takip Edin</a>
   </div>
 
 </div>
 
-<audio id="clickSound" src="https://assets.mixkit.co/sfx/preview/mixkit-soft-click-tone-1129.mp3"></audio>
+<audio id="clickSound" src="assets/click.mp3"></audio>
 
-<script src="index.js"></script>
+<script>
+/* Click sesi */
+document.querySelectorAll(".btn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.getElementById("clickSound").play();
+  });
+});
+
+/* Hoşgeldiniz sadece ilk giriş */
+if(localStorage.getItem("welcomeShown")){
+  document.getElementById("welcome").style.display="none";
+}else{
+  localStorage.setItem("welcomeShown","true");
+}
+</script>
+
 </body>
 </html>
