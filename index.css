@@ -1,1 +1,123 @@
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:'Montserrat', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("github-arka-plan.jpeg") center/cover fixed;
+  overflow:hidden;
+  color:#000;
+}
+
+/* HOŞ GELDİNİZ */
+#welcome{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:32px;
+  letter-spacing:2px;
+  color:#fff;
+  background:rgba(0,0,0,.85);
+  z-index:10;
+  animation:welcomeFade 3s forwards;
+}
+
+@keyframes welcomeFade{
+  0%{opacity:0; transform:scale(.9)}
+  20%{opacity:1; transform:scale(1)}
+  80%{opacity:1}
+  100%{opacity:0; visibility:hidden}
+}
+
+/* ANA ALAN */
+.screen{
+  width:100%;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ÇARK */
+.wheel-wrapper{
+  width:340px;
+  height:340px;
+  position:relative;
+}
+
+.wheel{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  position:relative;
+}
+
+/* DİLİMLER */
+.slice{
+  position:absolute;
+  width:50%;
+  height:50%;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:13px;
+  font-weight:500;
+  color:#111;
+  text-decoration:none;
+  box-shadow:0 10px 20px rgba(0,0,0,.25);
+  transition:.18s ease;
+}
+
+.slice:hover{
+  background:#f2f2f2;
+}
+
+.slice:active{
+  transform:scale(.97);
+}
+
+/* POZİSYONLAR */
+.s1{top:0; left:50%; border-top-right-radius:100%;}
+.s2{top:50%; left:50%; border-bottom-right-radius:100%;}
+.s3{top:50%; left:0; border-bottom-left-radius:100%;}
+.s4{top:0; left:0; border-top-left-radius:100%;}
+.s5{top:-20%; left:25%; transform:rotate(-90deg);}
+.s6{top:70%; left:25%; transform:rotate(-90deg);}
+
+/* ORTA LOGO */
+.center-circle{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 0 0 4px #ffffffcc, 0 15px 30px rgba(0,0,0,.4);
+}
+
+.center-circle img{
+  width:80%;
+}
+
+/* MOBİL İNCE AYAR */
+@media(max-width:420px){
+  .wheel-wrapper{
+    width:300px;
+    height:300px;
+  }
+}
 
