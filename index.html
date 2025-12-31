@@ -12,15 +12,15 @@
 
 body{
   margin:0;
-  min-height:100vh;
+  height:100vh;
   font-family:'Poppins',sans-serif;
   background:
     linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
     url("assets/github-arka-plan.jpeg") center/cover fixed;
-  color:#fff;
   display:flex;
   justify-content:center;
   align-items:center;
+  color:#fff;
 }
 
 /* HOŞ GELDİNİZ */
@@ -42,56 +42,55 @@ body{
   100%{opacity:0}
 }
 
-/* ANA KAPSAYICI */
-.wrapper{
-  width:100%;
-  max-width:420px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+/* SAHNE */
+.stage{
+  position:relative;
+  width:360px;
+  height:360px;
 }
 
 /* PLAK */
 .record{
-  width:210px;
-  height:210px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:200px;
+  height:200px;
+  transform:translate(-50%,-50%);
   border-radius:50%;
-  background:
-    radial-gradient(circle,#111 38%,#000 39%);
+  background:radial-gradient(circle,#111 38%,#000 39%);
   border:4px solid #fff;
   display:flex;
   align-items:center;
   justify-content:center;
-  box-shadow:0 0 35px rgba(255,255,255,.25);
+  box-shadow:0 0 40px rgba(255,255,255,.25);
   animation:spin 14s linear infinite;
-  margin-bottom:28px;
 }
 @keyframes spin{
-  from{transform:rotate(0)}
-  to{transform:rotate(360deg)}
+  from{transform:translate(-50%,-50%) rotate(0)}
+  to{transform:translate(-50%,-50%) rotate(360deg)}
 }
 
 .record img{
-  width:95%;
+  width:92%;
   border-radius:50%;
 }
 
-/* MENÜ */
+/* BUTON ORTAK */
 .menu{
+  position:absolute;
   width:100%;
-  display:flex;
-  flex-direction:column;
-  gap:14px;
+  height:100%;
 }
 
-/* BUTON */
 .menu a{
-  text-decoration:none;
-  color:#000;
+  position:absolute;
   background:#fff;
-  border-radius:18px;
-  padding:12px;
-  text-align:center;
+  color:#000;
+  text-decoration:none;
+  padding:10px 14px;
+  border-radius:16px;
+  font-size:14px;
   font-weight:600;
   box-shadow:
     0 8px 18px rgba(0,0,0,.35),
@@ -102,7 +101,7 @@ body{
     transform .12s ease;
 }
 
-/* HAFİF BÜYÜME + NEON */
+/* HAFİF BÜYÜME */
 .menu a:hover{
   filter:brightness(1.12);
   box-shadow:
@@ -111,13 +110,16 @@ body{
 }
 
 .menu a:active{
-  transform:scale(.97);
+  transform:scale(.96);
 }
 
-/* LINKLERİN ALTINI ÇİZMEYİ ENGELLE */
-.menu a span{
-  text-decoration:none;
-}
+/* KONUMSALLAR */
+.m1{ top:0; left:50%; transform:translateX(-50%); }
+.m2{ top:80px; right:0; }
+.m3{ bottom:80px; right:0; }
+.m4{ bottom:0; left:50%; transform:translateX(-50%); }
+.m5{ bottom:80px; left:0; }
+.m6{ top:80px; left:0; }
 </style>
 </head>
 
@@ -125,7 +127,7 @@ body{
 
 <div id="welcome">Hoş Geldiniz</div>
 
-<div class="wrapper">
+<div class="stage">
 
   <!-- PLAK -->
   <div class="record">
@@ -133,19 +135,18 @@ body{
   </div>
 
   <!-- MENÜ -->
-  <nav class="menu">
-    <a href="karaoke.html"><span>Şarkı Hatırlatıcı</span></a>
-    <a href="fotograflar.html"><span>Fotoğraflarımız</span></a>
-    <a href="fiyatlar.html"><span>Fiyatlarımız</span></a>
-    <a href="rezervasyon.html"><span>Rezervasyon</span></a>
-    <a href="dilek.html"><span>Dilek / İstek / Öneri</span></a>
-    <a href="takip.html"><span>Bizi Takip Edin</span></a>
-  </nav>
+  <div class="menu">
+    <a class="m1" href="karaoke.html">Şarkı Hatırlatıcı</a>
+    <a class="m2" href="fotograflar.html">Fotoğraflarımız</a>
+    <a class="m3" href="fiyatlar.html">Fiyatlarımız</a>
+    <a class="m4" href="rezervasyon.html">Rezervasyon</a>
+    <a class="m5" href="dilek.html">Dilek / İstek</a>
+    <a class="m6" href="takip.html">Bizi Takip Edin</a>
+  </div>
 
 </div>
 
 <script>
-/* Hoşgeldiniz sadece ilk girişte */
 if(localStorage.getItem("welcomeShown")){
   document.getElementById("welcome").style.display="none";
 }else{
