@@ -4,244 +4,217 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fiyatlarımız</title>
+
 <style>
+:root{
+  --lila:#a78bff;
+  --lila-dark:#7f63e6;
+  --bg:#0e0e0e;
+  --card:#1a1a1a;
+  --white:#ffffff;
+}
+
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
-  background:#111;
+  background:var(--bg);
   color:#fff;
 }
 
 .container{
-  max-width:600px;
+  max-width:360px;
   margin:auto;
-  padding:20px;
+  padding:24px 16px;
   text-align:center;
 }
 
 /* Geri Butonu */
 #geriBtn{
   width:100%;
-  padding:12px;
+  padding:10px 14px;
   margin-bottom:20px;
-  font-size:16px;
-  border:none;
-  border-radius:14px;
-  background:#0288d1;
-  color:#fff;
-  cursor:pointer;
-}
-#geriBtn:active{ background:#0277bd; }
-
-/* Slogan Animasyonu */
-.slogan{
-  font-size:20px;
-  color:#ffeb3b;
-  margin-bottom:20px;
+  font-size:12px;
   font-weight:600;
-  animation: slideBounce 2s ease forwards;
-}
-
-@keyframes slideBounce {
-  0% { transform: translateX(-100%); opacity:0; }
-  50% { transform: translateX(20px); opacity:1; }
-  70% { transform: translateX(-10px); }
-  90% { transform: translateX(5px); }
-  100% { transform: translateX(0); }
-}
-
-/* Accordion Ana Başlık */
-.accordion{
-  background:#c62828;
-  color:#fff;
-  cursor:pointer;
-  padding:14px;
-  width:100%;
   border:none;
-  text-align:left;
-  outline:none;
+  border-radius:22px;
+  background:#fff;
+  color:#111;
+  cursor:pointer;
+  box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#geriBtn:active{
+  transform:scale(.95);
+}
+
+/* Slogan */
+.slogan{
   font-size:16px;
-  border-radius:12px;
-  margin-bottom:10px;
-  transition:0.2s;
-}
-.accordion:active, .accordion:hover{
-  background:#b71c1c;
+  color:var(--lila);
+  margin-bottom:22px;
+  font-weight:600;
 }
 
-/* Panel */
+/* ANA ACCORDION */
+.accordion{
+  width:100%;
+  padding:12px 14px;
+  margin-bottom:12px;
+  border-radius:22px;
+  border:none;
+  cursor:pointer;
+  text-align:center;
+  font-size:14px;
+  font-weight:600;
+  color:#fff;
+
+  background:linear-gradient(145deg,var(--lila),var(--lila-dark));
+  box-shadow:
+    0 8px 18px rgba(0,0,0,.55),
+    0 0 0 rgba(167,139,255,0);
+
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.accordion:hover{
+  box-shadow:
+    0 10px 22px rgba(0,0,0,.6),
+    0 0 22px rgba(167,139,255,.6);
+}
+.accordion:active{
+  transform:scale(.96);
+}
+
+/* PANEL */
 .panel{
-  padding:0 15px;
   display:none;
-  background:#1c1c1c;
-  overflow:hidden;
-  border-radius:12px;
-  margin-bottom:10px;
+  background:#202020;
+  border-radius:18px;
+  padding:14px;
+  margin-bottom:12px;
   text-align:left;
 }
 
+/* LİSTE */
 .panel ul{
   list-style:none;
-  padding-left:0;
+  padding:0;
+  margin:0;
 }
-
 .panel li{
-  padding:6px 0;
   display:flex;
   justify-content:space-between;
-  border-bottom:1px solid #333;
+  align-items:center;
+  padding:8px 0;
 }
 
-/* İç içe accordion (alt başlıklar) */
+/* BADGE */
+.badge{
+  padding:4px 10px;
+  border-radius:14px;
+  font-size:12px;
+  font-weight:600;
+  color:#111;
+  background:linear-gradient(145deg,var(--lila),var(--lila-dark));
+  box-shadow:0 2px 6px rgba(0,0,0,.4);
+}
+
+/* ALT ACCORDION */
 .innerAccordion{
-  background:#b71c1c;
-  margin:5px 0;
-  padding:10px;
-  border-radius:10px;
+  background:var(--card);
+  margin:10px 0 6px 0;
+  padding:12px;
+  border-radius:18px;
   cursor:pointer;
+  text-align:center;
+  font-size:14px;
+  box-shadow:0 4px 10px rgba(0,0,0,.45);
+  transition:transform .15s ease, box-shadow .15s ease;
 }
-.innerAccordion:active, .innerAccordion:hover{
-  background:#8e0000;
+.innerAccordion:hover{
+  box-shadow:
+    0 6px 14px rgba(0,0,0,.6),
+    0 0 16px rgba(167,139,255,.35);
 }
+.innerAccordion:active{
+  transform:scale(.97);
+}
+
 .innerPanel{
   display:none;
-  background:#2a2a2a;
+  background:#202020;
+  border-radius:16px;
   padding:10px;
-  border-radius:10px;
-  margin-top:5px;
-}
-.innerPanel li{
-  border-bottom:none;
-  display:block;
+  margin-bottom:10px;
 }
 </style>
 </head>
+
 <body>
 
 <div class="container">
-  <!-- Ana Sayfaya Dönüş -->
-  <button id="geriBtn" onclick="window.location.href='index.html'">⬅ Ana Sayfa</button>
 
-  <!-- Animasyonlu Slogan -->
-  <div class="slogan">6 Kahve Sizden, 1 Kahve Bizden</div>
+<button id="geriBtn" onclick="window.location.href='index.html'">⬅ Ana Sayfa</button>
 
-  <!-- Karaoke Fiyatları -->
-  <button class="accordion">Karaoke Fiyatları</button>
-  <div class="panel">
+<div class="slogan">6 Kahve Sizden, 1 Kahve Bizden</div>
+
+<button class="accordion">Karaoke Fiyatları</button>
+<div class="panel">
+  <ul>
+    <li>1 Saat Kişi Başı <span class="badge">200 TL</span></li>
+  </ul>
+</div>
+
+<button class="accordion">Prova Stüdyoları</button>
+<div class="panel">
+  <ul>
+    <li>1 Saat <span class="badge">600 TL</span></li>
+  </ul>
+</div>
+
+<button class="accordion">Kayıt / Mix / Mastering</button>
+<div class="panel">
+  <p>Lütfen iletişime geçiniz<br><strong>541 719 57 06</strong></p>
+</div>
+
+<button class="accordion">Kafe Menü</button>
+<div class="panel">
+
+  <div class="innerAccordion">☕ Kahveler</div>
+  <div class="innerPanel">
     <ul>
-      <li>1 Saat Kişi Başı <span>200 TL</span></li>
+      <li>Türk Kahvesi <span class="badge">70 TL</span></li>
+      <li>Filtre Kahve <span class="badge">100 TL</span></li>
+      <li>Espresso <span class="badge">70 TL</span></li>
+      <li>Latte <span class="badge">110 TL</span></li>
     </ul>
   </div>
 
-  <!-- Prova Stüdyoları -->
-  <button class="accordion">Prova Stüdyoları</button>
-  <div class="panel">
+  <div class="innerAccordion">🍵 Çaylar</div>
+  <div class="innerPanel">
     <ul>
-      <li>1 Saat <span>500 TL</span></li>
+      <li>Siyah Çay <span class="badge">35 TL</span></li>
+      <li>Bitki Çayları <span class="badge">55 TL</span></li>
     </ul>
-  </div>
-
-  <!-- Kayıt / Mix / Mastering -->
-  <button class="accordion">Kayıt / Mix / Mastering</button>
-  <div class="panel">
-    <p>Lütfen iletişime geçiniz: <strong>541 719 57 06</strong></p>
-  </div>
-
-  <!-- Kafe Menü -->
-  <button class="accordion">Kafe Menü</button>
-  <div class="panel">
-    <!-- Sıcak İçecekler -->
-    <div class="innerAccordion">Sıcak İçecekler</div>
-    <div class="innerPanel">
-      <div class="innerAccordion">Kahveler</div>
-      <div class="innerPanel">
-        <ul>
-          <li>Türk Kahvesi <span>70 TL</span></li>
-          <li>Filtre Kahve <span>100 TL</span></li>
-          <li>Espresso <span>70 TL</span></li>
-          <li>Americano <span>110 TL</span></li>
-          <li>Cappuccino <span>110 TL</span></li>
-          <li>Latte <span>110 TL</span></li>
-          <li>Flat White <span>110 TL</span></li>
-          <li>Coffee Cream <span>110 TL</span></li>
-        </ul>
-      </div>
-      <div class="innerAccordion">Aromalı Kahveler</div>
-      <div class="innerPanel">
-        <ul>
-          <li>White Chocolate Mocha <span>135 TL</span></li>
-          <li>Caramel Macchiato <span>135 TL</span></li>
-          <li>Aromalı Cappuccino <span>135 TL</span></li>
-          <li>Aromalı Latte <span>135 TL</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Çaylar -->
-    <div class="innerAccordion">Çaylar</div>
-    <div class="innerPanel">
-      <ul>
-        <li>Siyah Çay <span>35 TL</span></li>
-        <li>Double Siyah Çay <span>45 TL</span></li>
-        <li>Bitki Çayları <span>55 TL</span></li>
-      </ul>
-    </div>
-
-    <!-- Soğuk İçecekler -->
-    <div class="innerAccordion">Soğuk İçecekler</div>
-    <div class="innerPanel">
-      <div class="innerAccordion">Soğuk Kahveler</div>
-      <div class="innerPanel">
-        <ul>
-          <li>Iced Caramel Latte</li>
-          <li>Iced Mocha</li>
-          <li>Iced Americano</li>
-        </ul>
-      </div>
-      <div class="innerAccordion">Gazlı / Gazsız İçecekler</div>
-      <div class="innerPanel">
-        <ul>
-          <li>Cam İçecekler 200 ml <span>50 TL</span></li>
-          <li>Kutu İçecekler <span>70 TL</span></li>
-          <li>Pet İçecekler 1 lt <span>90 TL</span></li>
-          <li>500 ml Su <span>20 TL</span></li>
-          <li>Maden Suyu <span>30 TL</span></li>
-        </ul>
-      </div>
-      <div class="innerAccordion">Enerji İçecekleri</div>
-      <div class="innerPanel">
-        <ul>
-          <li>Monster 500 ml <span>90 TL</span></li>
-          <li>Powerade 500 ml <span>90 TL</span></li>
-          <li>Predator Energy <span>70 TL</span></li>
-        </ul>
-      </div>
-    </div>
   </div>
 
 </div>
 
-<script>
-// Ana accordion
-const acc = document.getElementsByClassName("accordion");
-for(let i=0;i<acc.length;i++){
-  acc[i].addEventListener("click", function(){
-    this.classList.toggle("active");
-    const panel = this.nextElementSibling;
-    panel.style.display = (panel.style.display === "block") ? "none" : "block";
-  });
-}
+</div>
 
-// İç içe accordion
-const innerAcc = document.getElementsByClassName("innerAccordion");
-for(let i=0;i<innerAcc.length;i++){
-  innerAcc[i].addEventListener("click", function(e){
-    this.classList.toggle("active");
-    const panel = this.nextElementSibling;
-    panel.style.display = (panel.style.display === "block") ? "none" : "block";
-    e.stopPropagation(); // Alt başlıkların üst paneli etkilememesi için
-  });
-}
+<script>
+document.querySelectorAll(".accordion").forEach(btn=>{
+  btn.onclick=()=>{
+    const p=btn.nextElementSibling;
+    p.style.display=p.style.display==="block"?"none":"block";
+  }
+});
+
+document.querySelectorAll(".innerAccordion").forEach(btn=>{
+  btn.onclick=e=>{
+    const p=btn.nextElementSibling;
+    p.style.display=p.style.display==="block"?"none":"block";
+    e.stopPropagation();
+  }
+});
 </script>
 
 </body>
