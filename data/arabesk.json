@@ -5,12 +5,15 @@
   "id": "adnan_senses",
   "ad": "Adnan Şenses",
   "sarkilar": [
-    { "id": "bir_gece_ansizin", "ad": "Bir Gece Ansızın", "soz": "" },
-    { "id": "nereye_kadar", "ad": "Nereye Kadar", "soz": "" },
-    { "id": "dugun_mu_var", "ad": "Düğün mü Var", "soz": "" },
-    { "id": "sana_donmek_istiyorum", "ad": "Sana Dönmek İstiyorum", "soz": "" },
-    { "id": "yikilan_hayat", "ad": "Yıkılan Hayat", "soz": "" },
-    { "id": "bir_gun_seni_gorecegim", "ad": "Bir Gün Seni Göreceğim", "soz": "" }
+    { "id": "bir_gonule_ask_girdimi", "ad": "Bir Gönüle Aşk Girdi mi", "soz": "" },
+    { "id": "insan_bir_kerre_sever", "ad": "İnsan Bir Kerre Sever", "soz": "" },
+    { "id": "sana_deger_mi", "ad": "Sana Değer mi", "soz": "" },
+    { "id": "gormedin_mi", "ad": "Görmedin mi", "soz": "" },
+    { "id": "affet_beni", "ad": "Affet Beni", "soz": "" },
+    { "id": "benim_sensin", "ad": "Benim Sensin", "soz": "" },
+    { "id": "sen_aldirdin", "ad": "Sen Aldırdın", "soz": "" },
+    { "id": "hasret_aksamlari", "ad": "Hasret Akşamları", "soz": "" },
+    { "id": "bir_ates_olsan", "ad": "Bir Ateş Olsan", "soz": "" }
   ]
 },
 {
