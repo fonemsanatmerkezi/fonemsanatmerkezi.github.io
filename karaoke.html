@@ -107,19 +107,26 @@ body{
 
 /* ARAMA */
 #arama{
-  width:100%;
+  width:92%;                 /* ← BURASI GENİŞLİĞİ KISALTIR */
   height:48px;
   border-radius:18px;
   border:none;
   padding:0 14px;
   font-size:14px;
-  margin-bottom:12px;
+  margin:0 auto 12px auto;   /* ← ORTALAR */
   outline:none;
 
   background:var(--card);
   color:#fff;
   box-shadow:0 4px 10px rgba(0,0,0,.45);
 }
+
+#arama:focus{
+  box-shadow:
+    0 6px 14px rgba(0,0,0,.6),
+    0 0 16px rgba(167,139,255,.35);
+}
+
 
 #arama:focus{
   box-shadow:
