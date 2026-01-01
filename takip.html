@@ -66,24 +66,56 @@ body{
   font-weight:700;
   cursor:pointer;
   color:#fff;
-  transition:.15s;
+  transition:
+    transform .15s ease,
+    box-shadow .15s ease;
+}
+
+.follow-btn:hover{
+  box-shadow:
+    0 10px 22px rgba(0,0,0,.45),
+    0 0 18px rgba(255,255,255,.35);
 }
 
 .follow-btn:active{
   transform:scale(.96);
 }
 
-/* Platform renkleri */
+/* Platform renkleri + glow */
 .instagram{
   background:#E1306C;
+}
+.instagram:hover{
+  box-shadow:
+    0 10px 22px rgba(0,0,0,.45),
+    0 0 22px rgba(225,48,108,.7);
 }
 
 .tiktok{
   background:#000;
 }
+.tiktok:hover{
+  box-shadow:
+    0 10px 22px rgba(0,0,0,.55),
+    0 0 22px rgba(255,255,255,.55);
+}
+
+.x{
+  background:#000;
+}
+.x:hover{
+  box-shadow:
+    0 10px 22px rgba(0,0,0,.55),
+    0 0 22px rgba(167,139,255,.65);
+}
 
 .google{
   background:#4285F4;
+}
+.google:hover{
+  box-shadow:
+    0 10px 22px rgba(0,0,0,.45),
+    0 0 22px rgba(66,133,244,.7);
 }
 </style>
 </head>
@@ -103,6 +135,11 @@ body{
   <button class="follow-btn tiktok"
     onclick="window.open('https://www.tiktok.com/@fonemsanatmerkezi', '_blank')">
     🎵 TikTok
+  </button>
+
+  <button class="follow-btn x"
+    onclick="window.open('https://x.com/fonemsanat', '_blank')">
+    𝕏 X (Twitter)
   </button>
 
   <button class="follow-btn google"
