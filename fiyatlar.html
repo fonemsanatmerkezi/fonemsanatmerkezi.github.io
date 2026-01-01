@@ -11,7 +11,6 @@
   --lila-dark:#7f63e6;
   --bg:#0e0e0e;
   --card:#1a1a1a;
-  --white:#ffffff;
 }
 
 body{
@@ -42,9 +41,7 @@ body{
   cursor:pointer;
   box-shadow:0 4px 12px rgba(0,0,0,.4);
 }
-#geriBtn:active{
-  transform:scale(.95);
-}
+#geriBtn:active{ transform:scale(.95); }
 
 /* Slogan */
 .slogan{
@@ -66,22 +63,14 @@ body{
   font-size:14px;
   font-weight:600;
   color:#fff;
-
   background:linear-gradient(145deg,var(--lila),var(--lila-dark));
-  box-shadow:
-    0 8px 18px rgba(0,0,0,.55),
-    0 0 0 rgba(167,139,255,0);
-
-  transition:transform .18s ease, box-shadow .18s ease;
+  box-shadow:0 8px 18px rgba(0,0,0,.55);
+  transition:.18s;
 }
 .accordion:hover{
-  box-shadow:
-    0 10px 22px rgba(0,0,0,.6),
-    0 0 22px rgba(167,139,255,.6);
+  box-shadow:0 10px 22px rgba(0,0,0,.6),0 0 22px rgba(167,139,255,.6);
 }
-.accordion:active{
-  transform:scale(.96);
-}
+.accordion:active{ transform:scale(.96); }
 
 /* PANEL */
 .panel{
@@ -93,13 +82,34 @@ body{
   text-align:left;
 }
 
-/* LİSTE */
-.panel ul{
-  list-style:none;
-  padding:0;
-  margin:0;
+/* ALT ACCORDION */
+.innerAccordion{
+  background:var(--card);
+  margin:10px 0 6px 0;
+  padding:12px;
+  border-radius:18px;
+  cursor:pointer;
+  text-align:center;
+  font-size:14px;
+  box-shadow:0 4px 10px rgba(0,0,0,.45);
+  transition:.15s;
 }
-.panel li{
+.innerAccordion:hover{
+  box-shadow:0 6px 14px rgba(0,0,0,.6),0 0 16px rgba(167,139,255,.35);
+}
+.innerAccordion:active{ transform:scale(.97); }
+
+.innerPanel{
+  display:none;
+  background:#202020;
+  border-radius:16px;
+  padding:10px;
+  margin-bottom:10px;
+}
+
+/* LİSTE */
+ul{ list-style:none; padding:0; margin:0; }
+li{
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -115,35 +125,6 @@ body{
   color:#111;
   background:linear-gradient(145deg,var(--lila),var(--lila-dark));
   box-shadow:0 2px 6px rgba(0,0,0,.4);
-}
-
-/* ALT ACCORDION */
-.innerAccordion{
-  background:var(--card);
-  margin:10px 0 6px 0;
-  padding:12px;
-  border-radius:18px;
-  cursor:pointer;
-  text-align:center;
-  font-size:14px;
-  box-shadow:0 4px 10px rgba(0,0,0,.45);
-  transition:transform .15s ease, box-shadow .15s ease;
-}
-.innerAccordion:hover{
-  box-shadow:
-    0 6px 14px rgba(0,0,0,.6),
-    0 0 16px rgba(167,139,255,.35);
-}
-.innerAccordion:active{
-  transform:scale(.97);
-}
-
-.innerPanel{
-  display:none;
-  background:#202020;
-  border-radius:16px;
-  padding:10px;
-  margin-bottom:10px;
 }
 </style>
 </head>
@@ -172,7 +153,7 @@ body{
 
 <button class="accordion">Kayıt / Mix / Mastering</button>
 <div class="panel">
-  <p>Lütfen iletişime geçiniz<br><strong>541 719 57 06</strong></p>
+  <p>Bilgi için:<br><strong>541 719 57 06</strong></p>
 </div>
 
 <button class="accordion">Kafe Menü</button>
@@ -184,7 +165,21 @@ body{
       <li>Türk Kahvesi <span class="badge">70 TL</span></li>
       <li>Filtre Kahve <span class="badge">100 TL</span></li>
       <li>Espresso <span class="badge">70 TL</span></li>
+      <li>Americano <span class="badge">110 TL</span></li>
+      <li>Cappuccino <span class="badge">110 TL</span></li>
       <li>Latte <span class="badge">110 TL</span></li>
+      <li>Flat White <span class="badge">110 TL</span></li>
+      <li>Coffee Cream <span class="badge">110 TL</span></li>
+    </ul>
+  </div>
+
+  <div class="innerAccordion">🍫 Aromalı Kahveler</div>
+  <div class="innerPanel">
+    <ul>
+      <li>White Chocolate Mocha <span class="badge">135 TL</span></li>
+      <li>Caramel Macchiato <span class="badge">135 TL</span></li>
+      <li>Aromalı Cappuccino <span class="badge">135 TL</span></li>
+      <li>Aromalı Latte <span class="badge">135 TL</span></li>
     </ul>
   </div>
 
@@ -192,8 +187,43 @@ body{
   <div class="innerPanel">
     <ul>
       <li>Siyah Çay <span class="badge">35 TL</span></li>
+      <li>Double Siyah Çay <span class="badge">45 TL</span></li>
       <li>Bitki Çayları <span class="badge">55 TL</span></li>
     </ul>
+  </div>
+
+  <div class="innerAccordion">🧊 Soğuk İçecekler</div>
+  <div class="innerPanel">
+
+    <div class="innerAccordion">❄️ Soğuk Kahveler</div>
+    <div class="innerPanel">
+      <ul>
+        <li>Iced Caramel Latte</li>
+        <li>Iced Mocha</li>
+        <li>Iced Americano</li>
+      </ul>
+    </div>
+
+    <div class="innerAccordion">🥤 Gazlı / Gazsız</div>
+    <div class="innerPanel">
+      <ul>
+        <li>Cam İçecek 200 ml <span class="badge">50 TL</span></li>
+        <li>Kutu İçecek <span class="badge">70 TL</span></li>
+        <li>Pet İçecek 1 lt <span class="badge">90 TL</span></li>
+        <li>Su 500 ml <span class="badge">20 TL</span></li>
+        <li>Maden Suyu <span class="badge">30 TL</span></li>
+      </ul>
+    </div>
+
+    <div class="innerAccordion">⚡ Enerji İçecekleri</div>
+    <div class="innerPanel">
+      <ul>
+        <li>Monster 500 ml <span class="badge">90 TL</span></li>
+        <li>Powerade 500 ml <span class="badge">90 TL</span></li>
+        <li>Predator Energy <span class="badge">70 TL</span></li>
+      </ul>
+    </div>
+
   </div>
 
 </div>
