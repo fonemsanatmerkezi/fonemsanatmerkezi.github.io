@@ -7,11 +7,11 @@
 
 <style>
 :root{
-  --lila:#9c7bff;
-  --lila-dark:#7c5ce0;
-  --white:#ffffff;
+  --lila:#a78bff;
+  --lila-dark:#7f63e6;
   --bg:#0e0e0e;
   --card:#1a1a1a;
+  --white:#ffffff;
 }
 
 body{
@@ -26,25 +26,23 @@ body{
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:12px;
+  gap:14px;
   padding:24px;
   max-width:300px;
   margin:60px auto 20px auto;
 }
 
-/* ANA SAYFA BUTONU */
+/* ANA SAYFA */
 #anaSayfaBtn{
-  background:var(--white);
+  background:#fff;
   color:#111;
   border:none;
-  border-radius:20px;
+  border-radius:22px;
   font-size:12px;
   font-weight:600;
-  padding:6px 14px;
+  padding:6px 16px;
   cursor:pointer;
-  margin-bottom:12px;
-  box-shadow:0 4px 10px rgba(0,0,0,.35);
-  transition:transform .12s ease, box-shadow .12s ease;
+  box-shadow:0 4px 12px rgba(0,0,0,.4);
 }
 #anaSayfaBtn:active{
   transform:scale(.95);
@@ -53,24 +51,24 @@ body{
 /* KATEGORİ BUTONLARI */
 .kategoriBtn{
   width:100%;
+  padding:10px 14px;
+  border-radius:22px;
   background:linear-gradient(145deg,var(--lila),var(--lila-dark));
   color:#fff;
-  border-radius:18px;
   font-size:14px;
   font-weight:600;
-  padding:9px 14px;
   text-align:center;
   cursor:pointer;
   box-shadow:
-    0 6px 14px rgba(0,0,0,.45),
-    0 0 0 rgba(156,123,255,0);
-  transition:transform .12s ease, box-shadow .12s ease;
+    0 8px 18px rgba(0,0,0,.55),
+    0 0 0 rgba(167,139,255,0);
+  transition:transform .18s ease, box-shadow .18s ease;
 }
 
 .kategoriBtn:hover{
   box-shadow:
-    0 8px 18px rgba(0,0,0,.55),
-    0 0 14px rgba(156,123,255,.35);
+    0 10px 22px rgba(0,0,0,.6),
+    0 0 22px rgba(167,139,255,.6);
 }
 
 .kategoriBtn:active{
@@ -82,24 +80,24 @@ body{
 #sarkiAlan,
 #sozAlani{
   display:none;
-  max-width:360px;
+  max-width:320px;
   margin:30px auto;
-  padding:0 16px;
 }
 
-/* GERİ BUTONLARI (KATEGORİ İÇİ) */
+/* GERİ BUTONU */
 #sanatciAlan button,
 #sarkiAlan button,
 #sozAlani button{
-  background:#2a2a2a;
+  display:block;
+  margin:0 auto 14px auto;
+  background:#222;
   color:#fff;
   border:none;
-  border-radius:50px;
-  padding:6px 14px;
+  border-radius:30px;
+  padding:6px 16px;
   font-size:12px;
-  margin-bottom:12px;
   cursor:pointer;
-  box-shadow:0 4px 10px rgba(0,0,0,.45);
+  box-shadow:0 4px 12px rgba(0,0,0,.5);
 }
 #sanatciAlan button:active,
 #sarkiAlan button:active,
@@ -111,7 +109,7 @@ body{
 #arama{
   width:100%;
   height:38px;
-  border-radius:18px;
+  border-radius:20px;
   border:none;
   padding:0 14px;
   font-size:14px;
@@ -130,14 +128,17 @@ li{
   background:var(--card);
   padding:12px;
   margin-bottom:8px;
-  border-radius:16px;
+  border-radius:18px;
   text-align:center;
   cursor:pointer;
-  transition:background .12s ease, transform .12s ease;
+  box-shadow:0 4px 10px rgba(0,0,0,.45);
+  transition:transform .15s ease, box-shadow .15s ease;
 }
 
 li:hover{
-  background:#242424;
+  box-shadow:
+    0 6px 14px rgba(0,0,0,.6),
+    0 0 16px rgba(167,139,255,.35);
 }
 
 li:active{
@@ -146,9 +147,9 @@ li:active{
 
 /* ŞARKI SÖZÜ */
 #sozListe{
-  padding:16px;
   background:#202020;
-  border-radius:16px;
+  border-radius:18px;
+  padding:16px;
   line-height:1.6;
 }
 </style>
@@ -156,7 +157,6 @@ li:active{
 
 <body>
 
-<!-- KATEGORİLER -->
 <div class="kategoriler">
   <button id="anaSayfaBtn" onclick="window.location.href='index.html'">Ana Sayfa</button>
 
@@ -169,71 +169,54 @@ li:active{
   <div class="kategoriBtn" onclick="kategoriSec('yabanci')">Yabancı</div>
 </div>
 
-<!-- SANATÇI -->
 <div id="sanatciAlan">
   <button onclick="geriSanatci()">⬅ Geri</button>
   <input id="arama" placeholder="Sanatçı ara..." oninput="aramaFiltre()">
   <ul id="liste"></ul>
 </div>
 
-<!-- ŞARKI -->
 <div id="sarkiAlan">
   <button onclick="geriSarki()">⬅ Geri</button>
   <ul id="sarkiListe"></ul>
 </div>
 
-<!-- SÖZ -->
 <div id="sozAlani">
   <button onclick="geriSoz()">⬅ Geri</button>
   <div id="sozListe"></div>
 </div>
 
 <script>
-let mevcutSanatcilar = [];
-let mevcutData = [];
-let secilenSanatci = null;
+let mevcutSanatcilar=[], mevcutData=[], secilenSanatci=null;
 
-async function kategoriSec(kategori){
+async function kategoriSec(k){
   document.querySelector('.kategoriler').style.display='none';
-  document.getElementById('sanatciAlan').style.display='block';
-  document.getElementById('arama').value='';
-  const liste=document.getElementById('liste');
+  sanatciAlan.style.display='block';
+  arama.value='';
   liste.innerHTML='';
   mevcutSanatcilar=[];
   mevcutData=[];
-  secilenSanatci=null;
 
   try{
-    const response=await fetch(`data/${kategori}.json`);
-    if(!response.ok) throw new Error(response.status);
-    const data=await response.json();
-
-    mevcutData=data.sanatcilar||[];
+    const r=await fetch(`data/${k}.json`);
+    const d=await r.json();
+    mevcutData=d.sanatcilar||[];
     mevcutSanatcilar=mevcutData.map(s=>s.ad);
-
-    if(mevcutSanatcilar.length===0){
-      liste.innerHTML='<li>Sanatçı verisi yok.</li>';
-    }else{
-      mevcutSanatcilar.forEach(s=>{
-        const li=document.createElement('li');
-        li.textContent=s;
-        li.onclick=()=>sanatciSec(s);
-        liste.appendChild(li);
-      });
-    }
-  }catch(e){
-    liste.innerHTML='<li>Veri yüklenemedi.</li>';
+    mevcutSanatcilar.forEach(s=>{
+      const li=document.createElement('li');
+      li.textContent=s;
+      li.onclick=()=>sanatciSec(s);
+      liste.appendChild(li);
+    });
+  }catch{
+    liste.innerHTML='<li>Veri yüklenemedi</li>';
   }
 }
 
-function sanatciSec(ad){
-  secilenSanatci=mevcutData.find(s=>s.ad===ad);
-  if(!secilenSanatci) return;
-  document.getElementById('sanatciAlan').style.display='none';
-  document.getElementById('sarkiAlan').style.display='block';
-  const sarkiListe=document.getElementById('sarkiListe');
+function sanatciSec(a){
+  secilenSanatci=mevcutData.find(s=>s.ad===a);
+  sanatciAlan.style.display='none';
+  sarkiAlan.style.display='block';
   sarkiListe.innerHTML='';
-
   (secilenSanatci.sarkilar||[]).forEach(s=>{
     const li=document.createElement('li');
     li.textContent=s.ad;
@@ -243,36 +226,33 @@ function sanatciSec(ad){
 }
 
 function sarkiSec(s){
-  document.getElementById('sarkiAlan').style.display='none';
-  document.getElementById('sozAlani').style.display='block';
-  document.getElementById('sozListe').textContent=s.soz||'Şarkı sözü yok.';
+  sarkiAlan.style.display='none';
+  sozAlani.style.display='block';
+  sozListe.textContent=s.soz||'Şarkı sözü yok.';
 }
 
 function geriSanatci(){
-  document.getElementById('sanatciAlan').style.display='none';
+  sanatciAlan.style.display='none';
   document.querySelector('.kategoriler').style.display='flex';
 }
 function geriSarki(){
-  document.getElementById('sarkiAlan').style.display='none';
-  document.getElementById('sanatciAlan').style.display='block';
+  sarkiAlan.style.display='none';
+  sanatciAlan.style.display='block';
 }
 function geriSoz(){
-  document.getElementById('sozAlani').style.display='none';
-  document.getElementById('sarkiAlan').style.display='block';
+  sozAlani.style.display='none';
+  sarkiAlan.style.display='block';
 }
 
 function aramaFiltre(){
-  const arama=document.getElementById('arama').value.toLowerCase();
-  const liste=document.getElementById('liste');
+  const q=arama.value.toLowerCase();
   liste.innerHTML='';
-  mevcutSanatcilar
-    .filter(s=>s.toLowerCase().includes(arama))
-    .forEach(s=>{
-      const li=document.createElement('li');
-      li.textContent=s;
-      li.onclick=()=>sanatciSec(s);
-      liste.appendChild(li);
-    });
+  mevcutSanatcilar.filter(s=>s.toLowerCase().includes(q)).forEach(s=>{
+    const li=document.createElement('li');
+    li.textContent=s;
+    li.onclick=()=>sanatciSec(s);
+    liste.appendChild(li);
+  });
 }
 </script>
 
