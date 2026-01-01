@@ -224,11 +224,10 @@
     { "id": "vazgecilmiyor", "ad": "Vazgeçilmiyor", "soz": "" },
     { "id": "gulmedi_talihim", "ad": "Gülmedi Talihim", "soz": "" },
     { "id": "seninle_ilk_defa", "ad": "Seninle İlk Defa", "soz": "" },
-    { "id": "isoruk_olmadi", "ad": "Sen Yoktun", "soz": "" },
+    { "id": "sen_yoktun", "ad": "Sen Yoktun", "soz": "" },
     { "id": "kuslar", "ad": "Turnalar", "soz": "" },
     { "id": "namus_belasi", "ad": "Namus Belası", "soz": "" },
-    { "id": "gitme", "ad": "Gitme", "soz": "" },
-    { "id": "ay_yuzlum", "ad": "Ay Yüzlüm", "soz": "" }
+    { "id": "gitme", "ad": "Gitme", "soz": "" }
   ]
 },
  {
