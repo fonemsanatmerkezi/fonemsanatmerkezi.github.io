@@ -1,1 +1,791 @@
-
+{
+  "kategori": "yabancı",
+  "sanatcilar": [
+    {
+      "id": "ed_sheeran",
+      "ad": "Ed Sheeran",
+      "sarkilar": [
+        { "id": "shape_of_you", "ad": "Shape of You", "soz": "" },
+        { "id": "perfect", "ad": "Perfect", "soz": "" }
+      ]
+    },
+    {
+      "id": "queen",
+      "ad": "Queen",
+      "sarkilar": [
+        { "id": "bohemian_rhapsody", "ad": "Bohemian Rhapsody", "soz": "" },
+        { "id": "dont_stop_me_now", "ad": "Don't Stop Me Now", "soz": "" }
+      ]
+    },
+    {
+      "id": "neil_diamond",
+      "ad": "Neil Diamond",
+      "sarkilar": [
+        { "id": "sweet_caroline", "ad": "Sweet Caroline", "soz": "" }
+      ]
+    },
+    {
+      "id": "madonna",
+      "ad": "Madonna",
+      "sarkilar": [
+        { "id": "like_a_prayer", "ad": "Like a Prayer", "soz": "" }
+      ]
+    },
+    {
+      "id": "lady_gaga",
+      "ad": "Lady Gaga",
+      "sarkilar": [
+        { "id": "shallow", "ad": "Shallow", "soz": "" },
+        { "id": "bad_romance", "ad": "Bad Romance", "soz": "" }
+      ]
+    },
+    {
+      "id": "oasis",
+      "ad": "Oasis",
+      "sarkilar": [
+        { "id": "wonderwall", "ad": "Wonderwall", "soz": "" }
+      ]
+    },
+    {
+      "id": "whitney_houston",
+      "ad": "Whitney Houston",
+      "sarkilar": [
+        { "id": "i_wanna_dance_with_somebody", "ad": "I Wanna Dance With Somebody", "soz": "" }
+      ]
+    },
+    {
+      "id": "adele",
+      "ad": "Adele",
+      "sarkilar": [
+        { "id": "someone_like_you", "ad": "Someone Like You", "soz": "" },
+        { "id": "rolling_in_the_deep", "ad": "Rolling In The Deep", "soz": "" }
+      ]
+    },
+    {
+      "id": "spice_girls",
+      "ad": "Spice Girls",
+      "sarkilar": [
+        { "id": "wannabe", "ad": "Wannabe", "soz": "" }
+      ]
+    },
+    {
+      "id": "journey",
+      "ad": "Journey",
+      "sarkilar": [
+        { "id": "dont_stop_believin", "ad": "Don't Stop Believin'", "soz": "" }
+      ]
+    },
+    {
+      "id": "bon_jovi",
+      "ad": "Bon Jovi",
+      "sarkilar": [
+        { "id": "livin_on_a_prayer", "ad": "Livin' On A Prayer", "soz": "" }
+      ]
+    },
+    {
+      "id": "taylor_swift",
+      "ad": "Taylor Swift",
+      "sarkilar": [
+        { "id": "shake_it_off", "ad": "Shake It Off", "soz": "" }
+      ]
+    },
+    {
+      "id": "the_chainsmokers",
+      "ad": "The Chainsmokers",
+      "sarkilar": [
+        { "id": "closer", "ad": "Closer", "soz": "" }
+      ]
+    },
+    {
+      "id": "lewis_capaldi",
+      "ad": "Lewis Capaldi",
+      "sarkilar": [
+        { "id": "someone_you_loved", "ad": "Someone You Loved", "soz": "" }
+      ]
+    },
+    {
+      "id": "luis_fonsi",
+      "ad": "Luis Fonsi",
+      "sarkilar": [
+        { "id": "despacito", "ad": "Despacito", "soz": "" }
+      ]
+    },
+    {
+      "id": "wham",
+      "ad": "Wham!",
+      "sarkilar": [
+        { "id": "last_christmas", "ad": "Last Christmas", "soz": "" }
+      ]
+    },
+    {
+      "id": "katy_perry",
+      "ad": "Katy Perry",
+      "sarkilar": [
+        { "id": "roar", "ad": "Roar", "soz": "" }
+      ]
+    },
+    {
+      "id": "b52s",
+      "ad": "The B-52’s",
+      "sarkilar": [
+        { "id": "love_shack", "ad": "Love Shack", "soz": "" }
+      ]
+    },
+    {
+      "id": "bee_gees",
+      "ad": "Bee Gees",
+      "sarkilar": [
+        { "id": "stayin_alive", "ad": "Stayin' Alive", "soz": "" }
+      ]
+    },
+    {
+      "id": "backstreet_boys",
+      "ad": "Backstreet Boys",
+      "sarkilar": [
+        { "id": "i_want_it_that_way", "ad": "I Want It That Way", "soz": "" }
+      ]
+    },
+    {
+      "id": "blink_182",
+      "ad": "Blink-182",
+      "sarkilar": [
+        { "id": "all_the_small_things", "ad": "All The Small Things", "soz": "" }
+      ]
+    },
+    {
+      "id": "bjork",
+      "ad": "Björk",
+      "sarkilar": [
+        { "id": "its_oh_so_quiet", "ad": "It's Oh So Quiet", "soz": "" }
+      ]
+    },
+    {
+      "id": "alicia_keys",
+      "ad": "Alicia Keys",
+      "sarkilar": [
+        { "id": "no_one", "ad": "No One", "soz": "" }
+      ]
+    },
+    {
+      "id": "cher",
+      "ad": "Cher",
+      "sarkilar": [
+        { "id": "if_i_could_turn_back_time", "ad": "If I Could Turn Back Time", "soz": "" }
+      ]
+    },
+    {
+      "id": "celine_dion",
+      "ad": "Celine Dion",
+      "sarkilar": [
+        { "id": "my_heart_will_go_on", "ad": "My Heart Will Go On", "soz": "" }
+      ]
+    },
+    {
+      "id": "aretha_franklin",
+      "ad": "Aretha Franklin",
+      "sarkilar": [
+        { "id": "respect", "ad": "Respect", "soz": "" }
+      ]
+    },
+    {
+      "id": "billie_jean_mj",
+      "ad": "Michael Jackson",
+      "sarkilar": [
+        { "id": "billie_jean", "ad": "Billie Jean", "soz": "" },
+        { "id": "thriller", "ad": "Thriller", "soz": "" }
+      ]
+    },
+    {
+      "id": "tina_turner",
+      "ad": "Tina Turner",
+      "sarkilar": [
+        { "id": "what_s_love_got_to_do_with_it", "ad": "What's Love Got to Do With It", "soz": "" }
+      ]
+    },
+    {
+      "id": "blake_shelton",
+      "ad": "Blake Shelton",
+      "sarkilar": [
+        { "id": "god_gave_me_you", "ad": "God Gave Me You", "soz": "" }
+      ]
+    },
+    {
+      "id": "gnr",
+      "ad": "Guns N’ Roses",
+      "sarkilar": [
+        { "id": "sweet_child_o_mine", "ad": "Sweet Child O' Mine", "soz": "" }
+      ]
+    },
+    {
+      "id": "ramones",
+      "ad": "Ramones",
+      "sarkilar": [
+        { "id": "i_wanna_be_sedated", "ad": "I Wanna Be Sedated", "soz": "" }
+      ]
+    },
+    {
+      "id": "selena_gomez",
+      "ad": "Selena Gomez",
+      "sarkilar": [
+        { "id": "love_you_like_a_love_song", "ad": "Love You Like a Love Song", "soz": "" }
+      ]
+    },
+    {
+      "id": "dolly_parton",
+      "ad": "Dolly Parton",
+      "sarkilar": [
+        { "id": "jolene", "ad": "Jolene", "soz": "" }
+      ]
+    },
+    {
+      "id": "coolio",
+      "ad": "Coolio",
+      "sarkilar": [
+        { "id": "gangsta_s_paradise", "ad": "Gangsta's Paradise", "soz": "" }
+      ]
+    },
+    {
+      "id": "dr_dre",
+      "ad": "Dr. Dre",
+      "sarkilar": [
+        { "id": "nuthin_but_a_g_thang", "ad": "Nuthin' But a G Thang", "soz": "" }
+      ]
+    },
+    {
+      "id": "50_cent",
+      "ad": "50 Cent",
+      "sarkilar": [
+        { "id": "in_da_club", "ad": "In Da Club", "soz": "" }
+      ]
+    },
+    {
+      "id": "beyonce",
+      "ad": "Beyoncé",
+      "sarkilar": [
+        { "id": "halo", "ad": "Halo", "soz": "" },
+        { "id": "love_on_top", "ad": "Love On Top", "soz": "" }
+      ]
+    },
+    {
+      "id": "rihanna",
+      "ad": "Rihanna",
+      "sarkilar": [
+        { "id": "umbrella", "ad": "Umbrella", "soz": "" }
+      ]
+    },
+    {
+      "id": "t_pain",
+      "ad": "T-Pain",
+      "sarkilar": [
+        { "id": "low", "ad": "Low", "soz": "" }
+      ]
+    },
+    {
+      "id": "taylor_swift",
+      "ad": "Taylor Swift",
+      "sarkilar": [
+        { "id": "lover", "ad": "Lover", "soz": "" }
+      ]
+    },
+    {
+      "id": "michael_buble",
+      "ad": "Michael Bublé",
+      "sarkilar": [
+        { "id": "haven_t_met_you_yet", "ad": "Haven't Met You Yet", "soz": "" }
+      ]
+    },
+    {
+      "id": "maroon_5",
+      "ad": "Maroon 5",
+      "sarkilar": [
+        { "id": "sugar", "ad": "Sugar", "soz": "" },
+        { "id": "girls_like_you", "ad": "Girls Like You", "soz": "" },
+        { "id": "moves_like_jagger", "ad": "Moves Like Jagger", "soz": "" }
+      ]
+    },
+    {
+      "id": "pink",
+      "ad": "P!nk",
+      "sarkilar": [
+        { "id": "just_give_me_a_reason", "ad": "Just Give Me a Reason", "soz": "" },
+        { "id": "raise_your_glass", "ad": "Raise Your Glass", "soz": "" }
+      ]
+    },
+    {
+      "id": "coldplay",
+      "ad": "Coldplay",
+      "sarkilar": [
+        { "id": "yellow", "ad": "Yellow", "soz": "" },
+        { "id": "fix_you", "ad": "Fix You", "soz": "" },
+        { "id": "viva_la_vida", "ad": "Viva La Vida", "soz": "" }
+      ]
+    },
+    {
+      "id": "justin_bieber",
+      "ad": "Justin Bieber",
+      "sarkilar": [
+        { "id": "sorry", "ad": "Sorry", "soz": "" },
+        { "id": "baby", "ad": "Baby", "soz": "" },
+        { "id": "peaches", "ad": "Peaches", "soz": "" }
+      ]
+    },
+    {
+      "id": "bruno_mars",
+      "ad": "Bruno Mars",
+      "sarkilar": [
+        { "id": "just_the_way_you_are", "ad": "Just The Way You Are", "soz": "" },
+        { "id": "uptown_funk", "ad": "Uptown Funk", "soz": "" }
+      ]
+    },
+    {
+      "id": "rihanna",
+      "ad": "Rihanna",
+      "sarkilar": [
+        { "id": "diamonds", "ad": "Diamonds", "soz": "" },
+        { "id": "only_girl_in_the_world", "ad": "Only Girl (In The World)", "soz": "" }
+      ]
+    },
+    {
+      "id": "shakira",
+      "ad": "Shakira",
+      "sarkilar": [
+        { "id": "hips_dont_lie", "ad": "Hips Don't Lie", "soz": "" },
+        { "id": "waka_waka", "ad": "Waka Waka (This Time for Africa)", "soz": "" }
+      ]
+    },
+    {
+      "id": "whitney_houston",
+      "ad": "Whitney Houston",
+      "sarkilar": [
+        { "id": "i_will_always_love_you", "ad": "I Will Always Love You", "soz": "" },
+        { "id": "greatest_love_of_all", "ad": "Greatest Love Of All", "soz": "" }
+      ]
+    },
+    {
+      "id": "elton_john",
+      "ad": "Elton John",
+      "sarkilar": [
+        { "id": "rocket_man", "ad": "Rocket Man", "soz": "" },
+        { "id": "candle_in_the_wind", "ad": "Candle In The Wind", "soz": "" }
+      ]
+    },
+    {
+      "id": "michael_jackson",
+      "ad": "Michael Jackson",
+      "sarkilar": [
+        { "id": "beat_it", "ad": "Beat It", "soz": "" },
+        { "id": "man_in_the_mirror", "ad": "Man In The Mirror", "soz": "" }
+      ]
+    },
+    {
+      "id": "billie_eilish",
+      "ad": "Billie Eilish",
+      "sarkilar": [
+        { "id": "bad_guy", "ad": "Bad Guy", "soz": "" },
+        { "id": "when_the_party_s_over", "ad": "When the Party's Over", "soz": "" }
+      ]
+    },
+    {
+      "id": "amy_winehouse",
+      "ad": "Amy Winehouse",
+      "sarkilar": [
+        { "id": "rehab", "ad": "Rehab", "soz": "" },
+        { "id": "back_to_black", "ad": "Back to Black", "soz": "" }
+      ]
+    },
+    {
+      "id": "john_legend",
+      "ad": "John Legend",
+      "sarkilar": [
+        { "id": "all_of_me", "ad": "All of Me", "soz": "" }
+      ]
+    },
+    {
+      "id": "sia",
+      "ad": "Sia",
+      "sarkilar": [
+        { "id": "chandelier", "ad": "Chandelier", "soz": "" },
+        { "id": "cheap_thrills", "ad": "Cheap Thrills", "soz": "" }
+      ]
+    },
+    {
+      "id": "mariah_carey",
+      "ad": "Mariah Carey",
+      "sarkilar": [
+        { "id": "hero", "ad": "Hero", "soz": "" },
+        { "id": "all_i_want_for_christmas_is_you", "ad": "All I Want for Christmas Is You", "soz": "" }
+      ]
+    },
+    {
+      "id": "christina_aguilera",
+      "ad": "Christina Aguilera",
+      "sarkilar": [
+        { "id": "genie_in_a_bottle", "ad": "Genie in a Bottle", "soz": "" },
+        { "id": "beautiful", "ad": "Beautiful", "soz": "" }
+      ]
+    },
+    {
+      "id": "guns_n_roses",
+      "ad": "Guns N' Roses",
+      "sarkilar": [
+        { "id": "welcome_to_the_jungle", "ad": "Welcome to the Jungle", "soz": "" },
+        { "id": "paradise_city", "ad": "Paradise City", "soz": "" }
+      ]
+    },
+    {
+      "id": "backstreet_boys",
+      "ad": "Backstreet Boys",
+      "sarkilar": [
+        { "id": "as_long_as_you_love_me", "ad": "As Long As You Love Me", "soz": "" },
+        { "id": "i_want_it_that_way", "ad": "I Want It That Way", "soz": "" }
+      ]
+    },
+    {
+      "id": "spice_girls",
+      "ad": "Spice Girls",
+      "sarkilar": [
+        { "id": "say_you_ll_be_there", "ad": "Say You'll Be There", "soz": "" }
+      ]
+    },
+    {
+      "id": "wham",
+      "ad": "Wham!",
+      "sarkilar": [
+        { "id": "wake_me_up_before_you_go_go", "ad": "Wake Me Up Before You Go-Go", "soz": "" }
+      ]
+    },
+    {
+      "id": "abba",
+      "ad": "ABBA",
+      "sarkilar": [
+        { "id": "mamma_mia", "ad": "Mamma Mia", "soz": "" },
+        { "id": "dancing_queen", "ad": "Dancing Queen", "soz": "" }
+      ]
+    },
+    {
+      "id": "elvis_presley",
+      "ad": "Elvis Presley",
+      "sarkilar": [
+        { "id": "cannot_help_falling_in_love", "ad": "Can't Help Falling In Love", "soz": "" }
+      ]
+    },
+    {
+       "id": "kylie_minogue",
+      "ad": "Kylie Minogue",
+      "sarkilar": [
+        { "id": "cant_get_you_out_of_my_head", "ad": "Can't Get You Out of My Head", "soz": "" },
+        { "id": "spinning_around", "ad": "Spinning Around", "soz": "" }
+      ]
+    },
+    {
+      "id": "usher",
+      "ad": "Usher",
+      "sarkilar": [
+        { "id": "yeah", "ad": "Yeah!", "soz": "" },
+        { "id": "burn", "ad": "Burn", "soz": "" }
+      ]
+    },
+    {
+      "id": "jonas_brothers",
+      "ad": "Jonas Brothers",
+      "sarkilar": [
+        { "id": "sucker", "ad": "Sucker", "soz": "" },
+        { "id": "burnin_up", "ad": "Burnin' Up", "soz": "" }
+      ]
+    },
+    {
+      "id": "one_direction",
+      "ad": "One Direction",
+      "sarkilar": [
+        { "id": "what_makes_you_beautiful", "ad": "What Makes You Beautiful", "soz": "" },
+        { "id": "story_of_my_life", "ad": "Story of My Life", "soz": "" }
+      ]
+    },
+    {
+      "id": "justin_timberlake",
+      "ad": "Justin Timberlake",
+      "sarkilar": [
+        { "id": "sexyback", "ad": "SexyBack", "soz": "" },
+        { "id": "cry_me_a_river", "ad": "Cry Me a River", "soz": "" }
+      ]
+    },
+    {
+      "id": "black_eyed_peas",
+      "ad": "Black Eyed Peas",
+      "sarkilar": [
+        { "id": "i_gotta_feeling", "ad": "I Gotta Feeling", "soz": "" },
+        { "id": "where_is_the_love", "ad": "Where Is The Love?", "soz": "" }
+      ]
+    },
+    {
+      "id": "eminem",
+      "ad": "Eminem",
+      "sarkilar": [
+        { "id": "lose_yourself", "ad": "Lose Yourself", "soz": "" },
+        { "id": "stan", "ad": "Stan", "soz": "" }
+      ]
+    },
+    {
+      "id": "macklemore",
+      "ad": "Macklemore",
+      "sarkilar": [
+        { "id": "thrift_shop", "ad": "Thrift Shop", "soz": "" },
+        { "id": "cant_hold_us", "ad": "Can't Hold Us", "soz": "" }
+      ]
+    },
+    {
+      "id": "lady_antebellum",
+      "ad": "Lady Antebellum",
+      "sarkilar": [
+        { "id": "need_you_now", "ad": "Need You Now", "soz": "" }
+      ]
+    },
+    {
+      "id": "green_day",
+      "ad": "Green Day",
+      "sarkilar": [
+        { "id": "basket_case", "ad": "Basket Case", "soz": "" },
+        { "id": "wake_me_up_when_september_ends", "ad": "Wake Me Up When September Ends", "soz": "" }
+      ]
+    },
+    {
+      "id": "paramore",
+      "ad": "Paramore",
+      "sarkilar": [
+        { "id": "misery_business", "ad": "Misery Business", "soz": "" }
+      ]
+    },
+    {
+      "id": "foo_fighters",
+      "ad": "Foo Fighters",
+      "sarkilar": [
+        { "id": "everlong", "ad": "Everlong", "soz": "" }
+      ]
+    },
+    {
+      "id": "red_hot_chili_peppers",
+      "ad": "Red Hot Chili Peppers",
+      "sarkilar": [
+        { "id": "californication", "ad": "Californication", "soz": "" },
+        { "id": "under_the_bridge", "ad": "Under The Bridge", "soz": "" }
+      ]
+    },
+    {
+      "id": "the_beatles",
+      "ad": "The Beatles",
+      "sarkilar": [
+        { "id": "hey_jude", "ad": "Hey Jude", "soz": "" },
+        { "id": "let_it_be", "ad": "Let It Be", "soz": "" },
+        { "id": "come_together", "ad": "Come Together", "soz": "" }
+      ]
+    },
+    {
+      "id": "elvis_costello",
+      "ad": "Elvis Costello",
+      "sarkilar": [
+        { "id": "alison", "ad": "Alison", "soz": "" }
+      ]
+    },
+    {
+      "id": "john_mayer",
+      "ad": "John Mayer",
+      "sarkilar": [
+        { "id": "your_body_is_a_wonderland", "ad": "Your Body Is A Wonderland", "soz": "" }
+      ]
+    },
+    {
+      "id": "mariah_carey",
+      "ad": "Mariah Carey",
+      "sarkilar": [
+        { "id": "we_belong_together", "ad": "We Belong Together", "soz": "" }
+      ]
+    },
+    {
+      "id": "pink_floyd",
+      "ad": "Pink Floyd",
+      "sarkilar": [
+        { "id": "comfortably_numb", "ad": "Comfortably Numb", "soz": "" },
+        { "id": "another_brick_in_the_wall", "ad": "Another Brick in the Wall", "soz": "" }
+      ]
+    },
+    {
+      "id": "u2",
+      "ad": "U2",
+      "sarkilar": [
+        { "id": "with_or_without_you", "ad": "With or Without You", "soz": "" },
+        { "id": "beautiful_day", "ad": "Beautiful Day", "soz": "" }
+      ]
+    },
+    {
+      "id": "coldplay",
+      "ad": "Coldplay",
+      "sarkilar": [
+        { "id": "the_scientist", "ad": "The Scientist", "soz": "" },
+        { "id": "fix_you", "ad": "Fix You", "soz": "" }
+      ]
+    },
+    {
+      "id": "david_bowie",
+      "ad": "David Bowie",
+      "sarkilar": [
+        { "id": "lets_dance", "ad": "Let's Dance", "soz": "" },
+        { "id": "space_oddity", "ad": "Space Oddity", "soz": "" }
+      ]
+    },
+    {
+      "id": "elton_john",
+      "ad": "Elton John",
+      "sarkilar": [
+        { "id": "tiny_dancer", "ad": "Tiny Dancer", "soz": "" }
+      ]
+    },
+    {
+  "kategori": "yabancı",
+  "sanatcilar": [
+    {
+      "id": "camila_cabello",
+      "ad": "Camila Cabello",
+      "sarkilar": [
+        { "id": "havana", "ad": "Havana", "soz": "" }
+      ]
+    },
+    {
+      "id": "marshmello",
+      "ad": "Marshmello",
+      "sarkilar": [
+        { "id": "happier", "ad": "Happier", "soz": "" }
+      ]
+    },
+    {
+      "id": "imagine_dragons",
+      "ad": "Imagine Dragons",
+      "sarkilar": [
+        { "id": "radioactive", "ad": "Radioactive", "soz": "" },
+        { "id": "believer", "ad": "Believer", "soz": "" }
+      ]
+    },
+    {
+      "id": "lorde",
+      "ad": "Lorde",
+      "sarkilar": [
+        { "id": "royals", "ad": "Royals", "soz": "" }
+      ]
+    },
+    {
+      "id": "harry_styles",
+      "ad": "Harry Styles",
+      "sarkilar": [
+        { "id": "watermelon_sugar", "ad": "Watermelon Sugar", "soz": "" },
+        { "id": "adore_you", "ad": "Adore You", "soz": "" }
+      ]
+    },
+    {
+      "id": "camila_cabello",
+      "ad": "Camila Cabello",
+      "sarkilar": [
+        { "id": "never_be_the_same", "ad": "Never Be the Same", "soz": "" }
+      ]
+    },
+    {
+      "id": "bastille",
+      "ad": "Bastille",
+      "sarkilar": [
+        { "id": "pompeii", "ad": "Pompeii", "soz": "" }
+      ]
+    },
+    {
+      "id": "foster_the_people",
+      "ad": "Foster The People",
+      "sarkilar": [
+        { "id": "pumped_up_kicks", "ad": "Pumped Up Kicks", "soz": "" }
+      ]
+    },
+    {
+      "id": "lana_del_rey",
+      "ad": "Lana Del Rey",
+      "sarkilar": [
+        { "id": "summertime_sadness", "ad": "Summertime Sadness", "soz": "" }
+      ]
+    },
+    {
+      "id": "tove_lo",
+      "ad": "Tove Lo",
+      "sarkilar": [
+        { "id": "habits_stay_high", "ad": "Habits (Stay High)", "soz": "" }
+      ]
+    },
+    {
+      "id": "zayn",
+      "ad": "Zayn",
+      "sarkilar": [
+        { "id": "pillowtalk", "ad": "Pillowtalk", "soz": "" }
+      ]
+    },
+    {
+      "id": "selena_gomez",
+      "ad": "Selena Gomez",
+      "sarkilar": [
+        { "id": "come_and_get_it", "ad": "Come & Get It", "soz": "" }
+      ]
+    },
+    {
+      "id": "halsey",
+      "ad": "Halsey",
+      "sarkilar": [
+        { "id": "without_me", "ad": "Without Me", "soz": "" }
+      ]
+    },
+    {
+      "id": "billie_piper",
+      "ad": "Billie Piper",
+      "sarkilar": [
+        { "id": "because_we_want_to", "ad": "Because We Want To", "soz": "" }
+      ]
+    },
+    {
+      "id": "chris_brown",
+      "ad": "Chris Brown",
+      "sarkilar": [
+        { "id": "with_you", "ad": "With You", "soz": "" }
+      ]
+    },
+    {
+      "id": "fifth_harmony",
+      "ad": "Fifth Harmony",
+      "sarkilar": [
+        { "id": "work_from_home", "ad": "Work from Home", "soz": "" }
+      ]
+    },
+    {
+      "id": "macklemore",
+      "ad": "Macklemore & Ryan Lewis",
+      "sarkilar": [
+        { "id": "thrift_shop", "ad": "Thrift Shop", "soz": "" },
+        { "id": "cant_hold_us", "ad": "Can't Hold Us", "soz": "" }
+      ]
+    },
+    {
+      "id": "p!nk",
+      "ad": "P!nk",
+      "sarkilar": [
+        { "id": "just_give_me_a_reason", "ad": "Just Give Me a Reason", "soz": "" },
+        { "id": "raise_your_glass", "ad": "Raise Your Glass", "soz": "" }
+      ]
+    },
+    {
+      "id": "sia",
+      "ad": "Sia",
+      "sarkilar": [
+        { "id": "chandelier", "ad": "Chandelier", "soz": "" },
+        { "id": "cheap_thrills", "ad": "Cheap Thrills", "soz": "" }
+      ]
+    },
+    {
+      "id": "bebe_rexha",
+      "ad": "Bebe Rexha",
+      "sarkilar": [
+        { "id": "meant_to_be", "ad": "Meant to Be", "soz": "" }
+      ]
+    }
+  ]
+}
