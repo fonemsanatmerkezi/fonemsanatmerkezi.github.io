@@ -1,5 +1,5 @@
 {
-  "kategori": "Rock",
+  "kategori": "Sanat Muzigi",
   "sanatcilar": [
   {
     "id": "adnan_senses",
@@ -108,7 +108,7 @@
       { "id": "sari_guller", "ad": "Sarı Güller", "soz": "" },
       { "id": "gulumun_dalinda", "ad": "Gönlümün Dalında", "soz": "" },
       { "id": "senden_uzakta", "ad": "Senden Uzakta", "soz": "" },
-      { "id": "gzel_ne_olursun", "ad": "Güzel Ne Olursun", "soz": "" },
+      { "id": "guzel_ne_olursun", "ad": "Güzel Ne Olursun", "soz": "" },
       { "id": "gönül_sarkilari", "ad": "Gönül Şarkıları", "soz": "" },
       { "id": "uslandim_felegin_gulumle", "ad": "Usandırdı Feleğin Gülümle", "soz": "" },
       { "id": "gül_agaci", "ad": "Gül Ağacı", "soz": "" },
@@ -137,7 +137,7 @@
       { "id": "gitme_sana_muhtacim", "ad": "Gitme Sana Muhtacım", "soz": "" },
       { "id": "gözlerin", "ad": "Gözlerin", "soz": "" },
       { "id": "mavi_boncuk", "ad": "Mavi Boncuk", "soz": "" },
-      { "id": "kapı_her_calındıkça", "ad": "Kapı Her Çalındıkça", "soz": "" },
+      { "id": "kapın_her_calındıkça", "ad": "Kapın Her Çalındıkça", "soz": "" },
       { "id": "nankor", "ad": "Nankör", "soz": "" },
       { "id": "aldırma_gonül", "ad": "Aldırma Gönül", "soz": "" },
       { "id": "en_iyileriyle_behıye_aksoy", "ad": "En İyileriyle Behiye Aksoy (derleme)", "soz": "" }
@@ -406,20 +406,6 @@
     ]
   },
   {
-    "id": "seniha",
-    "ad": "Seniha",
-    "sarkilar": [
-      { "id": "populer_sanatci_best_of", "ad": "Seniha – Popüler Klasikler", "soz": "" }
-    ]
-  },
-  {
-    "id": "secil_heper",
-    "ad": "Seçil Heper",
-    "sarkilar": [
-      { "id": "populer_sanatci_best_of", "ad": "Seçil Heper – Popüler Klasikler", "soz": "" }
-    ]
-  },
-  {
     "id": "sibel_can",
     "ad": "Sibel Can",
     "sarkilar": [
@@ -448,13 +434,6 @@
     ]
   },
   {
-    "id": "sinan_erkoc",
-    "ad": "Sinan Erkoç",
-    "sarkilar": [
-      { "id": "populer_sanatci_best_of", "ad": "Sinan Erkoç – Popüler Klasikler", "soz": "" }
-    ]
-  },
-  {
     "id": "suat_sayin",
     "ad": "Suat Sayın",
     "sarkilar": [
@@ -469,15 +448,7 @@
       { "id": "populer_sanatci_best_of", "ad": "Şevval Sam – Diğer Popüler Parçalar", "soz": "" }
     ]
   },
-  {
-    "id": "sukran_ay",
-    "ad": "Şükran Ay",
-    "sarkilar": [
-      { "id": "populer_sanatci_best_of", "ad": "Şükran Ay – Popüler Klasikler", "soz": "" }
-    ]
-  },
-     [
-  {
+      {
     "id": "asli_hunel",
     "ad": "Aslı Hünel",
     "sarkilar": [
@@ -604,7 +575,7 @@
       { "id": "bir_yarin_gulu", "ad": "Bir Yarın Gülü", "soz": "" },
       { "id": "naz_makami", "ad": "Naz Makamı", "soz": "" },
       { "id": "gokler_icin", "ad": "Gökler İçin", "soz": "" },
-      { "id": "vedo", "ad": "Vedô", "soz": "" },
+      { "id": "veda", "ad": "Veda", "soz": "" },
       { "id": "senin_icin", "ad": "Senin İçin", "soz": "" },
       { "id": "sensiz_gece", "ad": "Sensiz Gece", "soz": "" },
       { "id": "gulum_benim", "ad": "Gülüm Benim", "soz": "" },
@@ -632,7 +603,6 @@
     "id": "nesrin_sipahi",
     "ad": "Nesrin Sipahi",
     "sarkilar": [
-      { "id": "sunup_sesleniyorum", "ad": "Şu Nup Sesleniyorum", "soz": "" },
       { "id": "senin_icin", "ad": "Senin İçin", "soz": "" },
       { "id": "gulum_benim", "ad": "Gülüm Benim", "soz": "" },
       { "id": "bir_yarin_askina", "ad": "Bir Yarın Aşkına", "soz": "" },
