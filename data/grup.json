@@ -487,27 +487,6 @@
     { "id": "saklambac", "ad": "Saklambaç", "soz": "" }
   ]
 },
-        {
-  "id": "izel_celik_ercan",
-  "ad": "İzel-Çelik-Ercan",
-  "sarkilar": [
-    { "id": "ozledim", "ad": "Özledim", "soz": "" },
-    { "id": "donmelisin", "ad": "Dönmelisin", "soz": "" },
-    { "id": "isge_yeniden", "ad": "İşte Yeniden", "soz": "" },
-    { "id": "ara_ara", "ad": "Ara Ara", "soz": "" },
-    { "id": "isikli_yol", "ad": "Işıklı Yol", "soz": "" }
-  ]
-},
-    {
-  "id": "imera",
-  "ad": "İmera",
-  "sarkilar": [
-    { "id": "hayat", "ad": "Hayat", "soz": "" },
-    { "id": "sazim", "ad": "Sazım", "soz": "" },
-    { "id": "yol", "ad": "Yol", "soz": "" },
-    { "id": "dunya_hali", "ad": "Dünya Hali", "soz": "" }
-  ]
-},
 {
   "id": "incesaz",
   "ad": "İncesaz",
