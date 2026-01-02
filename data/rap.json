@@ -321,6 +321,21 @@
     { "id": "vidos", "ad": "Vidos", "soz": "" }
   ]
 },
+     {
+  "id": "ragga_oktay",
+  "ad": "Ragga Oktay",
+  "sarkilar": [
+    { "id": "yeniden", "ad": "Yeniden", "soz": "" },
+    { "id": "gitme_kal", "ad": "Gitme Kal", "soz": "" },
+    { "id": "cukulata_kiz", "ad": "Çukulata Kız", "soz": "" },
+    { "id": "turbo_gaz", "ad": "Turbo Gaz", "soz": "" },
+    { "id": "yollar", "ad": "Yollar", "soz": "" },
+    { "id": "avare", "ad": "Avare", "soz": "" },
+    { "id": "gidim_gidim", "ad": "Gıdım Gıdım", "soz": "" },
+    { "id": "papucu_yarim", "ad": "Papucu Yarım", "soz": "" },
+    { "id": "bi_sevmedin_beni", "ad": "Bi Sevmedin Beni", "soz": "" }
+  ]
+},
   {
     "id": "sefo",
     "ad": "Sefo",
