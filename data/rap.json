@@ -1,7 +1,6 @@
    {
   "kategori": "Rap",
   "sanatcilar": [
-    [
   {
     "id": "ados",
     "ad": "Ados",
@@ -516,5 +515,7 @@
     "sarkilar": [
       { "id": "tattoo", "ad": "Tattoo", "soz": "" },
       { "id": "kural", "ad": "Kural", "soz": "" }
-    ]
-  }
+ ]
+}
+      ]
+
