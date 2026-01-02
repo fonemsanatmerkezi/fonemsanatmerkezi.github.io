@@ -53,6 +53,20 @@
   ]
 },
     {
+  "id": "athena",
+  "ad": "Athena",
+  "sarkilar": [
+    { "id": "yasamak_var_ya", "ad": "Yaşamak Var Ya", "soz": "" },
+    { "id": "her_sey_guzel_olacak", "ad": "Her Şey Güzel Olacak", "soz": "" },
+    { "id": "holigan", "ad": "Holigan", "soz": "" },
+    { "id": "on_iki_dev_adam", "ad": "On İki Dev Adam", "soz": "" },
+    { "id": "kafama_gore", "ad": "Kafama Göre", "soz": "" },
+    { "id": "yamyam_zurna", "ad": "Yamyam Zurna", "soz": "" },
+    { "id": "ses_etme", "ad": "Ses Etme", "soz": "" },
+    { "id": "bela", "ad": "Bela", "soz": "" }
+  ]
+},
+    {
   "id": "badem",
   "ad": "Badem",
   "sarkilar": [
@@ -249,6 +263,17 @@
     { "id": "rachmaninoff_suite_no2", "ad": "Rachmaninoff – Suite No.2", "soz": "" },
     { "id": "brahms_hungarian_dance_5", "ad": "Brahms – Hungarian Dance No.5", "soz": "" },
     { "id": "beethoven_symphony_5", "ad": "Beethoven – Symphony No.5 (Two Piano)", "soz": "" }
+  ]
+},
+    {
+  "id": "gripin",
+  "ad": "Gripin",
+  "sarkilar": [
+    { "id": "boyle_kahpedir_dunya", "ad": "Böyle Kahpedir Dünya", "soz": "" },
+    { "id": "muhtemel_ask", "ad": "Muhtemel Aşk", "soz": "" },
+    { "id": "ask_nerden_nereye", "ad": "Aşk Nerden Nereye", "soz": "" },
+    { "id": "sensiz_istanbul_a_dusmanim", "ad": "Sensiz İstanbul'a Düşmanım", "soz": "" },
+    { "id": "durma_yagmur_durma", "ad": "Durma Yağmur Durma", "soz": "" }
   ]
 },
     {
@@ -644,6 +669,18 @@
     { "id": "cheerio", "ad": "Cheerio", "soz": "" }
   ]
 },
+    {
+  "id": "kolpa",
+  "ad": "Kolpa",
+  "sarkilar": [
+    { "id": "son_nefesim", "ad": "Son Nefesim", "soz": "" },
+    { "id": "beni_aske_inandir", "ad": "Beni Aşka İnandır", "soz": "" },
+    { "id": "iyi_seyler", "ad": "İyi Şeyler", "soz": "" },
+    { "id": "askin_tek_hali", "ad": "Aşkın Tek Hali", "soz": "" },
+    { "id": "yatagin_soguk_tarafi", "ad": "Yatağın Soğuk Tarafı", "soz": "" },
+    { "id": "acil_geldim", "ad": "Acil Geldim", "soz": "" }
+  ]
+},
 {
   "id": "koliva",
   "ad": "Koliva",
@@ -768,6 +805,22 @@
     { "id": "melodi", "ad": "Melodi", "soz": "" },
     { "id": "raks", "ad": "Raks", "soz": "" },
     { "id": "dus", "ad": "Düş", "soz": "" }
+  ]
+},
+    {
+  "id": "manga",
+  "ad": "maNga",
+  "sarkilar": [
+    { "id": "we_could_be_the_same", "ad": "We Could Be the Same", "soz": "" },
+    { "id": "beni_benimle_birak", "ad": "Beni Benimle Bırak", "soz": "" },
+    { "id": "cevapsiz_sorular", "ad": "Cevapsız Sorular", "soz": "" },
+    { "id": "dunyanin_sonuna_dogmusum", "ad": "Dünyanın Sonuna Doğmuşum", "soz": "" },
+    { "id": "bir_kadin_cizeceksin", "ad": "Bir Kadın Çizeceksin", "soz": "" },
+    { "id": "dursun_zaman", "ad": "Dursun Zaman", "soz": "" },
+    { "id": "yalan", "ad": "Yalan", "soz": "" },
+    { "id": "evdeki_ses", "ad": "Evdeki Ses", "soz": "" },
+    { "id": "alisirim_gozlerimi_kapamaya", "ad": "Alışırım Gözlerimi Kapamaya", "soz": "" },
+    { "id": "guncel_guncesi", "ad": "Tek Yön Seçtiğim Tüm Yollar", "soz": "" }
   ]
 },
     {
@@ -941,7 +994,35 @@
     { "id": "gonul_kacani_kovalar", "ad": "Gönül Kaçanı Kovalar", "soz": "" },
     { "id": "yalanci_sevgilim", "ad": "Yalancı Sevgilim", "soz": "" }
   ]
+},
+    {
+  "id": "seksendort",
+  "ad": "Seksendört",
+  "sarkilar": [
+    { "id": "olurum_hasretinle", "ad": "Ölürüm Hasretinle", "soz": "" },
+    { "id": "kendime_yalan_soyledim", "ad": "Kendime Yalan Söyledim", "soz": "" },
+    { "id": "kirgin_cicekler", "ad": "Kırgın Çiçekler", "soz": "" },
+    { "id": "akin_zaman", "ad": "Akıyor Zaman", "soz": "" },
+    { "id": "tek_basima", "ad": "Tek Başına", "soz": "" }
+  ]
+},
+    {
+  "id": "yuzyuzeyken_konusuruz",
+  "ad": "Yüzyüzeyken Konuşuruz",
+  "sarkilar": [
+    { "id": "dinle_beni_bi", "ad": "Dinle Beni Bi’", "soz": "" },
+    { "id": "sen_varsin_diye", "ad": "Sen Varsın Diye", "soz": "" },
+    { "id": "kazili_kuyum", "ad": "Kazılı Kuyum", "soz": "" },
+    { "id": "yine_de", "ad": "Yine De", "soz": "" },
+    { "id": "durmaz_akar", "ad": "Durmaz Akar", "soz": "" },
+    { "id": "son_seslenisim", "ad": "Son Seslenişim", "soz": "" },
+    { "id": "gencligimi_geri_ver", "ad": "Gençliğimi Geri Ver", "soz": "" }
+  ]
 }
+  ]
+}
+
+    
 
 
 
