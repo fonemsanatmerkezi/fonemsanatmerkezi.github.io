@@ -1,1 +1,520 @@
-
+   {
+  "kategori": "Rap",
+  "sanatcilar": [
+    [
+  {
+    "id": "ados",
+    "ad": "Ados",
+    "sarkilar": [
+      { "id": "yikilir", "ad": "Yıkılır", "soz": "" },
+      { "id": "mesela_yani", "ad": "Mesela Yani", "soz": "" }
+    ]
+  },
+  {
+    "id": "agackakan",
+    "ad": "Ağaçkakan",
+    "sarkilar": [
+      { "id": "upuzunucurum", "ad": "Upuzunuçurum", "soz": "" }
+    ]
+  },
+ {
+  "id": "allame",
+  "ad": "Allâme",
+  "sarkilar": [
+    { "id": "kisir_dongu", "ad": "Kısır Döngü", "soz": "" },
+    { "id": "kenar_mahalle", "ad": "Kenar Mahalle", "soz": "" },
+    { "id": "hayalin_yeri_yok", "ad": "Hayalin Yeri Yok", "soz": "" },
+    { "id": "oyunun_kuralı", "ad": "Oyunun Kuralı", "soz": "" },
+    { "id": "allame_sendromu", "ad": "Allâme Sendromu", "soz": "" },
+    { "id": "galaktik", "ad": "Galaktik", "soz": "" },
+    { "id": "ira", "ad": "IRA", "soz": "" },
+    { "id": "fare_kapani", "ad": "Fare Kapanı", "soz": "" },
+    { "id": "memleket", "ad": "Memleket", "soz": "" },
+    { "id": "isiklar", "ad": "Işıklar", "soz": "" }
+  ]
+},
+  {
+    "id": "alper_aga",
+    "ad": "Alper Ağa",
+    "sarkilar": [
+      { "id": "bir_yabancinin_hayati", "ad": "Bir Yabancının Hayatı", "soz": "" }
+    ]
+  },
+  {
+    "id": "anil_piyanci",
+    "ad": "Anıl Piyancı",
+    "sarkilar": [
+      { "id": "git", "ad": "Git", "soz": "" },
+      { "id": "olmuyor", "ad": "Olmuyor", "soz": "" }
+    ]
+  },
+  {
+    "id": "ati242",
+    "ad": "Ati242",
+    "sarkilar": [
+      { "id": "meydan", "ad": "Meydan", "soz": "" },
+      { "id": "panorama", "ad": "Panorama", "soz": "" }
+    ]
+  },
+  {
+    "id": "ayben",
+    "ad": "Ayben",
+    "sarkilar": [
+      { "id": "kuvet", "ad": "Küvet", "soz": "" }
+    ]
+  },
+  {
+    "id": "ben_fero",
+    "ad": "Ben Fero",
+    "sarkilar": [
+      { "id": "demet_akalin", "ad": "Demet Akalın", "soz": "" },
+      { "id": "3_2_1", "ad": "3 2 1", "soz": "" }
+    ]
+  },
+  {
+    "id": "beta_berk_bayindir",
+    "ad": "Beta Berk Bayındır",
+    "sarkilar": [
+      { "id": "osonpanc", "ad": "Osonpanç", "soz": "" }
+    ]
+  },
+  {
+    "id": "blok3",
+    "ad": "Blok3",
+    "sarkilar": [
+      { "id": "baybay", "ad": "BAYBAY", "soz": "" },
+      { "id": "affetmem", "ad": "Affetmem", "soz": "" },
+      { "id": "aklinabengelcem", "ad": "Aklına Ben Geleceğim", "soz": "" }
+    ]
+  },
+  {
+    "id": "boe_b",
+    "ad": "Boe B",
+    "sarkilar": [
+      { "id": "flow", "ad": "Flow", "soz": "" }
+    ]
+  },
+{
+  "id": "burak_king",
+  "ad": "Burak King",
+  "sarkilar": [
+    { "id": "gunah_benim", "ad": "Günah Benim (feat. Eypio)", "soz": "" },
+    { "id": "yaniyoruz", "ad": "Yanıyoruz", "soz": "" },
+    { "id": "kostum_hekime", "ad": "Koştum Hekime", "soz": "" },
+    { "id": "sen", "ad": "Sen", "soz": "" },
+    { "id": "gidesim_var", "ad": "Gidesim Var", "soz": "" },
+    { "id": "var_git", "ad": "Var Git", "soz": "" },
+    { "id": "eyvallah", "ad": "Eyvallah", "soz": "" },
+    { "id": "bi_sonu_var_mi", "ad": "Bi Sonu Var Mı?", "soz": "" },
+    { "id": "kalbim", "ad": "Kalbim", "soz": "" },
+    { "id": "sessizlere_verdim", "ad": "Sessizlere Verdim", "soz": "" },
+    { "id": "zirve_2", "ad": "Zirve 2", "soz": "" }
+  ]
+},
+  {
+    "id": "cakal",
+    "ad": "Cakal",
+    "sarkilar": [
+      { "id": "gangsta_life", "ad": "Gangsta Life", "soz": "" },
+      { "id": "yerli_plaka", "ad": "Yerli Plaka (feat. Berk Erdemanar)", "soz": "" }
+    ]
+  },
+  {
+    "id": "ceg",
+    "ad": "Ceg",
+    "sarkilar": [
+      { "id": "bipolar", "ad": "Bipolar", "soz": "" },
+      { "id": "curumus_bahceler", "ad": "Çürümüş Bahçeler (feat. Doruk Ereşter)", "soz": "" }
+    ]
+  },
+  {
+    "id": "ceza",
+    "ad": "Ceza",
+    "sarkilar": [
+      { "id": "holocaust", "ad": "Holocaust", "soz": "" },
+      { "id": "susp us", "ad": "Susp u s", "soz": "" },
+      { "id": "neym_var_ki", "ad": "Neyim Var Ki (feat. Sagopa Kajmer)", "soz": "" },
+      { "id": "yerli_plaka", "ad": "Yerli Plaka", "soz": "" },
+      { "id": "med_cezir", "ad": "Med Cezir", "soz": "" }
+    ]
+  },
+  {
+    "id": "contra",
+    "ad": "Contra",
+    "sarkilar": [
+      { "id": "ters_yon", "ad": "Ters Yön", "soz": "" },
+      { "id": "ol u", "ad": "Ölü", "soz": "" },
+      { "id": "zebani", "ad": "Zebani", "soz": "" }
+    ]
+  },
+  {
+    "id": "dr_fuchs",
+    "ad": "Dr. Fuchs",
+    "sarkilar": [
+      { "id": "kara_maskeli_istanbul", "ad": "Kara Maskeli İstanbul", "soz": "" },
+      { "id": "toplama_kampi", "ad": "Toplama Kampı (feat. Sagopa Kajmer & Ceza)", "soz": "" }
+    ]
+  },
+        [
+  {
+    "id": "ege_cubukcu",
+    "ad": "Ege Çubukçu",
+    "sarkilar": [
+      { "id": "bir_gun", "ad": "1 Gün", "soz": "" },
+      { "id": "badd_trip", "ad": "BADD' Trip", "soz": "" },
+      { "id": "hey_dj", "ad": "Hey DJ", "soz": "" },
+      { "id": "yaz_geldi", "ad": "Yaz Geldi", "soz": "" }
+    ]
+  },
+  {
+    "id": "erci_e",
+    "ad": "Erci E",
+    "sarkilar": [
+      { "id": "bi_gidecegim", "ad": "Bi Gideceğim", "soz": "" },
+      { "id": "yoktan_var", "ad": "Yoktan Var", "soz": "" },
+      { "id": "hayat", "ad": "Hayat", "soz": "" }
+    ]
+  },
+ {
+  "id": "eypio",
+  "ad": "Eypio",
+  "sarkilar": [
+    { "id": "gunah_benim", "ad": "Günah Benim (feat. Burak King)", "soz": "" },
+    { "id": "naim", "ad": "Naim (Cep Herkülü Naim Süleymanoğlu Film Müziği)", "soz": "" },
+    { "id": "seni_optugum_sokak", "ad": "Seni Öptüğüm Sokak", "soz": "" },
+    { "id": "imdadim", "ad": "İmdadım", "soz": "" },
+    { "id": "umudum_kalmadi", "ad": "Umudum Kalmadı", "soz": "" },
+    { "id": "sen", "ad": "Sen", "soz": "" },
+    { "id": "katliam_4", "ad": "Katliam 4", "soz": "" },
+    { "id": "ay_kizim", "ad": "Ay Kızım", "soz": "" },
+    { "id": "sen_oyna", "ad": "Sen Oyna (feat. Kibariye & Tuğberk Işık)", "soz": "" },
+    { "id": "multeci", "ad": "Mülteci", "soz": "" }
+  ]
+},
+{
+  "id": "ezhel",
+  "ad": "Ezhel",
+  "sarkilar": [
+    { "id": "geceler", "ad": "Geceler", "soz": "" },
+    { "id": "imkansizim", "ad": "İmkânsızım", "soz": "" },
+    { "id": "bazen", "ad": "Bazen", "soz": "" },
+    { "id": "margiela", "ad": "Margiela", "soz": "" },
+    { "id": "nerdesin", "ad": "Nerdesin", "soz": "" },
+    { "id": "felaket", "ad": "Felaket", "soz": "" },
+    { "id": "bul_beni", "ad": "Bul Beni", "soz": "" },
+    { "id": "sekiz_2", "ad": "Sekiz 2", "soz": "" },
+    { "id": "sehrimin_tadi", "ad": "Şehrimin Tadı", "soz": "" },
+    { "id": "eyvallah", "ad": "Eyvallah", "soz": "" }
+  ]
+},
+{
+  "id": "fuat_ergin",
+  "ad": "Fuat Ergin",
+  "sarkilar": [
+    { "id": "metastaz_2_cendere", "ad": "Metastaz 2: Cendere", "soz": "" },
+    { "id": "okyanuslar", "ad": "Okyanuslar", "soz": "" },
+    { "id": "her_ayin_elemani", "ad": "Her Ayın Elemanı", "soz": "" },
+    { "id": "dusmeden_yukari", "ad": "Düşmeden Yukarı", "soz": "" },
+    { "id": "s.o.n", "ad": "S.O.N", "soz": "" },
+    { "id": "nefsine_guc_ver", "ad": "Nefsine Güç Ver (feat. Araf)", "soz": "" },
+    { "id": "hic_ugruna", "ad": "Hiç Uğruna (feat. Fuat Ergin)", "soz": "" },
+    { "id": "dudupduz", "ad": "Düpedüz", "soz": "" },
+    { "id": "olum_garanti", "ad": "Ölüm Garanti", "soz": "" },
+    { "id": "lunar_phase", "ad": "Lunar Phase", "soz": "" }
+  ]
+},
+  {
+  "id": "gazapizm",
+  "ad": "Gazapizm",
+  "sarkilar": [
+    { "id": "unutulacak_dunler", "ad": "Unutulacak Dünler", "soz": "" },
+    { "id": "olur_mu", "ad": "Olur Mu", "soz": "" },
+    { "id": "sagi_solu_kes", "ad": "Sağı Solu Kes", "soz": "" },
+    { "id": "heyecani_yok", "ad": "Heyecanı Yok", "soz": "" },
+    { "id": "kalbim_cukurda", "ad": "Kalbim Çukurda", "soz": "" },
+    { "id": "perisan", "ad": "Perişan (feat. Gaye Su Akyol)", "soz": "" },
+    { "id": "zani", "ad": "Zanı (feat. Cashflow, Boykot & Zeze)", "soz": "" },
+    { "id": "memleketsiz", "ad": "Memleketsiz", "soz": "" },
+    { "id": "dunya_bu", "ad": "Dünya Bu", "soz": "" },
+    { "id": "pisligin_ustune_basmislar", "ad": "Pisliğin Üstüne Basmışlar", "soz": "" }
+  ]
+},
+  {
+    "id": "gunes",
+    "ad": "Güneş",
+    "sarkilar": [
+      { "id": "dua", "ad": "Dua (feat. UZI)", "soz": "" },
+      { "id": "suclarimdan_biri", "ad": "Suçlarımdan Biri", "soz": "" },
+      { "id": "nkbi", "ad": "NKBİ", "soz": "" }
+    ]
+  },
+  {
+    "id": "hayki",
+    "ad": "Hayki",
+    "sarkilar": [
+      { "id": "milyon_dolar", "ad": "Milyon Dolar", "soz": "" },
+      { "id": "bi_sene", "ad": "Bi Sene", "soz": "" },
+      { "id": "yok_artik", "ad": "Yok Artık", "soz": "" }
+    ]
+  },
+  {
+    "id": "hey_douglas",
+    "ad": "Hey! Douglas",
+    "sarkilar": [
+      { "id": "sahne", "ad": "Sahne", "soz": "" },
+      { "id": "rol", "ad": "Rol", "soz": "" }
+    ]
+  },
+[
+  {
+    "id": "norm_ender",
+    "ad": "Norm Ender",
+    "sarkilar": [
+      { "id": "mekanin_sahibi", "ad": "Mekânın Sahibi", "soz": "" },
+      { "id": "sozler_serefsiz_oldu", "ad": "Sözler Şerefsiz Oldu", "soz": "" },
+      { "id": "ciktik_yine_yollara", "ad": "Çıktık Yine Yollara", "soz": "" },
+      { "id": "icinde_patlar", "ad": "İçinde Patlar", "soz": "" },
+      { "id": "bir_cift_goz", "ad": "Bir Çift Göz (feat. Ebru Gündeş)", "soz": "" }
+    ]
+  },
+  {
+    "id": "khontkar",
+    "ad": "Khontkar",
+    "sarkilar": [
+      { "id": "fight_kulup", "ad": "Fight Kulüp", "soz": "" },
+      { "id": "geldigim_yer", "ad": "Geldiğim Yer", "soz": "" },
+      { "id": "jenga", "ad": "JENGA", "soz": "" },
+      { "id": "koy", "ad": "Koy", "soz": "" },
+      { "id": "olmaz", "ad": "Olmaz", "soz": "" }
+    ]
+  },
+  {
+    "id": "kubilay_karca",
+    "ad": "Kubilay Karça",
+    "sarkilar": [
+      { "id": "ayaza_serdim", "ad": "Ayaza Serdim", "soz": "" },
+      { "id": "celladina_asik", "ad": "Celladına Aşık", "soz": "" },
+      { "id": "seni_kirmislar", "ad": "Seni Kırmışlar", "soz": "" },
+      { "id": "uzerime_kalir", "ad": "Üzerime Kalır", "soz": "" },
+      { "id": "intihar_saatler", "ad": "İntihar Saatler", "soz": "" }
+    ]
+  },
+  [
+  {
+    "id": "lvbel_c5",
+    "ad": "Lvbel C5",
+    "sarkilar": [
+      { "id": "havhavhav", "ad": "HAVHAVHAV", "soz": "" },
+      { "id": "gelmezsen_gelme", "ad": "Gelmezsen Gelme", "soz": "" },
+      { "id": "nkbix_yapamam_remix", "ad": "NKBİ X YAPAMAM (Remix)", "soz": "" }
+    ]
+  },
+{
+  "id": "murda",
+  "ad": "Murda",
+  "sarkilar": [
+    { "id": "omrum", "ad": "Ömrüm", "soz": "" },
+    { "id": "khrbr", "ad": "KHRBR", "soz": "" },
+    { "id": "gng_freestyle_1", "ad": "GNG Freestyle 1", "soz": "" },
+    { "id": "zoo_park", "ad": "ZOO PARK", "soz": "" },
+    { "id": "evine_don", "ad": "Evine Dön", "soz": "" },
+    { "id": "geri_ver", "ad": "Geri Ver", "soz": "" },
+    { "id": "dort_dortluk", "ad": "DÖRT DÖRTLÜK", "soz": "" },
+    { "id": "kan_ve_de_ter", "ad": "Kan ve de Ter", "soz": "" },
+    { "id": "lispo", "ad": "Lispo", "soz": "" },
+    { "id": "vidos", "ad": "Vidos", "soz": "" }
+  ]
+},
+  {
+    "id": "sefo",
+    "ad": "Sefo",
+    "sarkilar": [
+      { "id": "bilmem_mi", "ad": "Bilmem Mi?", "soz": "" },
+      { "id": "derdim_var", "ad": "Derdim Var", "soz": "" },
+      { "id": "yerinde_dur", "ad": "Yerinde Dur", "soz": "" }
+    ]
+  },
+  {
+  "id": "ozbi",
+  "ad": "Ozbi",
+  "sarkilar": [
+    { "id": "hadi_gittik", "ad": "Hadi Gittik (feat. Melek Mosso)", "soz": "" },
+    { "id": "o_bi_karamel", "ad": "O Bi Karamel", "soz": "" },
+    { "id": "geceyi_anlatmis", "ad": "Geceyi Anlatmış", "soz": "" },
+    { "id": "susamam", "ad": "Susamam (feat. 18 sanatçı)", "soz": "" },
+    { "id": "dunyam_20_24", "ad": "Dünya’m 20:24", "soz": "" },
+    { "id": "yildiz_tozu", "ad": "Yıldız Tozu", "soz": "" },
+    { "id": "sonu_yok", "ad": "Sonu Yok", "soz": "" },
+    { "id": "olmazlara_yandim", "ad": "Olmazlara Yandım", "soz": "" },
+    { "id": "facali_yurekler", "ad": "Façalı Yürekler", "soz": "" },
+    { "id": "bizi_hatirla", "ad": "Bizi Hatırla", "soz": "" },
+    { "id": "savasci", "ad": "Savaşçı", "soz": "" },
+    { "id": "sana_sormam", "ad": "Sana Sormam", "soz": "" },
+    { "id": "parasetamol", "ad": "Parasetamol", "soz": "" },
+    { "id": "boşver_gitsin", "ad": "Boşver Gitsin", "soz": "" }
+  ]
+  },
+  {
+    "id": "no1",
+    "ad": "No.1",
+    "sarkilar": [
+      { "id": "yarin_kalan_sigara", "ad": "Yarım Kalan Sigara (feat. Melek Mosso)", "soz": "" }
+    ]
+  },
+    [
+  {
+    "id": "patron",
+    "ad": "Patron",
+    "sarkilar": [
+      { "id": "olebilirim", "ad": "Ölebilirim", "soz": "" },
+      { "id": "guzel_kizlar_patron_dinler", "ad": "Güzel Kızlar Patron Dinler", "soz": "" },
+      { "id": "siyah", "ad": "Siyah", "soz": "" },
+      { "id": "benden_bu_kadar", "ad": "Benden Bu Kadar", "soz": "" },
+      { "id": "okyanus", "ad": "Okyanus", "soz": "" }
+    ]
+  },
+  {
+    "id": "reyhan_sahin",
+    "ad": "Reyhan Şahin",
+    "sarkilar": [
+      { "id": "susamam", "ad": "Susamam (feat. 18 artist)", "soz": "" }
+    ]
+  },
+{
+  "id": "sagopa_kajmer",
+  "ad": "Sagopa Kajmer",
+  "sarkilar": [
+    { "id": "siyah", "ad": "Siyah", "soz": "" },
+    { "id": "oldu_olanlar", "ad": "Oldu Olanlar", "soz": "" },
+    { "id": "toz_taneleri", "ad": "Toz Taneleri", "soz": "" },
+    { "id": "avutsun_bahaneler", "ad": "Avutsun Bahaneler", "soz": "" },
+    { "id": "366_gun", "ad": "366.Gün", "soz": "" },
+    { "id": "ates­ten_gomlek", "ad": "Ateşten Gömlek", "soz": "" },
+    { "id": "galiba", "ad": "Galiba (Orijinal Rap Versiyon)", "soz": "" },
+    { "id": "geceler", "ad": "Geceler", "soz": "" },
+    { "id": "bir_atese_attin_beni", "ad": "Bir Ateşe Attın Beni", "soz": "" },
+    { "id": "merhametine_don", "ad": "Merhametine Dön (2021 Tek Edit)", "soz": "" },
+    { "id": "vesselam", "ad": "Vesselam", "soz": "" },
+    { "id": "24", "ad": "24", "soz": "" }
+  ]
+},
+  {
+    "id": "saian",
+    "ad": "Saian",
+    "sarkilar": [
+      { "id": "ay_sarkisi", "ad": "Ay Şarkısı", "soz": "" },
+      { "id": "sos", "ad": "S.O.S (feat. Patron)", "soz": "" }
+    ]
+  },
+  {
+    "id": "sansar_salvo",
+    "ad": "Sansar Salvo",
+    "sarkilar": [
+      { "id": "sokağa_doner", "ad": "Sokağa Döner", "soz": "" },
+      { "id": "dunler", "ad": "Dünler", "soz": "" }
+    ]
+  },
+  {
+    "id": "server_uraz",
+    "ad": "Server Uraz",
+    "sarkilar": [
+      { "id": "sabaha_kadar_dans", "ad": "Sabaha Kadar Dans", "soz": "" },
+      { "id": "bahamalar", "ad": "Bahamalar", "soz": "" }
+    ]
+  },
+{
+  "id": "sehinshah",
+  "ad": "Şehinşah",
+  "sarkilar": [
+    { "id": "yak_yak_yak", "ad": "Yak Yak Yak", "soz": "" },
+    { "id": "karma", "ad": "Karma", "soz": "" },
+    { "id": "nabiz", "ad": "Nabız", "soz": "" },
+    { "id": "pirana", "ad": "Pirana", "soz": "" },
+    { "id": "dunya_dan_atlasa", "ad": "Dünya'dan Atlas'a", "soz": "" },
+    { "id": "pluton", "ad": "Plüton", "soz": "" },
+    { "id": "sifir_sikinti", "ad": "Sıfır Sıkıntı", "soz": "" },
+    { "id": "yaz_yagmurum", "ad": "Yaz Yağmurum", "soz": "" },
+    { "id": "gunes", "ad": "GÜNEŞ", "soz": "" },
+    { "id": "ist_taksimi", "ad": "İST/TAKSÎMİ", "soz": "" }
+  ]
+},
+{
+  "id": "saniser",
+  "ad": "Şanışer",
+  "sarkilar": [
+    { "id": "susamam", "ad": "Susamam (feat. 18 artist)", "soz": "" },
+    { "id": "gel", "ad": "Gel", "soz": "" },
+    { "id": "gunleri_geride_birak", "ad": "Günleri Geride Bırak", "soz": "" },
+    { "id": "kara_geceler", "ad": "Kara Geceler (feat. Sezen Aksu)", "soz": "" },
+    { "id": "aynı_sokaklarda", "ad": "Aynı Sokaklarda", "soz": "" },
+    { "id": "ask_sarkisi_live", "ad": "Aşk Şarkısı - Live", "soz": "" },
+    { "id": "ben_kimim", "ad": "Ben Kimim", "soz": "" },
+    { "id": "yalan", "ad": "Yalan", "soz": "" },
+    { "id": "katliam_3", "ad": "Katliam 3", "soz": "" },
+    { "id": "suç", "ad": "Suç", "soz": "" }
+  ]
+},
+  {
+    "id": "sokrat_st",
+    "ad": "Sokrat St",
+    "sarkilar": [
+      { "id": "susamam", "ad": "Susamam (feat. 18 artist)", "soz": "" },
+      { "id": "kaderimin_basinda", "ad": "Kaderimin Başında", "soz": "" }
+    ]
+  },
+  {
+    "id": "tankurt_manas",
+    "ad": "Tankurt Manas",
+    "sarkilar": [
+      { "id": "rapstar", "ad": "Rapstar", "soz": "" },
+      { "id": "bekle_beni", "ad": "Bekle Beni", "soz": "" }
+    ]
+  },
+  {
+    "id": "uzi",
+    "ad": "Uzi",
+    "sarkilar": [
+      { "id": "dua", "ad": "Dua (feat. Güneş)", "soz": "" },
+      { "id": "paparazzi", "ad": "Paparazzi", "soz": "" },
+      { "id": "umrumda_degıl", "ad": "Umrumda Değil", "soz": "" }
+    ]
+  },
+  {
+    "id": "ufo361",
+    "ad": "Ufo361",
+    "sarkilar": [
+      { "id": "emo_illegal", "ad": "Emo Illegal", "soz": "" },
+      { "id": "stay_high", "ad": "Stay High", "soz": "" }
+    ]
+  },
+  {
+    "id": "vio",
+    "ad": "Vio",
+    "sarkilar": [
+      { "id": "yukari", "ad": "Yukarı", "soz": "" }
+    ]
+  },
+{
+  "id": "yener_cevık",
+  "ad": "Yener Çevik",
+  "sarkilar": [
+    { "id": "senden_gizledim", "ad": "Senden Gizledim", "soz": "" },
+    { "id": "yikila_yikila", "ad": "Yıkıla Yıkıla", "soz": "" },
+    { "id": "donar", "ad": "Donar", "soz": "" },
+    { "id": "hasta_isi_ben_budu_remix", "ad": "Hasta İşi (Ben Büdü Remix)", "soz": "" },
+    { "id": "senle_zor", "ad": "Senle Zor", "soz": "" },
+    { "id": "huznu_hecem", "ad": "Hüznü Hecem", "soz": "" },
+    { "id": "dikkat_inat", "ad": "Dikkat İnat", "soz": "" },
+    { "id": "parcanin_adi_yok", "ad": "Parçanın Adı Yok", "soz": "" },
+    { "id": "oyle_kal", "ad": "Öyle Kal (feat. Yıldız Tilbe)", "soz": "" },
+    { "id": "bi_siyah_bi_beyaz", "ad": "Bi Siyah Bi Beyaz", "soz": "" }
+  ]
+},
+  {
+    "id": "zen_g",
+    "ad": "Zen‑G",
+    "sarkilar": [
+      { "id": "tattoo", "ad": "Tattoo", "soz": "" },
+      { "id": "kural", "ad": "Kural", "soz": "" }
+    ]
+  }
