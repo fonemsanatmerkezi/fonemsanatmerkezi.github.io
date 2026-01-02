@@ -155,7 +155,7 @@
     { "id": "omrum1", "ad": "Ömrüm", "soz": "" },
     { "id": "hazal_gelin", "ad": "Hazal Gelin", "soz": "" },
     { "id": "halay_potpori", "ad": "Halay Potpori", "soz": "" },
-    { "id": "veyiso", "ad": "Veyso", "soz": "" }
+    { "id": "veyio", "ad": "Veyso", "soz": "" }
   ]
 },
     {
@@ -182,22 +182,40 @@
     { "id": "nasil_bir_sey", "ad": "Nasıl Bir Şey", "soz": "" }
   ]
 },
-    {
-  "id": "derdiyoklar",
-  "ad": "Derdiyoklar",
-  "sarkilar": [
-    { "id": "yok_olur", "ad": "Yok Olur", "soz": "" },
-    { "id": "gulum_benim", "ad": "Gülüm Benim", "soz": "" },
-    { "id": "hayat_guzel_seyler", "ad": "Hayat Güzel Şeyler", "soz": "" }
-  ]
-},
-    {
-  "id": "doga_icin_cal",
-  "ad": "Doğa İçin Çal",
-  "sarkilar": [
-    { "id": "doga_icin_cal", "ad": "Doğa İçin Çal", "soz": "" },
-    { "id": "yolculuk", "ad": "Yolculuk", "soz": "" },
-    { "id": "gunesin_sesi", "ad": "Güneşin Sesi", "soz": "" }
+ const derdiyoklar = {
+  id: "derdiyoklar",
+  ad: "Derdiyoklar",
+  sarkilar: [
+    { id: "kadin_dirdiri_virviri", ad: "Kadın Dırdırı Vırvırı", soz: "" },
+    { id: "oldum_oldum", ad: "Öldüm Öldüm", soz: "" },
+    { id: "seherde_bir_baga_girdim", ad: "Seherde Bir Bağa Girdim", soz: "" },
+    { id: "uc_gun_arpani_derem", ad: "Üç Gün Arpanı Derem", soz: "" },
+    { id: "veren_olmaz_bizim_elin_tadini", ad: "Veren Olmaz Bizim Elin Tadını", soz: "" },
+    { id: "liebe_gabi", ad: "Liebe Gabi", soz: "" },
+    { id: "derdiyoklar_sarki", ad: "Derdiyoklar", soz: "" },
+    { id: "yaz_gazeteci_yaz", ad: "Yaz Gazeteci Yaz", soz: "" },
+    { id: "silaya_dogru", ad: "Sılaya Doğru", soz: "" },
+    { id: "yasin_hayvanlar", ad: "Yaşayın Hayvanlar", soz: "" },
+    { id: "baslik_parasi", ad: "Başlık Parası", soz: "" },
+    { id: "deli_kus", ad: "Deli Kuş", soz: "" },
+    { id: "maden_ocagi", ad: "Maden Ocağı", soz: "" },
+    { id: "turkulerle_gomun_beni", ad: "Türkülerle Gömün Beni", soz: "" },
+    { id: "yadoy", ad: "Yadoy", soz: "" },
+    { id: "yavuk_bulbul", ad: "Yavuk Bülbül", soz: "" },
+    { id: "aman_aman_arguvan_havasi", ad: "Aman Aman - Arguvan Havası", soz: "" },
+    { id: "salinda_yuru", ad: "Salında Yürü", soz: "" },
+    { id: "siyah_saclar", ad: "Siyah Saçlar", soz: "" },
+    { id: "ogretmenler", ad: "Öğretmenler", soz: "" },
+    { id: "sende_yurdun_kokusu_var", ad: "Sende Yurdun Kokusu Var", soz: "" },
+    { id: "derdi_guzel_aglama", ad: "Derdi Güzel Ağlama", soz: "" },
+    { id: "leylo", ad: "Leylo", soz: "" },
+    { id: "taklitciler", ad: "Taklitçiler", soz: "" },
+    { id: "yaz_gazeteci", ad: "Yaz Gazeteci", soz: "" },
+    { id: "gel_gel", ad: "Gel Gel", soz: "" },
+    { id: "su_dunyanin_halki", ad: "Şu Dünyanın Halkı", soz: "" },
+    { id: "aglama", ad: "Ağlama", soz: "" },
+    { id: "dost_mahzuni", ad: "Dost Mahzuni", soz: "" }
+ 
   ]
 },
     {
