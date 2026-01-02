@@ -630,7 +630,7 @@
         { "id": "gulusun_gulden_guzel", "ad": "Gülüşün Gülden Güzel", "soz": "" },
         { "id": "senin_yuzunden", "ad": "Senin Yüzünden", "soz": "" },
         { "id": "kiz_senin", "ad": "Kız Senin", "soz": "" },
-        { "id": "potpori_dut_agaci_vay_bana_vaylar_bana", "ad": "Potpori: Dut Ağacı / Vay Bana Vaylar Bana", "soz": "" }
+        { "id": "potpori_dut_agaci_vay_bana_vaylar_bana", "ad": "Dut Ağacı Vay Bana Vaylar Bana", "soz": "" }
       ]
     },
      {
@@ -853,7 +853,7 @@
         { "id": "caresizim", "ad": "Çaresizim", "soz": "" },
         { "id": "gul_nihal", "ad": "Gül Nihal", "soz": "" },
         { "id": "ay_doğarken_gecelerden", "ad": "Ay Doğarken Gecelerden", "soz": "" },
-        { "id": "bagcede_guller_acmis", "ad": "Bahçede Güller Açmış", "soz": "" },
+        { "id": "bahcede_guller_acmis", "ad": "Bahçede Güller Açmış", "soz": "" },
         { "id": "yuce_dag_basinda_bir_garip_kervan", "ad": "Yüce Dağ Başında Bir Garip Kervan", "soz": "" },
         { "id": "gunu_guzellik_varken_bakilmaz_mi_yesil_gozlum", "ad": "Sende Bu Güzellik Varken Bakılmaz mı Yeşil Gözlüm", "soz": "" }
       ]
@@ -872,7 +872,7 @@
         { "id": "agir_halay_he_gule_yar", "ad": "Ağır Halay (He Gule Yar)", "soz": "" },
         { "id": "arayi_arayi", "ad": "Arayı Arayı", "soz": "" },
         { "id": "gokteki_yildiz", "ad": "Gökteki Yıldız", "soz": "" },
-        { "id": "elazig_urfa_ikileme", "ad": "Elazığ‑Urfa İkileme", "soz": "" },
+        { "id": "elazig_urfa_ikileme", "ad": "Elazığ Urfa İkileme", "soz": "" },
         { "id": "su_derenin_oylumu", "ad": "Şu Derenin Oylumu", "soz": "" },
         { "id": "gozunu_toprak_doyursun", "ad": "Gözünü Toprak Doyursun", "soz": "" },
         { "id": "halay_potbori", "ad": "Halay Potbori", "soz": "" },
@@ -915,7 +915,7 @@
         { "id": "ask_mi_sandin", "ad": "Aşk Mı Sandın", "soz": "" },
         { "id": "dur_diyemem", "ad": "Dur Diyemem", "soz": "" },
         { "id": "insan", "ad": "İnsan", "soz": "" },
-        { "id": "ben_yoruldum_hayat_2021", "ad": "Ben Yoruldum Hayat (2021 Versiyon)", "soz": "" }
+        { "id": "ben_yoruldum_hayat_2021", "ad": "Ben Yoruldum Hayat", "soz": "" }
       ]
     },
      {
@@ -1188,7 +1188,6 @@
     { "id": "semah", "ad": "Semah", "soz": "" },
     { "id": "cayin_ortasinda_yilgin_adasi", "ad": "Çayın Ortasında Yılgın Adası", "soz": "" },
     { "id": "softa", "ad": "Softa", "soz": "" },
-    { "id": "suriyeden_ciktim_barak", "ad": "Suriye’den Çıktım / Barak", "soz": "" },
     { "id": "sevdocugim_barak", "ad": "Sevdiceğim / Barak", "soz": "" }
   ]
 },
@@ -1240,7 +1239,7 @@
   "sarkilar": [
     { "id": "adaletin_bu_mu_dunya", "ad": "Adaletin Bu mu Dünya", "soz": "" },
     { "id": "ayrilik", "ad": "Ayrılık", "soz": "" },
-    { "id": "oyle_bir_yerdeyim_ki", "ad": "Öyle Bir Yerdeyim ki (feat. Ahmet Kaya)", "soz": "" },
+    { "id": "oyle_bir_yerdeyim_ki", "ad": "Öyle Bir Yerdeyim ki", "soz": "" },
     { "id": "yuruyorum_dikenlerin_ustunde", "ad": "Yürüyorum Dikenlerin Üstünde", "soz": "" },
     { "id": "yuh_yuh", "ad": "Yuh Yuh", "soz": "" },
     { "id": "dostum_dostum", "ad": "Dostum Dostum", "soz": "" },
@@ -1312,7 +1311,7 @@
     { "id": "bu_dunya_pazar_yeridir", "ad": "Bu Dünya Pazar Yeridir", "soz": "" },
     { "id": "zor_dedi_bana", "ad": "Zor Dedi Bana", "soz": "" },
     { "id": "seni_aglatan_birgün_guldurur", "ad": "Seni Ağlatan Birgün Güldürür", "soz": "" },
-    { "id": "sabiha_ayrildim_gulum_senden", "ad": "Sabiha (Ayrıldım Gülüm Senden)", "soz": "" },
+    { "id": "sabiha_ayrildim_gulum_senden", "ad": "Sabiha", "soz": "" },
     { "id": "yaraliyum", "ad": "Yaralıyım", "soz": "" },
     { "id": "cilekes", "ad": "Çilekeş", "soz": "" },
     { "id": "olumu_gor", "ad": "Ölümü Gör", "soz": "" }
@@ -1377,7 +1376,7 @@
     { "id": "kopsun_bir_firtina", "ad": "Kopsun Bir Fırtına", "soz": "" },
     { "id": "karsiye_mese_yanar", "ad": "Karşıya Meşe Yanar", "soz": "" },
     { "id": "parali_lidyalı", "ad": "Paralı (Lidyalı)", "soz": "" },
-    { "id": "beni_anlama", "ad": "Beni Anlama (Live)", "soz": "" },
+    { "id": "beni_anlama", "ad": "Beni Anlama", "soz": "" },
     { "id": "hayat_devam_ediyi", "ad": "Hayat Devam Ediyi", "soz": "" }
   ]
 },
@@ -1431,7 +1430,7 @@
     { "id": "necedir_aglarsin", "ad": "Neçedir Ağlarsın", "soz": "" },
     { "id": "dağlar_kışımış", "ad": "Dağlar Kışımış", "soz": "" },
     { "id": "ahu_figan_dilber", "ad": "Ahu Figan Dilber", "soz": "" },
-    { "id": "ates_i_askina_semah", "ad": "Ateş‑i Aşkına (Semah)", "soz": "" },
+    { "id": "ates_i_askina_semah", "ad": "Ateş‑i Aşkına", "soz": "" },
     { "id": "daglar_oy_daglar", "ad": "Dağlar Oy Dağlar", "soz": "" },
     { "id": "su_sazima_bir_duzen_ver", "ad": "Şu Sazıma Bir Düzen Ver", "soz": "" },
     { "id": "ey_erenler", "ad": "Ey Erenler", "soz": "" },
@@ -1440,7 +1439,7 @@
     { "id": "bin_derdım_var_idi", "ad": "Bin Derdim Var İdi", "soz": "" },
     { "id": "gonul_dostlarima", "ad": "Gönül Dostlarıma", "soz": "" },
     { "id": "kayboldu_butun_omrum", "ad": "Kayboldu Bütün Ömrüm", "soz": "" },
-    { "id": "aliyar_acoustic_live", "ad": "Aliyar (Acoustic Live)", "soz": "" },
+    { "id": "aliyar_acoustic_live", "ad": "Aliyar", "soz": "" },
     { "id": "costak_yeri", "ad": "Kostak Yeri", "soz": "" }
   ]
 },
@@ -1455,7 +1454,6 @@
     { "id": "asker_oldum_bahriye", "ad": "Asker Oldum Bahriye", "soz": "" },
     { "id": "uryan_geldim", "ad": "Üryan Geldim", "soz": "" },
     { "id": "dostum_dostum", "ad": "Dostum Dostum", "soz": "" },
-    { "id": "tamzara_uzun_hava", "ad": "Tamzara (Uzun Hava)", "soz": "" },
     { "id": "ne_sevdigin_belli", "ad": "Ne Sevdiğin Belli", "soz": "" },
     { "id": "oy_bir_sigara_ver_bana", "ad": "Oy Bir Sigara Ver Bana", "soz": "" },
     { "id": "yaylanin_cimenine", "ad": "Yaylanın Çimenine", "soz": "" },
@@ -1473,10 +1471,10 @@
     { "id": "mimoza_cicegim", "ad": "Mimoza Çiçeğim", "soz": "" },
     { "id": "omrum", "ad": "Ömrüm", "soz": "" },
     { "id": "yarim_yarim", "ad": "Yarim Yarim", "soz": "" },
-    { "id": "herkesin_bir_derdi_var_cerrahpasa", "ad": "Herkesin Bir Derdi Var (Cerrahpaşa)", "soz": "" },
-    { "id": "izmir_marsi", "ad": "İzmir Marşı", "soz": "" },
+    { "id": "herkesin_bir_derdi_var_cerrahpasa", "ad": "Herkesin Bir Derdi Var", "soz": "" },
+    { "id": "ferigim", "ad": "Feriğim", "soz": "" },
     { "id": "keklik_gibi", "ad": "Keklik Gibi", "soz": "" },
-    { "id": "celilme_limani", "ad": "Mağusa Limanı", "soz": "" },
+    { "id": "magusa_limani", "ad": "Mağusa Limanı", "soz": "" },
     { "id": "ayletme_beni", "ad": "Ayletme Beni", "soz": "" },
     { "id": "goklerde_kartal_gibiydim", "ad": "Göklerde Kartal Gibiydim", "soz": "" },
     { "id": "dertliyim_kederliyim", "ad": "Dertliyim Kederliyim", "soz": "" },
