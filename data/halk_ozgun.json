@@ -860,4 +860,199 @@
         { "id": "gunu_guzellik_varken_bakilmaz_mi_yesil_gozlum", "ad": "Sende Bu Güzellik Varken Bakılmaz mı Yeşil Gözlüm", "soz": "" }
       ]
     },
+{
+      "id": "mustafa_ozarslan",
+      "ad": "Mustafa Özarslan",
+      "sarkilar": [
+        { "id": "esmem", "ad": "Esmem", "soz": "" },
+        { "id": "bir_kus_gibi", "ad": "Bir Kuş Gibi", "soz": "" },
+        { "id": "ayrilamam_ben_o_gul_yuzlu_yardan", "ad": "Ayrılamam Ben O Gül Yüzlü Yardan", "soz": "" },
+        { "id": "masa_ustunde_testi", "ad": "Masa Üstünde Testi", "soz": "" },
+        { "id": "ahu_bakislim", "ad": "Ahu Bakışlım", "soz": "" },
+        { "id": "yildiz_dagi_semah", "ad": "Yıldız Dağı (Semah)", "soz": "" },
+        { "id": "leylim_turnam", "ad": "Leylim Turnam", "soz": "" },
+        { "id": "agir_halay_he_gule_yar", "ad": "Ağır Halay (He Gule Yar)", "soz": "" },
+        { "id": "arayi_arayi", "ad": "Arayı Arayı", "soz": "" },
+        { "id": "gokteki_yildiz", "ad": "Gökteki Yıldız", "soz": "" },
+        { "id": "elazig_urfa_ikileme", "ad": "Elazığ‑Urfa İkileme", "soz": "" },
+        { "id": "su_derenin_oylumu", "ad": "Şu Derenin Oylumu", "soz": "" },
+        { "id": "gozunu_toprak_doyursun", "ad": "Gözünü Toprak Doyursun", "soz": "" },
+        { "id": "halay_potbori", "ad": "Halay Potbori", "soz": "" },
+        { "id": "sallan_gel", "ad": "Sallan Gel", "soz": "" }
+      ]
+    },
+     {
+      "id": "mustafa_topaloglu",
+      "ad": "Mustafa Topaloğlu",
+      "sarkilar": [
+        { "id": "muallim", "ad": "Muallim", "soz": "" },
+        { "id": "emine", "ad": "Emine", "soz": "" },
+        { "id": "cidik_sevgilim", "ad": "Çikolata Sevgilim", "soz": "" },
+        { "id": "haci_emmi", "ad": "Hacı Emmi", "soz": "" },
+        { "id": "ula_ula_niyazi", "ad": "Ula Ula Niyazi", "soz": "" },
+        { "id": "olurum_vallah", "ad": "Ölürüm Vallah", "soz": "" },
+        { "id": "fadime", "ad": "Fadime", "soz": "" },
+        { "id": "sepet_duser_basima", "ad": "Sepet Düşer Başıma", "soz": "" },
+        { "id": "dostlar_afiyet_olsun", "ad": "Dostlar Afiyet Olsun", "soz": "" },
+        { "id": "sensin_yar", "ad": "Sensin Yar", "soz": "" },
+        { "id": "oy_tombulum_tombulum", "ad": "Oy Tombulum Tombulum", "soz": "" },
+        { "id": "taktim_seni_oltaya", "ad": "Taktım Seni Oltaya", "soz": "" },
+        { "id": "gerizekali_sevgilim_benim", "ad": "Gerizekalı Sevgilim Benim", "soz": "" },
+        { "id": "aya_benzeyi_aya", "ad": "Aya Benzeyi Aya", "soz": "" },
+        { "id": "bir_ruzgar_esti_gecti", "ad": "Bir Rüzgar Esti Geçti", "soz": "" }
+      ]
+    },
+     {
+       "id": "mumin_sarikaya",
+      "ad": "Mümin Sarıkaya",
+      "sarkilar": [
+        { "id": "ben_yoruldum_hayat", "ad": "Ben Yoruldum Hayat", "soz": "" },
+        { "id": "al_basimdan_bu_dertleri", "ad": "Al Başımdan Bu Dertleri", "soz": "" },
+        { "id": "yazin_yagar_kar_basima", "ad": "Yazın Yağar Kar Başıma", "soz": "" },
+        { "id": "gozlerin", "ad": "Gözlerin", "soz": "" },
+        { "id": "oldugumu_bilmesinler", "ad": "Öldüğümü Bilmesinler", "soz": "" },
+        { "id": "nabiz", "ad": "Nabız", "soz": "" },
+        { "id": "su_karsiki_dagda_kar_var_duman_yok", "ad": "Şu Karşıki Dağda Kar Var Duman Yok", "soz": "" },
+        { "id": "annem", "ad": "Annem", "soz": "" },
+        { "id": "ask_mi_sandin", "ad": "Aşk Mı Sandın", "soz": "" },
+        { "id": "dur_diyemem", "ad": "Dur Diyemem", "soz": "" },
+        { "id": "insan", "ad": "İnsan", "soz": "" },
+        { "id": "ben_yoruldum_hayat_2021", "ad": "Ben Yoruldum Hayat (2021 Versiyon)", "soz": "" }
+      ]
+    },
+     {
+  "id": "neset_ertas",
+  "ad": "Neşet Ertaş",
+  "sarkilar": [
+    { "id": "yalan_dunya", "ad": "Yalan Dünya", "soz": "" },
+    { "id": "vay_vay_dunya", "ad": "Vay Vay Dünya", "soz": "" },
+    { "id": "kirsehirin_gulleri", "ad": "Kırşehir’in Gülleri", "soz": "" },
+    { "id": "neredesin_sen", "ad": "Neredesin Sen", "soz": "" },
+    { "id": "gonul_dagi", "ad": "Gönül Dağı", "soz": "" },
+    { "id": "muhur_gozlüm", "ad": "Mühür Gözlüm", "soz": "" },
+    { "id": "zuluf_dokulmus_yuze", "ad": "Zülüf Dökülmüş Yüze", "soz": "" },
+    { "id": "yaraladi_bu_ask_beni", "ad": "Yaraladı Bu Aşk Beni", "soz": "" },
+    { "id": "yolcu", "ad": "Yolcu", "soz": "" },
+    { "id": "iki_buyuk_nimetim_var", "ad": "İki Büyük Nimetim Var", "soz": "" },
+    { "id": "hapishanelere_gunes_dogmuyor", "ad": "Hapishanelere Güneş Doğmuyor", "soz": "" },
+    { "id": "evvelim_sen_oldun_ahirim_sensin", "ad": "Evvelim Sen Oldun, Ahirim Sensin", "soz": "" },
+    { "id": "seher_vakti", "ad": "Seher Vakti", "soz": "" },
+    { "id": "askin_beni_deli_eyledi", "ad": "Aşkın Beni Deli Eyledi", "soz": "" },
+    { "id": "deli_boran", "ad": "Deli Boran", "soz": "" },
+    { "id": "dertli_yoldas", "ad": "Dertli Yoldaş", "soz": "" },
+    { "id": "dinek_dagi", "ad": "Dinek Dağı", "soz": "" }
+  ]
+},
+     {
+  "id": "nihat_dogan",
+  "ad": "Nihat Doğan",
+  "sarkilar": [
+    { "id": "o_da_can", "ad": "O Da Can", "soz": "" },
+    { "id": "macoyum_ben", "ad": "Maçoyum Ben", "soz": "" },
+    { "id": "hey_gidi_hey", "ad": "Hey Gidi Hey", "soz": "" },
+    { "id": "yuregimin_basi_yangin_yeridir", "ad": "Yüreğimin Başı Yangın Yeridir", "soz": "" },
+    { "id": "hercai", "ad": "Hercai", "soz": "" },
+    { "id": "cogu_gitti_azi_kaldi", "ad": "Çoğu Gitti Azı Kaldı", "soz": "" },
+    { "id": "o_beni_oldurecek", "ad": "O Beni Öldürecek", "soz": "" },
+    { "id": "vazgec_gonlum", "ad": "Vazgeç Gönlüm", "soz": "" },
+    { "id": "ardahanin_yollarinda", "ad": "Ardahan'ın Yollarında", "soz": "" },
+    { "id": "kurdish_mashup", "ad": "Kurdish Mashup", "soz": "" },
+    { "id": "hep_tersine_tersine", "ad": "Hep Tersine Tersine", "soz": "" },
+    { "id": "tutulup_kaldim", "ad": "Tutulup Kaldım", "soz": "" },
+    { "id": "oy_masallah", "ad": "Oy Maşallah", "soz": "" },
+    { "id": "aman_guzel_yavas_yuru", "ad": "Aman Güzel Yavaş Yürü", "soz": "" },
+    { "id": "tel_lo_can", "ad": "TELLO CAN", "soz": "" }
+  ]
+},
+     {
+  "id": "nuray_hafiftas",
+  "ad": "Nuray Hafiftaş",
+  "sarkilar": [
+    { "id": "toza_dondum", "ad": "Toza Döndüm", "soz": "" },
+    { "id": "degirmen_basinda_vurdular_beni", "ad": "Değirmen Başında Vurdular Beni", "soz": "" },
+    { "id": "eyvah_gonul", "ad": "Eyvah Gönül", "soz": "" },
+    { "id": "gurbet", "ad": "Gurbet", "soz": "" },
+    { "id": "bir_dilim_iki_dillim_elma", "ad": "Bir Dilim İki Dillim Elma", "soz": "" },
+    { "id": "mardin_kapi_sen_olur", "ad": "Mardin Kapı Şen Olur", "soz": "" },
+    { "id": "bizim_eller", "ad": "Bizim Eller", "soz": "" },
+    { "id": "beri_gel_gara_goz", "ad": "Beri Gel Gara Göz", "soz": "" },
+    { "id": "sen_kucuksun", "ad": "Sen Küçüksün", "soz": "" },
+    { "id": "silayi_ver", "ad": "Sılayı Ver", "soz": "" },
+    { "id": "beyaz_gul_kirmizi_gul", "ad": "Beyaz Gül Kırmızı Gül", "soz": "" },
+    { "id": "arada_bir", "ad": "Arada Bir", "soz": "" },
+    { "id": "karanfil_ekermisin", "ad": "Karanfil Ekermisin", "soz": "" },
+    { "id": "su_siziyor", "ad": "Su Sızıyor", "soz": "" },
+    { "id": "leyli_leyli", "ad": "Leyli Leyli", "soz": "" }
+  ]
+},
+     {
+  "id": "nuri_sesiguzel",
+  "ad": "Nuri Sesigüzel",
+  "sarkilar": [
+    { "id": "kara_kas_gozlerin_elmas", "ad": "Kara Kaş Gözlerin Elmas", "soz": "" },
+    { "id": "dolana_ay_dolana", "ad": "Dolana Ay Dolana", "soz": "" },
+    { "id": "yar_demedim", "ad": "Yar Demedim", "soz": "" },
+    { "id": "kahverengi_gozlerin", "ad": "Kahverengi Gözlerin", "soz": "" },
+    { "id": "hele_ninna_olasin", "ad": "Hele Ninna Olasın", "soz": "" },
+    { "id": "leylam", "ad": "Leylam", "soz": "" },
+    { "id": "bayramdan_bayrama", "ad": "Bayramdan Bayrama", "soz": "" },
+    { "id": "gidenin_ucu_guzel", "ad": "Gidenin Ucu Güzel", "soz": "" },
+    { "id": "burnu_hizmali_gelin", "ad": "Burnu Hızmalı Gelin", "soz": "" },
+    { "id": "durma_guzel_durma", "ad": "Durma Güzel Durma", "soz": "" },
+    { "id": "bir_fincan_kahve_olsam", "ad": "Bir Fincan Kahve Olsam", "soz": "" },
+    { "id": "kara_sevdam", "ad": "Kara Sevdam", "soz": "" },
+    { "id": "kara_yazim", "ad": "Kara Yazım", "soz": "" },
+    { "id": "dost_hanceri", "ad": "Dost Hançeri", "soz": "" },
+    { "id": "kaderin_oyunu", "ad": "Kaderin Oyunu", "soz": "" }
+  ]
+},
+     {
+  "id": "oguz_aksac",
+  "ad": "Oğuz Aksaç",
+  "sarkilar": [
+    { "id": "niye_cattin_kaslarini", "ad": "Niye Çattın Kaşlarını", "soz": "" },
+    { "id": "adiyaman", "ad": "Adıyaman", "soz": "" },
+    { "id": "aglatma_gelem", "ad": "Ağlatma Gelem", "soz": "" },
+    { "id": "yuruyorum_dikenlerin_ustunde", "ad": "Yürüyorum Dikenlerin Üstünde", "soz": "" },
+    { "id": "bu_tepe_pullu_tepe", "ad": "Bu Tepe Pullu Tepe", "soz": "" },
+    { "id": "el_vurup_yaremi", "ad": "El Vurup Yaremi", "soz": "" },
+    { "id": "goresim_var", "ad": "Göresim Var", "soz": "" },
+    { "id": "ceylan_gozlerine_kurban_oldugum", "ad": "Ceylan Gözlerine Kurban Olduğum", "soz": "" },
+    { "id": "omrum", "ad": "Ömrüm", "soz": "" },
+    { "id": "mulk_i_devran", "ad": "Mülk‑i Devran", "soz": "" },
+    { "id": "bizim_eller", "ad": "Bizim Eller", "soz": "" },
+    { "id": "ayletme_beni", "ad": "Ayletme Beni", "soz": "" },
+    { "id": "dostun_bahcasina", "ad": "Dostun Bahçasına", "soz": "" },
+    { "id": "yarim_mi_var", "ad": "Yarım Mı Var", "soz": "" }
+  ]
+},
+     {
+  "id": "oguz_boran",
+  "ad": "Oğuz Boran",
+  "sarkilar": [
+    { "id": "yuce_dag_basinda", "ad": "Yüce Dağ Başında", "soz": "" },
+    { "id": "fikrimin_ince_gulu", "ad": "Fikrimin İnce Gülü", "soz": "" },
+    { "id": "seni_cok_seviyorum", "ad": "Seni Çok Seviyorum", "soz": "" },
+    { "id": "askim", "ad": "Aşkım", "soz": "" },
+    { "id": "suruler_icinde", "ad": "Sürüler İçinde", "soz": "" },
+    { "id": "hz_sahin_avazi", "ad": "Hz. Şahin Avazı", "soz": "" },
+    { "id": "aglama_gozlerim", "ad": "Ağlama Gözlerim", "soz": "" },
+    { "id": "obur_dunya", "ad": "Obur Dünya", "soz": "" },
+    { "id": "umuda_yolumsun", "ad": "Umuda Yolumsun", "soz": "" },
+    { "id": "gurbet", "ad": "Gurbet", "soz": "" },
+    { "id": "intifada", "ad": "İntifada", "soz": "" },
+    { "id": "havvanagila", "ad": "Havvanagila", "soz": "" },
+    { "id": "mamos", "ad": "Mamoş", "soz": "" },
+    { "id": "yarini_yok", "ad": "Yarını Yok", "soz": "" },
+    { "id": "haydi_kalbim", "ad": "Haydi Kalbim", "soz": "" }
+  ]
+},
+     
+
+     
+
+
+
+
+
 
