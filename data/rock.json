@@ -182,7 +182,23 @@
         { "id": "beyaz_atli", "ad": "Beyaz Atlı", "soz": "" }
       ]
     },
-  {
+    {
+  "id": "hayko_cepkin",
+  "ad": "Hayko Cepkin",
+  "sarkilar": [
+    { "id": "oluyorum", "ad": "Ölüyorum", "soz": "" },
+    { "id": "gamzendeki_cukur", "ad": "Gamzendeki Çukur", "soz": "" },
+    { "id": "paranoya", "ad": "Paranoya", "soz": "" },
+    { "id": "dans_et", "ad": "Dans Et", "soz": "" },
+    { "id": "firtinam", "ad": "Fırtınam", "soz": "" },
+    { "id": "ask_kitabi", "ad": "Aşk Kitabı", "soz": "" },
+    { "id": "melekler", "ad": "Melekler", "soz": "" },
+    { "id": "yol_gozumu_dagliyor", "ad": "Yol Gözümü Dağlıyor", "soz": "" },
+    { "id": "ozgurce_yasa", "ad": "Özgürce Yaşa", "soz": "" },
+    { "id": "bertaraf_et", "ad": "Bertaraf Et", "soz": "" }
+  ]
+},
+    {
   "id": "haluk_levent",
   "ad": "Haluk Levent",
   "sarkilar": [
