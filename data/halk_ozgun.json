@@ -289,6 +289,22 @@
       ]
     },
      {
+  "id": "erdal_erzincan",
+  "ad": "Erdal Erzincan",
+  "sarkilar": [
+    { "id": "aglasam_mi", "ad": "Ağlasam Mı", "soz": "" },
+    { "id": "nem_kaldi", "ad": "Nem Kaldı", "soz": "" },
+    { "id": "bugun_bize_pir_geldi", "ad": "Bugün Bize Pir Geldi", "soz": "" },
+    { "id": "daglar_kisimis", "ad": "Dağlar Kışımış", "soz": "" },
+    { "id": "kainatin_aynasiyim", "ad": "Kâinatın Aynasıyım", "soz": "" },
+    { "id": "yara_bende", "ad": "Yara Bende", "soz": "" },
+    { "id": "ardic_kesanda_aglar", "ad": "Ardıç Keşanda Ağlar", "soz": "" },
+    { "id": "keklik_gibi", "ad": "Keklik Gibi", "soz": "" },
+    { "id": "bulamadim_guzeli", "ad": "Bulamadım Güzeli", "soz": "" },
+    { "id": "gonul_gel_seninle", "ad": "Gönül Gel Seninle Muhabbet Edelim", "soz": "" }
+  ]
+},
+     {
       "id": "emre_saltik",
       "ad": "Emre Saltık",
       "sarkilar": [
