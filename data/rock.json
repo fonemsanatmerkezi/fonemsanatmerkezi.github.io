@@ -43,16 +43,23 @@
         { "id": "sag_salic", "ad": "Sağ Salim", "soz": "" }
       ]
     },
-
     {
-      "id": "bulent_ortacgil",
-      "ad": "Bülent Ortaçgil",
-      "sarkilar": [
-        { "id": "benimle_oynar_misin", "ad": "Benimle Oynar Mısın", "soz": "" },
-        { "id": "ephesus", "ad": "Ephesus", "soz": "" },
-        { "id": "bu_su_hic_durmaz", "ad": "Bu Su Hiç Durmaz", "soz": "" }
-      ]
-    },
+  "id": "bulent_ortacgil",
+  "ad": "Bülent Ortaçgil",
+  "sarkilar": [
+    { "id": "benimle_oynar_misin", "ad": "Benimle Oynar Mısın?", "soz": "" },
+    { "id": "bu_su_hic_durmaz", "ad": "Bu Su Hiç Durmaz", "soz": "" },
+    { "id": "denize_dogru", "ad": "Denize Doğru", "soz": "" },
+    { "id": "olmali_mi_olmamali_mi", "ad": "Olmalı mı, Olmamalı mı", "soz": "" },
+    { "id": "sensiz_olmaz", "ad": "Sensiz Olmaz", "soz": "" },
+    { "id": "eylul_aksami", "ad": "Eylül Akşamı", "soz": "" },
+    { "id": "degirmenler", "ad": "Değirmenler", "soz": "" },
+    { "id": "kimseye_anlatmadim", "ad": "Kimseye Anlatmadım", "soz": "" },
+    { "id": "hic_canim_yanmaz", "ad": "Hiç Canım Yanmaz", "soz": "" },
+    { "id": "olmasin_varsin", "ad": "Olmasın Varsın", "soz": "" }
+  ]
+}
+
  {
       "id": "cahit_oben",
       "ad": "Cahit Oben",
