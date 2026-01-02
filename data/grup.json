@@ -1,3 +1,163 @@
 {
   "kategori": "Grup",
   "sanatcilar": [
+{
+  "id": "apaslar",
+  "ad": "Apaşlar",
+  "sarkilar": [
+    { "id": "degmen_benim_gamli_yasima", "ad": "Değmen Benim Gamlı Yasima", "soz": "" },
+    { "id": "kizilirmak", "ad": "Kızılırmak", "soz": "" },
+    { "id": "silifkenin_yogurdu", "ad": "Silifke'nin Yoğurdu", "soz": "" },
+    { "id": "fidayda", "ad": "Fidayda", "soz": "" },
+    { "id": "katibim", "ad": "Üsküdar'a Gider İken (Katibim)", "soz": "" }
+  ]
+},
+    {
+  "id": "altin_gun",
+  "ad": "Altın Gün",
+  "sarkilar": [
+    { "id": "tatli_dile_guler_yuze", "ad": "Tatlı Dile Güler Yüze", "soz": "" },
+    { "id": "goca_dunya", "ad": "Goca Dünya", "soz": "" },
+    { "id": "cemalim", "ad": "Cemalim", "soz": "" },
+    { "id": "yolcu", "ad": "Yolcu", "soz": "" },
+    { "id": "ask", "ad": "Aşk", "soz": "" },
+    { "id": "rakiya_su_katamam", "ad": "Rakıya Su Katamam", "soz": "" },
+    { "id": "sallan_yuvarlan", "ad": "Sallan Yuvarlan", "soz": "" },
+    { "id": "kaymakamin_kizlari", "ad": "Kaymakamın Kızları", "soz": "" },
+    { "id": "dunya", "ad": "Dünya", "soz": "" },
+    { "id": "doktor_civanım", "ad": "Doktor Civanım", "soz": "" }
+  ]
+},
+    {
+  "id": "ayca_ve_elma_sekerleri",
+  "ad": "Ayça ve Elma Şekerleri",
+  "sarkilar": [
+    { "id": "olmazsa_olmaz", "ad": "Olmazsa Olmaz", "soz": "" },
+    { "id": "deliyim", "ad": "Deliyim", "soz": "" },
+    { "id": "seninleyim", "ad": "Seninleyim", "soz": "" },
+    { "id": "ask_oyunu", "ad": "Aşk Oyunu", "soz": "" },
+    { "id": "hayat", "ad": "Hayat", "soz": "" }
+  ]
+},
+   {
+  "id": "baba_zula",
+  "ad": "BaBa ZuLa",
+  "sarkilar": [
+    { "id": "tavus_havasi", "ad": "Tavus Havası", "soz": "" },
+    { "id": "col_aslanlari", "ad": "Çöl Aslanları", "soz": "" },
+    { "id": "bir_sana_bir_de_bana", "ad": "Bir Sana Bir De Bana", "soz": "" },
+    { "id": "ozgur_ruh", "ad": "Özgür Ruh", "soz": "" },
+    { "id": "babasi_olmayan_kizlar_balosu", "ad": "Babası Olmayan Kızlar Balosu", "soz": "" },
+    { "id": "kacin_kurasi", "ad": "Kaçın Kurası", "soz": "" },
+    { "id": "asiklarin_sozu_kalir", "ad": "Aşıkların Sözü Kalır", "soz": "" }
+  ]
+},
+    {
+  "id": "badem",
+  "ad": "Badem",
+  "sarkilar": [
+    { "id": "sen_aglama", "ad": "Sen Ağlama", "soz": "" },
+    { "id": "degismem", "ad": "Değişmem", "soz": "" },
+    { "id": "ask_bu", "ad": "Aşk Bu", "soz": "" },
+    { "id": "kara_degilmi", "ad": "Kara Değil mi", "soz": "" },
+    { "id": "sonsuz_ask", "ad": "Sonsuz Aşk", "soz": "" }
+  ]
+},
+    {
+  "id": "barista",
+  "ad": "Barista",
+  "sarkilar": [
+    { "id": "son_gibi", "ad": "Son Gibi", "soz": "" },
+    { "id": "bosver", "ad": "Boşver", "soz": "" },
+    { "id": "yok", "ad": "Yok", "soz": "" }
+  ]
+},
+    {
+  "id": "bes_yil_once_on_yil_sonra",
+  "ad": "Beş Yıl Önce On Yıl Sonra",
+  "sarkilar": [
+    { "id": "kayboldum", "ad": "Kayboldum", "soz": "" },
+    { "id": "insan", "ad": "İnsan", "soz": "" },
+    { "id": "dus", "ad": "Düş", "soz": "" }
+  ]
+},
+    {
+  "id": "blue_blues_band",
+  "ad": "Blue Blues Band",
+  "sarkilar": [
+    { "id": "iste_ozgurluk", "ad": "İşte Özgürlük", "soz": "" },
+    { "id": "cok_yalnizim", "ad": "Çok Yalnızım", "soz": "" },
+    { "id": "blues", "ad": "Blues", "soz": "" }
+  ]
+},
+    {
+  "id": "cartel",
+  "ad": "Cartel",
+  "sarkilar": [
+    { "id": "cartel", "ad": "Cartel", "soz": "" },
+    { "id": "bir_numara", "ad": "Bir Numara", "soz": "" },
+    { "id": "sen_turksun", "ad": "Sen Türksün", "soz": "" },
+    { "id": "evdeki_ses", "ad": "Evdeki Ses", "soz": "" },
+    { "id": "cehennemden_cikan_cilgin_turk", "ad": "Cehennemden Çıkan Çılgın Türk", "soz": "" },
+    { "id": "bir_oluruz", "ad": "Bir Oluruz", "soz": "" }
+  ]
+},
+    {
+  "id": "cemali",
+  "ad": "Cemali",
+  "sarkilar": [
+    { "id": "duymak_istiyorum", "ad": "Duymak İstiyorum", "soz": "" },
+    { "id": "simdi_hayallerdesin", "ad": "Şimdi Hayallerdesin", "soz": "" },
+    { "id": "yuh_yuh", "ad": "Yuh Yuh", "soz": "" },
+    { "id": "sever_misin_o_zaman", "ad": "Sever Misin O Zaman", "soz": "" },
+    { "id": "dunya_yalan", "ad": "Dünya Yalan", "soz": "" },
+    { "id": "biliyorum_sonunu", "ad": "Biliyorum Sonunu", "soz": "" },
+    { "id": "don_bana", "ad": "Dön Bana", "soz": "" },
+    { "id": "dokunmayin_gunese", "ad": "Dokunmayın Güneşe", "soz": "" },
+    { "id": "neredesin", "ad": "Neredesin", "soz": "" },
+    { "id": "hep_oyle_kal", "ad": "Hep Öyle Kal", "soz": "" }
+  ]
+},
+    {
+  "id": "cici_kizlar",
+  "ad": "Cici Kızlar",
+  "sarkilar": [
+    { "id": "delisin", "ad": "Delisin", "soz": "" },
+    { "id": "rengarenk", "ad": "Rengarenk", "soz": "" },
+    { "id": "olmaz_ki", "ad": "Olmaz Ki", "soz": "" },
+    { "id": "bak_su_cocuga", "ad": "Bak Şu Çocuğa", "soz": "" }
+  ]
+},
+    {
+  "id": "grup_cig",
+  "ad": "Grup Çığ",
+  "sarkilar": [
+    { "id": "kahpe_felek", "ad": "Kahpe Felek", "soz": "" },
+    { "id": "hekimoglu", "ad": "Hekimoğlu", "soz": "" },
+    { "id": "yuksek_minare", "ad": "Yüksek Minare", "soz": "" },
+    { "id": "halimem", "ad": "Halimem", "soz": "" },
+    { "id": "yarim_yarim", "ad": "Yarim Yarim", "soz": "" },
+    { "id": "ladik_semahi", "ad": "Ladik Semahı", "soz": "" },
+    { "id": "omrum", "ad": "Ömrüm", "soz": "" },
+    { "id": "hazal_gelin", "ad": "Hazal Gelin", "soz": "" },
+    { "id": "halay_potpori", "ad": "Halay Potpori", "soz": "" },
+    { "id": "veyiso", "ad": "Veyso", "soz": "" }
+  ]
+},
+    {
+  "id": "citir_kizlar",
+  "ad": "Çıtır Kızlar",
+  "sarkilar": [
+    { "id": "ahmetin_tavuklari", "ad": "Ahmet’in Tavukları", "soz": "" },
+    { "id": "bir_yaz_gununde", "ad": "Bir Yaz Günü’nde", "soz": "" },
+    { "id": "seninle_bir_gun", "ad": "Seninle Bir Gün", "soz": "" },
+    { "id": "gulum_benim", "ad": "Gülüm Benim", "soz": "" },
+    { "id": "bana_bir_sair_ara", "ad": "Bana Bir Şair Ara", "soz": "" },
+    { "id": "unutulmaz_bir_gun", "ad": "Unutulmaz Bir Gün", "soz": "" },
+    { "id": "hayat_boyle_guzel", "ad": "Hayat Böyle Güzel", "soz": "" }
+  ]
+},
+    
+    
+
+
