@@ -1,5 +1,5 @@
 {
-  "kategori": "Grup",
+  "kategori": "grup",
   "sanatcilar": [
 {
   "id": "apaslar",
@@ -19,7 +19,7 @@
     { "id": "tatli_dile_guler_yuze", "ad": "Tatlı Dile Güler Yüze", "soz": "" },
     { "id": "goca_dunya", "ad": "Goca Dünya", "soz": "" },
     { "id": "cemalim", "ad": "Cemalim", "soz": "" },
-    { "id": "yolcu", "ad": "Yolcu", "soz": "" },
+    { "id": "yolcu1", "ad": "Yolcu", "soz": "" },
     { "id": "ask", "ad": "Aşk", "soz": "" },
     { "id": "rakiya_su_katamam", "ad": "Rakıya Su Katamam", "soz": "" },
     { "id": "sallan_yuvarlan", "ad": "Sallan Yuvarlan", "soz": "" },
@@ -152,7 +152,7 @@
     { "id": "halimem", "ad": "Halimem", "soz": "" },
     { "id": "yarim_yarim", "ad": "Yarim Yarim", "soz": "" },
     { "id": "ladik_semahi", "ad": "Ladik Semahı", "soz": "" },
-    { "id": "omrum", "ad": "Ömrüm", "soz": "" },
+    { "id": "omrum1", "ad": "Ömrüm", "soz": "" },
     { "id": "hazal_gelin", "ad": "Hazal Gelin", "soz": "" },
     { "id": "halay_potpori", "ad": "Halay Potpori", "soz": "" },
     { "id": "veyiso", "ad": "Veyso", "soz": "" }
@@ -165,7 +165,7 @@
     { "id": "ahmetin_tavuklari", "ad": "Ahmet’in Tavukları", "soz": "" },
     { "id": "bir_yaz_gununde", "ad": "Bir Yaz Günü’nde", "soz": "" },
     { "id": "seninle_bir_gun", "ad": "Seninle Bir Gün", "soz": "" },
-    { "id": "gulum_benim", "ad": "Gülüm Benim", "soz": "" },
+    { "id": "gulum_benim9", "ad": "Gülüm Benim", "soz": "" },
     { "id": "bana_bir_sair_ara", "ad": "Bana Bir Şair Ara", "soz": "" },
     { "id": "unutulmaz_bir_gun", "ad": "Unutulmaz Bir Gün", "soz": "" },
     { "id": "hayat_boyle_guzel", "ad": "Hayat Böyle Güzel", "soz": "" }
@@ -328,7 +328,7 @@
     { "id": "basindaki_yazmayi_da_sariya_mi_boyadin", "ad": "Başındaki Yazmayı da Sarıya mı Boyadın", "soz": "" },
     { "id": "bu_tepe_pullu_tepe", "ad": "Bu Tepe Pullu Tepe", "soz": "" },
     { "id": "bebeğin_besigi_camdan", "ad": "Bebeğin Beşiği Çamdan", "soz": "" },
-    { "id": "gafil_ge zme_saskin", "ad": "Gafil Gezme Şaşkın", "soz": "" },
+    { "id": "gafil_gezme_saskin", "ad": "Gafil Gezme Şaşkın", "soz": "" },
     { "id": "ayrildim_guler_miyim", "ad": "Ayrıldım Güler miyim", "soz": "" },
     { "id": "nemrudun_kizi", "ad": "Nemrudun Kızı", "soz": "" },
     { "id": "mahsus_mahal", "ad": "Mahsus Mahal", "soz": "" },
