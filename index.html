@@ -36,14 +36,16 @@ body::before{
 /* hoşgeldiniz */
 #welcome{
   position:fixed;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:36px;
-  font-weight:300;
+  top:50px; /* ekranın üstüne yakın */
+  left:50%;
+  transform:translateX(-50%);
+  font-size:40px; /* biraz daha büyük */
+  font-weight:600; /* kalınlaştırdık */
+  color:#fff; /* beyaz renk */
   letter-spacing:3px;
-  background:rgba(0,0,0,.85);
+  background:rgba(0,0,0,.7); /* hafif karartma, ama çok koyu değil */
+  padding:15px 30px;
+  border-radius:10px;
   z-index:20;
   animation:fadeOut 3s forwards;
 }
