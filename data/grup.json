@@ -176,7 +176,7 @@
   "ad": "Dedublüman",
   "sarkilar": [
     { "id": "aseviye", "ad": "Aşeviye", "soz": "" },
-    { "id": "yuh_yuh", "ad": "Yuh Yuh", "soz": "" },
+    { "id": "yuh_yuh2", "ad": "Yuh Yuh", "soz": "" },
     { "id": "didem", "ad": "Didem", "soz": "" },
     { "id": "el_sen", "ad": "El Sen", "soz": "" },
     { "id": "nasil_bir_sey", "ad": "Nasıl Bir Şey", "soz": "" }
@@ -543,7 +543,7 @@
     { "id": "bitmeyen_sevda", "ad": "Bitmeyen Sevda", "soz": "" },
     { "id": "sevdan_ile", "ad": "Sevdan İle", "soz": "" },
     { "id": "oh_oh", "ad": "Oh Oh", "soz": "" },
-    { "id": "canin_sagolsun", "ad": "Canın Sağolsun", "soz": "" },
+    { "id": "canin_sagolsun", "ad": "Canın Sağolsun", "soz": "" }
   ]
 },
     {
@@ -626,8 +626,7 @@
     { "id": "fidayda", "ad": "Fidayda", "soz": "" },
     { "id": "kara_toprak", "ad": "Kara Toprak", "soz": "" },
     { "id": "su_daglar_tepe_tepe", "ad": "Şu Dağlar Tepe Tepe", "soz": "" },
-    { "id": "selvi_boylum_al_yazmalim", "ad": "Selvi Boylum Al Yazmalım", "soz": "" },
-    { "id": "seni_unutmayacagim", "ad": "Seni Unutmayacağım", "soz": "" }
+    { "id": "selvi_boylum_al_yazmalim", "ad": "Selvi Boylum Al Yazmalım", "soz": "" }
   ]
 },
     {
@@ -870,8 +869,7 @@
     { "id": "yuruyus", "ad": "Yürüyüş", "soz": "" },
     { "id": "ana_dunya", "ad": "Ana Dünya", "soz": "" }
   ]
-}
-
+},
  {
   "id": "multitap",
   "ad": "Multitap",
