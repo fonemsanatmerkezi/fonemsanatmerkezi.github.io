@@ -182,7 +182,7 @@
     { "id": "nasil_bir_sey", "ad": "Nasıl Bir Şey", "soz": "" }
   ]
 },
- const derdiyoklar = {
+{
   id: "derdiyoklar",
   ad: "Derdiyoklar",
   sarkilar: [
