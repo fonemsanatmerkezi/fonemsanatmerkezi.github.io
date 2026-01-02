@@ -1,5 +1,5 @@
 {
-  "kategori": "Sanat Muzigi",
+  "kategori": "Sanat",
   "sanatcilar": [
   {
     "id": "adnan_senses",
@@ -76,8 +76,7 @@
       { "id": "her_sey_seni_hatirlatir", "ad": "Her Şey Seni Hatırlatır", "soz": "" }
     ]
   },
-    [
-  {
+    {
     "id": "ahmet_ozhan",
     "ad": "Ahmet Özhan",
     "sarkilar": [
@@ -143,8 +142,7 @@
       { "id": "en_iyileriyle_behıye_aksoy", "ad": "En İyileriyle Behiye Aksoy (derleme)", "soz": "" }
     ]
   },
-      [
-  {
+ {
     "id": "emel_sayin",
     "ad": "Emel Sayın",
     "sarkilar": [
@@ -247,8 +245,7 @@
       { "id": "yillar_gecti_sensiz", "ad": "Yıllar Geçti Sensiz", "soz": "" }
     ]
   },
-        [
-  {
+    {
     "id": "hamiyet_yuceses",
     "ad": "Hamiyet Yüceses",
     "sarkilar": [
@@ -265,7 +262,6 @@
       { "id": "niye_caydın_sozunden", "ad": "Niye Caydın Sözünden", "soz": "" }
     ]
   },
-          [
   {
     "id": "hafiz_burhan",
     "ad": "Hafız Burhan",
@@ -302,8 +298,7 @@
       { "id": "gidemezsin", "ad": "Gidemezsin", "soz": "" }
     ]
   },
-            [
-  {
+   {
     "id": "inci_cayirli",
     "ad": "İnci Çayırlı",
     "sarkilar": [
@@ -365,7 +360,6 @@
       { "id": "kalbimde_senin_adi", "ad": "Kalbimde Senin Adı", "soz": "" }
     ]
   },
-   [
   {
     "id": "safiye_ayla",
     "ad": "Safiye Ayla",
@@ -533,8 +527,7 @@
       { "id": "avuclarimda_hala_sicakligin_var", "ad": "Avuçlarımda Hâlâ Sıcaklığın Var", "soz": "" }
     ]
   },
-       [
-  {
+      {
     "id": "deniz_kizi_eftalya",
     "ad": "Deniz Kızı Eftalya",
     "sarkilar": [
@@ -614,8 +607,7 @@
       { "id": "bahar_yagmur", "ad": "Bahar Yağmur", "soz": "" }
     ]
   },
-         [
-  {
+    {
     "id": "sevval_sam",
     "ad": "Şevval Sam",
     "sarkilar": [
@@ -643,8 +635,7 @@
       { "id": "populer_sanatci_sukran_ay_3", "ad": "Şükran Ay – Popüler Klasik 3", "soz": "" }
     ]
   },
-           [
-  {
+   {
     "id": "safiye_ayla",
     "ad": "Safiye Ayla",
     "sarkilar": [
@@ -703,8 +694,7 @@
       { "id": "askin_sesi", "ad": "Aşkın Sesi", "soz": "" }
     ]
   },
-             [
-  {
+ {
     "id": "secil_heper",
     "ad": "Seçil Heper",
     "sarkilar": [
@@ -754,7 +744,6 @@
       { "id": "gulum_benim", "ad": "Gülüm Benim", "soz": "" }
     ]
   },
-     [
   {
     "id": "muzeyyen_senar",
     "ad": "Müzeyyen Senar",
@@ -889,8 +878,7 @@
       { "id": "senin_icindir", "ad": "Senin İçindir", "soz": "" }
     ]
   },
-       [
-  {
+     {
     "id": "hamiyet_yuceses",
     "ad": "Hamiyet Yüceses",
     "sarkilar": [
@@ -974,7 +962,6 @@
       { "id": "sorma_ne_haldeyim", "ad": "Sorma Ne Haldeyim", "soz": "" }
     ]
   },
-         [
   {
     "id": "gaye_su_akyol",
     "ad": "Gaye Su Akyol",
@@ -1023,7 +1010,6 @@
       { "id": "ask_icin", "ad": "Aşk İçin", "soz": "" }
     ]
   },
-           [
   {
     "id": "safiye_ayla",
     "ad": "Safiye Ayla",
@@ -1073,8 +1059,7 @@
       { "id": "gelme_bir_aksam", "ad": "Gelme Bir Akşam", "soz": "" }
     ]
   },
-             [
-  {
+    {
     "id": "secil_heper",
     "ad": "Seçil Heper",
     "sarkilar": [
