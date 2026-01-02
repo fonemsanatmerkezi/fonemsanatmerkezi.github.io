@@ -177,9 +177,7 @@
       ]
     },
      {
-  "sanatcilar": [
-    {
-      "id": "cavit_karabey",
+       "id": "cavit_karabey",
       "ad": "Cavit Karabey",
       "sarkilar": [
         { "id": "vay_be", "ad": "Vay Be", "soz": "" },
@@ -1528,7 +1526,7 @@
     { "id": "geri_don", "ad": "Geri Dön", "soz": "" },
     { "id": "sensiz_yapamam", "ad": "Sensiz Yapamam", "soz": "" },
     { "id": "derin_ask_serisi_parca", "ad": "Derin Aşk Serisi Parça", "soz": "" }
-      ]
-    }
-  ]
-}
+  ]  
+     }  
+  ] 
+     }
