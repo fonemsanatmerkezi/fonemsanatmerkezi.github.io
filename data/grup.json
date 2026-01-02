@@ -9,7 +9,7 @@
     { "id": "kizilirmak", "ad": "Kızılırmak", "soz": "" },
     { "id": "silifkenin_yogurdu", "ad": "Silifke'nin Yoğurdu", "soz": "" },
     { "id": "fidayda", "ad": "Fidayda", "soz": "" },
-    { "id": "katibim", "ad": "Üsküdar'a Gider İken (Katibim)", "soz": "" }
+    { "id": "katibim", "ad": "Katibim", "soz": "" }
   ]
 },
     {
@@ -270,17 +270,6 @@
     { "id": "haydi_git", "ad": "Haydi Git", "soz": "" },
     { "id": "gulumse", "ad": "Gülümse", "soz": "" },
     { "id": "yeni_bir_baslangic", "ad": "Yeni Bir Başlangıç", "soz": "" }
-  ]
-},
-    {
-  "id": "ferhan_ferzan_onder",
-  "ad": "Ferhan ve Ferzan Önder",
-  "sarkilar": [
-    { "id": "mozart_sonata_k448", "ad": "Mozart – Sonata for Two Pianos K.448", "soz": "" },
-    { "id": "schubert_fantasia_fminor", "ad": "Schubert – Fantasia in F Minor", "soz": "" },
-    { "id": "rachmaninoff_suite_no2", "ad": "Rachmaninoff – Suite No.2", "soz": "" },
-    { "id": "brahms_hungarian_dance_5", "ad": "Brahms – Hungarian Dance No.5", "soz": "" },
-    { "id": "beethoven_symphony_5", "ad": "Beethoven – Symphony No.5 (Two Piano)", "soz": "" }
   ]
 },
     {
@@ -918,9 +907,9 @@
     { "id": "sahi", "ad": "Şahi", "soz": "" },
     { "id": "hep_hiphop", "ad": "Hep HipHop", "soz": "" },
     { "id": "yer_altinda_yasamak", "ad": "Yer Altında Yaşamak", "soz": "" },
-    { "id": "yalan_ruzgari", "ad": "Yalan Rüzgarı (feat. Sirhot & Fresh 8)", "soz": "" },
-    { "id": "2_sok", "ad": "2. Şok (feat. Erci E)", "soz": "" },
-    { "id": "pop_pop", "ad": "Pop Pop (feat. Bektaş & Kader K)", "soz": "" }
+    { "id": "yalan_ruzgari", "ad": "Yalan Rüzgarı", "soz": "" },
+    { "id": "2_sok", "ad": "2. Şok", "soz": "" },
+    { "id": "pop_pop", "ad": "Pop Pop", "soz": "" }
   ]
 },
     {
@@ -953,7 +942,7 @@
     { "id": "yuzerdik", "ad": "Yüzerdik", "soz": "" },
     { "id": "uzume_bax", "ad": "Üzüme Bax", "soz": "" },
     { "id": "pencere", "ad": "Pencere", "soz": "" },
-    { "id": "al_beni", "ad": "Al Beni (feat. Animist)", "soz": "" },
+    { "id": "al_beni", "ad": "Al Beni", "soz": "" },
     { "id": "deniz_derin", "ad": "Deniz Derin", "soz": "" },
     { "id": "dusunme_kaybolursun", "ad": "Düşünme Kaybolursun", "soz": "" }
   ]
