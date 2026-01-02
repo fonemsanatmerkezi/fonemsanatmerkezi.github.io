@@ -96,8 +96,7 @@
       { "id": "seni_hatirliyorum", "ad": "Seni Hatırlıyorum", "soz": "" }
     ]
   },
-    
-      {
+     {
     "id": "deniz_kizi_eftalya",
     "ad": "Deniz Kızı Eftalya",
     "sarkilar": [
@@ -198,6 +197,20 @@
       { "id": "senin_icin", "ad": "Senin İçin", "soz": "" }
     ]
   },
+    {
+    "id": "gonul_akkor",
+    "ad": "Gönül Akkor",
+    "sarkilar": [
+      { "id": "aglama_degil_asktir", "ad": "Ağlama Değil Aşktır", "soz": "" },
+      { "id": "sensiz_olmaz", "ad": "Sensiz Olmaz", "soz": "" },
+      { "id": "ask_icin_gonlume_saril", "ad": "Aşk İçin Gönlüme Sarıl", "soz": "" },
+      { "id": "bir_aksam_sarki", "ad": "Bir Akşam Şarkı", "soz": "" },
+      { "id": "elbette_bir_gun", "ad": "Elbette Bir Gün", "soz": "" },
+      { "id": "bu_gece_beni_sor", "ad": "Bu Gece Beni Sor", "soz": "" }
+    ]
+  },
+ 
+ 
 
     {
     "id": "hamiyet_yuceses",
@@ -270,6 +283,22 @@
       { "id": "senden_uzak_gunlerim", "ad": "Senden Uzak Günlerim Zindân Oluyor", "soz": "" }
     ]
   },
+      {
+    "id": "kamuran_akkor",
+    "ad": "Kâmuran Akkor",
+    "sarkilar": [
+      { "id": "bana_son_aksam_ugrayacaksin", "ad": "Bana Son Akşam Uğrayacaksın", "soz": "" },
+      { "id": "kapin_her_calindikca", "ad": "Kapın Her Çalındıkça", "soz": "" },
+      { "id": "yaninda_olmaliydim", "ad": "Yanında Olmalıydım", "soz": "" },
+      { "id": "sensiz_olmaz", "ad": "Sensiz Olmaz", "soz": "" },
+      { "id": "bir_guvercin_sahipsiz", "ad": "Bir Güvercin Sahipsiz", "soz": "" },
+      { "id": "dusuncelerim_bitti", "ad": "Düşüncelerim Bitti", "soz": "" },
+      { "id": "askimin_sesi_kalbimde", "ad": "Aşkımın Sesi Kalbimde", "soz": "" },
+      { "id": "gonlunde_bir_kusku", "ad": "Gönlünde Bir Kuşku", "soz": "" },
+      { "id": "sen_benim_ilacim", "ad": "Sen Benim İlacım", "soz": "" },
+      { "id": "tamamen_sana_hazirim", "ad": "Tamamen Sana Hazırım", "soz": "" }
+    ]
+  },
      {
     "id": "kutlu_payasli",
     "ad": "Kutlu Payaslı",
@@ -325,51 +354,8 @@
       { "id": "zeytin_gozlum", "ad": "Zeytin Gözlüm", "soz": "" }
     ]
   },
-  {
-    "id": "nalan_altinors",
-    "ad": "Nalan Altınörs",
-    "sarkilar": [
-      { "id": "gulum_sensin_benim", "ad": "Gülüm Sensin Benim", "soz": "" },
-      { "id": "sensiz_gunler", "ad": "Sensiz Günler", "soz": "" },
-      { "id": "ayrilik_sarkisi", "ad": "Ayrılık Şarkısı", "soz": "" },
-      { "id": "kalbimde_sensiz", "ad": "Kalbimde Sensiz", "soz": "" }
-    ]
-  },
-  {
-    "id": "nurdan_torun",
-    "ad": "Nurdan Torun",
-    "sarkilar": [
-      { "id": "sensiz_olmaz", "ad": "Sensiz Olmaz", "soz": "" },
-      { "id": "gulum_benim", "ad": "Gülüm Benim", "soz": "" },
-      { "id": "ask_icin", "ad": "Aşk İçin", "soz": "" }
-    ]
-  },
-  {
-    "id": "suat_sayin",
-    "ad": "Suat Sayın",
-    "sarkilar": [
-      { "id": "sensiz_gece", "ad": "Sensiz Gece", "soz": "" },
-      { "id": "sorma_ne_haldeyim", "ad": "Sorma Ne Haldeyim", "soz": "" }
-    ]
-  },
  
-    {
-    "id": "kamuran_akkor",
-    "ad": "Kâmuran Akkor",
-    "sarkilar": [
-      { "id": "bana_son_aksam_ugrayacaksin", "ad": "Bana Son Akşam Uğrayacaksın", "soz": "" },
-      { "id": "kapin_her_calindikca", "ad": "Kapın Her Çalındıkça", "soz": "" },
-      { "id": "yaninda_olmaliydim", "ad": "Yanında Olmalıydım", "soz": "" },
-      { "id": "sensiz_olmaz", "ad": "Sensiz Olmaz", "soz": "" },
-      { "id": "bir_guvercin_sahipsiz", "ad": "Bir Güvercin Sahipsiz", "soz": "" },
-      { "id": "dusuncelerim_bitti", "ad": "Düşüncelerim Bitti", "soz": "" },
-      { "id": "askimin_sesi_kalbimde", "ad": "Aşkımın Sesi Kalbimde", "soz": "" },
-      { "id": "gonlunde_bir_kusku", "ad": "Gönlünde Bir Kuşku", "soz": "" },
-      { "id": "sen_benim_ilacim", "ad": "Sen Benim İlacım", "soz": "" },
-      { "id": "tamamen_sana_hazirim", "ad": "Tamamen Sana Hazırım", "soz": "" }
-    ]
-  },
-       {
+      {
     "id": "melihat_gulses",
     "ad": "Melihat Gülses",
     "sarkilar": [
@@ -514,7 +500,7 @@
       { "id": "sana_icin", "ad": "Sana İçin", "soz": "" }
     ]
   },
-  {
+    {
     "id": "nurdan_torun",
     "ad": "Nurdan Torun",
     "sarkilar": [
@@ -541,22 +527,23 @@
       { "id": "bahar_yagmur", "ad": "Bahar Yağmur", "soz": "" }
     ]
   },
-    
-  {
+     {
     "id": "safiye_ayla",
     "ad": "Safiye Ayla",
     "sarkilar": [
-      { "id": "didem_yuzune_nazir", "ad": "Didem Yüzüne Nazır", "soz": "" },
-      { "id": "ne_bahar_kaldi_ne_gul_ne_de_bulbul_sesi_var", "ad": "Ne Bahar Kaldı Ne Gül, Ne De Bülbül Sesi Var", "soz": "" },
-      { "id": "sen_de_mi_hala_esir_i_zulf_i_yar_olmaktasin", "ad": "Sen De Mi Hâlâ Esir‑i Zülf‑i Yâr Olmaktasın", "soz": "" },
-      { "id": "etme_beyhude_figan", "ad": "Etme Beyhude Figan", "soz": "" },
-      { "id": "gonuller_ugrusu_bir_yar_i_bi_amanim_var", "ad": "Gönüller Uğrusu Bir Yâr‑i Bi‑Amanım Var", "soz": "" },
-      { "id": "bin_cefa_gorsem_ey_sanem", "ad": "Bin Cefa Görsem Ey Sanem", "soz": "" },
-      { "id": "ne_bahar_kaldi_ne_gul_ne_de_bulbul_sesi_var", "ad": "Ne Bahar Kaldı Ne Gül, Ne De Bülbül Sesi Var (versiyon)", "soz": "" },
-      { "id": "guzel_gibi_sanatli_sarki", "ad": "Güzel Gibi (klasik repertuvar)", "soz": "" }
+      { "id": "bir_kucuk_ask", "ad": "Bir Küçük Aşk Masalı", "soz": "" },
+      { "id": "ben_seni_unutmak_istiyorum", "ad": "Ben Seni Unutmak İstiyorum", "soz": "" },
+      { "id": "fikrimin_ince_gulu", "ad": "Fikrimin İnce Gülü", "soz": "" },
+      { "id": "bir_guze_sonbahar", "ad": "Bir Güzel Sonbahar", "soz": "" },
+      { "id": "ak_selim", "ad": "Ak Selim", "soz": "" },
+      { "id": "gole_gole", "ad": "Gole Gole", "soz": "" },
+      { "id": "gule_gule", "ad": "Güle Güle", "soz": "" },
+      { "id": "kucuk_bir_sair", "ad": "Küçük Bir Şair", "soz": "" },
+      { "id": "senin_icin_sarkilar", "ad": "Senin İçin Şarkılar", "soz": "" },
+      { "id": "ask_ve_seni", "ad": "Aşk ve Seni", "soz": "" }
     ]
   },
-  {
+   {
     "id": "safiye_soyman",
     "ad": "Safiye Soyman",
     "sarkilar": [
@@ -607,39 +594,6 @@
       { "id": "yenildim_sana", "ad": "Yenildim Sana", "soz": "" },
       { "id": "dunyam_degisti", "ad": "Dünyam Değişti", "soz": "" },
       { "id": "sahte_gozyaslari", "ad": "Sahte Gözyaşları", "soz": "" }
-    ]
-  },
-  
-   {
-    "id": "safiye_ayla",
-    "ad": "Safiye Ayla",
-    "sarkilar": [
-      { "id": "bir_kucuk_ask", "ad": "Bir Küçük Aşk Masalı", "soz": "" },
-      { "id": "ben_seni_unutmak_istiyorum", "ad": "Ben Seni Unutmak İstiyorum", "soz": "" },
-      { "id": "fikrimin_ince_gulu", "ad": "Fikrimin İnce Gülü", "soz": "" },
-      { "id": "bir_guze_sonbahar", "ad": "Bir Güzel Sonbahar", "soz": "" },
-      { "id": "ak_selim", "ad": "Ak Selim", "soz": "" },
-      { "id": "gole_gole", "ad": "Gole Gole", "soz": "" },
-      { "id": "gule_gule", "ad": "Güle Güle", "soz": "" },
-      { "id": "kucuk_bir_sair", "ad": "Küçük Bir Şair", "soz": "" },
-      { "id": "senin_icin_sarkilar", "ad": "Senin İçin Şarkılar", "soz": "" },
-      { "id": "ask_ve_seni", "ad": "Aşk ve Seni", "soz": "" }
-    ]
-  },
-  {
-    "id": "safiye_soyman",
-    "ad": "Safiye Soyman",
-    "sarkilar": [
-      { "id": "haydi_helene", "ad": "Haydi Helene", "soz": "" },
-      { "id": "deli_gibi_seviyorum", "ad": "Deli Gibi Seviyorum", "soz": "" },
-      { "id": "sen_ve_ben", "ad": "Sen ve Ben", "soz": "" },
-      { "id": "gel_gel", "ad": "Gel Gel", "soz": "" },
-      { "id": "benim_icin_sarkilar", "ad": "Benim İçin Şarkılar", "soz": "" },
-      { "id": "a_sen_beni", "ad": "Ah Sen Beni", "soz": "" },
-      { "id": "yurek_burun", "ad": "Yürek Burun", "soz": "" },
-      { "id": "kalbim_sana", "ad": "Kalbim Sana", "soz": "" },
-      { "id": "seni_seviyorum", "ad": "Seni Seviyorum", "soz": "" },
-      { "id": "gel_gel_birlikte", "ad": "Gel Gel Birlikte", "soz": "" }
     ]
   },
   {
@@ -741,82 +695,7 @@
       { "id": "ayrilik_sirasi_bize_gelince", "ad": "Ayrılık Sırası Bize Gelince", "soz": "" },
       { "id": "o_dudaklar", "ad": "O Dudaklar", "soz": "" }
     ]
-  },
- 
-   {
-    "id": "yuksel_uzel",
-    "ad": "Yüksel Uzel",
-    "sarkilar": [
-      { "id": "sensiz_gece_gozlerime_dusen", "ad": "Sensiz Gece Gözlerime Düşen", "soz": "" },
-      { "id": "gulum_benim", "ad": "Gülüm Benim", "soz": "" },
-      { "id": "askin_icin_kimler_oldu", "ad": "Aşkın İçin Kimler Oldu", "soz": "" },
-      { "id": "yollarima_dusun", "ad": "Yollarıma Düşün", "soz": "" },
-      { "id": "senin_icindeki_ciglik", "ad": "Senin İçindeki Çığlık", "soz": "" },
-      { "id": "gun_batisi", "ad": "Gün Batışı", "soz": "" },
-      { "id": "ozlemin_sesi", "ad": "Özlemin Sesi", "soz": "" }
-    ]
-  },
-     {
-    "id": "zeki_muren",
-    "ad": "Zeki Müren",
-    "sarkilar": [
-      { "id": "imkansiz", "ad": "İmkânsız", "soz": "" },
-      { "id": "ah_bu_sarkilarin_gozu_kor_olsun", "ad": "Ah Bu Şarkıların Gözü Kör Olsun", "soz": "" },
-      { "id": "gucume_gidiyor_boyle_yasamak", "ad": "Gücüme Gidiyor Böyle Yaşamak", "soz": "" },
-      { "id": "buyuleyen_gozlerinle", "ad": "Büyüleyen Gözlerinle", "soz": "" },
-      { "id": "ayaz_geceler", "ad": "Ayaz Geceler", "soz": "" },
-      { "id": "ruyalarda_bulusuruz", "ad": "Rüyalarda Buluşuruz", "soz": "" },
-      { "id": "sevgi_dolu_su_gonlum", "ad": "Sevgi Dolu Şu Gönlüm", "soz": "" },
-      { "id": "goz_yasimda_saklasin", "ad": "Göz Yaşımda Saklasın", "soz": "" },
-      { "id": "seni_ben_unutmak_istemedi̇m_ki", "ad": "Seni Ben Unutmak İstemedi̇m Ki", "soz": "" },
-      { "id": "biz_ayrilamayiz", "ad": "Biz Ayrılamayız", "soz": "" },
-      { "id": "sorma", "ad": "Sorma", "soz": "" },
-      { "id": "agi_benim", "ad": "Ağlama Sevdam", "soz": "" },
-      { "id": "iki_gozum_iki_cesme", "ad": "İki Gözüm İki Çeşme", "soz": "" },
-      { "id": "ne_olursun", "ad": "Ne Olursun", "soz": "" }
-    ]
-  },
- 
-  {
-    "id": "zekai_tunca",
-    "ad": "Zekai Tunca",
-    "sarkilar": [
-      { "id": "sensiz_olmaz", "ad": "Sensiz Olmaz", "soz": "" },
-      { "id": "askim_seni_seviyorum", "ad": "Aşkım Seni Seviyorum", "soz": "" },
-      { "id": "yollar_beni_asagi", "ad": "Yollar Beni Aşağı", "soz": "" },
-      { "id": "senin_icin_sarkilar", "ad": "Senin İçin Şarkılar", "soz": "" },
-      { "id": "bir_dunya_sarki", "ad": "Bir Dünya Şarkı", "soz": "" },
-      { "id": "ozlemle_sarkilar", "ad": "Özlemle Şarkılar", "soz": "" }
-    ]
-  },
-  {
-    "id": "ziya_taskent",
-    "ad": "Ziya Taşkent",
-    "sarkilar": [
-      { "id": "sensiz_olmaz_benim_gunlerim", "ad": "Sensiz Olmaz Benim Günlerim", "soz": "" },
-      { "id": "gulum_daha_guzel", "ad": "Gülüm Daha Güzel", "soz": "" },
-      { "id": "askin_rengi", "ad": "Aşkın Rengi", "soz": "" },
-      { "id": "yalnizim", "ad": "Yalnızım", "soz": "" },
-      { "id": "gunlergece", "ad": "Günler Gece", "soz": "" }
-    ]
-  },
- 
-  
- 
-  {
-    "id": "gonul_akkor",
-    "ad": "Gönül Akkor",
-    "sarkilar": [
-      { "id": "aglama_degil_asktir", "ad": "Ağlama Değil Aşktır", "soz": "" },
-      { "id": "sensiz_olmaz", "ad": "Sensiz Olmaz", "soz": "" },
-      { "id": "ask_icin_gonlume_saril", "ad": "Aşk İçin Gönlüme Sarıl", "soz": "" },
-      { "id": "bir_aksam_sarki", "ad": "Bir Akşam Şarkı", "soz": "" },
-      { "id": "elbette_bir_gun", "ad": "Elbette Bir Gün", "soz": "" },
-      { "id": "bu_gece_beni_sor", "ad": "Bu Gece Beni Sor", "soz": "" }
-    ]
-  },
- 
- 
+  }, 
   {
     "id": "safiye_ayla",
     "ad": "Safiye Ayla",
@@ -1009,6 +888,63 @@
       { "id": "tutku", "ad": "Tutku", "soz": "" },
       { "id": "senin_icindir", "ad": "Senin İçindir", "soz": "" },
       { "id": "ozlemin_sesi", "ad": "Özlemin Sesi", "soz": "" }
+    ]
+  },
+      {
+    "id": "yuksel_uzel",
+    "ad": "Yüksel Uzel",
+    "sarkilar": [
+      { "id": "sensiz_gece_gozlerime_dusen", "ad": "Sensiz Gece Gözlerime Düşen", "soz": "" },
+      { "id": "gulum_benim", "ad": "Gülüm Benim", "soz": "" },
+      { "id": "askin_icin_kimler_oldu", "ad": "Aşkın İçin Kimler Oldu", "soz": "" },
+      { "id": "yollarima_dusun", "ad": "Yollarıma Düşün", "soz": "" },
+      { "id": "senin_icindeki_ciglik", "ad": "Senin İçindeki Çığlık", "soz": "" },
+      { "id": "gun_batisi", "ad": "Gün Batışı", "soz": "" },
+      { "id": "ozlemin_sesi", "ad": "Özlemin Sesi", "soz": "" }
+    ]
+  },
+      {
+    "id": "zeki_muren",
+    "ad": "Zeki Müren",
+    "sarkilar": [
+      { "id": "imkansiz", "ad": "İmkânsız", "soz": "" },
+      { "id": "ah_bu_sarkilarin_gozu_kor_olsun", "ad": "Ah Bu Şarkıların Gözü Kör Olsun", "soz": "" },
+      { "id": "gucume_gidiyor_boyle_yasamak", "ad": "Gücüme Gidiyor Böyle Yaşamak", "soz": "" },
+      { "id": "buyuleyen_gozlerinle", "ad": "Büyüleyen Gözlerinle", "soz": "" },
+      { "id": "ayaz_geceler", "ad": "Ayaz Geceler", "soz": "" },
+      { "id": "ruyalarda_bulusuruz", "ad": "Rüyalarda Buluşuruz", "soz": "" },
+      { "id": "sevgi_dolu_su_gonlum", "ad": "Sevgi Dolu Şu Gönlüm", "soz": "" },
+      { "id": "goz_yasimda_saklasin", "ad": "Göz Yaşımda Saklasın", "soz": "" },
+      { "id": "seni_ben_unutmak_istemedi̇m_ki", "ad": "Seni Ben Unutmak İstemedi̇m Ki", "soz": "" },
+      { "id": "biz_ayrilamayiz", "ad": "Biz Ayrılamayız", "soz": "" },
+      { "id": "sorma", "ad": "Sorma", "soz": "" },
+      { "id": "agi_benim", "ad": "Ağlama Sevdam", "soz": "" },
+      { "id": "iki_gozum_iki_cesme", "ad": "İki Gözüm İki Çeşme", "soz": "" },
+      { "id": "ne_olursun", "ad": "Ne Olursun", "soz": "" }
+    ]
+  },
+ 
+  {
+    "id": "zekai_tunca",
+    "ad": "Zekai Tunca",
+    "sarkilar": [
+      { "id": "sensiz_olmaz", "ad": "Sensiz Olmaz", "soz": "" },
+      { "id": "askim_seni_seviyorum", "ad": "Aşkım Seni Seviyorum", "soz": "" },
+      { "id": "yollar_beni_asagi", "ad": "Yollar Beni Aşağı", "soz": "" },
+      { "id": "senin_icin_sarkilar", "ad": "Senin İçin Şarkılar", "soz": "" },
+      { "id": "bir_dunya_sarki", "ad": "Bir Dünya Şarkı", "soz": "" },
+      { "id": "ozlemle_sarkilar", "ad": "Özlemle Şarkılar", "soz": "" }
+    ]
+  },
+  {
+    "id": "ziya_taskent",
+    "ad": "Ziya Taşkent",
+    "sarkilar": [
+      { "id": "sensiz_olmaz_benim_gunlerim", "ad": "Sensiz Olmaz Benim Günlerim", "soz": "" },
+      { "id": "gulum_daha_guzel", "ad": "Gülüm Daha Güzel", "soz": "" },
+      { "id": "askin_rengi", "ad": "Aşkın Rengi", "soz": "" },
+      { "id": "yalnizim", "ad": "Yalnızım", "soz": "" },
+      { "id": "gunlergece", "ad": "Günler Gece", "soz": "" }
     ]
   },
 
