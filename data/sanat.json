@@ -30,7 +30,7 @@
       { "id": "ayarsizim", "ad": "Ayarsızım", "soz": "" },
       { "id": "sade_ve_sakin", "ad": "Sade ve Sakin", "soz": "" },
       { "id": "sen_unuttun", "ad": "Sen Unuttun", "soz": "" },
-      { "id": "kolay_mi", "ad": "Kolay Mı?", "soz": "" },
+      { "id": "kolay_mi", "ad": "Kolay Mı", "soz": "" },
       { "id": "ben_ordayim", "ad": "Ben Ordayım", "soz": "" },
       { "id": "oyle_bir_dunya_yok", "ad": "Öyle Bir Dünya Yok", "soz": "" },
       { "id": "aynalı_koruk", "ad": "Aynalı Körük", "soz": "" },
@@ -64,10 +64,9 @@
       { "id": "gitme_sana_muhtacim", "ad": "Gitme Sana Muhtacım", "soz": "" },
       { "id": "gözlerin", "ad": "Gözlerin", "soz": "" },
       { "id": "mavi_boncuk", "ad": "Mavi Boncuk", "soz": "" },
-      { "id": "kapın_her_calındıkça", "ad": "Kapın Her Çalındıkça", "soz": "" },
+      { "id": "kapın_her_calındıkca", "ad": "Kapın Her Çalındıkça", "soz": "" },
       { "id": "nankor", "ad": "Nankör", "soz": "" },
-      { "id": "aldırma_gonül", "ad": "Aldırma Gönül", "soz": "" },
-      { "id": "en_iyileriyle_behıye_aksoy", "ad": "En İyileriyle Behiye Aksoy (derleme)", "soz": "" }
+      { "id": "aldırma_gonül", "ad": "Aldırma Gönül", "soz": "" }
     ]
   },
      {
@@ -103,11 +102,11 @@
       { "id": "gulu_susuz_seni_asksiz_birakmam", "ad": "Gülü Susuz Seni Aşksız Bırakmam", "soz": "" },
       { "id": "senin_icin_dunyayi_degistiririm", "ad": "Senin İçin Dünyayı Değiştiririm", "soz": "" },
       { "id": "aydin_gozler", "ad": "Aydın Gözler", "soz": "" },
-      { "id": "sensiz_oldume_kader", "ad": "Sensiz Öldüm E Kader", "soz": "" },
+      { "id": "sensiz_oldum_e_kader", "ad": "Sensiz Öldüm E Kader", "soz": "" },
       { "id": "bir_yarin_aski", "ad": "Bir Yarın Aşkı", "soz": "" },
       { "id": "bu_sehir_benim_sensiz", "ad": "Bu Şehir Benim Sensiz", "soz": "" },
       { "id": "yollar_beni_asagi", "ad": "Yollar Beni Aşağı", "soz": "" },
-      { "id": "sen_kim_derdine_dusmesin", "ad": "Sen Kim Derdene Düşmesin", "soz": "" },
+      { "id": "sen_kim_derdine_dusmesin", "ad": "Sen Kim Derdine Düşmesin", "soz": "" },
       { "id": "yanimda_olmasan_bile", "ad": "Yanımda Olmasan Bile", "soz": "" },
       { "id": "senin_icin_agladim", "ad": "Senin İçin Ağladım", "soz": "" }
     ]
@@ -116,7 +115,7 @@
     "id": "ebru_gundes",
     "ad": "Ebru Gündeş",
     "sarkilar": [
-      { "id": "fırtına", "ad": "Fırtına", "soz": "" },
+      { "id": "firtina", "ad": "Fırtına", "soz": "" },
       { "id": "senin_icin", "ad": "Senin İçin", "soz": "" },
       { "id": "alev_alev", "ad": "Alev Alev", "soz": "" },
       { "id": "duygum_sudur", "ad": "Duygum Şudur", "soz": "" },
@@ -172,7 +171,7 @@
       { "id": "balik", "ad": "Balık", "soz": "" },
       { "id": "ohlale", "ad": "Ohlale", "soz": "" },
       { "id": "gulumse_yarim_gulumse", "ad": "Gülümse Yarim Gülümse", "soz": "" },
-      { "id": "uzerime_dusunmeden", "ad": "Üzerime Düşünmeden", "soz": "" }
+      { "id": "uzerine_dusunmeden", "ad": "Üzerine Düşünmeden", "soz": "" }
     ]
   },
      {
@@ -180,7 +179,7 @@
     "ad": "Gönül Yazar",
     "sarkilar": [
       { "id": "gonlumde_sevda", "ad": "Gönlümde Sevda", "soz": "" },
-      { "id": "guzel_gunler_sarki", "ad": "Güzel Günler", "soz": "" },
+      { "id": "guzel_gunler", "ad": "Güzel Günler", "soz": "" },
       { "id": "yeniden_basla", "ad": "Yeniden Başla", "soz": "" },
       { "id": "askin_rengi", "ad": "Aşkın Rengi", "soz": "" },
       { "id": "bir_baska_dunya", "ad": "Bir Başka Dünya", "soz": "" }
@@ -193,8 +192,8 @@
       { "id": "sensiz_olmaz", "ad": "Sensiz Olmaz", "soz": "" },
       { "id": "hayat_sensin", "ad": "Hayat Sensin", "soz": "" },
       { "id": "askim_benim", "ad": "Aşkım Benim", "soz": "" },
-      { "id": "gulum_benim", "ad": "Gülüm Benim", "soz": "" },
-      { "id": "senin_icin", "ad": "Senin İçin", "soz": "" }
+      { "id": "gulum_benim1", "ad": "Gülüm Benim", "soz": "" },
+      { "id": "senin_icin1", "ad": "Senin İçin", "soz": "" }
     ]
   },
     {
@@ -219,7 +218,7 @@
       { "id": "makber", "ad": "Makber", "soz": "" },
       { "id": "aksam_oldu_huzunlendim_ben_yine", "ad": "Akşam Oldu Hüzünlendim Ben Yine", "soz": "" },
       { "id": "gitti_de_gelmeyiverdi", "ad": "Gitti de Gelmeyiverdi", "soz": "" },
-      { "id": "ben_kuskunum_beleğe", "ad": "Ben Küskünüm Feleğe", "soz": "" },
+      { "id": "ben_kuskunum_felege", "ad": "Ben Küskünüm Feleğe", "soz": "" },
       { "id": "bakmiyor_cesm_i_siyah", "ad": "Bakmıyor Çeşm‑i Siyah", "soz": "" },
       { "id": "bir_gorusde_asik_oldum", "ad": "Bir Görüşte Âşık Oldum", "soz": "" },
       { "id": "kiskanirim_seni_ben", "ad": "Kıskanırım Seni Ben", "soz": "" },
