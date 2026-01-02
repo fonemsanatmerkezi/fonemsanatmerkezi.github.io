@@ -35,19 +35,20 @@ body::before{
 
 /* hoşgeldiniz */
 #welcome{
-  position:fixed;
-  top:50px; /* ekranın üstüne yakın */
+   position:fixed;
+  top:50px; /* sayfanın üst kısmına yakın */
   left:50%;
   transform:translateX(-50%);
   font-size:40px; /* biraz daha büyük */
-  font-weight:600; /* kalınlaştırdık */
-  color:#fff; /* beyaz renk */
+  font-weight:700; /* daha kalın */
+  color:#ffffff; /* beyaz */
   letter-spacing:3px;
-  background:rgba(0,0,0,.7); /* hafif karartma, ama çok koyu değil */
-  padding:15px 30px;
+  background:rgba(0,0,0,0.7); /* hafif karartma, okunması için */
+  padding:15px 40px;
   border-radius:10px;
-  z-index:20;
+  z-index:9999; /* en üstte görünmesi için yüksek z-index */
   animation:fadeOut 3s forwards;
+  text-align:center;
 }
 
 @keyframes fadeOut{
