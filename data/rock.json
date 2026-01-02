@@ -71,7 +71,7 @@
         { "id": "deniz_ustu_kopurur", "ad": "Deniz Üstü Köpürür", "soz": "" },
         { "id": "iskenderiye", "ad": "İskenderiye", "soz": "" },
         { "id": "kaldir_ustundeki_oluyu", "ad": "Kaldır Üstündeki Ölüyü", "soz": "" },
-        { "id": "nem_kaldi", "ad": "Nerede Kalmıştık", "soz": "" },
+        { "id": "nem_kaldi", "ad": "Nem Kaldı", "soz": "" },
         { "id": "bindik_bir_alamete", "ad": "Bindik Bir Alamete", "soz": "" },
         { "id": "bu_son_olsun", "ad": "Bu Son Olsun", "soz": "" },
         { "id": "arap_saci", "ad": "Arap Saçı", "soz": "" },
@@ -109,7 +109,6 @@
       "ad": "Erkin Koray",
       "sarkilar": [
         { "id": "fesuphanallah", "ad": "Fesuphanallah", "soz": "" },
-        { "id": "cemalim", "ad": "Cemalim", "soz": "" },
         { "id": "mesafeler", "ad": "Mesafeler", "soz": "" },
         { "id": "seni_her_gordugumde", "ad": "Seni Her Gördüğümde", "soz": "" },
         { "id": "ask_bir_ates", "ad": "Aşk Bir Ateş", "soz": "" },
@@ -225,7 +224,7 @@
     { "id": "gulmedi_talihim", "ad": "Gülmedi Talihim", "soz": "" },
     { "id": "seninle_ilk_defa", "ad": "Seninle İlk Defa", "soz": "" },
     { "id": "sen_yoktun", "ad": "Sen Yoktun", "soz": "" },
-    { "id": "kuslar", "ad": "Turnalar", "soz": "" },
+    { "id": "turnalar", "ad": "Turnalar", "soz": "" },
     { "id": "namus_belasi", "ad": "Namus Belası", "soz": "" },
     { "id": "gitme", "ad": "Gitme", "soz": "" }
   ]
@@ -240,9 +239,8 @@
     { "id": "salini_salini", "ad": "Salını Salını", "soz": "" },
     { "id": "gel_opem_seni", "ad": "Gel Öpem Seni", "soz": "" },
     { "id": "avara", "ad": "Avara", "soz": "" },
-    { "id": "cılgın_hadi_oradan", "ad": "Çılgın (Hadi Oradan)", "soz": "" },
     { "id": "ver_bana_duslerimi", "ad": "Ver Bana Düşlerimi", "soz": "" },
-    { "id": "seni_cılgın", "ad": "Seni Çılgın", "soz": "" },
+    { "id": "seni_cilgin", "ad": "Seni Çılgın", "soz": "" },
     { "id": "dere_boyu_kavaklar", "ad": "Dere Boyu Kavaklar", "soz": "" },
     { "id": "usandim_ben", "ad": "Usandım Ben", "soz": "" },
     { "id": "kopruden_gecti_gelin", "ad": "Köprüden Geçti Gelin", "soz": "" },
