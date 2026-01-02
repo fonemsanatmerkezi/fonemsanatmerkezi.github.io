@@ -154,7 +154,6 @@
       { "id": "toplama_kampi", "ad": "Toplama Kampı (feat. Sagopa Kajmer & Ceza)", "soz": "" }
     ]
   },
-        [
   {
     "id": "ege_cubukcu",
     "ad": "Ege Çubukçu",
@@ -264,7 +263,6 @@
       { "id": "rol", "ad": "Rol", "soz": "" }
     ]
   },
-[
   {
     "id": "norm_ender",
     "ad": "Norm Ender",
@@ -298,7 +296,6 @@
       { "id": "intihar_saatler", "ad": "İntihar Saatler", "soz": "" }
     ]
   },
-  [
   {
     "id": "lvbel_c5",
     "ad": "Lvbel C5",
@@ -360,7 +357,6 @@
       { "id": "yarin_kalan_sigara", "ad": "Yarım Kalan Sigara (feat. Melek Mosso)", "soz": "" }
     ]
   },
-    [
   {
     "id": "patron",
     "ad": "Patron",
@@ -515,7 +511,8 @@
     "sarkilar": [
       { "id": "tattoo", "ad": "Tattoo", "soz": "" },
       { "id": "kural", "ad": "Kural", "soz": "" }
- ]
+    ]
+    }
+  ]
 }
-      ]
 
