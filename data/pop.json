@@ -18,6 +18,22 @@
       ]
     },
     {
+  "id": "ahmet_akkaya",
+  "ad": "Ahmet Akkaya",
+  "sarkilar": [
+    { "id": "ah_canim_vah_canim", "ad": "Ah Canım Vah Canım", "soz": "" },
+    { "id": "gel_gel", "ad": "Gel Gel", "soz": "" },
+    { "id": "sensiz_olmuyor", "ad": "Sensiz Olmuyor", "soz": "" },
+    { "id": "bir_tek_sen", "ad": "Bir Tek Sen", "soz": "" },
+    { "id": "askin_sesi", "ad": "Aşkın Sesi", "soz": "" },
+    { "id": "sevdanin_yolu", "ad": "Sevdanın Yolu", "soz": "" },
+    { "id": "biliyorum", "ad": "Biliyorum", "soz": "" },
+    { "id": "oyun_bitti", "ad": "Oyun Bitti", "soz": "" },
+    { "id": "gecenin_rengi", "ad": "Gecenin Rengi", "soz": "" },
+    { "id": "kalbimdeki_yer", "ad": "Kalbimdeki Yer", "soz": "" }
+  ]
+},
+    {
       "id": "ajlan_buyukburc",
       "ad": "Ajlan Büyükburç",
       "sarkilar": [
@@ -420,6 +436,22 @@
       ]
     },
     {
+  "id": "ferda_anil_yarkin",
+  "ad": "Ferda Anıl Yarkın",
+  "sarkilar": [
+    { "id": "sonuna_kadar", "ad": "Sonuna Kadar", "soz": "" },
+    { "id": "uzulme", "ad": "Üzülme", "soz": "" },
+    { "id": "yaraliyim", "ad": "Yaralıyım", "soz": "" },
+    { "id": "ayrilmayalim", "ad": "Ayrılmayalım", "soz": "" },
+    { "id": "zorlama_guzelim", "ad": "Zorlama Güzelim", "soz": "" },
+    { "id": "tanima_beni", "ad": "Tanıma Beni", "soz": "" },
+    { "id": "askin_yetmez", "ad": "Aşkın Yetmez", "soz": "" },
+    { "id": "cumbus_cumbus_yollar", "ad": "Cümbüş Cümbüş Yollar", "soz": "" },
+    { "id": "dikkat_et", "ad": "Dikkat Et", "soz": "" },
+    { "id": "ayrica_bir_gonul_sayfasi", "ad": "Bir Gönül Sayfası", "soz": "" }
+  ]
+},
+    {
       "id": "fettah_can",
       "ad": "Fettah Can",
       "sarkilar": [
@@ -789,6 +821,22 @@
       ]
     },
     {
+  "id": "mansur_ark",
+  "ad": "Mansur Ark",
+  "sarkilar": [
+    { "id": "silinmez", "ad": "Silinmez", "soz": "" },
+    { "id": "malesef", "ad": "Maalesef", "soz": "" },
+    { "id": "gazla_gitsin", "ad": "Gazla Gitsin", "soz": "" },
+    { "id": "sana_demedim_mi", "ad": "Sana Demedim Mi", "soz": "" },
+    { "id": "yarim", "ad": "Yarim (feat. Ragga Oktay)", "soz": "" },
+    { "id": "gel_yanima", "ad": "Gel Yanıma", "soz": "" },
+    { "id": "doyamiyorum", "ad": "Doyamıyorum", "soz": "" },
+    { "id": "sen_de_bizdensin", "ad": "Sen De Bizdensin", "soz": "" },
+    { "id": "uzulme", "ad": "Üzülme", "soz": "" },
+    { "id": "senin_icin_olurum", "ad": "Senin İçin Ölürüm", "soz": "" }
+  ]
+},
+    {
       "id": "melike_demirag",
       "ad": "Melike Demirağ",
       "sarkilar": [
@@ -1097,6 +1145,22 @@
         { "id": "ayrilik", "ad": "Ayrılık", "soz": "" }
       ]
     },
+    {
+  "id": "ozan_orhon",
+  "ad": "Ozan Orhon",
+  "sarkilar": [
+    { "id": "ay_geceye_kuser_mi", "ad": "Ay Geceye Küser mi", "soz": "" },
+    { "id": "huzur", "ad": "Huzur", "soz": "" },
+    { "id": "depresyon", "ad": "Depresyon", "soz": "" },
+    { "id": "hava_buz_gibi", "ad": "Hava Buz Gibi", "soz": "" },
+    { "id": "kendini_zorlama", "ad": "Kendini Zorlama", "soz": "" },
+    { "id": "her_gece", "ad": "Her Gece", "soz": "" },
+    { "id": "gokyuzunden_ellerine", "ad": "Gökyüzünden Ellerine", "soz": "" },
+    { "id": "sana_ne_kime_ne", "ad": "Sana Ne Kime Ne", "soz": "" },
+    { "id": "anilarda_yarim_kalan", "ad": "Anılarda Yarım Kalan", "soz": "" },
+    { "id": "okyanus_gozlum", "ad": "Okyanus Gözlüm", "soz": "" }
+  ]
+},
     {
       "id": "ozkan_ugur",
       "ad": "Özkan Uğur",
