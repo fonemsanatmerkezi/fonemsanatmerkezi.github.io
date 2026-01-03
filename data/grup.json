@@ -88,6 +88,23 @@
 { "id": "bela", "ad": "Bela", "soz": "" }
 ]
 },
+  {
+  "id": "bajar",
+  "ad": "Bajar",
+  "sarkilar": [
+    { "id": "berfin", "ad": "Berfîn", "soz": "" },
+    { "id": "tem_tem", "ad": "Tem Tem", "soz": "" },
+    { "id": "emele", "ad": "Emele", "soz": "" },
+    { "id": "ogit", "ad": "Ogit", "soz": "" },
+    { "id": "na_na", "ad": "Na Na", "soz": "" },
+    { "id": "mêvanê_bêdawet", "ad": "Mêvanê Bêdawet", "soz": "" },
+    { "id": "b_xatire_te", "ad": "B'xatirê Te", "soz": "" },
+    { "id": "serhildan_jiyan_e", "ad": "Serhıldan Jiyan E (Yaşamak Direnmektir)", "soz": "" },
+    { "id": "hoşgeldin", "ad": "Hoşgeldin", "soz": "" },
+    { "id": "firtina_bahoz", "ad": "Fırtına (Bahoz)", "soz": "" },
+    { "id": "muhabbet_baginda", "ad": "Muhabbet Bağında", "soz": "" }
+  ]
+},
 {
 "id": "badem",
 "ad": "Badem",
