@@ -236,6 +236,25 @@
       ]
     },
     {
+  "id": "hozier",
+  "ad": "Hozier",
+  "sarkilar": [
+    { "id": "take_me_to_church", "ad": "Take Me to Church", "soz": "" },
+    { "id": "too_sweet", "ad": "Too Sweet", "soz": "" },
+    { "id": "work_song", "ad": "Work Song", "soz": "" },
+    { "id": "someone_new", "ad": "Someone New", "soz": "" },
+    { "id": "cherry_wine_live", "ad": "Cherry Wine (Live)", "soz": "" },
+    { "id": "like_real_people_do", "ad": "Like Real People Do", "soz": "" },
+    { "id": "almost_sweet_music", "ad": "Almost (Sweet Music)", "soz": "" },
+    { "id": "northern_attitude", "ad": "Northern Attitude", "soz": "" },
+    { "id": "would_that_i", "ad": "Would That I", "soz": "" },
+    { "id": "from_eden", "ad": "From Eden", "soz": "" },
+    { "id": "jackie_and_wilson", "ad": "Jackie and Wilson", "soz": "" },
+    { "id": "movement", "ad": "Movement", "soz": "" },
+    { "id": "angel_of_small_death_and_the_codeine_scene", "ad": "Angel of Small Death and the Codeine Scene", "soz": "" }
+  ]
+},
+    {
       "id": "halsey",
       "ad": "Halsey",
       "sarkilar": [
