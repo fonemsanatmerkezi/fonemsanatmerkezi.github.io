@@ -279,15 +279,6 @@
 ]
 },
 {
-"id": "dus_sokagi_sakinleri",
-"ad": "Düş Sokağı Sakinleri",
-"sarkilar": [
-{ "id": "haydi_git", "ad": "Haydi Git", "soz": "" },
-{ "id": "gulumse", "ad": "Gülümse", "soz": "" },
-{ "id": "yeni_bir_baslangic", "ad": "Yeni Bir Başlangıç", "soz": "" }
-]
-},
-{
 "id": "gripin",
 "ad": "Gripin",
 "sarkilar": [
@@ -297,6 +288,18 @@
 { "id": "sensiz_istanbul_a_dusmanim", "ad": "Sensiz İstanbul'a Düşmanım", "soz": "" },
 { "id": "durma_yagmur_durma", "ad": "Durma Yağmur Durma", "soz": "" }
 ]
+  },
+{
+  "id": "dus_sokagi_sakinleri",
+  "ad": "Düş Sokağı Sakinleri",
+  "sarkilar": [
+    { "id": "sevdan_bir_ates", "ad": "Sevdan Bir Ateş", "soz": "" },
+    { "id": "hoscakal", "ad": "Hoşçakal", "soz": "" },
+    { "id": "ayrilik", "ad": "Ayrılık", "soz": "" },
+    { "id": "gayret_et_guzelim", "ad": "Gayret Et Güzelim", "soz": "" },
+    { "id": "hic_bilmem", "ad": "Hiç Bilmem", "soz": "" },
+    { "id": "yasadikca", "ad": "Yaşadıkça", "soz": "" }
+  ]
 },
 {
 "id": "gece_yolculari",
