@@ -950,6 +950,24 @@
 { "id": "ben_giderim_batuma", "ad": "Ben Giderim Batuma", "soz": "" }
 ]
 },
+      {
+  "id": "yeni_turku",
+  "ad": "Yeni Türkü",
+  "sarkilar": [
+    { "id": "maskeli_balo", "ad": "Maskeli Balo", "soz": "" },
+    { "id": "deliler", "ad": "Deliler", "soz": "" },
+    { "id": "telli_telli", "ad": "Telli Telli", "soz": "" },
+    { "id": "yagmurun_elleri", "ad": "Yağmurun Elleri", "soz": "" },
+    { "id": "olsama_mektubun", "ad": "Olmasa Mektubun", "soz": "" },
+    { "id": "karanfil", "ad": "Karanfil", "soz": "" },
+    { "id": "viravira", "ad": "Vira Vira", "soz": "" },
+    { "id": "cember", "ad": "Çember", "soz": "" },
+    { "id": "yedikule", "ad": "Yedikule", "soz": "" },
+    { "id": "ask_yeniden", "ad": "Aşk Yeniden", "soz": "" },
+    { "id": "bana_bir_masal_anlat_baba", "ad": "Bana Bir Masal Anlat Baba", "soz": "" },
+    { "id": "firtina", "ad": "Fırtına", "soz": "" }
+  ]
+      }
 {
 "id": "oya_bora",
 "ad": "Oya Bora",
