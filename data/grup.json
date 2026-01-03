@@ -1,6 +1,33 @@
 {
 "kategori": "grup",
 "sanatcilar": [
+      {
+      "id": "adamlar",
+      "ad": "Adamlar",
+      "sarkilar": [
+        { "id": "zombi", "ad": "Zombi", "soz": "" },
+        { "id": "hikaye", "ad": "Hikâye", "soz": "" },
+        { "id": "yoruldum", "ad": "Yoruldum", "soz": "" },
+        { "id": "mavi_ekran", "ad": "Mavi Ekran", "soz": "" },
+        { "id": "doldum", "ad": "Doldum", "soz": "" },
+        { "id": "benden_bana", "ad": "Benden Bana", "soz": "" },
+        { "id": "sarilirim_birine", "ad": "Sarılırım Birine", "soz": "" },
+        { "id": "felek", "ad": "Felek", "soz": "" },
+        { "id": "koca_yasli_sisko_dunya", "ad": "Koca Yaşlı Şişko Dünya", "soz": "" },
+        { "id": "kapisi_kapali", "ad": "Kapısı Kapalı", "soz": "" },
+        { "id": "adini_baskasinin_koydugu_cocuklar", "ad": "Adını Başkasının Koyduğu Çocuklar", "soz": "" },
+        { "id": "derine_indik", "ad": "Derine İndik", "soz": "" },
+        { "id": "acinin_ilaci", "ad": "Acının İlacı", "soz": "" },
+         { "id": "dalgali", "ad": "Dalgalı", "soz": "" },
+          { "id": "es", "ad": "Es", "soz": "" },
+         { "id": "mezara_kadar", "ad": "Mezara Kadar", "soz": "" },
+        { "id": "okyanus", "ad": "Okyanus", "soz": "" },
+        { "id": "dal", "ad": "Dal", "soz": "" },
+        { "id": "gelir_gecer", "ad": "Gelir Geçer", "soz": "" },
+        { "id": "hayret", "ad": "Hayret", "soz": "" },
+        { "id": "donduruyor", "ad": "Döndürüyor", "soz": "" }
+      ]
+    },
 {
   "id": "apaslar",
   "ad": "Apaşlar",
