@@ -294,6 +294,29 @@
 { "id": "oyle_dertli", "ad": "Öyle Dertli", "soz": "" }
 ]
 },
+  {
+  "id": "flort",
+  "ad": "Flört",
+  "sarkilar": [
+    { "id": "denize_dogru", "ad": "Denize Doğru", "soz": "" },
+    { "id": "yalnizlik_mevsimi", "ad": "Yalnızlık Mevsimi", "soz": "" },
+       { "id": "apolitik", "ad": "Apolitik", "soz": "" },
+    { "id": "rastababa", "ad": "Rasta Baba", "soz": "" },
+    { "id": "u­yanman_lazim", "ad": "Uyanman Lazım", "soz": "" },
+    { "id": "sevmez_olaydim", "ad": "Sevmez Olaydım", "soz": "" },
+      { "id": "ne_guzel", "ad": "Ne Güzel", "soz": "" },
+     { "id": "lan_oglum_boyle_olmaz", "ad": "Lan Oğlum Böyle Olmaz", "soz": "" },
+    { "id": "sevgili_gonul", "ad": "Sevgili Gönül", "soz": "" },
+     { "id": "sakin", "ad": "Sakin", "soz": "" },
+     { "id": "yol_al­dim", "ad": "Yol Aldım", "soz": "" },
+    { "id": "yalanlar", "ad": "Yalanlar", "soz": "" },
+    { "id": "kolay_mi_sanki", "ad": "Kolay Mı Sanki", "soz": "" },
+    { "id": "kutup_ayisi", "ad": "Kutup Ayısı", "soz": "" },
+    { "id": "hayirdir_birader", "ad": "Hayırdır Birader", "soz": "" },
+    { "id": "senden_kalan", "ad": "Senden Kalan", "soz": "" },
+    { "id": "bize_ozel", "ad": "Bize Özel", "soz": "" }
+  ]
+},
 {
 "id": "gripin",
 "ad": "Gripin",
