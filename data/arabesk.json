@@ -2,22 +2,6 @@
   "kategori": "Arabesk",
   "sanatcilar": [
 {
-  "id": "adnan_senses",
-  "ad": "Adnan Şenses",
-  "sarkilar": [
-    { "id": "doldur_meyhaneci", "ad": "Doldur Meyhaneci", "soz": "" },
-    { "id": "neden_saclarin_beyazlamis_arkadas", "ad": "Neden Saçların Beyazlamış Arkadaş", "soz": "" },
-    { "id": "usta", "ad": "Usta", "soz": "" },
-    { "id": "bana_hersey_seni_hatirlatir", "ad": "Bana Herşey Seni Hatırlatıyor", "soz": "" },
-    { "id": "kavusamadik", "ad": "Kavuşamadık", "soz": "" },
-    { "id": "dokunmayin_bana", "ad": "Dokunmayın Bana", "soz": "" },
-    { "id": "bizim_mahalle", "ad": "Bizim Mahalle", "soz": "" },
-    { "id": "sen_miydin", "ad": "Sen Miydin", "soz": "" },
-    { "id": "cok_uzgunsun_arkadas", "ad": "Çok Üzgünsün Arkadaş", "soz": "" },
-    { "id": "bana_kadehi_siseyi_kir", "ad": "Kadehi Şişeyi Kırarım", "soz": "" }
-  ]
-},
-{
   "id": "ali_tekinture",
   "ad": "Ali Tekintüre",
   "sarkilar": [
