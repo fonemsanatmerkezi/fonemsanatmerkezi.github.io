@@ -577,6 +577,22 @@
     { "id": "mutlu_ol_yeter", "ad": "Mutlu Ol Yeter", "soz": "" }
   ]
 },
+    {
+  "id": "nejat_alp",
+  "ad": "Nejat Alp",
+  "sarkilar": [
+    { "id": "arkadasim", "ad": "Arkadaşım", "soz": "" },
+    { "id": "saka_yaptim", "ad": "Şaka Yaptım", "soz": "" },
+    { "id": "sensizlige_alisamadim", "ad": "Sensizliğe Alışamadım", "soz": "" },
+    { "id": "evlendigin_gun", "ad": "Evlendiğin Gün", "soz": "" },
+    { "id": "yenildim_gozlerine", "ad": "Yenildim Gözlerine", "soz": "" },
+    { "id": "ozlem", "ad": "Özlem", "soz": "" },
+    { "id": "yine_mi_sen", "ad": "Yine Mi Sen", "soz": "" },
+    { "id": "yan_yan_derdine", "ad": "Yan Yan Derdine", "soz": "" },
+    { "id": "kapin_her_calindikca", "ad": "Kapın Her Çalındıkça", "soz": "" },
+    { "id": "iyiki_vardim_hani_ben", "ad": "İyiki Vardım Hani Ben", "soz": "" }
+  ]
+},
 {
   "id": "nese_karabocek",
   "ad": "Neşe Karaböcek",
