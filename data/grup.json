@@ -490,6 +490,22 @@
 { "id": "hakliyiz_kazanacagiz", "ad": "Haklıyız Kazanacağız", "soz": "" }
 ]
 },
+  {
+  "id": "grup_lacin",
+  "ad": "Grup Laçin",
+  "sarkilar": [
+    { "id": "bekar_gezelim", "ad": "Bekar Gezelim", "soz": "" },
+    { "id": "samsak_doveci", "ad": "Samsak Döveci", "soz": "" },
+    { "id": "sekerli", "ad": "Şekerli", "soz": "" },
+    { "id": "eylen_sunam", "ad": "Eylen Sunam", "soz": "" },
+    { "id": "kiziroglu", "ad": "Kiziroğlu", "soz": "" },
+    { "id": "yogurt_koydum_dolaba", "ad": "Yoğurt Koydum Dolaba", "soz": "" },
+    { "id": "bir_dahaki_sefere", "ad": "Bir Dahaki Sefere", "soz": "" },
+    { "id": "ucun_kuslar", "ad": "Uçun Kuşlar", "soz": "" },
+    { "id": "vardim_hint_eline", "ad": "Vardım Hint Eline", "soz": "" },
+    { "id": "armut_agaci", "ad": "Armut Ağacı", "soz": "" }
+  ]
+},
 {
   "id": "hardal",
   "ad": "Hardal",
