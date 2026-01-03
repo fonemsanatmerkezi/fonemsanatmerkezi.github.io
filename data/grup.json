@@ -228,13 +228,19 @@
 ]
 },
 {
-"id": "dolapdere_big_gang",
-"ad": "Dolapdere Big Gang",
-"sarkilar": [
-{ "id": "ishiklar", "ad": "Işıklar", "soz": "" },
-{ "id": "dur_yavas", "ad": "Dur Yavaş", "soz": "" },
-{ "id": "su_sesi", "ad": "Su Sesi", "soz": "" }
-]
+  "id": "dolapdere_big_gang",
+  "ad": "Dolapdere Big Gang",
+  "sarkilar": [
+    { "id": "big_in_japan", "ad": "Big in Japan", "soz": "" },
+    { "id": "the_final_countdown", "ad": "The Final Countdown", "soz": "" },
+    { "id": "smooth", "ad": "Smooth", "soz": "" },
+    { "id": "faith", "ad": "Faith", "soz": "" },
+    { "id": "gimme_hope_joanna", "ad": "Gimme Hope Jo'anna", "soz": "" },
+    { "id": "another_day_in_paradise", "ad": "Another Day in Paradise", "soz": "" },
+    { "id": "jailhouse_rock", "ad": "Jailhouse Rock", "soz": "" },
+    { "id": "dont_let_me_be_misunderstood", "ad": "Don’t Let Me Be Misunderstood", "soz": "" },
+    { "id": "oh_life", "ad": "Oh Life", "soz": "" }
+  ]
 },
 {
 "id": "dolu_kadehi_ters_tut",
