@@ -2,15 +2,37 @@
 "kategori": "grup",
 "sanatcilar": [
 {
-"id": "apaslar",
-"ad": "Apaşlar",
-"sarkilar": [
-{ "id": "degmen_benim_gamli_yasima", "ad": "Değmen Benim Gamlı Yasima", "soz": "" },
-{ "id": "kizilirmak", "ad": "Kızılırmak", "soz": "" },
-{ "id": "silifkenin_yogurdu", "ad": "Silifke'nin Yoğurdu", "soz": "" },
-{ "id": "fidayda", "ad": "Fidayda", "soz": "" },
-{ "id": "katibim", "ad": "Katibim", "soz": "" }
-]
+  "id": "apaslar",
+  "ad": "Apaşlar (Cem Karaca & Apaşlar)",
+  "sarkilar": [
+    { "id": "emrah", "ad": "Emrah", "soz": "" },
+    { "id": "karacaoğlan", "ad": "Karacaoğlan", "soz": "" },
+    { "id": "hudey", "ad": "Hudey", "soz": "" },
+    { "id": "vahset", "ad": "Vahşet", "soz": "" },
+    { "id": "bang_bang", "ad": "Bang Bang", "soz": "" },
+    { "id": "shakin_all_over", "ad": "Shakin' All Over", "soz": "" },
+    { "id": "hucum", "ad": "Hücum", "soz": "" },
+    { "id": "aysen", "ad": "Ayşen", "soz": "" },
+    { "id": "umit_tarlalari", "ad": "Ümit Tarlaları", "soz": "" },
+    { "id": "anatoliu_oyun_havasi", "ad": "Anadolu Oyun Havası", "soz": "" },
+    { "id": "suya_giden_alli_gelin", "ad": "Suya Giden Allı Gelin", "soz": "" },
+    { "id": "nasil_da_gectin", "ad": "Nasıl Da Geçtin", "soz": "" },
+    { "id": "istanbulu_dinliyorum", "ad": "İstanbul’u Dinliyorum", "soz": "" },
+    { "id": "oy_babo", "ad": "Oy Babo", "soz": "" },
+    { "id": "hikaye", "ad": "Hikaye", "soz": "" },
+    { "id": "istanbul", "ad": "İstanbul", "soz": "" },
+    { "id": "why", "ad": "Why", "soz": "" },
+    { "id": "karanlik_yollar", "ad": "Karanlık Yollar", "soz": "" },
+    { "id": "resimdeki_gozyaslari", "ad": "Resimdeki Gözyaşları", "soz": "" },
+    { "id": "sans_cocugu", "ad": "Şans Çocuğu", "soz": "" },
+    { "id": "tears_no_no_no", "ad": "Tears / No, No, No", "soz": "" },
+    { "id": "ayrilik_gunumuz", "ad": "Ayrılık Günümüz", "soz": "" },
+    { "id": "gilgamış", "ad": "Gılgamış", "soz": "" },
+    { "id": "zeyno", "ad": "Zeyno", "soz": "" },
+    { "id": "niksar", "ad": "Niksar", "soz": "" },
+    { "id": "bu_son_olsun", "ad": "Bu Son Olsun", "soz": "" },
+    { "id": "felek_beni", "ad": "Felek Beni", "soz": "" }
+  ]
 },
 {
 "id": "altin_gun",
