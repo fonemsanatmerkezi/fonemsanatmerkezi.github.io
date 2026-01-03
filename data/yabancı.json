@@ -251,6 +251,13 @@
     { "id": "from_eden", "ad": "From Eden", "soz": "" },
     { "id": "jackie_and_wilson", "ad": "Jackie and Wilson", "soz": "" },
     { "id": "movement", "ad": "Movement", "soz": "" },
+     { "id": "de_selby", "ad": "De Selby 1-2", "soz": "" },
+    { "id": "nobody", "ad": "Nobody", "soz": "" },
+     { "id": "sunlight", "ad": "Sunlight", "soz": "" },
+      { "id": "mfwmb", "ad": "NFWMB", "soz": "" },
+     { "id": "abstract", "ad": "Abstract", "soz": "" },
+      { "id": "jackboot_jump", "ad": "Jackboot Jump", "soz": "" },
+    { "id": "dinner_and_diatribes", "ad": "Dinner And Diatribes", "soz": "" },
     { "id": "angel_of_small_death_and_the_codeine_scene", "ad": "Angel of Small Death and the Codeine Scene", "soz": "" }
   ]
 },
