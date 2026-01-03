@@ -74,6 +74,24 @@
     { "id": "ak_parti", "ad": "Ak Parti", "soz": "" }
   ]
     },
+     {
+  "id": "arif_kemal_red_turkuleri",
+  "ad": "Arif Kemal – Red Türküleri",
+  "sarkilar": [
+    { "id": "salkim_sogut", "ad": "Salkım Söğüt", "soz": "" },
+    { "id": "suclamabeni", "ad": "Suçlama Beni", "soz": "" },
+    { "id": "pirinc_turkusu", "ad": "Pirinç Türküsü", "soz": "" },
+    { "id": "sohbet", "ad": "Sohbet", "soz": "" },
+    { "id": "isci_kiz", "ad": "İşçi Kız", "soz": "" },
+    { "id": "vardiya", "ad": "Vardiya", "soz": "" },
+    { "id": "mapushane_cesmesi", "ad": "Mapushane Çeşmesi", "soz": "" },
+    { "id": "kadınım", "ad": "Kadınım", "soz": "" },
+    { "id": "kizil_atlilar", "ad": "Kızıl Atlılar", "soz": "" },
+    { "id": "insanlarda_tek_sicak_kanim", "ad": "İnsanlarda Tek Sıcak Kanım", "soz": "" },
+    { "id": "gece_gelin_konuk", "ad": "Gece Gelin Konuk", "soz": "" },
+    { "id": "onlar_icin_hersey_bitti", "ad": "Onlar İçin Herşey Bitti", "soz": "" }
+  ]
+     },
     {
       "id": "arif_sag",
       "ad": "Arif Sağ",
