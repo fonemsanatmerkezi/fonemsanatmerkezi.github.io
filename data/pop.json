@@ -456,6 +456,18 @@
       ]
     },
     {
+  "id": "eda_ozulku",
+  "ad": "Eda Özülkü",
+  "sarkilar": [
+    { "id": "aramadin_aylardir", "ad": "Aramadın Aylardır", "soz": "" },
+    { "id": "boyle_ask_olmaz", "ad": "Böyle Aşk Olmaz", "soz": "" },
+    { "id": "vara_vara", "ad": "Vara Vara", "soz": "" },
+    { "id": "parolayi_soyle", "ad": "Parolayı Söyle", "soz": "" },
+    { "id": "yolver_aska", "ad": "Yolver Aşka", "soz": "" },
+    { "id": "oyalama", "ad": "Oyalama", "soz": "" }
+  ]
+},
+    {
       "id": "ersay_uner",
       "ad": "Ersay Üner",
       "sarkilar": [
