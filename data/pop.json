@@ -146,6 +146,59 @@
   ]
 },
     {
+  "id": "burcu_gunes",
+  "ad": "Burcu Güneş",
+  "sarkilar": [
+    { "id": "alimallah", "ad": "Alimallah", "soz": "" },
+    { "id": "ask_yarasi", "ad": "Aşk Yarası", "soz": "" },
+    { "id": "hayallerde_gezginim", "ad": "Hayallerde Gezginim", "soz": "" },
+    { "id": "yansin_geceler", "ad": "Yansın Geceler", "soz": "" },
+    { "id": "uzak_degilim", "ad": "Uzak Değilim", "soz": "" },
+    { "id": "tilsim_remix", "ad": "Tılsım (Remix)", "soz": "" },
+    { "id": "biz_aski_meleklerden_caldik", "ad": "Biz Aşkı Meleklerden Çaldık", "soz": "" },
+    { "id": "cile_bulbulum", "ad": "Çile Bülbülüm", "soz": "" },
+    { "id": "ay_sahit", "ad": "Ay Şahit", "soz": "" },
+    { "id": "sahilden", "ad": "Sahilden", "soz": "" },
+    { "id": "sinifta_kal", "ad": "Sınıfta Kal", "soz": "" },
+    { "id": "olmazsan_olmaz", "ad": "Olmazsan Olmaz", "soz": "" },
+    { "id": "ben_yeter_miyim", "ad": "Ben Yeter miyim?", "soz": "" },
+    { "id": "kaybol_benle", "ad": "Kaybol Benle", "soz": "" },
+    { "id": "seven", "ad": "Seven", "soz": "" },
+    { "id": "gozlerinde_biraktim_aski", "ad": "Gözlerinde Bıraktım Aşkı", "soz": "" },
+    { "id": "tamamdir", "ad": "Tamamdır", "soz": "" },
+    { "id": "oflaya_oflaya", "ad": "Oflaya Oflaya", "soz": "" },
+    { "id": "cikmaz_sokaklar", "ad": "Çıkmaz Sokaklar", "soz": "" },
+    { "id": "bir_sevgi_istiyorum", "ad": "Bir Sevgi İstiyorum", "soz": "" },
+    { "id": "gul_kokusu", "ad": "Gül Kokusu", "soz": "" },
+    { "id": "sen_kaybi", "ad": "Sen Kaybı", "soz": "" }
+  ]
+},
+    {
+  "id": "bora_duran",
+  "ad": "Bora Duran",
+  "sarkilar": [
+    { "id": "gül_senin_tenin", "ad": "Gül Senin Tenin", "soz": "" },
+    { "id": "insan", "ad": "İnsan", "soz": "" },
+    { "id": "sen_de_gidersen", "ad": "Sen De Gidersen", "soz": "" },
+    { "id": "unut_bakalım", "ad": "Unut Bakalım", "soz": "" },
+    { "id": "icimdeki_deli", "ad": "İçimdeki Deli", "soz": "" },
+    { "id": "sana_dogru", "ad": "Sana Doğru", "soz": "" },
+    { "id": "basgan", "ad": "Başgan", "soz": "" },
+    { "id": "dondum", "ad": "Döndüm", "soz": "" },
+    { "id": "degmen_benim_remix", "ad": "Değmen Benim (Remix)", "soz": "" },
+    { "id": "cocuk", "ad": "Çocuk", "soz": "" },
+    { "id": "uc_gunluk_akustik", "ad": "Üç Günlük (Akustik)", "soz": "" },
+    { "id": "yazin_en_guzeli", "ad": "Yazın En Güzeli", "soz": "" },
+    { "id": "benim_olacaksin", "ad": "Benim Olacaksın (Nilay ile)", "soz": "" },
+    { "id": "gamsiz", "ad": "Gamsız", "soz": "" },
+    { "id": "saklarim", "ad": "Saklarım", "soz": "" },
+    { "id": "leyla", "ad": "Leyla", "soz": "" },
+    { "id": "vira_vira", "ad": "Vira Vira", "soz": "" },
+    { "id": "ismi_lazim_degil", "ad": "İsmi Lazım Değil", "soz": "" },
+    { "id": "firari", "ad": "Firari", "soz": "" }
+  ]
+},
+    {
       "id": "burak_kut",
       "ad": "Burak Kut",
       "sarkilar": [
