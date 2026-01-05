@@ -215,6 +215,31 @@
       ]
     },
     {
+  "id": "buray",
+  "ad": "Buray",
+  "sarkilar": [
+    { "id": "hayat_surer", "ad": "Hayat Sürer", "soz": "" },
+    { "id": "ben_olmeden_once", "ad": "Ben Ölmeden Önce", "soz": "" },
+    { "id": "aska_extra_ni_kat", "ad": "Aşka Extra'nı Kat", "soz": "" },
+    { "id": "rampapapam", "ad": "Rampapapam", "soz": "" },
+    { "id": "deli_kiz", "ad": "Deli Kız", "soz": "" },
+    { "id": "ask_ne_guzel_sey", "ad": "Aşk Ne Güzel Şey", "soz": "" },
+    { "id": "senin_yuzunden", "ad": "Senin Yüzünden", "soz": "" },
+    { "id": "cift_gokkusagi", "ad": "Çift Gökkuşağı", "soz": "" },
+    { "id": "bin_dokuzyuz_otuz_sekiz", "ad": "1938", "soz": "" },
+    { "id": "yangin_var", "ad": "Yangın Var", "soz": "" },
+    { "id": "girdap", "ad": "Girdap", "soz": "" },
+    { "id": "here_comes_the_dawn", "ad": "Here Comes the Dawn", "soz": "" },
+    { "id": "yok_mu", "ad": "Yok Mu?", "soz": "" },
+    { "id": "beni_affet", "ad": "Beni Affet", "soz": "" },
+    { "id": "olmusum_leyla", "ad": "Olmuşum Leyla", "soz": "" },
+    { "id": "serseri_ruhum", "ad": "Serseri Ruhum", "soz": "" },
+    { "id": "herkes_gorsun", "ad": "Herkes Görsün", "soz": "" },
+    { "id": "istanbul_bile", "ad": "İstanbul Bile", "soz": "" },
+    { "id": "buzlu_cam", "ad": "Buzlu Cam", "soz": "" },
+   ]
+},
+    {
       "id": "burcu_gunes",
       "ad": "Burcu Güneş",
       "sarkilar": [
