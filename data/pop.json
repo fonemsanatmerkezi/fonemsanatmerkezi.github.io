@@ -1053,6 +1053,34 @@
       ]
     },
     {
+  "id": "niran_unsal",
+  "ad": "Niran Ünsal",
+  "sarkilar": [
+    { "id": "aklim_hep_sende", "ad": "Aklım Hep Sende", "soz": "" },
+    { "id": "aska_davet", "ad": "Aşka Davet", "soz": "" },
+    { "id": "aziz_dostum", "ad": "Aziz Dostum", "soz": "" },
+    { "id": "ben_yine_kendimle", "ad": "Ben Yine Kendimle", "soz": "" },
+    { "id": "beyaz_gul", "ad": "Beyaz Gül", "soz": "" },
+    { "id": "bir_sans_daha", "ad": "Bir Şans Daha", "soz": "" },
+    { "id": "dedigim_dedik", "ad": "Dediğim Dedik", "soz": "" },
+    { "id": "firuze", "ad": "Firuze", "soz": "" },
+    { "id": "gectim_dunya_hevesinden", "ad": "Geçtim Dünya Hevesinden", "soz": "" },
+    { "id": "gidesim_gelmiyor", "ad": "Gidesim Gelmiyor", "soz": "" },
+    { "id": "gocebe", "ad": "Göçebe", "soz": "" },
+    { "id": "haktan", "ad": "Haktan", "soz": "" },
+    { "id": "hangimiz_sevmedik", "ad": "Hangimiz Sevmedik", "soz": "" },
+    { "id": "hayat_surgun", "ad": "Hayat Sürgün", "soz": "" },
+    { "id": "hayranim", "ad": "Hayranım", "soz": "" },
+    { "id": "helal_et", "ad": "Helal Et", "soz": "" },
+    { "id": "itiraf_ediyorum", "ad": "İtiraf Ediyorum", "soz": "" },
+    { "id": "ok", "ad": "OK", "soz": "" },
+    { "id": "oyun_bozan", "ad": "Oyun Bozan", "soz": "" },
+    { "id": "sebebim", "ad": "Sebebim", "soz": "" },
+    { "id": "sarap_misali", "ad": "Şarap Misali", "soz": "" },
+    { "id": "yuregim_rehin", "ad": "Yüreğim Rehin", "soz": "" }
+  ]
+},
+    {
       "id": "nukhet_duru",
       "ad": "Nükhet Duru",
       "sarkilar": [
