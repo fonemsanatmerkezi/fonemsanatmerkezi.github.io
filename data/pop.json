@@ -711,6 +711,29 @@
       ]
     },
     {
+  "id": "isin_karaca",
+  "ad": "Işın Karaca",
+  "sarkilar": [
+    { "id": "ala", "ad": "Alâ", "soz": "" },
+    { "id": "aramiza_yollar", "ad": "Aramıza Yollar", "soz": "" },
+    { "id": "baska_bahar", "ad": "Başka Bahar", "soz": "" },
+    { "id": "bekleyelim_de_gorelim", "ad": "Bekleyelim de Görelim", "soz": "" },
+    { "id": "birakma", "ad": "Bırakma", "soz": "" },
+    { "id": "dert_bende_derman_sende", "ad": "Dert Bende Derman Sende", "soz": "" },
+    { "id": "hosgoru", "ad": "Hoşgörü", "soz": "" },
+    { "id": "i_will_survive", "ad": "I Will Survive", "soz": "" },
+    { "id": "kalp_tanriya_emanet", "ad": "Kalp Tanrıya Emanet", "soz": "" },
+    { "id": "kirmizi_ruj", "ad": "Kırmızı Ruj", "soz": "" },
+    { "id": "mandalinalar", "ad": "Mandalinalar", "soz": "" },
+    { "id": "mavi_mavi", "ad": "Mavi Mavi", "soz": "" },
+    { "id": "sen_gittin_mi_ben_olurum", "ad": "Sen Gittin mi Ben Ölürüm", "soz": "" },
+    { "id": "sessiz_kalma", "ad": "Sessiz Kalma", "soz": "" },
+    { "id": "tutunamadim", "ad": "Tutunamadım", "soz": "" },
+    { "id": "uyanis", "ad": "Uyanış", "soz": "" },
+    { "id": "yetinmeyi_bilir_misin", "ad": "Yetinmeyi Bilir misin?", "soz": "" }
+  ]
+},
+    {
       "id": "ilyas_yalcintas",
       "ad": "İlyas Yalçıntaş",
       "sarkilar": [
