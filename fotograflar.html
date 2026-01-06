@@ -12,15 +12,12 @@ body{
   background:#111;
   color:#fff;
 }
-
 .container{
   max-width:520px;
   margin:auto;
   padding:20px;
   text-align:center;
 }
-
-/* Geri Butonu */
 #geriBtn{
   width:100%;
   padding:12px;
@@ -30,18 +27,7 @@ body{
   border-radius:14px;
   background:#0288d1;
   color:#fff;
-  cursor:pointer;
 }
-
-#geriBtn:active{
-  background:#0277bd;
-}
-
-/* FOTOĞRAF YÜKLEME */
-.uploadBox{
-  margin-bottom:20px;
-}
-
 .uploadBtn{
   display:block;
   background:#43a047;
@@ -51,56 +37,34 @@ body{
   cursor:pointer;
   color:#fff;
 }
-
-.uploadBtn:active{
-  background:#388e3c;
-}
-
-#fotoInput{
-  display:none;
-}
-
+#fotoInput{ display:none; }
 .uploadInfo{
   font-size:12px;
   color:#aaa;
   margin-top:6px;
 }
-
-/* Galeri */
 .galeri{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:10px;
 }
-
 .galeri img{
   width:100%;
   border-radius:12px;
   cursor:pointer;
-  transition:transform .2s ease;
 }
-
-.galeri img:hover{
-  transform:scale(1.05);
-}
-
-/* Modal */
 #modal{
   display:none;
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,0.9);
+  background:rgba(0,0,0,.9);
   justify-content:center;
   align-items:center;
-  z-index:1000;
 }
-
-#modalImg{
+#modal img{
   max-width:90%;
   max-height:90%;
-  border-radius:12px;
 }
-
 #kapat{
   position:absolute;
   top:20px;
@@ -114,30 +78,16 @@ body{
 <body>
 
 <div class="container">
+  <button id="geriBtn" onclick="location.href='index.html'">⬅ Ana Sayfa</button>
+  <h2 style="color:#0288d1">Mekan Fotoğrafları</h2>
 
-  <button id="geriBtn" onclick="window.location.href='index.html'">⬅ Ana Sayfa</button>
+  <!-- YÜKLEME -->
+  <label class="uploadBtn" for="fotoInput">📤 Fotoğraf Yükle</label>
+  <input type="file" id="fotoInput" accept="image/*">
+  <p class="uploadInfo">Fotoğraflar onaydan sonra yayınlanır</p>
 
-  <h2 style="margin-bottom:20px; font-size:22px; color:#0288d1;">Mekan Fotoğrafları</h2>
-
-  <!-- FOTOĞRAF YÜKLEME -->
-  <div class="uploadBox">
-    <label for="fotoInput" class="uploadBtn">📤 Fotoğraf Yükle</label>
-    <input type="file" id="fotoInput" accept="image/*">
-    <p class="uploadInfo">Sadece JPG / PNG – max 5 MB</p>
-  </div>
-
-  <!-- GALERİ -->
-  <div class="galeri" id="galeri">
-    <img src="fotograflarimiz/foto1.jpeg">
-    <img src="fotograflarimiz/foto2.jpeg">
-    <img src="fotograflarimiz/foto3.jpeg">
-    <img src="fotograflarimiz/foto4.jpeg">
-    <img src="fotograflarimiz/foto5.jpeg">
-    <img src="fotograflarimiz/foto6.jpeg">
-    <img src="fotograflarimiz/foto7.jpeg">
-    <img src="fotograflarimiz/foto8.jpeg">
-  </div>
-
+  <!-- GALERİ (SADECE ONAYLI) -->
+  <div class="galeri" id="galeri"></div>
 </div>
 
 <!-- MODAL -->
@@ -146,82 +96,58 @@ body{
   <img id="modalImg">
 </div>
 
-<!-- Firebase SDK -->
+<!-- Firebase -->
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage-compat.js"></script>
 
 <script>
-const firebaseConfig = {
+firebase.initializeApp({
   apiKey: "AIzaSyAfn39Tp6Z41XxNfocdId-NJ20YNrbZrr8",
   authDomain: "fonem-fotograflar.firebaseapp.com",
   projectId: "fonem-fotograflar",
   storageBucket: "fonem-fotograflar.firebasestorage.app",
   messagingSenderId: "602553440908",
   appId: "1:602553440908:web:e54ddef8f35c83e494b9a9"
-};
-
-firebase.initializeApp(firebaseConfig);
-const storage = firebase.storage();
-</script>
-
-<script>
-// MODAL
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modalImg");
-const kapat = document.getElementById("kapat");
-
-document.querySelectorAll(".galeri img").forEach(img=>{
-  img.onclick = ()=>{
-    modal.style.display="flex";
-    modalImg.src = img.src;
-  }
 });
 
-kapat.onclick = ()=> modal.style.display="none";
-modal.onclick = e=>{
-  if(e.target === modal) modal.style.display="none";
-};
-
-// FOTOĞRAF YÜKLEME
-const fotoInput = document.getElementById("fotoInput");
+const storage = firebase.storage();
 const galeri = document.getElementById("galeri");
 
-fotoInput.addEventListener("change", ()=>{
-  const file = fotoInput.files[0];
-  if(!file) return;
-
-  if(!file.type.startsWith("image/")){
-    alert("Sadece fotoğraf yükleyebilirsiniz");
-    return;
-  }
-
-  if(file.size > 5 * 1024 * 1024){
-    alert("Dosya 5 MB'dan büyük");
-    return;
-  }
-
-  const dosyaAdi = Date.now() + "_" + file.name;
-  const ref = storage.ref("kullanici_fotograflari/" + dosyaAdi);
-
-  ref.put(file)
-    .then(()=> ref.getDownloadURL())
-    .then(url=>{
+/* 🔽 SADECE ONAYLI FOTOĞRAFLAR */
+storage.ref("onayli").listAll().then(res=>{
+  res.items.forEach(item=>{
+    item.getDownloadURL().then(url=>{
       const img = document.createElement("img");
       img.src = url;
       img.onclick = ()=>{
         modal.style.display="flex";
         modalImg.src = url;
       };
-      galeri.prepend(img);
-      alert("Fotoğraf yüklendi 🎉");
-    })
-    .catch(err=>{
-      alert("Hata: " + err.message);
+      galeri.appendChild(img);
     });
-
-  fotoInput.value = "";
+  });
 });
+
+/* 🔼 YÜKLEME → BEKLEYEN */
+document.getElementById("fotoInput").onchange = e=>{
+  const file = e.target.files[0];
+  if(!file) return;
+
+  const ref = storage.ref("bekleyen/" + Date.now() + "_" + file.name);
+  ref.put(file).then(()=>{
+    alert("📸 Fotoğraf alındı.\nOnaydan sonra galeride yayınlanacaktır.");
+  });
+
+  e.target.value = "";
+};
+
+/* MODAL */
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modalImg");
+document.getElementById("kapat").onclick = ()=>modal.style.display="none";
+modal.onclick = e=>{ if(e.target===modal) modal.style.display="none"; }
 </script>
 
 </body>
 </html>
+
