@@ -47,6 +47,7 @@ body{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:10px;
+  margin-top:20px;
 }
 .galeri img{
   width:100%;
@@ -81,24 +82,19 @@ body{
   <button id="geriBtn" onclick="location.href='index.html'">⬅ Ana Sayfa</button>
   <h2 style="color:#0288d1">Mekan Fotoğrafları</h2>
 
-  <!-- YÜKLEME -->
   <label class="uploadBtn" for="fotoInput">📤 Fotoğraf Yükle</label>
   <input type="file" id="fotoInput" accept="image/*">
   <p class="uploadInfo">Fotoğraflar onaydan sonra yayınlanır</p>
-  <p id="durum" style="margin-top:10px; font-size:14px; color:#ffd54f;"></p>
+  <p id="durum"></p>
 
-
-  <!-- GALERİ (SADECE ONAYLI) -->
   <div class="galeri" id="galeri"></div>
 </div>
 
-<!-- MODAL -->
 <div id="modal">
   <span id="kapat">&times;</span>
   <img id="modalImg">
 </div>
 
-<!-- Firebase -->
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage-compat.js"></script>
 
@@ -114,8 +110,9 @@ firebase.initializeApp({
 
 const storage = firebase.storage();
 const galeri = document.getElementById("galeri");
+const durum = document.getElementById("durum");
 
-/* 🔽 SADECE ONAYLI FOTOĞRAFLAR */
+/* ONAYLI FOTOĞRAFLAR */
 storage.ref("onayli").listAll().then(res=>{
   res.items.forEach(item=>{
     item.getDownloadURL().then(url=>{
@@ -130,17 +127,24 @@ storage.ref("onayli").listAll().then(res=>{
   });
 });
 
-/* 🔼 YÜKLEME → BEKLEYEN */
+/* FOTOĞRAF YÜKLE → BEKLEYEN */
 document.getElementById("fotoInput").onchange = e=>{
   const file = e.target.files[0];
   if(!file) return;
 
-  const ref = storage.ref("bekleyen/" + Date.now() + "_" + file.name);
-  ref.put(file).then(()=>{
-    alert("📸 Fotoğraf alındı.\nOnaydan sonra galeride yayınlanacaktır.");
-  });
+  durum.innerText = "⏳ Yükleniyor...";
 
-  e.target.value = "";
+  storage.ref("bekleyen/" + Date.now() + "_" + file.name)
+    .put(file)
+    .then(()=>{
+      durum.innerText = "✅ Fotoğraf alındı. Onay bekliyor.";
+    })
+    .catch(err=>{
+      durum.innerText = "❌ Yüklenemedi";
+      alert(err.message);
+    });
+
+  e.target.value="";
 };
 
 /* MODAL */
@@ -152,4 +156,3 @@ modal.onclick = e=>{ if(e.target===modal) modal.style.display="none"; }
 
 </body>
 </html>
-
