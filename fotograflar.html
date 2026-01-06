@@ -37,10 +37,9 @@ body{
   background:#0277bd;
 }
 
-/* FOTOĞRAF YÜKLEME ALANI */
+/* FOTOĞRAF YÜKLEME */
 .uploadBox{
   margin-bottom:20px;
-  text-align:center;
 }
 
 .uploadBtn{
@@ -89,7 +88,7 @@ body{
 #modal{
   display:none;
   position:fixed;
-  top:0; left:0; right:0; bottom:0;
+  inset:0;
   background:rgba(0,0,0,0.9);
   justify-content:center;
   align-items:center;
@@ -106,7 +105,6 @@ body{
   position:absolute;
   top:20px;
   right:30px;
-  color:#fff;
   font-size:30px;
   cursor:pointer;
 }
@@ -128,7 +126,8 @@ body{
     <p class="uploadInfo">Sadece JPG / PNG – max 5 MB</p>
   </div>
 
-  <div class="galeri">
+  <!-- GALERİ -->
+  <div class="galeri" id="galeri">
     <img src="fotograflarimiz/foto1.jpeg">
     <img src="fotograflarimiz/foto2.jpeg">
     <img src="fotograflarimiz/foto3.jpeg">
@@ -140,22 +139,6 @@ body{
   </div>
 
 </div>
-<!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage-compat.js"></script>
-<script>
-  const firebaseConfig = {
-    apiKey: "AIzaSyAfn39Tp6Z41XxNfocdId-NJ20YNrbZrr8",
-    authDomain: "fonem-fotograflar.firebaseapp.com",
-    projectId: "fonem-fotograflar",
-    storageBucket: "fonem-fotograflar.firebasestorage.app",
-    messagingSenderId: "602553440908",
-    appId: "1:602553440908:web:e54ddef8f35c83e494b9a9"
-  };
-
-  firebase.initializeApp(firebaseConfig);
-  const storage = firebase.storage();
-</script>
 
 <!-- MODAL -->
 <div id="modal">
@@ -163,24 +146,81 @@ body{
   <img id="modalImg">
 </div>
 
-<script>
-// Modal elemanları
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modalImg');
-const kapat = document.getElementById('kapat');
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage-compat.js"></script>
 
-// Galeri fotoğrafları
-document.querySelectorAll('.galeri img').forEach(img=>{
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyAfn39Tp6Z41XxNfocdId-NJ20YNrbZrr8",
+  authDomain: "fonem-fotograflar.firebaseapp.com",
+  projectId: "fonem-fotograflar",
+  storageBucket: "fonem-fotograflar.firebasestorage.app",
+  messagingSenderId: "602553440908",
+  appId: "1:602553440908:web:e54ddef8f35c83e494b9a9"
+};
+
+firebase.initializeApp(firebaseConfig);
+const storage = firebase.storage();
+</script>
+
+<script>
+// MODAL
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modalImg");
+const kapat = document.getElementById("kapat");
+
+document.querySelectorAll(".galeri img").forEach(img=>{
   img.onclick = ()=>{
-    modal.style.display = 'flex';
+    modal.style.display="flex";
     modalImg.src = img.src;
   }
 });
 
-kapat.onclick = ()=> modal.style.display='none';
+kapat.onclick = ()=> modal.style.display="none";
 modal.onclick = e=>{
-  if(e.target === modal) modal.style.display='none';
+  if(e.target === modal) modal.style.display="none";
 };
+
+// FOTOĞRAF YÜKLEME
+const fotoInput = document.getElementById("fotoInput");
+const galeri = document.getElementById("galeri");
+
+fotoInput.addEventListener("change", ()=>{
+  const file = fotoInput.files[0];
+  if(!file) return;
+
+  if(!file.type.startsWith("image/")){
+    alert("Sadece fotoğraf yükleyebilirsiniz");
+    return;
+  }
+
+  if(file.size > 5 * 1024 * 1024){
+    alert("Dosya 5 MB'dan büyük");
+    return;
+  }
+
+  const dosyaAdi = Date.now() + "_" + file.name;
+  const ref = storage.ref("kullanici_fotograflari/" + dosyaAdi);
+
+  ref.put(file)
+    .then(()=> ref.getDownloadURL())
+    .then(url=>{
+      const img = document.createElement("img");
+      img.src = url;
+      img.onclick = ()=>{
+        modal.style.display="flex";
+        modalImg.src = url;
+      };
+      galeri.prepend(img);
+      alert("Fotoğraf yüklendi 🎉");
+    })
+    .catch(err=>{
+      alert("Hata: " + err.message);
+    });
+
+  fotoInput.value = "";
+});
 </script>
 
 </body>
